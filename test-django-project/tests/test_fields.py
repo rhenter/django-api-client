@@ -1,28 +1,38 @@
 import pytest
-import uuid
+from django.core.exceptions import ValidationError
 
-from django.forms import ValidationError
-
-from testapp.models import TestModel, TestDigitsOnlyField
-
-pytestmark = pytest.mark.django_db
+from django_api_client.fields import AjaxChoiceField
 
 
-def test_uuid_primary_key_field():
-    obj = TestModel(name='Name')
-    assert obj.pk is None
-    obj.save()
-    assert obj.pk is not None
-    assert isinstance(obj.pk, uuid.UUID)
+@pytest.mark.parametrize('value', [
+    '',
+    None,
+])
+def test_choicefield_required(value):
+    f = AjaxChoiceField(choices=[('1', 'One'), ('2', 'Two')], required=True)
+    with pytest.raises(ValidationError) as error:
+        f.clean(value)
+    assert str(error) != "'This field is required.'"
 
 
-@pytest.mark.parametrize('value', ('1', '123', '00123', '000'))
-def test_char_field_only_digits_valid(value):
-    assert not TestDigitsOnlyField(digits_only_field=value).full_clean()
+@pytest.mark.parametrize('value', [4, 5, 6])
+def test_choicefield_invalid(value):
+    """This field should be filled by ajax, so the should not validate the choice"""
+    f = AjaxChoiceField(choices=[('1', 'One'), ('2', 'Two')], required=False)
+
+    assert str(value) == f.clean(value)
 
 
-@pytest.mark.parametrize('value', ('a', '12db', '1.23', '123-4'))
-def test_char_field_only_digits_invalid(value):
-    with pytest.raises(ValidationError) as exc:
-        TestDigitsOnlyField(digits_only_field=value).full_clean()
-    assert 'digits_only_field' in exc.value.error_dict
+def test_choicefield_valid():
+    f = AjaxChoiceField(choices=[('1', 'One'), ('2', 'Two')], required=False)
+
+    assert '1' == f.clean(1)
+    assert '2' == f.clean(2)
+
+
+def test_choicefield_callable():
+    def choices():
+        return [('J', 'John'), ('P', 'Paul')]
+
+    f = AjaxChoiceField(choices=choices)
+    assert 'J' == f.clean('J')
