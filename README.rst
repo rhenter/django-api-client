@@ -30,7 +30,7 @@ Requirements
 How to install
 ==============
 
-You can get Django Stuff by using pip:
+You can get Django API Client by using pip:
 
 .. code:: shell
 

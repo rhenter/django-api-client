@@ -1,17 +1,19 @@
-Welcome to Django Stuff's documentation!
-============================================
+Welcome to Django API Client documentation!
+===========================================
 
-Django Stuff is a collection of tools and utilities to make your development with Django simpler.
+Django API Client is a client for APIs in general, which allows iterating with the API as if they were using a Local model in their project, through a client and Custom CBV (Class based Views)
 
-Features
---------
 
-- TimeStamp and History models to giving you information like when your record wore created/updated and History Changes
-- UUID Model as primary key or not instead of sequence ID.
-- Serializer model to return a dict with all data of your django instance.
-- Signals model to add any task before or after you save, update or delete your model
-- And many other stuff. For more information, see our documentation following the links below.
-- Backend to Login using email or username
+Some reasons to use the **Django API Client**
+
+* If you work with microservices with APIs in multiple locations and want to continue using Django as a WebApp with the same capabilities to render data as if you were using native models
+
+* You want to separate your Django project to let one of them only with the API with DRF and the other as a WebApp with Templates (HTML), CSS, JS instead of using some JS frontend (ReactJS, AngularJS, etc.)
+
+* You want to use a third party API to list, create and change using the django template system
+
+For more information, see our documentation at `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_.
+
 
 Quickstart
 ----------
@@ -28,10 +30,8 @@ User Guide
 .. toctree::
     :maxdepth: 2
 
-    backends/index.rst
     fields.rst
     forms.rst
-    models/index.rst
     utils.rst
 
 

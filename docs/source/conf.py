@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Django Stuff documentation build configuration file, created by
+# Django API Client documentation build configuration file, created by
 # sphinx-quickstart on Wed Nov 29 06:50:23 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -19,11 +19,11 @@
 #
 import os
 import sys
+
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../'))
 sys.path.insert(0, PROJECT_ROOT)
 
 from django_api_client import __version__
-
 
 # -- General configuration ------------------------------------------------
 
@@ -35,11 +35,11 @@ from django_api_client import __version__
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages']
+              'sphinx.ext.doctest',
+              'sphinx.ext.todo',
+              'sphinx.ext.coverage',
+              'sphinx.ext.viewcode',
+              'sphinx.ext.githubpages']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -54,8 +54,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Django Stuff'
-copyright = '2019, Rafael Henter'
+project = 'Django API Client'
+copyright = '2020, Rafael Henter'
 author = 'Rafael Henter'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -72,7 +72,9 @@ release = __version__
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'pt_BR'
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -85,7 +87,6 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -95,6 +96,7 @@ todo_include_todos = True
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if not on_rtd:
     import sphinx_rtd_theme
+
     html_theme = 'sphinx_rtd_theme'
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
@@ -121,12 +123,10 @@ html_sidebars = {
     ]
 }
 
-
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'DjangoStuffdoc'
-
+htmlhelp_basename = 'DjangoApiClient'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -152,20 +152,18 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'DjangoStuff.tex', 'Django Stuff Documentation',
+    (master_doc, 'DjangoApiClient.tex', 'Django API Client Documentation',
      'Rafael Henter', 'manual'),
 ]
-
 
 # -- Options for manual page output ---------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'DjangoStuff', 'Django Stuff Documentation',
+    (master_doc, 'DjangoApiClient', 'Django API Client Documentation',
      [author], 1)
 ]
-
 
 # -- Options for Texinfo output -------------------------------------------
 
@@ -173,12 +171,11 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'DjangoStuff', 'Django Stuff Documentation',
-     author, 'DjangoStuff', 'One line description of project.',
+    (master_doc, 'DjangoApiClient', 'Django API Client Documentation',
+     author, 'DjangoApiClient',
+     'Django API Client is a client for APIs in general, which allows iterating with the API as if they were using a Local model in their project, through a client and Custom CBV (Class based Views).',
      'Miscellaneous'),
 ]
-
-
 
 # -- Options for Epub output ----------------------------------------------
 
@@ -199,5 +196,3 @@ epub_copyright = copyright
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
-
-

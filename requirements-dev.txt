@@ -7,6 +7,7 @@ ipython
 pre-commit
 Sphinx
 sphinx-autobuild
+sphinx-intl
 sphinx-rtd-theme
 twine
 wheel
