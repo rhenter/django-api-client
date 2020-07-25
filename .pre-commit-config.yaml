@@ -1,6 +1,6 @@
 repos:
 -   repo: git@github.com:pre-commit/pre-commit-hooks
-    rev: v2.1.0
+    rev: v3.1.0
     hooks:
     - id: debug-statements
     - id: trailing-whitespace
@@ -15,5 +15,9 @@ repos:
     - id: check-yaml
     - id: detect-private-key
     - id: forbid-new-submodules
+
+-   repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.9
+    hooks:
     - id: flake8
       args: ['--exclude=docs/*,*migrations*', '--ignore=E501']

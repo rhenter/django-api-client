@@ -75,7 +75,6 @@ setup(
     description='Library with REST APIs Client code for Django',
     install_requires=install_requires,
     keywords='utils tools django views list api client',
-    license='MIT',
     long_description=long_description,
     name='django-api-client',
     packages=find_packages(exclude=['docs', 'tests*']),

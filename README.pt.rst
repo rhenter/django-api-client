@@ -18,9 +18,6 @@ Alguns motivos para se usar o **Django API Client**
 
 Para mais informações, veja nossa documentação em `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_.
 
-Ref:
-`* Queryset: (Resultado de uma busca usando o ORM do Django)`
-
 Dependências
 ============
 
@@ -95,7 +92,7 @@ Exemplo
 
 *Obs: Os detalhes de configuração serão explicados na documentação*
 
-* Crie um arquivo clients.py em alguma pasta nucleo do seu projeto, caso não tenha crie dentro da sua pasta do projeto para ser simples de ser importado de qualquer lugar do projeto com o seguinte conteúdo:
+* Crie um arquivo clients.py em alguma pasta nucleo do seu projeto, caso não tenha, crie dentro da sua pasta do projeto para ficar mais simples de ser importado de qualquer lugar do projeto com o seguinte conteúdo:
 
 .. code-block:: python
 
@@ -123,7 +120,7 @@ Vamos imaginar que o cliente esta na pasta de projeto (pasta que contem o arquiv
   class OrderListView(ClientAPIListMixin):
       template_name = "template_name.html"        # Caminho do seu template HTML
       page_title = 'Orders'                       # Gera uma variavel de contexto para usar no seu template
-      page_base_url = reverse_lazy('order:list')  # Informação usada na paginação
+      page_base_url = reverse_lazy('order:list')  # Informação usada na paginação e na busca
       paginate_by = 50                            # Número de items para gerar a paginação
       client_method = api_client.order.get_orders
 
@@ -142,8 +139,8 @@ Exemplo com o endpoint **/order/orders/**:
         get_order    # GET: Detalhe de um recurso usando um identificador
         create_order # POST: Cria um registro de um recurso
         update_order # PUT/PATCH: Atualiza total ou parciamente um recurso usando um identificador
-  O que isso quer dizer?
-    Que o cliente sempre gerará a estutura de acordo os nomes dos seus endpoints
+    O que isso quer dizer?
+      Que o cliente sempre gerará a estutura de acordo os nomes dos seus endpoints
 
 Documentação
 ============

@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -27,7 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'rest_framework',
     'django_api_client',
 
     'testapp',
@@ -75,7 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'test_django_project.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
@@ -85,7 +81,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -109,7 +104,6 @@ AUTHENTICATION_BACKENDS = (
     'testapp.backends.MockAuthBackend',
 )
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
@@ -123,12 +117,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-
 
 CACHES = {
     'default': {
@@ -136,18 +128,19 @@ CACHES = {
     }
 }
 
+DJANGO_API_CLIENT = {
+    'API': {
+        'NAME': 'localhost',
+        'BASE_URL': 'http://localhost:8001/v1',
+        'ENDPOINTS': [
+            'condo/condos/',
+            'category/categories/',
+            'order/orders/',
+            'supplier/suppliers/',
 
-# Django REST Framework
-REST_FRAMEWORK = {
-    'UNAUTHENTICATED_USER': None,
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_PAGINATION_CLASS':
-        'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 150,
-    'DEFAULT_FILTER_BACKENDS': (
-        'rest_framework.filters.SearchFilter',
-        'rest_framework.filters.OrderingFilter'
-    )
+        ],
+        'LOCALE': 'pt-br',
+        'AUTHENTICATION_ACCESS_TOKEN_TYPE': 'Token',
+        'AUTHENTICATION_ACCESS_TOKEN': '56d5b06d739f0abcd41d78953749d467e8ba986d'
+    },
 }

@@ -20,9 +20,6 @@ Some reasons to use the **Django API Client**
 
 For more information, see our documentation at `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_.
 
-Ref:
-`* Queryset: (Result of a search using Django's ORM)`
-
 Requirements
 ============
 
@@ -67,7 +64,7 @@ To enable `django_api_client` in your project you need to add it to `INSTALLED_A
 Example
 =======
 
-- Adicione tambem ao settings.py a configuração para acessar sua API:
+- Also add the settings to access your API to settings.py:
 
 .. code-block:: python
 
@@ -97,9 +94,9 @@ Example
     }
 
 
-*Obs: Os detalhes de configuração serão explicados na documentação*
+*Note: The details of the configuration will be better explained in the documentation*
 
-* Crie um arquivo clients.py em alguma pasta nucleo do seu projeto, caso não tenha crie dentro da sua pasta do projeto para ser simples de ser importado de qualquer lugar do projeto com o seguinte conteúdo:
+* Create a clients.py file in the core folder of your project, if you haven't, created it within your project folder to be simple to be imported from anywhere in the project with the following content:
 
 .. code-block:: python
 
@@ -108,14 +105,15 @@ Example
   api_client = api_client_factory('production')
 
 
-Obs:
-  - O nome desta variável será o nome nome do cliente que você usará em todo o seu projeto
-  - Recomendo para produção usar uma env var setada no settings.py para você poder alterar de maneira simples o nome da API sem a necessidade de criar varios.
-  - No nosso caso, temos a opção de "production" e "localhost", o factory gerará o cliente de acordo com o nome utilizado e os parametros descritos nele
+Note:
+   - The name of this variable will be the name of the client that you can use throughout your project
+   - It is recommended that the production use a set of configurations without configurations.py to change the simple way or the name of the API without the need to create several.
+   - In our case, we have the option of "production" and "localhost", the factory generates the customer according to the name used and the parameters identified in it
 
-* Agora vamos listar os dados usando o sistema de templates normal do Django
 
-Vamos imaginar que o cliente esta na pasta de projeto (pasta que contem o arquivo settings.py)
+* Now we are going to list the data using the normal Django template system
+
+Let's imagine which client has a project folder (folder containing the settings.py file)
 
 .. code-block:: python
 
@@ -125,26 +123,26 @@ Vamos imaginar que o cliente esta na pasta de projeto (pasta que contem o arquiv
 
 
   class OrderListView(ClientAPIListMixin):
-      template_name = "template_name.html"        # Caminho do seu template HTML
-      page_title = 'Orders'                       # Gera uma variavel de contexto para usar no seu template
-      page_base_url = reverse_lazy('order:list')  # Informação usada na paginação
-      paginate_by = 50                            # Número de items para gerar a paginação
+      template_name = "template_name.html"        # Path where is your template
+      page_title = 'Orders'                       # Generates a context variable to use in your template
+      page_base_url = reverse_lazy('order:list')  # Information used in pagination, and the search
+      paginate_by = 50                            # Number of items to generate the pagination
       client_method = api_client.order.get_orders
 
 
-Obs:
-  O cliente gerará para cada endpoint a toda uma estrutura amigavel para o usuário. Exemplo com o endpoint */order/orders/*:
+Note:
+   The client will generate a user-friendly structure for each endpoint. Example with the endpoint */order/orders/*:
 
 .. code-block:: text
 
-    nome do endpoint: order
-    métodos:
-        get_orders   # GET: Listar
-        get_order    # GET: Detalhe de um recurso usando um identificador
-        create_order # POST: Cria um registro de um recurso
-        update_order # PUT/PATCH: Atualiza total ou parciamente um recurso usando um identificador
-  O que isso quer dizer?
-    Que o cliente sempre gerará a estutura de acordo os nomes dos seus endpoints
+    endpoint name: order
+    methods:
+         get_orders # GET: List
+         get_order # GET: Detail of a resource using an identifier
+         create_order # POST: Create a resource record
+         update_order # PUT / PATCH: Fully or partially updates a resource using an identifier
+    What does that mean?
+      That the customer will always generate the structure according to the names of their endpoints
 
 Documentation
 =============
