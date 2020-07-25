@@ -20,6 +20,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements-ci.txt
+            cd django_api_client; pip install .
 
       - save_cache:
           paths:
