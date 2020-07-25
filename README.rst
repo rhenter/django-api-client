@@ -1,3 +1,6 @@
+`Para visualizar o README em português <https://github.com/rhenter/django-api-client/blob/master/README.pt.rst>`_.
+
+
 =================
 Django API Client
 =================
@@ -14,9 +17,6 @@ Some reasons to use the **Django API Client**
 * You want to separate your Django project to let one of them only with the API with DRF and the other as a WebApp with Templates (HTML), CSS, JS instead of using some JS frontend (ReactJS, AngularJS, etc.)
 
 * You want to use a third party API to list, create and change using the django template system
-
-
-`README em português <https://github.com/rhenter/django-api-client/blob/master/README.pt.rst>`_.
 
 For more information, see our documentation at `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_.
 
