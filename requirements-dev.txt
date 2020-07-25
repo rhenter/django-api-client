@@ -8,6 +8,6 @@ pre-commit
 Sphinx
 sphinx-autobuild
 sphinx-intl
-sphinx-rtd-theme
+allanc-sphinx
 twine
 wheel
