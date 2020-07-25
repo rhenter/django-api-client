@@ -1,4 +1,4 @@
-import status
+from django_api_client import status
 
 
 def test_is_informational():

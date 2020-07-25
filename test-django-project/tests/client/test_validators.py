@@ -1,8 +1,9 @@
-import pytest
 from unittest.mock import Mock
-import status
 
-from django_api_client.client.exceptions import AuthError, NotFound, APIError, ServerError
+import pytest
+
+from django_api_client import status
+from django_api_client.client.exceptions import APIError, AuthError, NotFound, ServerError
 from django_api_client.client.validators import validate_status_code
 
 
