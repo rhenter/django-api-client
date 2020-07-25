@@ -91,3 +91,5 @@ ENV/
 *.swp
 .idea
 db.sqlite3
+
+test-django-project/django_api_client
