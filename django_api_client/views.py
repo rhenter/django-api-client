@@ -1,10 +1,10 @@
 import json
 
 from django.core.paginator import InvalidPage
-from django.http import Http404, HttpResponse
+from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView, ListView
-from django.views.generic.edit import FormView
+from django.views.generic.edit import DeleteView, FormView
 
 from mixins import BaseViewMixin
 from . import status
@@ -180,10 +180,20 @@ class ClientAPIAuthenticatedDetailView(DetailView):
 
     def get(self, request, *args, **kwargs):
         response = self.client_method(**self.kwargs)
-        instance = response.as_obj()
-        self.object = instance
+        self.object = response.as_obj()
         context = self.get_context_data()
         return self.render_to_response(context)
+
+
+class ClientAPIAuthenticatedDeleteView(DeleteView):
+    slug_field = api_client_settings.configs['SLUG_FIELD']
+    slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
+    client_method = None
+
+    def post(self, request, *args, **kwargs):
+        self.client_method(**self.kwargs)
+        success_url = self.get_success_url()
+        return HttpResponseRedirect(success_url)
 
 
 class ClientAPICreateView(BaseViewMixin, ClientAPIAuthenticatedCreateView):
@@ -199,4 +209,8 @@ class ClientAPIUpdateView(BaseViewMixin, ClientAPIAuthenticatedUpdateView):
 
 
 class ClientAPIListView(BaseViewMixin, ClientAPIAuthenticatedListView):
+    pass
+
+
+class ClientAPIDeleteView(BaseViewMixin, ClientAPIAuthenticatedDeleteView):
     pass
