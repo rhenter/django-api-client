@@ -1,0 +1,103 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - pt-br
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.24.0
+    method: GET
+    uri: http://localhost:8001/v1/fake/endpoint/
+  response:
+    body:
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta http-equiv=\"content-type\"
+        content=\"text/html; charset=utf-8\">\n  <title>Page not found at /v1/fake/endpoint/</title>\n
+        \ <meta name=\"robots\" content=\"NONE,NOARCHIVE\">\n  <style type=\"text/css\">\n
+        \   html * { padding:0; margin:0; }\n    body * { padding:10px 20px; }\n    body
+        * * { padding:0; }\n    body { font:small sans-serif; background:#eee; color:#000;
+        }\n    body>div { border-bottom:1px solid #ddd; }\n    h1 { font-weight:normal;
+        margin-bottom:.4em; }\n    h1 span { font-size:60%; color:#666; font-weight:normal;
+        }\n    table { border:none; border-collapse: collapse; width:100%; }\n    td,
+        th { vertical-align:top; padding:2px 3px; }\n    th { width:12em; text-align:right;
+        color:#666; padding-right:.5em; }\n    #info { background:#f6f6f6; }\n    #info
+        ol { margin: 0.5em 4em; }\n    #info ol li { font-family: monospace; }\n    #summary
+        { background: #ffc; }\n    #explanation { background:#eee; border-bottom:
+        0px none; }\n  </style>\n</head>\n<body>\n  <div id=\"summary\">\n    <h1>Page
+        not found <span>(404)</span></h1>\n    <table class=\"meta\">\n      <tr>\n
+        \       <th>Request Method:</th>\n        <td>GET</td>\n      </tr>\n      <tr>\n
+        \       <th>Request URL:</th>\n        <td>http://localhost:8001/v1/fake/endpoint/</td>\n
+        \     </tr>\n      \n    </table>\n  </div>\n  <div id=\"info\">\n    \n      <p>\n
+        \     Using the URLconf defined in <code>supplai_api.urls</code>,\n      Django
+        tried these URL patterns, in this order:\n      </p>\n      <ol>\n        \n
+        \         <li>\n            \n                ^$\n                [name='login']\n
+        \           \n          </li>\n        \n          <li>\n            \n                logout/\n
+        \               [name='logout']\n            \n          </li>\n        \n
+        \         <li>\n            \n                ^doc/$\n                [name='schema-redoc']\n
+        \           \n          </li>\n        \n          <li>\n            \n                ^o/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^o/login/\n                \n            \n
+        \         </li>\n        \n          <li>\n            \n                ^api-auth/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^admin/\n                \n            \n          </li>\n
+        \       \n          <li>\n            \n                ^ckeditor/\n                \n
+        \           \n          </li>\n        \n          <li>\n            \n                ^jet/dashboard/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^jet/\n                \n            \n          </li>\n
+        \       \n          <li>\n            \n                ^v1/agenda/\n                \n
+        \           \n          </li>\n        \n          <li>\n            \n                ^v1/auction/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^v1/core/\n                \n            \n
+        \         </li>\n        \n          <li>\n            \n                ^v1/category/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^v1/condo/\n                \n            \n
+        \         </li>\n        \n          <li>\n            \n                ^v1/contact/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^v1/financial/\n                \n            \n
+        \         </li>\n        \n          <li>\n            \n                ^v1/form/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^v1/administrator/\n                \n            \n
+        \         </li>\n        \n          <li>\n            \n                ^v1/order/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^v1/supplier/\n                \n            \n
+        \         </li>\n        \n          <li>\n            \n                ^v1/user/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^v1/rating/\n                \n            \n
+        \         </li>\n        \n          <li>\n            \n                ^v1/notification/\n
+        \               \n            \n          </li>\n        \n          <li>\n
+        \           \n                ^v1/faq/\n                \n            \n          </li>\n
+        \       \n          <li>\n            \n                ^v1/quote/\n                \n
+        \           \n          </li>\n        \n      </ol>\n      <p>\n        \n
+        \       The current path, <code>v1/fake/endpoint/</code>, didn't match any
+        of these.\n      </p>\n    \n  </div>\n\n  <div id=\"explanation\">\n    <p>\n
+        \     You're seeing this error because you have <code>DEBUG = True</code>
+        in\n      your Django settings file. Change that to <code>False</code>, and
+        Django\n      will display a standard 404 page.\n    </p>\n  </div>\n</body>\n</html>\n"
+    headers:
+      Content-Language:
+      - pt-br
+      Content-Length:
+      - '4799'
+      Content-Type:
+      - text/html
+      Date:
+      - Sat, 25 Jul 2020 18:43:37 GMT
+      Server:
+      - WSGIServer/0.2 CPython/3.8.0
+      Vary:
+      - Authorization, Accept-Language, Origin
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+    status:
+      code: 404
+      message: Not Found
+version: 1

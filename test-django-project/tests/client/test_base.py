@@ -5,6 +5,7 @@ import pytest
 from requests.exceptions import ConnectionError as RequestsConnectionError, ReadTimeout, Timeout
 
 from django_api_client.client.exceptions import NotFound, ServerError
+from ..vcr import vcr
 
 
 @pytest.fixture
@@ -17,8 +18,8 @@ def endpoint():
     return 'fake/endpoint/'
 
 
+@vcr.use_cassette()
 def test_sync_with_endpoint_not_fount(api_client, endpoint):
-
     with pytest.raises(NotFound) as error:
         api_client.api.search(endpoint)
 

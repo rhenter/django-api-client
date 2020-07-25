@@ -4,3 +4,4 @@ flake8
 pytest-cov
 pytest-django
 pytest>=3
+vcrpy
