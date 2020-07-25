@@ -8,6 +8,6 @@ pre-commit
 Sphinx
 sphinx-autobuild
 sphinx-intl
-allanc-sphinx
+sphinxjp.themes.basicstrap
 twine
 wheel
