@@ -129,7 +129,10 @@ Vamos imaginar que o cliente esta na pasta de projeto (pasta que contem o arquiv
 
 
 Obs:
-  O cliente gerará para cada endpoint a toda uma estrutura amigavel para o usuário. Exemplo com o endpoint */order/orders/*:
+  O cliente gerará para cada endpoint a toda uma estrutura amigavel para o usuário.
+
+
+Exemplo com o endpoint **/order/orders/**:
 
 .. code-block:: text
 
