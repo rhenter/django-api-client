@@ -24,7 +24,7 @@ def test_response_factory():
     ('base/sub/123123', 'BaseSub'),
     ('test/data', 'TestData'),
 ])
-def test_factory_str(endpoint,expected):
+def test_factory_str(endpoint, expected):
     data = {'users': [{'id': '000-000-0000000-000', 'tags': []}]}
 
     class ResponseTest:
