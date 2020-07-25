@@ -24,7 +24,7 @@ from django.conf import settings
 from django.test.signals import setting_changed
 
 DEFAULT_SETTINGS_KEY = 'DJANGO_API_CLIENT'
-DEFAULTS = {
+API_DEFAULTS = {
     'AUTHENTICATION_ACCESS_TOKEN': None,
     'AUTHENTICATION_ACCESS_TOKEN_TYPE': 'Bearer',
     'AUTHENTICATION_METHOD': 'header',
@@ -36,6 +36,10 @@ DEFAULTS = {
     'NAME': None,
     'URL_APPEND_SLASH': True,
     'TIMEOUT': 3,
+}
+DEFAULTS = {
+    'PAGE_SIZE': 100,
+    'SLUG_FIELD': 'id'
 }
 REQUIRED_KEYS = ['NAME', 'BASE_URL', 'ENDPOINTS']
 
@@ -52,12 +56,14 @@ class APIClientSettings:
     and return the class, rather than the string literal.
     """
 
-    def __init__(self, user_settings=None, defaults=None):
+    def __init__(self, user_settings=None, defaults=None, api_defaults=None):
         if user_settings:
             self._user_settings = user_settings
+        self.api_defaults = api_defaults or API_DEFAULTS
         self.defaults = defaults or DEFAULTS
         self._cached_attrs = set()
         self.apis = self._set_apis()
+        self.configs = self._get_defaults_configs()
 
     def _get_api_configs(self, api_settings):
         configs = {}
@@ -70,7 +76,7 @@ class APIClientSettings:
             if user_attr not in self.defaults:
                 raise AttributeError(f"Invalid API setting: '{user_attr}'")
 
-        for attr in self.defaults:
+        for attr in self.api_defaults:
             try:
                 # Check if present in user settings
                 val = api_settings[attr]
@@ -80,6 +86,26 @@ class APIClientSettings:
 
             if attr == 'URL_BASE' and not val.startswith('http'):
                 raise AttributeError(f"Invalid Base URL: '{val}'. Please add a URL with http or https as prefix.")
+
+            configs[attr] = val
+            # Cache the result
+            self._cached_attrs.add(attr)
+        return configs
+
+    def _get_defaults_configs(self):
+        configs = {}
+
+        for user_attr in self.user_settings:
+            if user_attr not in self.defaults:
+                raise AttributeError(f"Invalid API setting: '{user_attr}'")
+
+        for attr in self.defaults:
+            try:
+                # Check if present in user settings
+                val = self.user_settings[attr]
+            except KeyError:
+                # Fall back to defaults
+                val = self.defaults[attr]
 
             configs[attr] = val
             # Cache the result

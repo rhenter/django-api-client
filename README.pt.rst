@@ -18,9 +18,6 @@ Alguns motivos para se usar o **Django API Client**
 
 Para mais informações, veja nossa documentação em `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_.
 
-Ref:
-`* Queryset: (Resultado de uma busca usando o ORM do Django)`
-
 Dependências
 ============
 

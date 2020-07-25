@@ -136,18 +136,21 @@ CACHES = {
     }
 }
 
+DJANGO_API_CLIENT = {
+    'API': {
+        'NAME': 'localhost',
+        'BASE_URL': 'http://localhost:8001/v1',
+        'ENDPOINTS': [
+            'condo/condos/',
+            'category/categories/',
+            'order/orders/',
+            'supplier/suppliers/',
 
-# Django REST Framework
-REST_FRAMEWORK = {
-    'UNAUTHENTICATED_USER': None,
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_PAGINATION_CLASS':
-        'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 150,
-    'DEFAULT_FILTER_BACKENDS': (
-        'rest_framework.filters.SearchFilter',
-        'rest_framework.filters.OrderingFilter'
-    )
+        ],
+        'LOCALE': 'pt-br',
+        'AUTHENTICATION_ACCESS_TOKEN_TYPE': 'Token',
+        'AUTHENTICATION_ACCESS_TOKEN': '56d5b06d739f0abcd41d78953749d467e8ba986d'
+    },
 }
+
+

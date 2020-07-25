@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.1.2
+~~~~~
+
+* Add documentação and fix Python version
+
+
 0.1.1
 ~~~~~
 
