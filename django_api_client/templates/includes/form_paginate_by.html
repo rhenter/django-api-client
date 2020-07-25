@@ -1,0 +1,18 @@
+{% load i18n %}
+
+
+<form class="form-inline" action="." method="GET">
+  <div class="input-group input-group-sm" style="margin-left: 20px;">
+    <label for="id_paginate">{% trans "Show" %}</label>
+    <select class="form-control" name="paginate_by" id="id_paginate" onchange="this.form.submit()">
+      {% for pages in range_pagination %}
+      {% if paginate_by == pages %}
+      <option selected="selected">{{ pages }}</option>
+      {% else %}
+      <option>{{ pages }}</option>
+      {% endif %}
+      {% endfor %}
+    </select>
+  </div>
+</form>
+

@@ -1,0 +1,69 @@
+{% load i18n %}
+{% load l10n %}
+{% load app_utils %}
+
+{% if not no_info %}
+<span>
+  {{ page_obj.number }} {% trans 'of' %} {{ paginator.num_pages }}
+  {% trans 'page' %}{% if paginator.num_pages > 1 %}s{% endif %}.
+</span>
+{% endif %}
+{% if paginator.num_pages > 1 %}
+<ul class="pagination pagination-sm m-0 float-right">
+  
+  {% if page_obj.has_previous %}
+  <li class="page-item">
+    <a class="page-link" href="{{ search_url }}{{ append_param }}page={{ page_obj.previous_page_number }}">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+  </li>
+  {% else %}
+  <li class="page-item disabled">
+    <a class="page-link disabled" href="#">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+  </li>
+  {% endif %}
+  
+  {% if page_obj.number|add:'-4' > 1 %}
+  <li class="page-item">
+    <a class="page-link" href="{{ search_url }}{{ append_param }}page=1">1</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link" href="{{ search_url }}{{ append_param }}page={{ page_obj.number|add:'-5' }}">&hellip;</a>
+  </li>
+  {% endif %}
+  
+  {% for i in paginator.page_range %}
+  {% if page_obj.number == i %}
+  <li class="page-item active"><a class="page-link" href="#">{{ i }}</a></li>
+  {% elif i > page_obj.number|add:'-5' and i < page_obj.number|add:'5' %}
+  <li class="page-item"><a class="page-link" href="{{ search_url }}{{ append_param }}page={{ i }}">{{ i }}</a></li>
+  {% endif %}
+  {% endfor %}
+  
+  {% if paginator.num_pages > page_obj.number|add:'4' %}
+  <li class="page-item">
+    <a class="page-link" href="{{ search_url }}{{ append_param }}page={{ page_obj.number|add:'5' }}">&hellip;</a>
+  </li>
+  <li class="page-item">
+    <a class="page-link"
+       href="{{ search_url }}{{ append_param }}page={{ paginator.num_pages }}">{{ paginator.num_pages }}</a>
+  </li>
+  {% endif %}
+  
+  {% if page_obj.has_next %}
+  <li class="page-item">
+    <a class="page-link" href="{{ search_url }}{{ append_param }}page={{ page_obj.next_page_number }}">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </li>
+  {% else %}
+  <li class="page-item disabled">
+    <a class="page-link" href="#">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}

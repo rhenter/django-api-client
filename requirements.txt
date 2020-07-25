@@ -1,0 +1,4 @@
+django>=2.0
+pysimplemodel==2.3.3
+requests
+unipath

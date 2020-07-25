@@ -1,0 +1,25 @@
+{% load i18n %}
+{% load l10n %}
+
+
+<form class="form-inline" action="." method="GET">
+  <div class="input-group input-group-sm" style="width: 350px;">
+    <input
+        id="id_search"
+        name="search"
+        type="search"
+        placeholder="{{ placeholder }}"
+        value="{% if search %}{{ search }}{% endif %}"
+        class="form-control float-right">
+    <div class="input-group-append">
+      {% if search %}
+      <a id="btn-clear" class="btn btn-default" href="{{ page_base_url }}">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+      </a>
+      {% endif %}
+      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+</form>
+
+
