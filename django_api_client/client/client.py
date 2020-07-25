@@ -1,6 +1,6 @@
 from django.utils.translation import gettext_lazy as _
 
-from django_api_client.settings import api_client_settings, DEFAULTS
+from django_api_client.settings import api_client_settings
 from .base import BaseAPI, BaseEndpoint
 from .exceptions import APINotFound
 
@@ -30,18 +30,18 @@ def api_client_factory(api_name=''):
         raise APINotFound(_('API name Not Found.'))
 
     api_args = {
-        'api_name': api_configs.get('NAME', DEFAULTS['NAME']),
-        'base_url': api_configs.get('BASE_URL', DEFAULTS['BASE_URL']),
-        'access_token': api_configs.get('AUTHENTICATION_ACCESS_TOKEN', DEFAULTS['AUTHENTICATION_ACCESS_TOKEN']),
+        'api_name': api_configs.get('NAME'),
+        'base_url': api_configs.get('BASE_URL'),
+        'access_token': api_configs.get('AUTHENTICATION_ACCESS_TOKEN'),
         'access_token_type': api_configs.get(
-            'AUTHENTICATION_ACCESS_TOKEN_TYPE', DEFAULTS['AUTHENTICATION_ACCESS_TOKEN_TYPE']),
-        'authentication_method': api_configs.get('AUTHENTICATION_METHOD', DEFAULTS['AUTHENTICATION_METHOD']),
+            'AUTHENTICATION_ACCESS_TOKEN_TYPE'),
+        'authentication_method': api_configs.get('AUTHENTICATION_METHOD'),
         'authentication_url_extra_params': api_configs.get(
-            'AUTHENTICATION_URL_EXTRA_PARAMS', DEFAULTS['AUTHENTICATION_URL_EXTRA_PARAMS']),
-        'authentication_url_key': api_configs.get('AUTHENTICATION_URL_KEY', DEFAULTS['AUTHENTICATION_URL_KEY']),
-        'endpoints': api_configs.get('ENDPOINTS', DEFAULTS['ENDPOINTS']),
-        'locale': api_configs.get('LOCALE', DEFAULTS['LOCALE']),
-        'url_append_slash': api_configs.get('URL_APPEND_SLASH', DEFAULTS['URL_APPEND_SLASH']),
-        'timeout': api_configs.get('TIMEOUT', DEFAULTS['TIMEOUT']),
+            'AUTHENTICATION_URL_EXTRA_PARAMS'),
+        'authentication_url_key': api_configs.get('AUTHENTICATION_URL_KEY'),
+        'endpoints': api_configs.get('ENDPOINTS'),
+        'locale': api_configs.get('LOCALE'),
+        'url_append_slash': api_configs.get('URL_APPEND_SLASH'),
+        'timeout': api_configs.get('TIMEOUT'),
     }
     return APIClient(**api_args)

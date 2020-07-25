@@ -156,11 +156,22 @@ class BaseAPI:
         response = self.make_request('GET', endpoint, params=params)
         return ResponseFactory(response, endpoint)
 
+    def delete(self, endpoint):
+        """Do a DELETE request to remove a resource
+        Args:
+            endpoint (str): URL for the API endpoint with the ID of the resource.
+
+        Returns:
+            dict: Empty
+        """
+        response = self.make_request('DELETE', endpoint)
+        return ResponseFactory(response, endpoint)
+
 
 class BaseEndpoint:
     """Class holding endpoint functions.
     """
-    base_methods = ['_get_objects', '_create_object', '_get_object', '_update_object']
+    base_methods = ['_get_objects', '_create_object', '_get_object', '_update_object', '_delete_object']
 
     def __init__(self, api, endpoint=''):
         self._api = api
@@ -256,3 +267,20 @@ class BaseEndpoint:
         if self.endpoint.endswith('/'):
             path = f'{self.endpoint}{object_id}/'
         return self._api.update(path, data, partial)
+
+    def _delete_object(self, object_id):
+        """Delete a single resource
+        Args:
+            object_id (str): Object ID.
+
+        Returns:
+            dict: Empty
+
+        Raises:
+            RequestException: An error thrown by Requests library.
+            APIError: An error occurred while requesting the API.
+        """
+        path = f'{self.endpoint}/{object_id}/'
+        if self.endpoint.endswith('/'):
+            path = f'{self.endpoint}{object_id}/'
+        return self._api.delete(path)

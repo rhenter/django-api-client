@@ -73,7 +73,7 @@ class APIClientSettings:
                 raise AttributeError(f"Key Required: '{req_attr}'")
 
         for user_attr in api_settings:
-            if user_attr not in self.defaults:
+            if user_attr not in self.api_defaults:
                 raise AttributeError(f"Invalid API setting: '{user_attr}'")
 
         for attr in self.api_defaults:
@@ -82,7 +82,7 @@ class APIClientSettings:
                 val = api_settings[attr]
             except KeyError:
                 # Fall back to defaults
-                val = self.defaults[attr]
+                val = self.api_defaults[attr]
 
             if attr == 'URL_BASE' and not val.startswith('http'):
                 raise AttributeError(f"Invalid Base URL: '{val}'. Please add a URL with http or https as prefix.")
@@ -96,8 +96,8 @@ class APIClientSettings:
         configs = {}
 
         for user_attr in self.user_settings:
-            if user_attr not in self.defaults:
-                raise AttributeError(f"Invalid API setting: '{user_attr}'")
+            if user_attr != 'API' and user_attr not in self.defaults:
+                raise AttributeError(f"Invalid Global Setting: '{user_attr}'")
 
         for attr in self.defaults:
             try:
