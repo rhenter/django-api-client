@@ -45,9 +45,6 @@ coverage.xml
 *,cover
 .hypothesis/
 
-# Translations
-*.mo
-*.pot
 
 # Django API Client:
 *.log
@@ -61,7 +58,8 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+!docs/_build/
+!docs/build/
 
 # PyBuilder
 target/
