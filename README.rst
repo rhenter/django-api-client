@@ -18,7 +18,7 @@ Some reasons to use the **Django API Client**
 
 * You want to use a third party API to list, create and change using the django template system
 
-For more information, see our documentation at `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_.
+For more information, see our documentation at `Github Pages <https://rhenter.github.io/django-api-client/>`_
 
 Requirements
 ============
