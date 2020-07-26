@@ -77,7 +77,7 @@ setup(
     keywords='utils tools django views list api client',
     long_description=long_description,
     name='django-api-client',
-    packages=find_packages(exclude=['docs', 'tests*']),
+    packages=find_packages(exclude=['docs_src', 'tests*']),
     url='https://github.com/rhenter/django-api-client',
     version=version,
 )

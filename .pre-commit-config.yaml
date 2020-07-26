@@ -20,4 +20,4 @@ repos:
     rev: 3.7.9
     hooks:
     - id: flake8
-      args: ['--exclude=docs/*,*migrations*', '--ignore=E501']
+      args: ['--exclude=docs_src/*,*migrations*', '--ignore=E501']

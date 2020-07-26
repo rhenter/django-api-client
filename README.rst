@@ -164,7 +164,7 @@ Please send pull requests, very much appreciated.
 6. Create a Pull Request with your contribution
 
 
-.. |Docs| image:: https://readthedocs.org/projects/django-api-client/badge/?version=latest
+.. |Docs| image:: https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg
    :target: http://django-api-client.readthedocs.org/en/latest/?badge=latest
 .. |PyPI Version| image:: https://img.shields.io/pypi/pyversions/django-api-client.svg?maxAge=60
    :target: https://pypi.python.org/pypi/django-api-client
