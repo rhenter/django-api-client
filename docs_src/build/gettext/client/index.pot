@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Rafael Henter
+# This file is distributed under the same license as the Django API Client package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Django API Client 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-26 11:31-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/client/index.rst:2
+msgid "Overview"
+msgstr ""
+
+#: ../../source/client/index.rst:4
+msgid "API Client Factory is a python3 wrapper for REST APIs. That is, APIs that follow the pattern of using the methods as below:"
+msgstr ""
+
+#: ../../source/client/index.rst:15
+msgid "Settings"
+msgstr ""
+
+#: ../../source/client/index.rst:17
+msgid "To enable `django_api_client` in your project you need to add it to `INSTALLED_APPS` in your projects `settings.py` file:"
+msgstr ""
+
+#: ../../source/client/index.rst:29
+msgid "You need also to add you APIs configs using ``DJANGO_API_CLIENT`` constant. Ex:"
+msgstr ""
+
+#: ../../source/client/index.rst:47
+msgid "for more information on the available configurations see at:"
+msgstr ""
+
+#: ../../source/client/index.rst:55
+msgid "Client Usage"
+msgstr ""
+
+#: ../../source/client/index.rst:57
+msgid "Import the api_client_factory and create an instance using the name of the API you set in the ``DJANGO_API_CLIENT`` on settings.py file:"
+msgstr ""

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Overview &mdash; documentação Django API Client 0.3.0</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="top" title="documentação Django API Client 0.3.0" href="../index.html" />
+    <link rel="next" title="Available Settings" href="defaults.html" />
+    <link rel="prev" title="Requirements" href="../quickstart/index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.0</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Overview</a></li>
+<li><a class="reference internal" href="#settings">Settings</a></li>
+<li><a class="reference internal" href="#client-usage">Client Usage</a></li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../quickstart/index.html" title="Requirements" accesskey="P">anterior </a></li>
+              <li><a href="defaults.html" title="Available Settings" accesskey="N">próximo </a></li>
+              <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
+            
+            <li class="visible-xs"><a href="../_sources/client/index.rst.txt" rel="nofollow">Exibir Fonte</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Ir" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Overview</a></li>
+<li><a class="reference internal" href="#settings">Settings</a></li>
+<li><a class="reference internal" href="#client-usage">Client Usage</a></li>
+</ul>
+
+  <h4>Tópico anterior</h4>
+  <p class="topless"><a href="../quickstart/index.html"
+                        title="capítulo anterior">Requirements</a></p>
+  <h4>Próximo tópico</h4>
+  <p class="topless"><a href="defaults.html"
+                        title="próximo capítulo">Available Settings</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Essa Página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/client/index.rst.txt"
+            rel="nofollow">Exibir Fonte</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Busca rápida</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Ir" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link permanente para este título">¶</a></h1>
+<p>API Client Factory is a python3 wrapper for REST APIs. That is, APIs that follow the pattern of using the methods as below:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET: List or Retrieve
+POST: Create
+UPDATE: Full Update
+PATCH: Partial Update
+</pre></div>
+</div>
+</div>
+<div class="section" id="settings">
+<h1>Settings<a class="headerlink" href="#settings" title="Link permanente para este título">¶</a></h1>
+<p>To enable <cite>django_api_client</cite> in your project you need to add it to <cite>INSTALLED_APPS</cite> in your projects
+<cite>settings.py</cite> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="o">...</span>
+    <span class="s1">&#39;django_api_client&#39;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>You need also to add you APIs configs using <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> constant. Ex:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DJANGO_API_CLIENT</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;API&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;Slug Name to Access Your client&gt;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;URL_BASE&#39;</span><span class="p">:</span> <span class="s1">&#39;https://example.com/v1&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;ENDPOINTS&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;&lt;PATH OF THE ENDPOINT 1&gt;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;&lt;PATH OF THE ENDPOINT 2&gt;&#39;</span><span class="p">,</span>
+            <span class="o">...</span>
+        <span class="p">],</span>
+        <span class="s1">&#39;AUTHENTICATION_ACCESS_TOKEN&#39;</span><span class="p">:</span> <span class="s1">&#39;TOKEN&#39;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>for more information on the available configurations see at:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="defaults.html">Available Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html#api">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html#general-defaults">General defaults</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="client-usage">
+<h1>Client Usage<a class="headerlink" href="#client-usage" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Import the api_client_factory and create an instance using the name of the API you set in the <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> on settings.py file:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="kn">from</span> <span class="nn">django_api_client.client</span> <span class="kn">import</span> <span class="n">api_client_factory</span>
+<span class="o">&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">api_client_factory</span><span class="p">(</span><span class="s1">&#39;&lt;Slug Name to Access Your client&gt;&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span>
+<span class="o">&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">get_users</span><span class="p">()</span>
+<span class="o">&gt;&gt;</span>
+<span class="o">&gt;&gt;</span> <span class="c1"># Use the result as object</span>
+<span class="o">&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">as_obj</span><span class="p">())</span>
+<span class="n">UserUsers</span><span class="p">(</span>
+    <span class="n">previous</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="nb">next</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">results</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">NamelessModel</span><span class="p">(</span><span class="n">occupation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">full_name</span><span class="o">=</span><span class="s1">&#39;Admin System&#39;</span><span class="p">,</span>
+            <span class="n">image</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cpf</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">is_superuser</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cellphone</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sex</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="s1">&#39;admin&#39;</span><span class="p">,</span> <span class="n">birthdate</span><span class="o">=</span><span class="s1">&#39;09/09/1999&#39;</span><span class="p">,</span>
+            <span class="n">logged_as</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">is_temp</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_active</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+<span class="o">&gt;&gt;</span>
+<span class="o">&gt;&gt;</span> <span class="c1"># Use the result as dict</span>
+<span class="o">&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">as_dict</span><span class="p">())</span>
+<span class="p">{</span><span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+ <span class="s1">&#39;next&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+ <span class="s1">&#39;previous&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+ <span class="s1">&#39;results&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+   <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="s1">&#39;admin&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;full_name&#39;</span><span class="p">:</span> <span class="s1">&#39;Admin System&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;sex&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+   <span class="s1">&#39;birthdate&#39;</span><span class="p">:</span> <span class="s1">&#39;09/09/1999&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;cpf&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;cellphone&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;email&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+   <span class="s1">&#39;occupation&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+   <span class="s1">&#39;logged_as&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;is_superuser&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="s1">&#39;is_active&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+   <span class="s1">&#39;is_temp&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">}</span>
+  <span class="p">]</span>
+ <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../index.html">documentação Django API Client 0.3.0</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../quickstart/index.html" title="Requirements" >anterior</a></li>
+        <li><a href="defaults.html" title="Available Settings" >próximo</a></li>
+        <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2020, Rafael Henter.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.1.2.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

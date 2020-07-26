@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Dynamic Form and Field &mdash; documentação Django API Client 0.3.0</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="top" title="documentação Django API Client 0.3.0" href="../index.html" />
+    <link rel="next" title="Views" href="../views/index.html" />
+    <link rel="prev" title="Available Settings" href="../client/defaults.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.0</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Dynamic Form and Field</a><ul>
+<li><a class="reference internal" href="#dynamicform">DynamicForm</a></li>
+<li><a class="reference internal" href="#ajaxchoicefield">AjaxChoiceField</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../client/defaults.html" title="Available Settings" accesskey="P">anterior </a></li>
+              <li><a href="../views/index.html" title="Views" accesskey="N">próximo </a></li>
+              <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
+            
+            <li class="visible-xs"><a href="../_sources/forms/index.rst.txt" rel="nofollow">Exibir Fonte</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Ir" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Dynamic Form and Field</a><ul>
+<li><a class="reference internal" href="#dynamicform">DynamicForm</a></li>
+<li><a class="reference internal" href="#ajaxchoicefield">AjaxChoiceField</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Tópico anterior</h4>
+  <p class="topless"><a href="../client/defaults.html"
+                        title="capítulo anterior">Available Settings</a></p>
+  <h4>Próximo tópico</h4>
+  <p class="topless"><a href="../views/index.html"
+                        title="próximo capítulo">Views</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Essa Página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/forms/index.rst.txt"
+            rel="nofollow">Exibir Fonte</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Busca rápida</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Ir" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="dynamic-form-and-field">
+<h1>Dynamic Form and Field<a class="headerlink" href="#dynamic-form-and-field" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="dynamicform">
+<h2>DynamicForm<a class="headerlink" href="#dynamicform" title="Link permanente para este título">¶</a></h2>
+<p>In the same way that ModelForm does not need to manually add each attribute, DynamicForm only needs you to add the field name, allowing you to add the “Verbose Name” in the list</p>
+<ul class="simple">
+<li><p>Simple Example</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.forms</span> <span class="kn">import</span> <span class="n">DynamicForm</span>
+
+<span class="o">...</span>
+
+
+<span class="k">class</span> <span class="nc">CompanyExampleForm</span><span class="p">(</span><span class="n">DynamicForm</span><span class="p">):</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">dynamic_fields</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;brand&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cnpj&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Advanced Example with custom fields and verbose name</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.forms</span> <span class="kn">import</span> <span class="n">DynamicForm</span>
+
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">CompanyExampleForm</span><span class="p">(</span><span class="n">DynamicForm</span><span class="p">):</span>
+    <span class="n">phone</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Phone&#39;</span><span class="p">))</span>
+    <span class="n">cellphone</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Cellphone&#39;</span><span class="p">))</span>
+    <span class="n">email_contact</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">EmailField</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s1">&#39;Contact Email&#39;</span><span class="p">))</span>
+    <span class="n">active</span> <span class="o">=</span> <span class="n">forms</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">()</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">dynamic_fields</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Company Name&quot;</span><span class="p">),</span>
+            <span class="s1">&#39;brand&#39;</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Brand&quot;</span><span class="p">),</span>
+            <span class="s1">&#39;cnpj&#39;</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;CNPJ&quot;</span><span class="p">),</span>
+            <span class="s1">&#39;phone&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;cellphone&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;email_contact&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;active&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Advanced Example with validation</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.forms</span> <span class="kn">import</span> <span class="n">DynamicForm</span>
+
+<span class="c1"># These imports are only show a real CNPJ validation</span>
+<span class="kn">from</span> <span class="nn">django_stuff.utils</span> <span class="kn">import</span> <span class="n">remove_special_characters</span>
+<span class="kn">from</span> <span class="nn">django_stuff.validators</span> <span class="kn">import</span> <span class="n">validate_cnpj</span>
+
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">CompanyExampleForm</span><span class="p">(</span><span class="n">DynamicForm</span><span class="p">):</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+        <span class="n">dynamic_fields</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Company Name&quot;</span><span class="p">),</span>
+            <span class="s1">&#39;brand&#39;</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;Brand&quot;</span><span class="p">),</span>
+            <span class="s1">&#39;cnpj&#39;</span><span class="p">:</span> <span class="n">_</span><span class="p">(</span><span class="s2">&quot;CNPJ&quot;</span><span class="p">),</span>
+        <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">clean_cnpj</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">remove_special_characters</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">[</span><span class="s1">&#39;cnpj&#39;</span><span class="p">])</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">validate_cnpj</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">forms</span><span class="o">.</span><span class="n">ValidationError</span><span class="p">(</span><span class="s2">&quot;CNPJ Invalid.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ajaxchoicefield">
+<h2>AjaxChoiceField<a class="headerlink" href="#ajaxchoicefield" title="Link permanente para este título">¶</a></h2>
+<p>Is the same of a ChoiceField but you are able to populate the field using <code class="docutils literal notranslate"><span class="pre">ajax</span></code> in the template and submit the result</p>
+<ul class="simple">
+<li><p>Example</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.fields</span> <span class="kn">import</span> <span class="n">AjaxChoiceField</span>
+
+<span class="o">...</span>
+<span class="k">class</span> <span class="nc">TestForm</span><span class="p">(</span><span class="n">DynamicForm</span><span class="p">):</span>
+    <span class="n">sub_category</span> <span class="o">=</span> <span class="n">AjaxChoiceField</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">_</span><span class="p">(</span><span class="s2">&quot;Sub Category&quot;</span><span class="p">),</span> <span class="n">widget</span><span class="o">=</span><span class="n">forms</span><span class="o">.</span><span class="n">Select</span><span class="p">)</span>
+
+    <span class="k">class</span> <span class="nc">Meta</span><span class="p">:</span>
+      <span class="n">dynamic_fields</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="o">...</span>
+          <span class="s1">&#39;sub_category&#39;</span><span class="p">:,</span>
+      <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../index.html">documentação Django API Client 0.3.0</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="../client/defaults.html" title="Available Settings" >anterior</a></li>
+        <li><a href="../views/index.html" title="Views" >próximo</a></li>
+        <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2020, Rafael Henter.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.1.2.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

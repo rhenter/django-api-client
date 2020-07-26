@@ -40,11 +40,3 @@ or:
 
     $ cd test-django-project/
     $ py.test -vv -s
-
-Generating documentation
-------------------------
-
-.. code-block:: bash
-
-    $ cd docs/
-    $ make html

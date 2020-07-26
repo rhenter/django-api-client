@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Using Class Based Views (CBV) &mdash; documentação Django API Client 0.3.0</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+    <link rel="top" title="documentação Django API Client 0.3.0" href="../index.html" />
+    <link rel="up" title="Views" href="index.html" />
+    <link rel="next" title="Using Function Based Views (FBV)" href="fbv.html" />
+    <link rel="prev" title="Views" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.0</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Using Class Based Views (CBV)</a><ul>
+<li><a class="reference internal" href="#clientapilistview">ClientAPIListView</a></li>
+<li><a class="reference internal" href="#clientapidetailview">ClientAPIDetailView</a></li>
+<li><a class="reference internal" href="#clientapicreateview">ClientAPICreateView</a></li>
+<li><a class="reference internal" href="#clientapiupdateview">ClientAPIUpdateView</a></li>
+<li><a class="reference internal" href="#clientapideleteview">ClientAPIDeleteView</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="index.html" title="Views" accesskey="P">anterior </a></li>
+              <li><a href="fbv.html" title="Using Function Based Views (FBV)" accesskey="N">próximo </a></li>
+              <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
+              <li><a href="index.html" accesskey="U">Views</a></li>
+            
+            <li class="visible-xs"><a href="../_sources/views/cbv.rst.txt" rel="nofollow">Exibir Fonte</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Ir" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Using Class Based Views (CBV)</a><ul>
+<li><a class="reference internal" href="#clientapilistview">ClientAPIListView</a></li>
+<li><a class="reference internal" href="#clientapidetailview">ClientAPIDetailView</a></li>
+<li><a class="reference internal" href="#clientapicreateview">ClientAPICreateView</a></li>
+<li><a class="reference internal" href="#clientapiupdateview">ClientAPIUpdateView</a></li>
+<li><a class="reference internal" href="#clientapideleteview">ClientAPIDeleteView</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Tópico anterior</h4>
+  <p class="topless"><a href="index.html"
+                        title="capítulo anterior">Views</a></p>
+  <h4>Próximo tópico</h4>
+  <p class="topless"><a href="fbv.html"
+                        title="próximo capítulo">Using Function Based Views (FBV)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Essa Página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/views/cbv.rst.txt"
+            rel="nofollow">Exibir Fonte</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Busca rápida</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Ir" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="using-class-based-views-cbv">
+<h1>Using Class Based Views (CBV)<a class="headerlink" href="#using-class-based-views-cbv" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="clientapilistview">
+<h2>ClientAPIListView<a class="headerlink" href="#clientapilistview" title="Link permanente para este título">¶</a></h2>
+<p>Following the same example as Model ListView, the results returned from the model will go to the context variable `` object_list``, unless you want to customize it. Using ClientAPIListView we will use the attribute `` client_method`` instead of `` model`` to get our results</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIListView</span>
+
+<span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
+
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">TestListView</span><span class="p">(</span><span class="n">ClientAPIListView</span><span class="p">):</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;template_name.html&quot;</span>
+    <span class="n">page_title</span> <span class="o">=</span> <span class="s1">&#39;Tests&#39;</span>
+    <span class="n">page_base_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;order:list&#39;</span><span class="p">)</span>
+    <span class="n">paginate_by</span> <span class="o">=</span> <span class="mi">50</span>
+    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get_orders</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Note:</dt><dd><ul class="simple">
+<li><p>template_name: path with name of you template</p></li>
+<li><p>client_method: method of the client that to get the the resource list</p></li>
+<li><p>page_title: Generates a context variable to use in your template</p></li>
+<li><p>page_base_url: Information used in pagination, and the search</p></li>
+<li><p>paginate_by: Number of items to generate the pagination</p></li>
+</ul>
+</dd>
+</dl>
+<p>PS: The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+</div>
+<div class="section" id="clientapidetailview">
+<h2>ClientAPIDetailView<a class="headerlink" href="#clientapidetailview" title="Link permanente para este título">¶</a></h2>
+<p>Following the same example as Model DetailView, the results returned from the model will go to the context variable <code class="docutils literal notranslate"><span class="pre">object</span></code>, unless you want to customize it. Using ClientAPIDetailView we will use the attribute <code class="docutils literal notranslate"><span class="pre">client_method</span></code> instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our result</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIDetailView</span>
+
+<span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
+
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">TestDetailView</span><span class="p">(</span><span class="n">ClientAPIDetailView</span><span class="p">):</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;template_name.html&quot;</span>
+    <span class="n">page_title</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;View Test&#39;</span><span class="p">)</span>
+    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get_order</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Note:</dt><dd><ul class="simple">
+<li><p>template_name: path with name of you template</p></li>
+<li><p>client_method: method of the client that to get the resource information</p></li>
+<li><p>page_title: Generates a context variable to use in your template</p></li>
+</ul>
+</dd>
+</dl>
+<p>PS: The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+</div>
+<div class="section" id="clientapicreateview">
+<h2>ClientAPICreateView<a class="headerlink" href="#clientapicreateview" title="Link permanente para este título">¶</a></h2>
+<p>Following the same example as Model CreateView, on submit will validate and save, using ClientAPIListView we will use the attribute `` client_method`` instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our result</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPICreateView</span>
+
+<span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
+
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">TestCreateView</span><span class="p">(</span><span class="n">ClientAPICreateView</span><span class="p">):</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">TestForm</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;template_name.html&quot;</span>
+    <span class="n">page_title</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;View Test&#39;</span><span class="p">)</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;test:list&#39;</span><span class="p">)</span>
+    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">create_order</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Note:</dt><dd><ul class="simple">
+<li><p>template_name: path with name of you template</p></li>
+<li><p>client_method: method of the client that to create</p></li>
+<li><p>page_title: Generates a context variable to use in your template</p></li>
+</ul>
+</dd>
+</dl>
+<p>PS: The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+</div>
+<div class="section" id="clientapiupdateview">
+<h2>ClientAPIUpdateView<a class="headerlink" href="#clientapiupdateview" title="Link permanente para este título">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIUpdateView</span>
+
+<span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
+
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">TestUpdateView</span><span class="p">(</span><span class="n">ClientAPIUpdateView</span><span class="p">):</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">TestForm</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;template_name.html&quot;</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;test:list&#39;</span><span class="p">)</span>
+    <span class="n">page_title</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Edit Test&#39;</span><span class="p">)</span>
+    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">update_order</span>
+    <span class="n">client_initial_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">update_order</span>
+    <span class="n">partial</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>or with a custom initial</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIUpdateView</span>
+
+<span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
+
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">TestUpdateView</span><span class="p">(</span><span class="n">ClientAPIUpdateView</span><span class="p">):</span>
+    <span class="n">form_class</span> <span class="o">=</span> <span class="n">TestForm</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;template_name.html&quot;</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;test:list&#39;</span><span class="p">)</span>
+    <span class="n">page_title</span> <span class="o">=</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Edit Test&#39;</span><span class="p">)</span>
+    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">update_order</span>
+    <span class="n">client_initial_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">update_order</span>
+    <span class="n">partial</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">get_initial</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client_initial_method</span><span class="p">(</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">as_dict</span><span class="p">()</span>
+        <span class="n">instance</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">as_obj</span><span class="p">()</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;start_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">start_date</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y %H:%M&#39;</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;end_date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">instance</span><span class="o">.</span><span class="n">end_date</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y %H:%M&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Note:</dt><dd><ul class="simple">
+<li><p>template_name: path with name of you template</p></li>
+<li><p>client_method: method of the client that to update</p></li>
+<li><p>client_initial_method: method of the client that brings the result</p></li>
+<li><p>page_title: Generates a context variable to use in your template</p></li>
+<li><p>partial: means if you are going to update only part of your asset or you are going to update everything</p></li>
+</ul>
+</dd>
+</dl>
+<p>PS: The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+</div>
+<div class="section" id="clientapideleteview">
+<h2>ClientAPIDeleteView<a class="headerlink" href="#clientapideleteview" title="Link permanente para este título">¶</a></h2>
+<p>Following the same example as Model DetailView, the results returned from the model will go to the context variable <code class="docutils literal notranslate"><span class="pre">object</span></code>, unless you want to customize it. Using ClientAPIDetailView we will use the attribute <code class="docutils literal notranslate"><span class="pre">client_method</span></code> instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our result</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIDeleteView</span>
+
+<span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
+
+<span class="o">...</span>
+
+<span class="k">class</span> <span class="nc">TestDetailView</span><span class="p">(</span><span class="n">ClientAPIDeleteView</span><span class="p">):</span>
+    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">delete_order</span>
+    <span class="n">success_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;test:list&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Note:</dt><dd><ul class="simple">
+<li><p>client_method: method of the client that to remove the resource</p></li>
+</ul>
+</dd>
+</dl>
+<p>PS: The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../index.html">documentação Django API Client 0.3.0</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="index.html" title="Views" >anterior</a></li>
+        <li><a href="fbv.html" title="Using Function Based Views (FBV)" >próximo</a></li>
+        <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
+        <li><a href="index.html" >Views</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2020, Rafael Henter.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.1.2.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

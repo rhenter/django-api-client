@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>Release &mdash; documentação Django API Client 0.2.0</title>
+    <title>Release &mdash; documentação Django API Client 0.3.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,7 +33,7 @@
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
             URL_ROOT:    '../',
-            VERSION:     '0.2.0',
+            VERSION:     '0.3.0',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE:  true
@@ -51,9 +51,9 @@
 </script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="top" title="documentação Django API Client 0.2.0" href="../index.html" />
-    <link rel="next" title="0.2.0" href="../changelog.html" />
-    <link rel="prev" title="Development Installation" href="installation.html" /> 
+    <link rel="top" title="documentação Django API Client 0.3.0" href="../index.html" />
+    <link rel="next" title="0.3.0" href="../changelog.html" />
+    <link rel="prev" title="Documentation" href="documentation.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -65,14 +65,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.2.0</a>
+          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.0</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
 
             
-              <li><a href="installation.html" title="Development Installation" accesskey="P">anterior </a></li>
-              <li><a href="../changelog.html" title="0.2.0" accesskey="N">próximo </a></li>
+              <li><a href="documentation.html" title="Documentation" accesskey="P">anterior </a></li>
+              <li><a href="../changelog.html" title="0.3.0" accesskey="N">próximo </a></li>
               <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
             
             <li class="visible-xs"><a href="../_sources/development/release.rst.txt" rel="nofollow">Exibir Fonte</a></li>
@@ -108,11 +108,11 @@
 <div class="col-md-3 hidden-xs" id="sidebar-wrapper">
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h4>Tópico anterior</h4>
-  <p class="topless"><a href="installation.html"
-                        title="capítulo anterior">Development Installation</a></p>
+  <p class="topless"><a href="documentation.html"
+                        title="capítulo anterior">Documentation</a></p>
   <h4>Próximo tópico</h4>
   <p class="topless"><a href="../changelog.html"
-                        title="próximo capítulo">0.2.0</a></p>
+                        title="próximo capítulo">0.3.0</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -150,12 +150,23 @@
 <h1>Release<a class="headerlink" href="#release" title="Link permanente para este título">¶</a></h1>
 <p>To release a new version, a few steps are required:</p>
 <ul class="simple">
-<li><p>Add entry to <code class="docutils literal notranslate"><span class="pre">CHANGES.rst</span></code> and documentation</p></li>
-<li><p>Review changes in test requirements <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></p></li>
-<li><p>Test build with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">build</span></code></p></li>
-<li><p>Commit and push changes</p></li>
-<li><p>Release with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">release</span></code></p></li>
+<li><p>Add entry to <code class="docutils literal notranslate"><span class="pre">CHANGES.rst</span></code> following the same standard</p></li>
 </ul>
+<p>Example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">0.1.0</span>
+<span class="gh">-----</span>
+
+<span class="m">-</span> What was changed
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Review changes in test requirements <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code></p></li>
+<li><p>Commit and push changes</p></li>
+<li><p>Run the Release command that will run the tests, build the code and upload to Pypi.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ make release
+</pre></div>
+</div>
 </div>
 
 
@@ -173,12 +184,12 @@
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav navbar-nav ">
-        <li><a href="../index.html">documentação Django API Client 0.2.0</a></li>
+        <li><a href="../index.html">documentação Django API Client 0.3.0</a></li>
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="installation.html" title="Development Installation" >anterior</a></li>
-        <li><a href="../changelog.html" title="0.2.0" >próximo</a></li>
+        <li><a href="documentation.html" title="Documentation" >anterior</a></li>
+        <li><a href="../changelog.html" title="0.3.0" >próximo</a></li>
         <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
         <li><a href="#">top</a></li> 
       

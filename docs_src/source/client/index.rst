@@ -1,0 +1,99 @@
+Overview
+========
+
+API Client Factory is a python3 wrapper for REST APIs. That is, APIs that follow the pattern of using the methods as below:
+
+.. code-block:: text
+
+  GET: List or Retrieve
+  POST: Create
+  UPDATE: Full Update
+  PATCH: Partial Update
+
+
+Settings
+========
+
+To enable `django_api_client` in your project you need to add it to `INSTALLED_APPS` in your projects
+`settings.py` file:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        'django_api_client',
+        ...
+    )
+
+
+You need also to add you APIs configs using ``DJANGO_API_CLIENT`` constant. Ex:
+
+.. code-block:: python
+
+
+      DJANGO_API_CLIENT = {
+          'API': {
+              'NAME': '<Slug Name to Access Your client>',
+              'URL_BASE': 'https://example.com/v1',
+              'ENDPOINTS': [
+                  '<PATH OF THE ENDPOINT 1>',
+                  '<PATH OF THE ENDPOINT 2>',
+                  ...
+              ],
+              'AUTHENTICATION_ACCESS_TOKEN': 'TOKEN'
+          }
+      }
+
+for more information on the available configurations see at:
+
+.. toctree::
+    :maxdepth: 2
+
+    defaults.rst
+
+Client Usage
+============
+
+- Import the api_client_factory and create an instance using the name of the API you set in the ``DJANGO_API_CLIENT`` on settings.py file:
+
+.. code-block:: python
+
+    >> from django_api_client.client import api_client_factory
+    >> client = api_client_factory('<Slug Name to Access Your client>')
+    >>
+    >> result = client.user.get_users()
+    >>
+    >> # Use the result as object
+    >> print(result.as_obj())
+    UserUsers(
+        previous=None,
+        count=1,
+        next=None,
+        results=[
+            NamelessModel(occupation=None, full_name='Admin System',
+                image=None, cpf='', is_superuser=True, cellphone='', email='', sex=None, username='admin', birthdate='09/09/1999',
+                logged_as='', id=1, is_temp=False, is_active=True)
+        ]
+    )
+    >>
+    >> # Use the result as dict
+    >> print(result.as_dict())
+    {'count': 1,
+     'next': None,
+     'previous': None,
+     'results': [{'id': 1,
+       'username': 'admin',
+       'full_name': 'Admin System',
+       'sex': None,
+       'birthdate': '09/09/1999',
+       'cpf': '',
+       'cellphone': '',
+       'email': '',
+       'image': None,
+       'occupation': None,
+       'logged_as': '',
+       'is_superuser': True,
+       'is_active': True,
+       'is_temp': False}
+      ]
+     }

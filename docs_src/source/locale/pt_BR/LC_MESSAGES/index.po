@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-25 16:42-0300\n"
+"POT-Creation-Date: 2020-07-26 11:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,13 +24,12 @@ msgstr "Bem vindo a documentação do Django API Client"
 
 #: ../../source/index.rst:4
 msgid ""
-"Django API Client is a client for APIs in general, which allows iterating"
-" with the API as if they were using a Local model in their project, "
-"through a client and Custom CBV (Class based Views)"
-msgstr ""
-"Django API Client é um cliente para APIs em geral, que possibilita "
-"iteragir com a API como se tivessem usando um modelo Local no seu "
-"projeto, atravês de um client e CBV (Class based Views) Customizadas"
+"The Django API Client is an API response wrapper, which allows you to "
+"iterate through the API as if they were using a local model / object in "
+"your project. Whether through the direct customer in an FBV or using "
+"personalized CBV (class-based displays), this framework tries to make "
+"this communication as easy as possible"
+msgstr "O Django API Client é um wrapper de resposta da API, que permite iterar com a API como se eles estivesse usando um modelo/objeto local em seu projeto. Seja por meio do cliente direto em uma FBV ou usando CBV personalizada (exibições baseadas em classe), este framework tenta facilitar ao máximo esta comunicação"
 
 #: ../../source/index.rst:7
 msgid "Some reasons to use the **Django API Client**"
@@ -64,23 +63,15 @@ msgstr ""
 "Você deseja usar uma API de terceiros para listar, criar e alterar usando"
 " o sistema de templates do django"
 
-#: ../../source/index.rst:15
-msgid ""
-"For more information, see our documentation at `Read the Docs <http"
-"://django-api-client.readthedocs.io/en/latest/>`_."
-msgstr ""
-"Para mais informações, veja nossa documentação em `Read the Docs <http"
-"://django-api-client.readthedocs.io/en/latest/>`_."
-
-#: ../../source/index.rst:19
+#: ../../source/index.rst:17
 msgid "Quickstart"
 msgstr ""
 
-#: ../../source/index.rst:28
+#: ../../source/index.rst:26
 msgid "User Guide"
 msgstr "Guia do Usuário"
 
-#: ../../source/index.rst:39
+#: ../../source/index.rst:38
 msgid "Development"
 msgstr "Desenvolvimento"
 
@@ -101,5 +92,33 @@ msgid ""
 msgstr ""
 
 #: ../../source/index.rst:57
-msgid "Other"
-msgstr "Outro"
+msgid "Changelog"
+msgstr ""
+
+#~ msgid ""
+#~ "Django API Client is a client for"
+#~ " APIs in general, which allows "
+#~ "iterating with the API as if they"
+#~ " were using a Local model in "
+#~ "their project, through a client and "
+#~ "Custom CBV (Class based Views)"
+#~ msgstr ""
+#~ "Django API Client é um cliente "
+#~ "para APIs em geral, que possibilita "
+#~ "iteragir com a API como se "
+#~ "tivessem usando um modelo Local no "
+#~ "seu projeto, atravês de um client "
+#~ "e CBV (Class based Views) Customizadas"
+
+#~ msgid ""
+#~ "For more information, see our "
+#~ "documentation at `Read the Docs <http"
+#~ "://django-api-client.readthedocs.io/en/latest/>`_."
+#~ msgstr ""
+#~ "Para mais informações, veja nossa "
+#~ "documentação em `Read the Docs <http"
+#~ "://django-api-client.readthedocs.io/en/latest/>`_."
+
+#~ msgid "Other"
+#~ msgstr "Outro"
+

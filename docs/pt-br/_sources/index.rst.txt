@@ -1,7 +1,7 @@
 Welcome to Django API Client documentation!
 ===========================================
 
-Django API Client is a client for APIs in general, which allows iterating with the API as if they were using a Local model in their project, through a client and Custom CBV (Class based Views)
+The Django API Client is an API response wrapper, which allows you to iterate through the API as if they were using a local model / object in your project. Whether through the direct customer in an FBV or using personalized CBV (class-based displays), this framework tries to make this communication as easy as possible
 
 
 Some reasons to use the **Django API Client**
@@ -12,11 +12,9 @@ Some reasons to use the **Django API Client**
 
 * You want to use a third party API to list, create and change using the django template system
 
-For more information, see our documentation at `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_.
-
 
 Quickstart
-----------
+==========
 
 .. toctree::
     :maxdepth: 2
@@ -25,23 +23,25 @@ Quickstart
 
 
 User Guide
-----------
+==========
 
 .. toctree::
     :maxdepth: 2
 
-    fields.rst
-    forms.rst
-    utils.rst
+    client/index.rst
+    forms/index.rst
+    views/index.rst
+    example.rst
 
 
 Development
 -----------
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     development/installation.rst
+    development/documentation.rst
     development/release.rst
 
 

@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>Bem vindo a documentação do Django API Client &mdash; documentação Django API Client 0.2.0</title>
+    <title>Bem vindo a documentação do Django API Client &mdash; documentação Django API Client 0.3.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,7 +33,7 @@
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
             URL_ROOT:    './',
-            VERSION:     '0.2.0',
+            VERSION:     '0.3.0',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE:  true
@@ -51,7 +51,7 @@
 </script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Buscar" href="search.html" />
-    <link rel="top" title="documentação Django API Client 0.2.0" href="#" />
+    <link rel="top" title="documentação Django API Client 0.3.0" href="#" />
     <link rel="next" title="Requirements" href="quickstart/index.html" /> 
   </head>
   <body role="document">
@@ -64,7 +64,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">documentação Django API Client 0.2.0</a>
+          <a class="navbar-brand" href="#">documentação Django API Client 0.3.0</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -72,9 +72,9 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">Bem vindo a documentação do Django API Client</a><ul>
+<li><a class="reference internal" href="#">Bem vindo a documentação do Django API Client</a></li>
 <li><a class="reference internal" href="#quickstart">Quickstart</a></li>
-<li><a class="reference internal" href="#user-guide">Guia do Usuário</a></li>
+<li><a class="reference internal" href="#user-guide">Guia do Usuário</a><ul>
 <li><a class="reference internal" href="#development">Desenvolvimento</a></li>
 <li><a class="reference internal" href="#downloads">Downloads</a></li>
 <li><a class="reference internal" href="#changelog">Changelog</a></li>
@@ -123,9 +123,9 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="#">Tabela de Conteúdo</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Bem vindo a documentação do Django API Client</a><ul>
+<li><a class="reference internal" href="#">Bem vindo a documentação do Django API Client</a></li>
 <li><a class="reference internal" href="#quickstart">Quickstart</a></li>
-<li><a class="reference internal" href="#user-guide">Guia do Usuário</a></li>
+<li><a class="reference internal" href="#user-guide">Guia do Usuário</a><ul>
 <li><a class="reference internal" href="#development">Desenvolvimento</a></li>
 <li><a class="reference internal" href="#downloads">Downloads</a></li>
 <li><a class="reference internal" href="#changelog">Changelog</a></li>
@@ -171,16 +171,16 @@
                   
   <div class="section" id="welcome-to-django-api-client-documentation">
 <h1>Bem vindo a documentação do Django API Client<a class="headerlink" href="#welcome-to-django-api-client-documentation" title="Link permanente para este título">¶</a></h1>
-<p>Django API Client é um cliente para APIs em geral, que possibilita iteragir com a API como se tivessem usando um modelo Local no seu projeto, atravês de um client e CBV (Class based Views) Customizadas</p>
+<p>O Django API Client é um wrapper de resposta da API, que permite iterar com a API como se eles estivesse usando um modelo/objeto local em seu projeto. Seja por meio do cliente direto em uma FBV ou usando CBV personalizada (exibições baseadas em classe), este framework tenta facilitar ao máximo esta comunicação</p>
 <p>Alguns motivos para se usar o <strong>Django API Client</strong></p>
 <ul class="simple">
 <li><p>Se você trabalha com microsserviços com APIs em vários locais e deseja continuar usando o Django como um WebApp com os mesmos recursos para renderizar os dados como se estivesse usando os modelos nativos</p></li>
 <li><p>Você quer separar o seu projeto Django para deixar um deles somente com a API com DRF e outro como um WebApp com Templates(HTML), CSS, JS ao invés de usar algum frontend JS (ReactJS, AngularJS, etc)</p></li>
 <li><p>Você deseja usar uma API de terceiros para listar, criar e alterar usando o sistema de templates do django</p></li>
 </ul>
-<p>Para mais informações, veja nossa documentação em <a class="reference external" href="http://django-api-client.readthedocs.io/en/latest/">Read the Docs</a>.</p>
+</div>
 <div class="section" id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link permanente para este título">¶</a></h2>
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Link permanente para este título">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="quickstart/index.html">Requirements</a></li>
@@ -190,37 +190,44 @@
 </div>
 </div>
 <div class="section" id="user-guide">
-<h2>Guia do Usuário<a class="headerlink" href="#user-guide" title="Link permanente para este título">¶</a></h2>
+<h1>Guia do Usuário<a class="headerlink" href="#user-guide" title="Link permanente para este título">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="fields.html">Fields</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="fields.html#uuidprimarykeyfield">UUIDPrimaryKeyField</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fields.html#charfielddigitsonly">CharFieldDigitsOnly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client/index.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client/index.html#settings">Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="client/defaults.html">Available Settings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="forms.html">Forms</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="forms.html#cpffield">CPFField</a></li>
-<li class="toctree-l2"><a class="reference internal" href="forms.html#cnpjfield">CNPJField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client/index.html#client-usage">Client Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forms/index.html">Dynamic Form and Field</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="forms/index.html#dynamicform">DynamicForm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="forms/index.html#ajaxchoicefield">AjaxChoiceField</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="utils.html">Utils</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#generate-md5-hashcode">generate_md5_hashcode</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#generate-random-code">generate_random_code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#generate-datetime">generate_datetime</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#is-equal">is_equal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#sanitize-digits">sanitize_digits</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#validate-cpf">validate_cpf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="utils.html#validate-cnpj">validate_cnpj</a></li>
+<li class="toctree-l1"><a class="reference internal" href="views/index.html">Views</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="views/cbv.html">Using Class Based Views (CBV)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="views/fbv.html">Using Function Based Views (FBV)</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Example</a></li>
 </ul>
-</div>
 </div>
 <div class="section" id="development">
 <h2>Desenvolvimento<a class="headerlink" href="#development" title="Link permanente para este título">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="development/installation.html">Development Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/installation.html">Development Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/installation.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/installation.html#development-install">Development install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/installation.html#running-tests">Running tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development/documentation.html">Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/documentation.html#update-or-add-documentation">Update or Add Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/documentation.html#update-the-translation">Update the translation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/documentation.html#generating-documentation">Generating documentation</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="development/release.html">Release</a></li>
 </ul>
 </div>
@@ -236,11 +243,12 @@
 <h2>Changelog<a class="headerlink" href="#changelog" title="Link permanente para este título">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">0.2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id2">0.1.3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id3">0.1.2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id4">0.1.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id5">0.1.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">0.3.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id2">0.2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id3">0.1.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id4">0.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id5">0.1.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id6">0.1.0</a></li>
 </ul>
 </div>
 </div>
@@ -261,7 +269,7 @@
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav navbar-nav ">
-        <li><a href="#">documentação Django API Client 0.2.0</a></li>
+        <li><a href="#">documentação Django API Client 0.3.0</a></li>
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       

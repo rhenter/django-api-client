@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-25 17:57-0300\n"
+"POT-Creation-Date: 2020-07-26 11:31-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,22 +27,33 @@ msgid "To release a new version, a few steps are required:"
 msgstr ""
 
 #: ../../source/development/release.rst:6
-msgid "Add entry to ``CHANGES.rst`` and documentation"
+msgid "Add entry to ``CHANGES.rst`` following the same standard"
 msgstr ""
 
 #: ../../source/development/release.rst:8
+msgid "Example:"
+msgstr ""
+
+#: ../../source/development/release.rst:18
 msgid "Review changes in test requirements ``requirements.txt``"
 msgstr ""
 
-#: ../../source/development/release.rst:10
-msgid "Test build with ``make build``"
-msgstr ""
-
-#: ../../source/development/release.rst:12
+#: ../../source/development/release.rst:20
 msgid "Commit and push changes"
 msgstr ""
 
-#: ../../source/development/release.rst:14
-msgid "Release with ``make release``"
+#: ../../source/development/release.rst:22
+msgid ""
+"Run the Release command that will run the tests, build the code and "
+"upload to Pypi."
 msgstr ""
+
+#~ msgid "Add entry to ``CHANGES.rst`` and documentation"
+#~ msgstr ""
+
+#~ msgid "Test build with ``make build``"
+#~ msgstr ""
+
+#~ msgid "Release with ``make release``"
+#~ msgstr ""
 

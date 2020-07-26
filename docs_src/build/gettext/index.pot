@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Django API Client 0.2.0\n"
+"Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-25 17:57-0300\n"
+"POT-Creation-Date: 2020-07-26 11:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgid "Welcome to Django API Client documentation!"
 msgstr ""
 
 #: ../../source/index.rst:4
-msgid "Django API Client is a client for APIs in general, which allows iterating with the API as if they were using a Local model in their project, through a client and Custom CBV (Class based Views)"
+msgid "The Django API Client is an API response wrapper, which allows you to iterate through the API as if they were using a local model / object in your project. Whether through the direct customer in an FBV or using personalized CBV (class-based displays), this framework tries to make this communication as easy as possible"
 msgstr ""
 
 #: ../../source/index.rst:7
@@ -40,19 +40,15 @@ msgstr ""
 msgid "You want to use a third party API to list, create and change using the django template system"
 msgstr ""
 
-#: ../../source/index.rst:15
-msgid "For more information, see our documentation at `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_."
-msgstr ""
-
-#: ../../source/index.rst:19
+#: ../../source/index.rst:17
 msgid "Quickstart"
 msgstr ""
 
-#: ../../source/index.rst:28
+#: ../../source/index.rst:26
 msgid "User Guide"
 msgstr ""
 
-#: ../../source/index.rst:39
+#: ../../source/index.rst:38
 msgid "Development"
 msgstr ""
 
@@ -69,5 +65,5 @@ msgid "`Epub <https://readthedocs.org/projects/django-api-client/downloads/epub/
 msgstr ""
 
 #: ../../source/index.rst:57
-msgid "Other"
+msgid "Changelog"
 msgstr ""

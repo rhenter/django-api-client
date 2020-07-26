@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Available Settings &mdash; Django API Client 0.3.0 documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="../_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="Django API Client 0.3.0 documentation" href="../index.html" />
+    <link rel="up" title="Overview" href="index.html" />
+    <link rel="next" title="Dynamic Form and Field" href="../forms/index.html" />
+    <link rel="prev" title="Overview" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">Django API Client 0.3.0 documentation</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Available Settings</a><ul>
+<li><a class="reference internal" href="#api">API</a></li>
+<li><a class="reference internal" href="#general-defaults">General defaults</a></li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="index.html" title="Overview" accesskey="P">previous </a></li>
+              <li><a href="../forms/index.html" title="Dynamic Form and Field" accesskey="N">next </a></li>
+              <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
+              <li><a href="index.html" accesskey="U">Overview</a></li>
+            
+            <li class="visible-xs"><a href="../_sources/client/defaults.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Available Settings</a><ul>
+<li><a class="reference internal" href="#api">API</a></li>
+<li><a class="reference internal" href="#general-defaults">General defaults</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Overview</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../forms/index.html"
+                        title="next chapter">Dynamic Form and Field</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/client/defaults.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="available-settings">
+<h1>Available Settings<a class="headerlink" href="#available-settings" title="Permalink to this headline">¶</a></h1>
+<p>There are some settings that can be easily configured and added to the settings</p>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<p>API key could be a dict with a single API or a List with Many API settings</p>
+<ul class="simple">
+<li><p>AUTHENTICATION_ACCESS_TOKEN</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
+Default: None
+Required: True
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>AUTHENTICATION_ACCESS_TOKEN_TYPE</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Key used on the Header Authorization. Could be ``Bearer``, ``Token``, etc
+Default: &#39;Bearer&#39;
+Required: False
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>AUTHENTICATION_METHOD</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Method used to authentication. Today only ``header`` and ``url`` using params is available
+Default: &#39;header&#39;
+Required: False
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>AUTHENTICATION_URL_EXTRA_PARAMS</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Extra params used to authenticate by URL using GET method
+Default: []
+Required: False
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>AUTHENTICATION_URL_KEY</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Key used to authenticate by URL using GET method
+Default: &#39;token&#39;
+Required: False
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>BASE_URL</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: API URL with the protocol. E.g: https://example.com/v1
+Default: None
+Required: True
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>ENDPOINTS</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to map all endpoint you want to access
+Default: []
+Required: False
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>LOCALE</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Only available in the Header authentication method, is the used to pass the ``Accept-Language`` in the request
+Default: Project Language Code
+Required: False
+</pre></div>
+</div>
+<p>n’)
+* NAME</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
+Default: None
+Required: False
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>URL_APPEND_SLASH</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
+Default: True
+Required: False
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>TIMEOUT</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
+Default: 3
+Required: False
+</pre></div>
+</div>
+</div>
+<div class="section" id="general-defaults">
+<h2>General defaults<a class="headerlink" href="#general-defaults" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>PAGE_SIZE</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
+Default: 100
+Required: False
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>SLUG_FIELD</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Key used to get a endpoint resource. Use the same identifier you receive in payload.
+Default: &#39;id&#39;
+Required: False
+</pre></div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="../index.html">Django API Client 0.3.0 documentation</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="index.html" title="Overview" >previous</a></li>
+        <li><a href="../forms/index.html" title="Dynamic Form and Field" >next</a></li>
+        <li><a href="../genindex.html" title="General Index" >index</a></li>
+        <li><a href="index.html" >Overview</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2020, Rafael Henter.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.1.2.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

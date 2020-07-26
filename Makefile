@@ -26,7 +26,7 @@ pip-dev:
 test: deps
 	cd test-django-project && py.test -vvv
 
-build: clean
+build: clean test
 	python setup.py sdist bdist_wheel
 
 release: build

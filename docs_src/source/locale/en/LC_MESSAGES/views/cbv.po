@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Rafael Henter
+# This file is distributed under the same license as the Django API Client
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Django API Client 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-26 11:44-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/views/cbv.rst:2
+msgid "Using Class Based Views (CBV)"
+msgstr ""
+
+#: ../../source/views/cbv.rst:5
+msgid "ClientAPIListView"
+msgstr ""
+
+#: ../../source/views/cbv.rst:7
+msgid ""
+"Following the same example as Model ListView, the results returned from "
+"the model will go to the context variable `` object_list``, unless you "
+"want to customize it. Using ClientAPIListView we will use the attribute "
+"`` client_method`` instead of `` model`` to get our results"
+msgstr ""
+
+#: ../../source/views/cbv.rst:32 ../../source/views/cbv.rst:57
+#: ../../source/views/cbv.rst:84 ../../source/views/cbv.rst:143
+#: ../../source/views/cbv.rst:168
+msgid "Note:"
+msgstr ""
+
+#: ../../source/views/cbv.rst:28 ../../source/views/cbv.rst:55
+#: ../../source/views/cbv.rst:82 ../../source/views/cbv.rst:139
+msgid "template_name: path with name of you template"
+msgstr ""
+
+#: ../../source/views/cbv.rst:29
+msgid "client_method: method of the client that to get the the resource list"
+msgstr ""
+
+#: ../../source/views/cbv.rst:30 ../../source/views/cbv.rst:57
+#: ../../source/views/cbv.rst:84 ../../source/views/cbv.rst:142
+msgid "page_title: Generates a context variable to use in your template"
+msgstr ""
+
+#: ../../source/views/cbv.rst:31
+msgid "page_base_url: Information used in pagination, and the search"
+msgstr ""
+
+#: ../../source/views/cbv.rst:32
+msgid "paginate_by: Number of items to generate the pagination"
+msgstr ""
+
+#: ../../source/views/cbv.rst:34 ../../source/views/cbv.rst:59
+#: ../../source/views/cbv.rst:86 ../../source/views/cbv.rst:145
+#: ../../source/views/cbv.rst:170
+msgid "PS: The usage example assumes that the endpoint ``/order/orders/``"
+msgstr ""
+
+#: ../../source/views/cbv.rst:37
+msgid "ClientAPIDetailView"
+msgstr ""
+
+#: ../../source/views/cbv.rst:39 ../../source/views/cbv.rst:151
+msgid ""
+"Following the same example as Model DetailView, the results returned from"
+" the model will go to the context variable ``object``, unless you want to"
+" customize it. Using ClientAPIDetailView we will use the attribute "
+"``client_method`` instead of ``model`` to get our result"
+msgstr ""
+
+#: ../../source/views/cbv.rst:56
+msgid "client_method: method of the client that to get the resource information"
+msgstr ""
+
+#: ../../source/views/cbv.rst:62
+msgid "ClientAPICreateView"
+msgstr ""
+
+#: ../../source/views/cbv.rst:64
+msgid ""
+"Following the same example as Model CreateView, on submit will validate "
+"and save, using ClientAPIListView we will use the attribute `` "
+"client_method`` instead of ``model`` to get our result"
+msgstr ""
+
+#: ../../source/views/cbv.rst:83
+msgid "client_method: method of the client that to create"
+msgstr ""
+
+#: ../../source/views/cbv.rst:89
+msgid "ClientAPIUpdateView"
+msgstr ""
+
+#: ../../source/views/cbv.rst:109
+msgid "or with a custom initial"
+msgstr ""
+
+#: ../../source/views/cbv.rst:140
+msgid "client_method: method of the client that to update"
+msgstr ""
+
+#: ../../source/views/cbv.rst:141
+msgid "client_initial_method: method of the client that brings the result"
+msgstr ""
+
+#: ../../source/views/cbv.rst:143
+msgid ""
+"partial: means if you are going to update only part of your asset or you "
+"are going to update everything"
+msgstr ""
+
+#: ../../source/views/cbv.rst:149
+msgid "ClientAPIDeleteView"
+msgstr ""
+
+#: ../../source/views/cbv.rst:167
+msgid "client_method: method of the client that to remove the resource"
+msgstr ""
+

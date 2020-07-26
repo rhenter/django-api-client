@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Rafael Henter
+# This file is distributed under the same license as the Django API Client
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Django API Client 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-26 11:31-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/quickstart/index.rst:2
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/quickstart/index.rst:4
+msgid "Python 3.x"
+msgstr ""
+
+#: ../../source/quickstart/index.rst:5
+msgid "Django 2.0 or later"
+msgstr ""
+
+#: ../../source/quickstart/index.rst:9
+msgid "How to install"
+msgstr ""
+
+#: ../../source/quickstart/index.rst:11
+msgid "You can get Django API Client by using pip:"
+msgstr ""
+
+#: ../../source/quickstart/index.rst:18
+msgid ""
+"If you want to install it from source, grab the git repository from "
+"Gitlab and run setup.py:"
+msgstr ""
+
+#: ../../source/quickstart/index.rst:28
+msgid "How to Config"
+msgstr ""
+
+#: ../../source/quickstart/index.rst:30
+msgid ""
+"To enable `django_api_client` in your project you need to add it to "
+"`INSTALLED_APPS` in your projects `settings.py` file:"
+msgstr ""
+

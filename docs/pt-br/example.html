@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="pt_BR">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Example &mdash; documentação Django API Client 0.3.0</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+<link rel="stylesheet" href="_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+<link rel="stylesheet" href="_static/css/font-awesome.min.css">
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    './',
+            VERSION:     '0.3.0',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="top" title="documentação Django API Client 0.3.0" href="index.html" />
+    <link rel="next" title="Development Installation" href="development/installation.html" />
+    <link rel="prev" title="Using Function Based Views (FBV)" href="views/fbv.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">documentação Django API Client 0.3.0</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            
+              <li><a href="views/fbv.html" title="Using Function Based Views (FBV)" accesskey="P">anterior </a></li>
+              <li><a href="development/installation.html" title="Development Installation" accesskey="N">próximo </a></li>
+              <li><a href="genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
+            
+            <li class="visible-xs"><a href="_sources/example.rst.txt" rel="nofollow">Exibir Fonte</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Ir" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <h4>Tópico anterior</h4>
+  <p class="topless"><a href="views/fbv.html"
+                        title="capítulo anterior">Using Function Based Views (FBV)</a></p>
+  <h4>Próximo tópico</h4>
+  <p class="topless"><a href="development/installation.html"
+                        title="próximo capítulo">Development Installation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Essa Página</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/example.rst.txt"
+            rel="nofollow">Exibir Fonte</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Busca rápida</h3>
+  <form class="search form-inline" action="search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Ir" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="example">
+<h1>Example<a class="headerlink" href="#example" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Add this settings in your project <code class="docutils literal notranslate"><span class="pre">settings.py</span></code> file to access your API</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DJANGO_API_CLIENT</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;API&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;production&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;URL_BASE&#39;</span><span class="p">:</span> <span class="s1">&#39;https://example.com/v1&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;ENDPOINTS&#39;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s1">&#39;/order/orders&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;/user/users&#39;</span><span class="p">,</span>
+              <span class="o">...</span>
+          <span class="p">],</span>
+          <span class="s1">&#39;AUTHENTICATION_ACCESS_TOKEN&#39;</span><span class="p">:</span> <span class="s1">&#39;TOKEN&#39;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;URL_BASE&#39;</span><span class="p">:</span> <span class="s1">&#39;http://localhost:8001/v1&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;ENDPOINTS&#39;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s1">&#39;/order/orders&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;/user/users&#39;</span><span class="p">,</span>
+              <span class="o">...</span>
+          <span class="p">],</span>
+          <span class="s1">&#39;AUTHENTICATION_ACCESS_TOKEN&#39;</span><span class="p">:</span> <span class="s1">&#39;TOKEN&#39;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><em>Nota: Os detalhes da configuração serão melhor explicados na documentação</em></p>
+<ul class="simple">
+<li><p>Crie um arquivo clients.py em alguma pasta nucleo do seu projeto, caso não tenha, crie dentro da sua pasta do projeto para ficar mais simples de ser importado de qualquer lugar do projeto com o seguinte conteúdo:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.client</span> <span class="kn">import</span> <span class="n">api_client_factory</span>
+
+<span class="n">api_client</span> <span class="o">=</span> <span class="n">api_client_factory</span><span class="p">(</span><span class="s1">&#39;production&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Nota</dt><dd><ul class="simple">
+<li><p>The name of this variable will be the name of the client that you can use throughout your project</p></li>
+<li><p>It is recommended that the production use a set of configurations without configurations.py to change the simple way or the name of the API without the need to create several.</p></li>
+<li><p>In our case, we have the option of “production” and “localhost”, the factory generates the customer according to the name used and the parameters identified in it</p></li>
+</ul>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Now we are going to list the data using the normal Django template system</p></li>
+</ul>
+<p>Let’s imagine which client has a project folder (folder containing the settings.py file)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.mixins</span> <span class="kn">import</span> <span class="n">ClientAPIListMixin</span>
+
+<span class="kn">from</span> <span class="nn">pasta_do_projeto.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
+
+
+<span class="k">class</span> <span class="nc">OrderListView</span><span class="p">(</span><span class="n">ClientAPIListMixin</span><span class="p">):</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;template_name.html&quot;</span>        <span class="c1"># Path where is your template</span>
+    <span class="n">page_title</span> <span class="o">=</span> <span class="s1">&#39;Orders&#39;</span>                       <span class="c1"># Generates a context variable to use in your template</span>
+    <span class="n">page_base_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;order:list&#39;</span><span class="p">)</span>  <span class="c1"># Information used in pagination, and the search</span>
+    <span class="n">paginate_by</span> <span class="o">=</span> <span class="mi">50</span>                            <span class="c1"># Number of items to generate the pagination</span>
+    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get_orders</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Nota</dt><dd><p>The client will generate a user-friendly structure for each endpoint. Example with the endpoint <em>/order/orders/</em>:</p>
+</dd>
+</dl>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>endpoint name: order
+methods:
+     get_orders # GET: List
+     get_order # GET: Detail of a resource using an identifier
+     create_order # POST: Create a resource record
+     update_order # PUT / PATCH: Fully or partially updates a resource using an identifier
+What does that mean?
+  That the customer will always generate the structure according to the names of their endpoints
+</pre></div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+
+      <!-- row -->
+      <div class="row footer-relbar">
+<div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
+  <div class="navbar-inner">
+    <ul class="nav navbar-nav ">
+        <li><a href="index.html">documentação Django API Client 0.3.0</a></li>
+    </ul>
+<ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
+      
+        <li><a href="views/fbv.html" title="Using Function Based Views (FBV)" >anterior</a></li>
+        <li><a href="development/installation.html" title="Development Installation" >próximo</a></li>
+        <li><a href="genindex.html" title="Índice Geral" >índice</a></li>
+        <li><a href="#">top</a></li> 
+      
+    </ul>
+  </div>
+</div>
+      </div><!-- /row -->
+
+      <!-- footer -->
+      <footer role="contentinfo">
+          &copy; Copyright 2020, Rafael Henter.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 3.1.2.
+      </footer>
+      <!-- /footer -->
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

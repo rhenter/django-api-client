@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Rafael Henter
+# This file is distributed under the same license as the Django API Client package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Django API Client 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-26 11:31-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/forms/index.rst:2
+msgid "Dynamic Form and Field"
+msgstr ""
+
+#: ../../source/forms/index.rst:5
+msgid "DynamicForm"
+msgstr ""
+
+#: ../../source/forms/index.rst:7
+msgid "In the same way that ModelForm does not need to manually add each attribute, DynamicForm only needs you to add the field name, allowing you to add the \"Verbose Name\" in the list"
+msgstr ""
+
+#: ../../source/forms/index.rst:10
+msgid "Simple Example"
+msgstr ""
+
+#: ../../source/forms/index.rst:29
+msgid "Advanced Example with custom fields and verbose name"
+msgstr ""
+
+#: ../../source/forms/index.rst:56
+msgid "Advanced Example with validation"
+msgstr ""
+
+#: ../../source/forms/index.rst:88
+msgid "AjaxChoiceField"
+msgstr ""
+
+#: ../../source/forms/index.rst:90
+msgid "Is the same of a ChoiceField but you are able to populate the field using ``ajax`` in the template and submit the result"
+msgstr ""
+
+#: ../../source/forms/index.rst:92
+msgid "Example"
+msgstr ""

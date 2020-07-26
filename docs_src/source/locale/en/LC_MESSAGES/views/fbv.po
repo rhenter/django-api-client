@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, Rafael Henter
+# This file is distributed under the same license as the Django API Client
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Django API Client 0.3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-26 11:44-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../source/views/fbv.rst:2
+msgid "Using Function Based Views (FBV)"
+msgstr ""
+
+#: ../../source/views/fbv.rst:4
+msgid ""
+"Using function-based views, the way is somewhat manual but it is quite "
+"simple to use the results in the same way."
+msgstr ""
+
+#: ../../source/views/fbv.rst:7
+msgid "List"
+msgstr ""
+
+#: ../../source/views/fbv.rst:23 ../../source/views/fbv.rst:42
+#: ../../source/views/fbv.rst:67 ../../source/views/fbv.rst:93
+msgid "PS: The usage example assumes that the endpoint ``/order/orders/``"
+msgstr ""
+
+#: ../../source/views/fbv.rst:26
+msgid "Detail"
+msgstr ""
+
+#: ../../source/views/fbv.rst:46
+msgid "Create"
+msgstr ""
+
+#: ../../source/views/fbv.rst:71
+msgid "Update"
+msgstr ""
+
+#: ../../source/views/fbv.rst:97
+msgid "Delete"
+msgstr ""
+

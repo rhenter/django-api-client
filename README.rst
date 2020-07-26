@@ -5,10 +5,9 @@
 Django API Client
 =================
 
-|PyPI latest| |PyPI Version| |PyPI License|  |CicleCI Status| |Coverage| |Docs|
+|PyPI latest| |PyPI Version| |PyPI License|  |CicleCI Status| |Coverage| |Docs| |Open Source? Yes!|
 
-Django API Client is a client for APIs in general, which allows iterating with the API as if they were using a Local model in their project, through a client and Custom CBV (Class based Views)
-
+The Django API Client is an API response wrapper, which allows you to iterate through the API as if they were using a local model / object in your project. Whether through the direct customer in an FBV or using personalized CBV (class-based displays), this framework tries to make this communication as easy as possible
 
 Some reasons to use the **Django API Client**
 
@@ -46,8 +45,8 @@ If you want to install it from source, grab the git repository from Gitlab and r
     $ python setup.py install
 
 
-Config
-======
+Settings
+========
 
 To enable `django_api_client` in your project you need to add it to `INSTALLED_APPS` in your projects
 `settings.py` file:
@@ -164,7 +163,7 @@ Please send pull requests, very much appreciated.
 6. Create a Pull Request with your contribution
 
 
-.. |Docs| image:: https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg
+.. |Docs| image:: https://img.shields.io/static/v1?label=DOC&message=GitHub%20Pages&color=%3CCOLOR%3E
    :target: https://rhenter.github.io/django-api-client/
 .. |PyPI Version| image:: https://img.shields.io/pypi/pyversions/django-api-client.svg?maxAge=60
    :target: https://pypi.python.org/pypi/django-api-client
@@ -176,3 +175,5 @@ Please send pull requests, very much appreciated.
    :target: https://circleci.com/gh/rhenter/django-api-client
 .. |Coverage| image:: https://codecov.io/gh/rhenter/django-api-client/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/rhenter/django-api-client
+.. |Open Source? Yes!| image:: https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github
+   :target: https://github.com/rhenter/django-api-client

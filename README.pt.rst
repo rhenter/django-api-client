@@ -2,9 +2,9 @@
 Django API Client
 =================
 
-|PyPI latest| |PyPI Version| |PyPI License|  |CicleCI Status| |Coverage| |Docs|
+|PyPI latest| |PyPI Version| |PyPI License|  |CicleCI Status| |Coverage| |Docs| |Open Source? Yes!|
 
-Django API Client é um cliente para APIs em geral, que possibilita iteragir com a API como se tivessem usando um modelo Local no seu projeto, atravês de um client e CBV (Class based Views) Customizadas
+O Django API Client é um wrapper de resposta da API, que permite iterar com a API como se eles estivesse usando um modelo/objeto local em seu projeto. Seja por meio do cliente direto em uma FBV ou usando CBV personalizada (exibições baseadas em classe), este framework tenta facilitar ao máximo esta comunicação
 
 
 Alguns motivos para se usar o **Django API Client**
@@ -162,7 +162,7 @@ Por favor envie seus Pull Requests, eles serão muito apreciados.
 6. Crie um Pull Request com a sua contribuição
 
 
-.. |Docs| image:: https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg
+.. |Docs| image:: https://img.shields.io/static/v1?label=DOC&message=GitHub%20Pages&color=%3CCOLOR%3E
    :target: https://rhenter.github.io/django-api-client/
 .. |PyPI Version| image:: https://img.shields.io/pypi/pyversions/django-api-client.svg?maxAge=60
    :target: https://pypi.python.org/pypi/django-api-client
@@ -174,3 +174,5 @@ Por favor envie seus Pull Requests, eles serão muito apreciados.
    :target: https://circleci.com/gh/rhenter/django-api-client
 .. |Coverage| image:: https://codecov.io/gh/rhenter/django-api-client/branch/master/graph/badge.svg
    :target: https://codecov.io/gh/rhenter/django-api-client
+.. |Open Source? Yes!| image:: https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github
+   :target: https://github.com/rhenter/django-api-client
