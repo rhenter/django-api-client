@@ -1,3 +1,8 @@
+0.3.1
+~~~~~
+
+- Finish the base documentation and Readme
+
 0.3.0
 ~~~~~
 

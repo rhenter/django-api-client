@@ -23,7 +23,7 @@ lint:
 pip-dev:
 	pip install -r requirements-dev.txt
 
-test: deps
+test:
 	cd test-django-project && py.test -vvv
 
 build: clean test
