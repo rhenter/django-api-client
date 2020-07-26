@@ -20,7 +20,8 @@ List
     return render(request, template, context)
 
 
-PS: The usage example assumes that the endpoint ``/order/orders/``
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``
 
 Detail
 ~~~~~~
@@ -39,7 +40,8 @@ Detail
     return render(request, template, context)
 
 
-PS: The usage example assumes that the endpoint ``/order/orders/``
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``
 
 
 Create
@@ -64,8 +66,8 @@ Create
     return render(request, template, context)
 
 
-PS: The usage example assumes that the endpoint ``/order/orders/``
-
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``
 
 Update
 ~~~~~~
@@ -90,7 +92,8 @@ Update
     return render(request, template, context)
 
 
-PS: The usage example assumes that the endpoint ``/order/orders/``
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``
 
 
 Delete
@@ -110,3 +113,6 @@ Delete
           return redirect('fbv:index')
       context = {"object": response.as_obj()}
       return render(request, template, context)
+
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``

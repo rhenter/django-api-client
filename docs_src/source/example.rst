@@ -69,7 +69,7 @@ Let's imagine which client has a project folder (folder containing the settings.
       client_method = api_client.order.get_orders
 
 
-.. hint::
+.. note::
    The client will generate a user-friendly structure for each endpoint. Example with the endpoint */order/orders/*:
 
 .. code-block:: text

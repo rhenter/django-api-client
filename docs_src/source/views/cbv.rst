@@ -31,7 +31,8 @@ Following the same example as Model ListView, the results returned from the mode
   - page_base_url: Information used in pagination, and the search
   - paginate_by: Number of items to generate the pagination
 
-PS: The usage example assumes that the endpoint ``/order/orders/``
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``
 
 ClientAPIDetailView
 ~~~~~~~~~~~~~~~~~~~
@@ -56,7 +57,8 @@ Following the same example as Model DetailView, the results returned from the mo
   - client_method: method of the client that to get the resource information
   - page_title: Generates a context variable to use in your template
 
-PS: The usage example assumes that the endpoint ``/order/orders/``
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``
 
 ClientAPICreateView
 ~~~~~~~~~~~~~~~~~~~
@@ -83,7 +85,8 @@ Following the same example as Model CreateView, on submit will validate and save
   - client_method: method of the client that to create
   - page_title: Generates a context variable to use in your template
 
-PS: The usage example assumes that the endpoint ``/order/orders/``
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``
 
 ClientAPIUpdateView
 ~~~~~~~~~~~~~~~~~~~
@@ -143,7 +146,8 @@ ClientAPIUpdateView
     - page_title: Generates a context variable to use in your template
     - partial: means if you are going to update only part of your asset or you are going to update everything
 
-PS: The usage example assumes that the endpoint ``/order/orders/``
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``
 
 
 ClientAPIDeleteView
@@ -168,4 +172,5 @@ Following the same example as Model DetailView, the results returned from the mo
   - client_method: method of the client that to remove the resource
 
 
-PS: The usage example assumes that the endpoint ``/order/orders/``
+.. note::
+  The usage example assumes that the endpoint ``/order/orders/``
