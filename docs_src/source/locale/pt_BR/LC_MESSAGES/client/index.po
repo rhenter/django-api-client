@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:31-0300\n"
+"POT-Creation-Date: 2020-07-26 14:23-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,41 +20,53 @@ msgstr ""
 
 #: ../../source/client/index.rst:2
 msgid "Overview"
-msgstr ""
+msgstr "Visão Geral"
 
 #: ../../source/client/index.rst:4
 msgid ""
 "API Client Factory is a python3 wrapper for REST APIs. That is, APIs that"
 " follow the pattern of using the methods as below:"
 msgstr ""
+"O API Client Factory é um wrapper python3 para APIs REST. Ou seja, APIs "
+"que seguem o padrão de uso dos métodos abaixo:"
 
 #: ../../source/client/index.rst:15
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #: ../../source/client/index.rst:17
 msgid ""
 "To enable `django_api_client` in your project you need to add it to "
-"`INSTALLED_APPS` in your projects `settings.py` file:"
+"`INSTALLED_APPS` in your project `settings.py` file:"
 msgstr ""
+"Para habilitar o `django_api_client` você precisa adiciona-lo ao "
+"`INSTALLED_APPS` no seu arquivo `settings.py` do seu projeto:"
 
 #: ../../source/client/index.rst:29
 msgid ""
-"You need also to add you APIs configs using ``DJANGO_API_CLIENT`` "
-"constant. Ex:"
+"You need also to add your APIs settings using ``DJANGO_API_CLIENT`` "
+"constant. E.g:"
 msgstr ""
+"Você tambem precisa adicionar suas configurações das suas API usando a "
+"constante ``DJANGO_API_CLIENT``. Ex"
 
-#: ../../source/client/index.rst:47
-msgid "for more information on the available configurations see at:"
-msgstr ""
+#: ../../source/client/index.rst:48
+#, fuzzy
+msgid "For more information on the available configurations, see at:"
+msgstr "Para mais informações sobre as configurações diponiveis, veja em:"
 
-#: ../../source/client/index.rst:55
+#: ../../source/client/index.rst:56
 msgid "Client Usage"
-msgstr ""
+msgstr "Uso do Cliente"
 
-#: ../../source/client/index.rst:57
+#: ../../source/client/index.rst:58
+#, fuzzy
 msgid ""
-"Import the api_client_factory and create an instance using the name of "
-"the API you set in the ``DJANGO_API_CLIENT`` on settings.py file:"
+"Import the api_client_factory module and create an instance using the "
+"name of the API you set in the ``DJANGO_API_CLIENT`` constant on "
+"settings.py file:"
 msgstr ""
+"Importe o modulo api_client_factory e crie uma instância usando o nome da"
+" API que você definiu na constante ``DJANGO_API_CLIENT`` no arquivo "
+"settings.py"
 

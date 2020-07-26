@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:51-0300\n"
+"POT-Creation-Date: 2020-07-26 14:16-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,65 +25,95 @@ msgstr ""
 #: ../../source/example.rst:4
 #, fuzzy
 msgid "Add this settings in your project ``settings.py`` file to access your API"
-msgstr "Adicione esta configuração no seu projeto no arquivo ``settings.py`` para acessar a sua API "
-
-#: ../../source/example.rst:35
-msgid ""
-"*Note: The details of the configuration will be better explained in the "
-"documentation*"
 msgstr ""
-"*Nota: Os detalhes da configuração serão melhor explicados na documentação*"
+"Adicione esta configuração no seu projeto no arquivo ``settings.py`` para"
+" acessar a sua API "
 
-#: ../../source/example.rst:37
+#: ../../source/example.rst:36
+#, fuzzy
+msgid ""
+"The details of the configuration will be better explained in the "
+"documentation"
+msgstr ""
+"*Nota: Os detalhes da configuração serão melhor explicados na "
+"documentação*"
+
+#: ../../source/example.rst:38
 msgid ""
 "Create a clients.py file in the core folder of your project, if you "
 "haven't, created it within your project folder to be simple to be "
 "imported from anywhere in the project with the following content:"
 msgstr ""
 "Crie um arquivo clients.py em alguma pasta nucleo do seu projeto, caso "
-"não tenha, crie dentro da sua pasta do projeto para ficar mais simples "
-"de ser importado de qualquer lugar do projeto com o seguinte conteúdo:"
-
-#: ../../source/example.rst:50 ../../source/example.rst:72
-msgid "Note:"
-msgstr "Nota"
-
-#: ../../source/example.rst:47
-msgid ""
-"The name of this variable will be the name of the client that you can use"
-" throughout your project"
-msgstr ""
+"não tenha, crie dentro da sua pasta do projeto para ficar mais simples de"
+" ser importado de qualquer lugar do projeto com o seguinte conteúdo:"
 
 #: ../../source/example.rst:48
 msgid ""
-"It is recommended that the production use a set of configurations without"
-" configurations.py to change the simple way or the name of the API "
-"without the need to create several."
+"The name of this variable will be the name of the customer that you will "
+"import into every project"
 msgstr ""
+"O nome dessa variável será o nome do cliente que será importado para cada"
+" projeto"
 
 #: ../../source/example.rst:49
 msgid ""
-"In our case, we have the option of \"production\" and \"localhost\", the "
-"factory generates the customer according to the name used and the "
+"It is recommended that the name comes from a constant in the settings.py "
+"file, and if possible it can even be an environment variable."
+msgstr ""
+"É recomendável que o nome venha de uma constante no arquivo settings.py, "
+"e se possível ser até uma variável de ambiente"
+
+#: ../../source/example.rst:50
+msgid ""
+"In our case, we have 2 options,\"production\" and \"localhost\", the "
+"factory generates a `api client` according to the name used and the "
 "parameters identified in it"
 msgstr ""
+"No nosso caso, temos 2 opções, \"produção\" e \"localhost\", a fábrica "
+"gera um `api client` de acordo com o nome usado e os parâmetros "
+"identificados nele"
 
-#: ../../source/example.rst:52
-msgid "Now we are going to list the data using the normal Django template system"
-msgstr ""
+#: ../../source/example.rst:53
+#, fuzzy
+msgid "Now we are going to list the data using the Django template system default"
+msgstr "Agora vamos listar os dados usando o sistema padrão do Django "
 
-#: ../../source/example.rst:54
+#: ../../source/example.rst:55
 msgid ""
 "Let's imagine which client has a project folder (folder containing the "
 "settings.py file)"
 msgstr ""
+"Vamos imaginar qual cliente tem uma pasta de projeto (pasta que contém o "
+"arquivo settings.py)"
 
-#: ../../source/example.rst:72
+#: ../../source/example.rst:73
 msgid ""
 "The client will generate a user-friendly structure for each endpoint. "
 "Example with the endpoint */order/orders/*:"
 msgstr ""
+"O cliente irá gerar uma estrutura amigavel para cada endpoing. Exemplo "
+"com o endpoint */order/orders/*:"
 
 #~ msgid "Also add the settings to access your API to settings.py:"
+#~ msgstr ""
+
+#~ msgid "Note:"
+#~ msgstr "Nota"
+
+#~ msgid ""
+#~ "It is recommended that the production"
+#~ " use a set of configurations without"
+#~ " configurations.py to change the simple "
+#~ "way or the name of the API "
+#~ "without the need to create several."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In our case, we have the option"
+#~ " of \"production\" and \"localhost\", the"
+#~ " factory generates the customer according"
+#~ " to the name used and the "
+#~ "parameters identified in it"
 #~ msgstr ""
 

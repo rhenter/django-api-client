@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>Example &mdash; documentação Django API Client 0.3.0</title>
+    <title>6. Example &mdash; documentação Django API Client 0.3.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -52,8 +52,8 @@
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Buscar" href="search.html" />
     <link rel="top" title="documentação Django API Client 0.3.0" href="index.html" />
-    <link rel="next" title="Development Installation" href="development/installation.html" />
-    <link rel="prev" title="Using Function Based Views (FBV)" href="views/fbv.html" /> 
+    <link rel="next" title="1. Development Installation" href="development/installation.html" />
+    <link rel="prev" title="5.2. Using Function Based Views (FBV)" href="views/fbv.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -71,8 +71,8 @@
           <ul class="nav navbar-nav navbar-right">
 
             
-              <li><a href="views/fbv.html" title="Using Function Based Views (FBV)" accesskey="P">anterior </a></li>
-              <li><a href="development/installation.html" title="Development Installation" accesskey="N">próximo </a></li>
+              <li><a href="views/fbv.html" title="5.2. Using Function Based Views (FBV)" accesskey="P">anterior </a></li>
+              <li><a href="development/installation.html" title="1. Development Installation" accesskey="N">próximo </a></li>
               <li><a href="genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
             
             <li class="visible-xs"><a href="_sources/example.rst.txt" rel="nofollow">Exibir Fonte</a></li>
@@ -109,10 +109,10 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h4>Tópico anterior</h4>
   <p class="topless"><a href="views/fbv.html"
-                        title="capítulo anterior">Using Function Based Views (FBV)</a></p>
+                        title="capítulo anterior"><span class="section-number">5.2. </span>Using Function Based Views (FBV)</a></p>
   <h4>Próximo tópico</h4>
   <p class="topless"><a href="development/installation.html"
-                        title="próximo capítulo">Development Installation</a></p>
+                        title="próximo capítulo"><span class="section-number">1. </span>Development Installation</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -147,7 +147,7 @@
                 <div class="body">
                   
   <div class="section" id="example">
-<h1>Example<a class="headerlink" href="#example" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">6. </span>Example<a class="headerlink" href="#example" title="Link permanente para este título">¶</a></h1>
 <ul class="simple">
 <li><p>Add this settings in your project <code class="docutils literal notranslate"><span class="pre">settings.py</span></code> file to access your API</p></li>
 </ul>
@@ -177,7 +177,10 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><em>Nota: Os detalhes da configuração serão melhor explicados na documentação</em></p>
+<div class="admonition hint">
+<p class="admonition-title">Dica</p>
+<p>The details of the configuration will be better explained in the documentation</p>
+</div>
 <ul class="simple">
 <li><p>Crie um arquivo clients.py em alguma pasta nucleo do seu projeto, caso não tenha, crie dentro da sua pasta do projeto para ficar mais simples de ser importado de qualquer lugar do projeto com o seguinte conteúdo:</p></li>
 </ul>
@@ -186,18 +189,18 @@
 <span class="n">api_client</span> <span class="o">=</span> <span class="n">api_client_factory</span><span class="p">(</span><span class="s1">&#39;production&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>Nota</dt><dd><ul class="simple">
-<li><p>The name of this variable will be the name of the client that you can use throughout your project</p></li>
-<li><p>It is recommended that the production use a set of configurations without configurations.py to change the simple way or the name of the API without the need to create several.</p></li>
-<li><p>In our case, we have the option of “production” and “localhost”, the factory generates the customer according to the name used and the parameters identified in it</p></li>
-</ul>
-</dd>
-</dl>
+<div class="admonition hint">
+<p class="admonition-title">Dica</p>
 <ul class="simple">
-<li><p>Now we are going to list the data using the normal Django template system</p></li>
+<li><p>O nome dessa variável será o nome do cliente que será importado para cada projeto</p></li>
+<li><p>É recomendável que o nome venha de uma constante no arquivo settings.py, e se possível ser até uma variável de ambiente</p></li>
+<li><p>No nosso caso, temos 2 opções, “produção” e “localhost”, a fábrica gera um <cite>api client</cite> de acordo com o nome usado e os parâmetros identificados nele</p></li>
 </ul>
-<p>Let’s imagine which client has a project folder (folder containing the settings.py file)</p>
+</div>
+<ul class="simple">
+<li><p>Now we are going to list the data using the Django template system default</p></li>
+</ul>
+<p>Vamos imaginar qual cliente tem uma pasta de projeto (pasta que contém o arquivo settings.py)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.mixins</span> <span class="kn">import</span> <span class="n">ClientAPIListMixin</span>
 
 <span class="kn">from</span> <span class="nn">pasta_do_projeto.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
@@ -211,10 +214,10 @@
     <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get_orders</span>
 </pre></div>
 </div>
-<dl class="simple">
-<dt>Nota</dt><dd><p>The client will generate a user-friendly structure for each endpoint. Example with the endpoint <em>/order/orders/</em>:</p>
-</dd>
-</dl>
+<div class="admonition hint">
+<p class="admonition-title">Dica</p>
+<p>O cliente irá gerar uma estrutura amigavel para cada endpoing. Exemplo com o endpoint <em>/order/orders/</em>:</p>
+</div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>endpoint name: order
 methods:
      get_orders # GET: List
@@ -246,8 +249,8 @@ What does that mean?
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="views/fbv.html" title="Using Function Based Views (FBV)" >anterior</a></li>
-        <li><a href="development/installation.html" title="Development Installation" >próximo</a></li>
+        <li><a href="views/fbv.html" title="5.2. Using Function Based Views (FBV)" >anterior</a></li>
+        <li><a href="development/installation.html" title="1. Development Installation" >próximo</a></li>
         <li><a href="genindex.html" title="Índice Geral" >índice</a></li>
         <li><a href="#">top</a></li> 
       

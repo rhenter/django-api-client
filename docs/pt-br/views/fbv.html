@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>Using Function Based Views (FBV) &mdash; documentação Django API Client 0.3.0</title>
+    <title>5.2. Using Function Based Views (FBV) &mdash; documentação Django API Client 0.3.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -52,9 +52,9 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
     <link rel="top" title="documentação Django API Client 0.3.0" href="../index.html" />
-    <link rel="up" title="Views" href="index.html" />
-    <link rel="next" title="Example" href="../example.html" />
-    <link rel="prev" title="Using Class Based Views (CBV)" href="cbv.html" /> 
+    <link rel="up" title="5. Views" href="index.html" />
+    <link rel="next" title="6. Example" href="../example.html" />
+    <link rel="prev" title="5.1. Using Class Based Views (CBV)" href="cbv.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -74,12 +74,12 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">Using Function Based Views (FBV)</a><ul>
-<li><a class="reference internal" href="#list">List</a></li>
-<li><a class="reference internal" href="#detail">Detail</a></li>
-<li><a class="reference internal" href="#create">Create</a></li>
-<li><a class="reference internal" href="#update">Update</a></li>
-<li><a class="reference internal" href="#delete">Delete</a></li>
+<li><a class="reference internal" href="#">5.2. Using Function Based Views (FBV)</a><ul>
+<li><a class="reference internal" href="#list">5.2.1. List</a></li>
+<li><a class="reference internal" href="#detail">5.2.2. Detail</a></li>
+<li><a class="reference internal" href="#create">5.2.3. Create</a></li>
+<li><a class="reference internal" href="#update">5.2.4. Update</a></li>
+<li><a class="reference internal" href="#delete">5.2.5. Delete</a></li>
 </ul>
 </li>
 </ul>
@@ -88,10 +88,10 @@
               </li>
 
             
-              <li><a href="cbv.html" title="Using Class Based Views (CBV)" accesskey="P">anterior </a></li>
-              <li><a href="../example.html" title="Example" accesskey="N">próximo </a></li>
+              <li><a href="cbv.html" title="5.1. Using Class Based Views (CBV)" accesskey="P">anterior </a></li>
+              <li><a href="../example.html" title="6. Example" accesskey="N">próximo </a></li>
               <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
-              <li><a href="index.html" accesskey="U">Views</a></li>
+              <li><a href="index.html" accesskey="U"><span class="section-number">5. </span>Views</a></li>
             
             <li class="visible-xs"><a href="../_sources/views/fbv.rst.txt" rel="nofollow">Exibir Fonte</a></li>
 
@@ -127,22 +127,22 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Using Function Based Views (FBV)</a><ul>
-<li><a class="reference internal" href="#list">List</a></li>
-<li><a class="reference internal" href="#detail">Detail</a></li>
-<li><a class="reference internal" href="#create">Create</a></li>
-<li><a class="reference internal" href="#update">Update</a></li>
-<li><a class="reference internal" href="#delete">Delete</a></li>
+<li><a class="reference internal" href="#">5.2. Using Function Based Views (FBV)</a><ul>
+<li><a class="reference internal" href="#list">5.2.1. List</a></li>
+<li><a class="reference internal" href="#detail">5.2.2. Detail</a></li>
+<li><a class="reference internal" href="#create">5.2.3. Create</a></li>
+<li><a class="reference internal" href="#update">5.2.4. Update</a></li>
+<li><a class="reference internal" href="#delete">5.2.5. Delete</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Tópico anterior</h4>
   <p class="topless"><a href="cbv.html"
-                        title="capítulo anterior">Using Class Based Views (CBV)</a></p>
+                        title="capítulo anterior"><span class="section-number">5.1. </span>Using Class Based Views (CBV)</a></p>
   <h4>Próximo tópico</h4>
   <p class="topless"><a href="../example.html"
-                        title="próximo capítulo">Example</a></p>
+                        title="próximo capítulo"><span class="section-number">6. </span>Example</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -177,10 +177,10 @@
                 <div class="body">
                   
   <div class="section" id="using-function-based-views-fbv">
-<h1>Using Function Based Views (FBV)<a class="headerlink" href="#using-function-based-views-fbv" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">5.2. </span>Using Function Based Views (FBV)<a class="headerlink" href="#using-function-based-views-fbv" title="Link permanente para este título">¶</a></h1>
 <p>Using function-based views, the way is somewhat manual but it is quite simple to use the results in the same way.</p>
 <div class="section" id="list">
-<h2>List<a class="headerlink" href="#list" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">5.2.1. </span>List<a class="headerlink" href="#list" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -195,7 +195,7 @@
 <p>PS: The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
 </div>
 <div class="section" id="detail">
-<h2>Detail<a class="headerlink" href="#detail" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">5.2.2. </span>Detail<a class="headerlink" href="#detail" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -210,7 +210,7 @@
 <p>PS: The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
 </div>
 <div class="section" id="create">
-<h2>Create<a class="headerlink" href="#create" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">5.2.3. </span>Create<a class="headerlink" href="#create" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -230,7 +230,7 @@
 <p>PS: The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
 </div>
 <div class="section" id="update">
-<h2>Update<a class="headerlink" href="#update" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">5.2.4. </span>Update<a class="headerlink" href="#update" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -251,7 +251,7 @@
 <p>PS: The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
 </div>
 <div class="section" id="delete">
-<h2>Delete<a class="headerlink" href="#delete" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">5.2.5. </span>Delete<a class="headerlink" href="#delete" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -287,10 +287,10 @@
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="cbv.html" title="Using Class Based Views (CBV)" >anterior</a></li>
-        <li><a href="../example.html" title="Example" >próximo</a></li>
+        <li><a href="cbv.html" title="5.1. Using Class Based Views (CBV)" >anterior</a></li>
+        <li><a href="../example.html" title="6. Example" >próximo</a></li>
         <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
-        <li><a href="index.html" >Views</a></li>
+        <li><a href="index.html" ><span class="section-number">5. </span>Views</a></li>
         <li><a href="#">top</a></li> 
       
     </ul>

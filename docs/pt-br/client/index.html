@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>Overview &mdash; documentação Django API Client 0.3.0</title>
+    <title>1. Visão Geral &mdash; documentação Django API Client 0.3.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -52,7 +52,7 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
     <link rel="top" title="documentação Django API Client 0.3.0" href="../index.html" />
-    <link rel="next" title="Available Settings" href="defaults.html" />
+    <link rel="next" title="2.1. Configurações Disponiveis" href="defaults.html" />
     <link rel="prev" title="Requirements" href="../quickstart/index.html" /> 
   </head>
   <body role="document">
@@ -73,9 +73,9 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">Overview</a></li>
-<li><a class="reference internal" href="#settings">Settings</a></li>
-<li><a class="reference internal" href="#client-usage">Client Usage</a></li>
+<li><a class="reference internal" href="#">1. Visão Geral</a></li>
+<li><a class="reference internal" href="#settings">2. Configurações</a></li>
+<li><a class="reference internal" href="#client-usage">3. Uso do Cliente</a></li>
 </ul>
 
                 </ul>
@@ -83,7 +83,7 @@
 
             
               <li><a href="../quickstart/index.html" title="Requirements" accesskey="P">anterior </a></li>
-              <li><a href="defaults.html" title="Available Settings" accesskey="N">próximo </a></li>
+              <li><a href="defaults.html" title="2.1. Configurações Disponiveis" accesskey="N">próximo </a></li>
               <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
             
             <li class="visible-xs"><a href="../_sources/client/index.rst.txt" rel="nofollow">Exibir Fonte</a></li>
@@ -120,9 +120,9 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Overview</a></li>
-<li><a class="reference internal" href="#settings">Settings</a></li>
-<li><a class="reference internal" href="#client-usage">Client Usage</a></li>
+<li><a class="reference internal" href="#">1. Visão Geral</a></li>
+<li><a class="reference internal" href="#settings">2. Configurações</a></li>
+<li><a class="reference internal" href="#client-usage">3. Uso do Cliente</a></li>
 </ul>
 
   <h4>Tópico anterior</h4>
@@ -130,7 +130,7 @@
                         title="capítulo anterior">Requirements</a></p>
   <h4>Próximo tópico</h4>
   <p class="topless"><a href="defaults.html"
-                        title="próximo capítulo">Available Settings</a></p>
+                        title="próximo capítulo"><span class="section-number">2.1. </span>Configurações Disponiveis</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -165,8 +165,8 @@
                 <div class="body">
                   
   <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Link permanente para este título">¶</a></h1>
-<p>API Client Factory is a python3 wrapper for REST APIs. That is, APIs that follow the pattern of using the methods as below:</p>
+<h1><span class="section-number">1. </span>Visão Geral<a class="headerlink" href="#overview" title="Link permanente para este título">¶</a></h1>
+<p>O API Client Factory é um wrapper python3 para APIs REST. Ou seja, APIs que seguem o padrão de uso dos métodos abaixo:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET: List or Retrieve
 POST: Create
 UPDATE: Full Update
@@ -175,9 +175,8 @@ PATCH: Partial Update
 </div>
 </div>
 <div class="section" id="settings">
-<h1>Settings<a class="headerlink" href="#settings" title="Link permanente para este título">¶</a></h1>
-<p>To enable <cite>django_api_client</cite> in your project you need to add it to <cite>INSTALLED_APPS</cite> in your projects
-<cite>settings.py</cite> file:</p>
+<h1><span class="section-number">2. </span>Configurações<a class="headerlink" href="#settings" title="Link permanente para este título">¶</a></h1>
+<p>Para habilitar o <cite>django_api_client</cite> você precisa adiciona-lo ao <cite>INSTALLED_APPS</cite> no seu arquivo <cite>settings.py</cite> do seu projeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="o">...</span>
     <span class="s1">&#39;django_api_client&#39;</span><span class="p">,</span>
@@ -185,7 +184,7 @@ PATCH: Partial Update
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>You need also to add you APIs configs using <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> constant. Ex:</p>
+<p>Você tambem precisa adicionar suas configurações das suas API usando a constante <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code>. Ex</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DJANGO_API_CLIENT</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;API&#39;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;Slug Name to Access Your client&gt;&#39;</span><span class="p">,</span>
@@ -200,21 +199,23 @@ PATCH: Partial Update
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>for more information on the available configurations see at:</p>
+<ul class="simple">
+<li><p>For more information on the available configurations, see at:</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="defaults.html">Available Settings</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="defaults.html#api">API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="defaults.html#general-defaults">General defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="defaults.html">2.1. Configurações Disponiveis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html#api">2.1.1. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html#general-defaults">2.1.2. Configuração padrão</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div class="section" id="client-usage">
-<h1>Client Usage<a class="headerlink" href="#client-usage" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">3. </span>Uso do Cliente<a class="headerlink" href="#client-usage" title="Link permanente para este título">¶</a></h1>
 <ul class="simple">
-<li><p>Import the api_client_factory and create an instance using the name of the API you set in the <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> on settings.py file:</p></li>
+<li><p>Import the api_client_factory module and create an instance using the name of the API you set in the <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> constant on settings.py file:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="kn">from</span> <span class="nn">django_api_client.client</span> <span class="kn">import</span> <span class="n">api_client_factory</span>
 <span class="o">&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">api_client_factory</span><span class="p">(</span><span class="s1">&#39;&lt;Slug Name to Access Your client&gt;&#39;</span><span class="p">)</span>
@@ -279,7 +280,7 @@ PATCH: Partial Update
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
         <li><a href="../quickstart/index.html" title="Requirements" >anterior</a></li>
-        <li><a href="defaults.html" title="Available Settings" >próximo</a></li>
+        <li><a href="defaults.html" title="2.1. Configurações Disponiveis" >próximo</a></li>
         <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
         <li><a href="#">top</a></li> 
       

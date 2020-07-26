@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>Overview &mdash; Django API Client 0.3.0 documentation</title>
+    <title>1. Overview &mdash; Django API Client 0.3.0 documentation</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -51,7 +51,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="top" title="Django API Client 0.3.0 documentation" href="../index.html" />
-    <link rel="next" title="Available Settings" href="defaults.html" />
+    <link rel="next" title="2.1. Available Settings" href="defaults.html" />
     <link rel="prev" title="Requirements" href="../quickstart/index.html" /> 
   </head>
   <body role="document">
@@ -72,9 +72,9 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">Overview</a></li>
-<li><a class="reference internal" href="#settings">Settings</a></li>
-<li><a class="reference internal" href="#client-usage">Client Usage</a></li>
+<li><a class="reference internal" href="#">1. Overview</a></li>
+<li><a class="reference internal" href="#settings">2. Settings</a></li>
+<li><a class="reference internal" href="#client-usage">3. Client Usage</a></li>
 </ul>
 
                 </ul>
@@ -82,7 +82,7 @@
 
             
               <li><a href="../quickstart/index.html" title="Requirements" accesskey="P">previous </a></li>
-              <li><a href="defaults.html" title="Available Settings" accesskey="N">next </a></li>
+              <li><a href="defaults.html" title="2.1. Available Settings" accesskey="N">next </a></li>
               <li><a href="../genindex.html" title="General Index" accesskey="I">index </a></li>
             
             <li class="visible-xs"><a href="../_sources/client/index.rst.txt" rel="nofollow">Show Source</a></li>
@@ -119,9 +119,9 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Overview</a></li>
-<li><a class="reference internal" href="#settings">Settings</a></li>
-<li><a class="reference internal" href="#client-usage">Client Usage</a></li>
+<li><a class="reference internal" href="#">1. Overview</a></li>
+<li><a class="reference internal" href="#settings">2. Settings</a></li>
+<li><a class="reference internal" href="#client-usage">3. Client Usage</a></li>
 </ul>
 
   <h4>Previous topic</h4>
@@ -129,7 +129,7 @@
                         title="previous chapter">Requirements</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="defaults.html"
-                        title="next chapter">Available Settings</a></p>
+                        title="next chapter"><span class="section-number">2.1. </span>Available Settings</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -164,7 +164,7 @@
                 <div class="body">
                   
   <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">1. </span>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
 <p>API Client Factory is a python3 wrapper for REST APIs. That is, APIs that follow the pattern of using the methods as below:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET: List or Retrieve
 POST: Create
@@ -174,8 +174,8 @@ PATCH: Partial Update
 </div>
 </div>
 <div class="section" id="settings">
-<h1>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h1>
-<p>To enable <cite>django_api_client</cite> in your project you need to add it to <cite>INSTALLED_APPS</cite> in your projects
+<h1><span class="section-number">2. </span>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h1>
+<p>To enable <cite>django_api_client</cite> in your project you need to add it to <cite>INSTALLED_APPS</cite> in your project
 <cite>settings.py</cite> file:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="o">...</span>
@@ -184,7 +184,7 @@ PATCH: Partial Update
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>You need also to add you APIs configs using <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> constant. Ex:</p>
+<p>You need also to add your APIs settings using <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> constant. E.g:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DJANGO_API_CLIENT</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;API&#39;</span><span class="p">:</span> <span class="p">{</span>
         <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;Slug Name to Access Your client&gt;&#39;</span><span class="p">,</span>
@@ -199,21 +199,23 @@ PATCH: Partial Update
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>for more information on the available configurations see at:</p>
+<ul class="simple">
+<li><p>For more information on the available configurations, see at:</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="defaults.html">Available Settings</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="defaults.html#api">API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="defaults.html#general-defaults">General defaults</a></li>
+<li class="toctree-l1"><a class="reference internal" href="defaults.html">2.1. Available Settings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html#api">2.1.1. API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html#general-defaults">2.1.2. General defaults</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div class="section" id="client-usage">
-<h1>Client Usage<a class="headerlink" href="#client-usage" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">3. </span>Client Usage<a class="headerlink" href="#client-usage" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p>Import the api_client_factory and create an instance using the name of the API you set in the <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> on settings.py file:</p></li>
+<li><p>Import the api_client_factory module and create an instance using the name of the API you set in the <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> constant on settings.py file:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="kn">from</span> <span class="nn">django_api_client.client</span> <span class="kn">import</span> <span class="n">api_client_factory</span>
 <span class="o">&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">api_client_factory</span><span class="p">(</span><span class="s1">&#39;&lt;Slug Name to Access Your client&gt;&#39;</span><span class="p">)</span>
@@ -278,7 +280,7 @@ PATCH: Partial Update
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
         <li><a href="../quickstart/index.html" title="Requirements" >previous</a></li>
-        <li><a href="defaults.html" title="Available Settings" >next</a></li>
+        <li><a href="defaults.html" title="2.1. Available Settings" >next</a></li>
         <li><a href="../genindex.html" title="General Index" >index</a></li>
         <li><a href="#">top</a></li> 
       

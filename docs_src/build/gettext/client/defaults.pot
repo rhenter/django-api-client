@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:31-0300\n"
+"POT-Creation-Date: 2020-07-26 14:50-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgid "Available Settings"
 msgstr ""
 
 #: ../../source/client/defaults.rst:4
-msgid "There are some settings that can be easily configured and added to the settings"
+msgid "There are some settings that can be easily customized and added to the settings"
 msgstr ""
 
 #: ../../source/client/defaults.rst:7
@@ -29,61 +29,175 @@ msgid "API"
 msgstr ""
 
 #: ../../source/client/defaults.rst:9
-msgid "API key could be a dict with a single API or a List with Many API settings"
+msgid "``API`` key can be a dictionary in case it is just a single API or a list of dictionaries in case it is multiple APIs \""
 msgstr ""
 
 #: ../../source/client/defaults.rst:12
 msgid "AUTHENTICATION_ACCESS_TOKEN"
 msgstr ""
 
-#: ../../source/client/defaults.rst:20
+#: ../../source/client/defaults.rst:15
+msgid "Definition: Used to pass your API Access Token"
+msgstr ""
+
+#: ../../source/client/defaults.rst:16
+#: ../../source/client/defaults.rst:51
+#: ../../source/client/defaults.rst:72
+msgid "Default: None"
+msgstr ""
+
+#: ../../source/client/defaults.rst:17
+#: ../../source/client/defaults.rst:52
+msgid "Required: True"
+msgstr ""
+
+#: ../../source/client/defaults.rst:19
 msgid "AUTHENTICATION_ACCESS_TOKEN_TYPE"
 msgstr ""
 
-#: ../../source/client/defaults.rst:28
+#: ../../source/client/defaults.rst:22
+msgid "Definition: Key used on the Header Authorization. Could be ``Bearer``, ``Token``, etc"
+msgstr ""
+
+#: ../../source/client/defaults.rst:23
+msgid "Default: 'Bearer'"
+msgstr ""
+
+#: ../../source/client/defaults.rst:24
+#: ../../source/client/defaults.rst:31
+#: ../../source/client/defaults.rst:38
+#: ../../source/client/defaults.rst:45
+#: ../../source/client/defaults.rst:59
+#: ../../source/client/defaults.rst:66
+#: ../../source/client/defaults.rst:73
+#: ../../source/client/defaults.rst:80
+#: ../../source/client/defaults.rst:87
+#: ../../source/client/defaults.rst:98
+#: ../../source/client/defaults.rst:105
+msgid "Required: False"
+msgstr ""
+
+#: ../../source/client/defaults.rst:26
 msgid "AUTHENTICATION_METHOD"
 msgstr ""
 
-#: ../../source/client/defaults.rst:36
+#: ../../source/client/defaults.rst:29
+msgid "Definition: Method used to authentication. Today only ``header`` and ``url`` using params is available"
+msgstr ""
+
+#: ../../source/client/defaults.rst:30
+msgid "Default: 'header'"
+msgstr ""
+
+#: ../../source/client/defaults.rst:33
 msgid "AUTHENTICATION_URL_EXTRA_PARAMS"
 msgstr ""
 
-#: ../../source/client/defaults.rst:44
+#: ../../source/client/defaults.rst:36
+msgid "Definition: Extra params used to authenticate by URL using GET method"
+msgstr ""
+
+#: ../../source/client/defaults.rst:37
+#: ../../source/client/defaults.rst:58
+msgid "Default: []"
+msgstr ""
+
+#: ../../source/client/defaults.rst:40
 msgid "AUTHENTICATION_URL_KEY"
 msgstr ""
 
-#: ../../source/client/defaults.rst:52
+#: ../../source/client/defaults.rst:43
+msgid "Definition: Key used to authenticate by URL using GET method"
+msgstr ""
+
+#: ../../source/client/defaults.rst:44
+msgid "Default: 'token'"
+msgstr ""
+
+#: ../../source/client/defaults.rst:47
 msgid "BASE_URL"
 msgstr ""
 
-#: ../../source/client/defaults.rst:60
+#: ../../source/client/defaults.rst:50
+msgid "Definition: API URL with the protocol. E.g: https://example.com/v1"
+msgstr ""
+
+#: ../../source/client/defaults.rst:54
 msgid "ENDPOINTS"
 msgstr ""
 
-#: ../../source/client/defaults.rst:68
+#: ../../source/client/defaults.rst:57
+msgid "Definition: Used to map all endpoint you want to access"
+msgstr ""
+
+#: ../../source/client/defaults.rst:61
 msgid "LOCALE"
 msgstr ""
 
-#: ../../source/client/defaults.rst:76
-msgid "n') * NAME"
+#: ../../source/client/defaults.rst:64
+msgid "Definition: Only available in the Header authentication method, is the used to pass the ``Accept-Language`` in the request"
 msgstr ""
 
-#: ../../source/client/defaults.rst:85
+#: ../../source/client/defaults.rst:65
+msgid "Default: Project Language Code"
+msgstr ""
+
+#: ../../source/client/defaults.rst:68
+msgid "NAME"
+msgstr ""
+
+#: ../../source/client/defaults.rst:71
+msgid "Definition: Slug Name used to instantiate the client api factory"
+msgstr ""
+
+#: ../../source/client/defaults.rst:75
 msgid "URL_APPEND_SLASH"
 msgstr ""
 
-#: ../../source/client/defaults.rst:93
+#: ../../source/client/defaults.rst:78
+msgid "Definition: Add a slash in end of the endpoint URL"
+msgstr ""
+
+#: ../../source/client/defaults.rst:79
+msgid "Default: True"
+msgstr ""
+
+#: ../../source/client/defaults.rst:82
 msgid "TIMEOUT"
 msgstr ""
 
-#: ../../source/client/defaults.rst:103
+#: ../../source/client/defaults.rst:85
+msgid "Definition: Period to wait for the request response"
+msgstr ""
+
+#: ../../source/client/defaults.rst:86
+msgid "Default: 3"
+msgstr ""
+
+#: ../../source/client/defaults.rst:91
 msgid "General defaults"
 msgstr ""
 
-#: ../../source/client/defaults.rst:105
+#: ../../source/client/defaults.rst:93
 msgid "PAGE_SIZE"
 msgstr ""
 
-#: ../../source/client/defaults.rst:113
+#: ../../source/client/defaults.rst:96
+msgid "Definition: Used define the size of the Pagination"
+msgstr ""
+
+#: ../../source/client/defaults.rst:97
+msgid "Default: 100"
+msgstr ""
+
+#: ../../source/client/defaults.rst:100
 msgid "SLUG_FIELD"
+msgstr ""
+
+#: ../../source/client/defaults.rst:103
+msgid "Definition: Key used to get a endpoint resource. Use the same identifier you receive in payload."
+msgstr ""
+
+#: ../../source/client/defaults.rst:104
+msgid "Default: 'id'"
 msgstr ""

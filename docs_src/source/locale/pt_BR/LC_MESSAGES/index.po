@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:44-0300\n"
+"POT-Creation-Date: 2020-07-26 13:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,8 +19,9 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 #: ../../source/index.rst:2
-msgid "Welcome to Django API Client documentation!"
-msgstr "Bem vindo a documentação do Django API Client"
+#, fuzzy
+msgid "Django API Client Documentation"
+msgstr "Documentação do Django API Client"
 
 #: ../../source/index.rst:4
 msgid ""
@@ -29,7 +30,12 @@ msgid ""
 "your project. Whether through the direct customer in an FBV or using "
 "personalized CBV (class-based displays), this framework tries to make "
 "this communication as easy as possible"
-msgstr "O Django API Client é um wrapper de resposta da API, que permite iterar com a API como se eles estivesse usando um modelo/objeto local em seu projeto. Seja por meio do cliente direto em uma FBV ou usando CBV personalizada (exibições baseadas em classe), este framework tenta facilitar ao máximo esta comunicação"
+msgstr ""
+"O Django API Client é um wrapper de resposta da API, que permite iterar "
+"com a API como se eles estivesse usando um modelo/objeto local em seu "
+"projeto. Seja por meio do cliente direto em uma FBV ou usando CBV "
+"personalizada (exibições baseadas em classe), este framework tenta "
+"facilitar ao máximo esta comunicação"
 
 #: ../../source/index.rst:7
 msgid "Some reasons to use the **Django API Client**"
@@ -71,27 +77,27 @@ msgstr ""
 msgid "User Guide"
 msgstr "Guia do Usuário"
 
-#: ../../source/index.rst:38
+#: ../../source/index.rst:39
 msgid "Development"
 msgstr "Desenvolvimento"
 
-#: ../../source/index.rst:49
+#: ../../source/index.rst:51
 msgid "Downloads"
 msgstr ""
 
-#: ../../source/index.rst:51
+#: ../../source/index.rst:53
 msgid ""
 "`PDF <https://readthedocs.org/projects/django-api-"
 "client/downloads/pdf/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:53
+#: ../../source/index.rst:55
 msgid ""
 "`Epub <https://readthedocs.org/projects/django-api-"
 "client/downloads/epub/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:57
+#: ../../source/index.rst:59
 msgid "Changelog"
 msgstr ""
 

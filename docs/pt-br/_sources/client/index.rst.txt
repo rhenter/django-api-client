@@ -14,7 +14,7 @@ API Client Factory is a python3 wrapper for REST APIs. That is, APIs that follow
 Settings
 ========
 
-To enable `django_api_client` in your project you need to add it to `INSTALLED_APPS` in your projects
+To enable `django_api_client` in your project you need to add it to `INSTALLED_APPS` in your project
 `settings.py` file:
 
 .. code-block:: python
@@ -26,7 +26,7 @@ To enable `django_api_client` in your project you need to add it to `INSTALLED_A
     )
 
 
-You need also to add you APIs configs using ``DJANGO_API_CLIENT`` constant. Ex:
+You need also to add your APIs settings using ``DJANGO_API_CLIENT`` constant. E.g:
 
 .. code-block:: python
 
@@ -44,7 +44,8 @@ You need also to add you APIs configs using ``DJANGO_API_CLIENT`` constant. Ex:
           }
       }
 
-for more information on the available configurations see at:
+
+- For more information on the available configurations, see at:
 
 .. toctree::
     :maxdepth: 2
@@ -54,7 +55,7 @@ for more information on the available configurations see at:
 Client Usage
 ============
 
-- Import the api_client_factory and create an instance using the name of the API you set in the ``DJANGO_API_CLIENT`` on settings.py file:
+- Import the api_client_factory module and create an instance using the name of the API you set in the ``DJANGO_API_CLIENT`` constant on settings.py file:
 
 .. code-block:: python
 

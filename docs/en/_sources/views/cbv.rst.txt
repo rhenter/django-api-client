@@ -24,7 +24,7 @@ Following the same example as Model ListView, the results returned from the mode
 
 
 
-Note:
+.. hint::
   - template_name: path with name of you template
   - client_method: method of the client that to get the the resource list
   - page_title: Generates a context variable to use in your template
@@ -51,7 +51,7 @@ Following the same example as Model DetailView, the results returned from the mo
       page_title = _('View Test')
       client_method = api_client.order.get_order
 
-Note:
+.. hint::
   - template_name: path with name of you template
   - client_method: method of the client that to get the resource information
   - page_title: Generates a context variable to use in your template
@@ -78,7 +78,7 @@ Following the same example as Model CreateView, on submit will validate and save
       success_url = reverse_lazy('test:list')
       client_method = api_client.order.create_order
 
-Note:
+.. hint::
   - template_name: path with name of you template
   - client_method: method of the client that to create
   - page_title: Generates a context variable to use in your template
@@ -87,6 +87,8 @@ PS: The usage example assumes that the endpoint ``/order/orders/``
 
 ClientAPIUpdateView
 ~~~~~~~~~~~~~~~~~~~
+
+- Simple
 
 .. code-block:: python
 
@@ -106,7 +108,7 @@ ClientAPIUpdateView
       partial = False
 
 
-or with a custom initial
+- Advanced with a custom initial
 
 .. code-block:: python
 
@@ -134,13 +136,12 @@ or with a custom initial
           return data
 
 
-
-Note:
-  - template_name: path with name of you template
-  - client_method: method of the client that to update
-  - client_initial_method: method of the client that brings the result
-  - page_title: Generates a context variable to use in your template
-  - partial: means if you are going to update only part of your asset or you are going to update everything
+.. hint::
+    - template_name: path with name of you template
+    - client_method: method of the client that to update
+    - client_initial_method: method of the client that brings the result
+    - page_title: Generates a context variable to use in your template
+    - partial: means if you are going to update only part of your asset or you are going to update everything
 
 PS: The usage example assumes that the endpoint ``/order/orders/``
 
@@ -163,7 +164,7 @@ Following the same example as Model DetailView, the results returned from the mo
       success_url = reverse_lazy('test:list')
 
 
-Note:
+.. hint::
   - client_method: method of the client that to remove the resource
 
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:44-0300\n"
+"POT-Creation-Date: 2020-07-26 13:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,14 +34,8 @@ msgid ""
 "`` client_method`` instead of `` model`` to get our results"
 msgstr ""
 
-#: ../../source/views/cbv.rst:32 ../../source/views/cbv.rst:57
-#: ../../source/views/cbv.rst:84 ../../source/views/cbv.rst:143
-#: ../../source/views/cbv.rst:168
-msgid "Note:"
-msgstr ""
-
 #: ../../source/views/cbv.rst:28 ../../source/views/cbv.rst:55
-#: ../../source/views/cbv.rst:82 ../../source/views/cbv.rst:139
+#: ../../source/views/cbv.rst:82 ../../source/views/cbv.rst:140
 msgid "template_name: path with name of you template"
 msgstr ""
 
@@ -50,7 +44,7 @@ msgid "client_method: method of the client that to get the the resource list"
 msgstr ""
 
 #: ../../source/views/cbv.rst:30 ../../source/views/cbv.rst:57
-#: ../../source/views/cbv.rst:84 ../../source/views/cbv.rst:142
+#: ../../source/views/cbv.rst:84 ../../source/views/cbv.rst:143
 msgid "page_title: Generates a context variable to use in your template"
 msgstr ""
 
@@ -63,8 +57,8 @@ msgid "paginate_by: Number of items to generate the pagination"
 msgstr ""
 
 #: ../../source/views/cbv.rst:34 ../../source/views/cbv.rst:59
-#: ../../source/views/cbv.rst:86 ../../source/views/cbv.rst:145
-#: ../../source/views/cbv.rst:170
+#: ../../source/views/cbv.rst:86 ../../source/views/cbv.rst:146
+#: ../../source/views/cbv.rst:171
 msgid "PS: The usage example assumes that the endpoint ``/order/orders/``"
 msgstr ""
 
@@ -72,7 +66,7 @@ msgstr ""
 msgid "ClientAPIDetailView"
 msgstr ""
 
-#: ../../source/views/cbv.rst:39 ../../source/views/cbv.rst:151
+#: ../../source/views/cbv.rst:39 ../../source/views/cbv.rst:152
 msgid ""
 "Following the same example as Model DetailView, the results returned from"
 " the model will go to the context variable ``object``, unless you want to"
@@ -103,29 +97,39 @@ msgstr ""
 msgid "ClientAPIUpdateView"
 msgstr ""
 
-#: ../../source/views/cbv.rst:109
-msgid "or with a custom initial"
+#: ../../source/views/cbv.rst:91
+msgid "Simple"
 msgstr ""
 
-#: ../../source/views/cbv.rst:140
-msgid "client_method: method of the client that to update"
+#: ../../source/views/cbv.rst:111
+msgid "Advanced with a custom initial"
 msgstr ""
 
 #: ../../source/views/cbv.rst:141
+msgid "client_method: method of the client that to update"
+msgstr ""
+
+#: ../../source/views/cbv.rst:142
 msgid "client_initial_method: method of the client that brings the result"
 msgstr ""
 
-#: ../../source/views/cbv.rst:143
+#: ../../source/views/cbv.rst:144
 msgid ""
 "partial: means if you are going to update only part of your asset or you "
 "are going to update everything"
 msgstr ""
 
-#: ../../source/views/cbv.rst:149
+#: ../../source/views/cbv.rst:150
 msgid "ClientAPIDeleteView"
 msgstr ""
 
-#: ../../source/views/cbv.rst:167
+#: ../../source/views/cbv.rst:168
 msgid "client_method: method of the client that to remove the resource"
 msgstr ""
+
+#~ msgid "Note:"
+#~ msgstr ""
+
+#~ msgid "or with a custom initial"
+#~ msgstr ""
 

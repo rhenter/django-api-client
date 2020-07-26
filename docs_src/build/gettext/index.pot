@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:44-0300\n"
+"POT-Creation-Date: 2020-07-26 13:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../source/index.rst:2
-msgid "Welcome to Django API Client documentation!"
+msgid "Django API Client Documentation"
 msgstr ""
 
 #: ../../source/index.rst:4
@@ -48,22 +48,22 @@ msgstr ""
 msgid "User Guide"
 msgstr ""
 
-#: ../../source/index.rst:38
+#: ../../source/index.rst:39
 msgid "Development"
 msgstr ""
 
-#: ../../source/index.rst:49
+#: ../../source/index.rst:51
 msgid "Downloads"
 msgstr ""
 
-#: ../../source/index.rst:51
+#: ../../source/index.rst:53
 msgid "`PDF <https://readthedocs.org/projects/django-api-client/downloads/pdf/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:53
+#: ../../source/index.rst:55
 msgid "`Epub <https://readthedocs.org/projects/django-api-client/downloads/epub/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:57
+#: ../../source/index.rst:59
 msgid "Changelog"
 msgstr ""

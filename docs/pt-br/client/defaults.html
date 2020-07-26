@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>Available Settings &mdash; documentação Django API Client 0.3.0</title>
+    <title>2.1. Configurações Disponiveis &mdash; documentação Django API Client 0.3.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -52,9 +52,9 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
     <link rel="top" title="documentação Django API Client 0.3.0" href="../index.html" />
-    <link rel="up" title="Overview" href="index.html" />
-    <link rel="next" title="Dynamic Form and Field" href="../forms/index.html" />
-    <link rel="prev" title="Overview" href="index.html" /> 
+    <link rel="up" title="1. Visão Geral" href="index.html" />
+    <link rel="next" title="4. Dynamic Form and Field" href="../forms/index.html" />
+    <link rel="prev" title="1. Visão Geral" href="index.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -74,9 +74,9 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">Available Settings</a><ul>
-<li><a class="reference internal" href="#api">API</a></li>
-<li><a class="reference internal" href="#general-defaults">General defaults</a></li>
+<li><a class="reference internal" href="#">2.1. Configurações Disponiveis</a><ul>
+<li><a class="reference internal" href="#api">2.1.1. API</a></li>
+<li><a class="reference internal" href="#general-defaults">2.1.2. Configuração padrão</a></li>
 </ul>
 </li>
 </ul>
@@ -85,10 +85,10 @@
               </li>
 
             
-              <li><a href="index.html" title="Overview" accesskey="P">anterior </a></li>
-              <li><a href="../forms/index.html" title="Dynamic Form and Field" accesskey="N">próximo </a></li>
+              <li><a href="index.html" title="1. Visão Geral" accesskey="P">anterior </a></li>
+              <li><a href="../forms/index.html" title="4. Dynamic Form and Field" accesskey="N">próximo </a></li>
               <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
-              <li><a href="index.html" accesskey="U">Overview</a></li>
+              <li><a href="index.html" accesskey="U"><span class="section-number">1. </span>Visão Geral</a></li>
             
             <li class="visible-xs"><a href="../_sources/client/defaults.rst.txt" rel="nofollow">Exibir Fonte</a></li>
 
@@ -124,19 +124,19 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Available Settings</a><ul>
-<li><a class="reference internal" href="#api">API</a></li>
-<li><a class="reference internal" href="#general-defaults">General defaults</a></li>
+<li><a class="reference internal" href="#">2.1. Configurações Disponiveis</a><ul>
+<li><a class="reference internal" href="#api">2.1.1. API</a></li>
+<li><a class="reference internal" href="#general-defaults">2.1.2. Configuração padrão</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Tópico anterior</h4>
   <p class="topless"><a href="index.html"
-                        title="capítulo anterior">Overview</a></p>
+                        title="capítulo anterior"><span class="section-number">1. </span>Visão Geral</a></p>
   <h4>Próximo tópico</h4>
   <p class="topless"><a href="../forms/index.html"
-                        title="próximo capítulo">Dynamic Form and Field</a></p>
+                        title="próximo capítulo"><span class="section-number">4. </span>Dynamic Form and Field</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -171,116 +171,156 @@
                 <div class="body">
                   
   <div class="section" id="available-settings">
-<h1>Available Settings<a class="headerlink" href="#available-settings" title="Link permanente para este título">¶</a></h1>
-<p>There are some settings that can be easily configured and added to the settings</p>
+<h1><span class="section-number">2.1. </span>Configurações Disponiveis<a class="headerlink" href="#available-settings" title="Link permanente para este título">¶</a></h1>
+<p>Existem algumas configurações que podem ser facilmente customizadas e adicionadas às configurações</p>
 <div class="section" id="api">
-<h2>API<a class="headerlink" href="#api" title="Link permanente para este título">¶</a></h2>
-<p>API key could be a dict with a single API or a List with Many API settings</p>
+<h2><span class="section-number">2.1.1. </span>API<a class="headerlink" href="#api" title="Link permanente para este título">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">API</span></code> key can be a dictionary in case it is just a single API or a list of dictionaries in case it is multiple APIs “</p>
 <ul class="simple">
 <li><p>AUTHENTICATION_ACCESS_TOKEN</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
-Default: None
-Required: True
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definição: Usado para passar o Token de Acesso da sua API</p></li>
+<li><p>Padrão: None</p></li>
+<li><p>Requerido: True</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>AUTHENTICATION_ACCESS_TOKEN_TYPE</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Key used on the Header Authorization. Could be ``Bearer``, ``Token``, etc
-Default: &#39;Bearer&#39;
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definição: Chave usada no <code class="docutils literal notranslate"><span class="pre">Header</span> <span class="pre">Authorization</span></code>. Pode ser <code class="docutils literal notranslate"><span class="pre">Bearer</span></code>, <code class="docutils literal notranslate"><span class="pre">Token</span></code>, etc</p></li>
+<li><p>Padrão: ‘Bearer’</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>AUTHENTICATION_METHOD</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Method used to authentication. Today only ``header`` and ``url`` using params is available
-Default: &#39;header&#39;
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definição: Método utilizado para autenticação. Hoje apenas <code class="docutils literal notranslate"><span class="pre">header</span></code> e <code class="docutils literal notranslate"><span class="pre">url</span></code> usando parâmetros estão disponíveis</p></li>
+<li><p>Padrão: ‘header’</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>AUTHENTICATION_URL_EXTRA_PARAMS</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Extra params used to authenticate by URL using GET method
-Default: []
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definição: Parâmetros extras usados para autenticar por URL usando o método GET</p></li>
+<li><p>Padrão: []</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>AUTHENTICATION_URL_KEY</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Key used to authenticate by URL using GET method
-Default: &#39;token&#39;
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definição: Chave usada para autenticar por URL usando o método GET</p></li>
+<li><p>Padrão: ‘token’</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>BASE_URL</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: API URL with the protocol. E.g: https://example.com/v1
-Default: None
-Required: True
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definição: URL da API com o protocolo. Ex: <a class="reference external" href="https://example.com/v1">https://example.com/v1</a></p></li>
+<li><p>Padrão: None</p></li>
+<li><p>Requerido: True</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>ENDPOINTS</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to map all endpoint you want to access
-Default: []
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definição: Usado para mapear todos endpoints que você quer acessar</p></li>
+<li><p>Padrão: []</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>LOCALE</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Only available in the Header authentication method, is the used to pass the ``Accept-Language`` in the request
-Default: Project Language Code
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definição: Disponível apenas no método de autenticação <code class="docutils literal notranslate"><span class="pre">header</span></code>, é usado para passar o <code class="docutils literal notranslate"><span class="pre">Accept-Language</span></code> na solicitação</p></li>
+<li><p>Default: Project Language Code set on settings.py</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
-<p>n’)
-* NAME</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
-Default: None
-Required: False
-</pre></div>
+<ul class="simple">
+<li><p>NAME</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definition: Apelido usado para instaciar o cliente da API</p></li>
+<li><p>Padrão: None</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>URL_APPEND_SLASH</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
-Default: True
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definition: Add a slash in end of the endpoint URL</p></li>
+<li><p>Padrão: True</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>TIMEOUT</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
-Default: 3
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definition: Period to wait for the request response</p></li>
+<li><p>Padrão: 3</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="general-defaults">
-<h2>General defaults<a class="headerlink" href="#general-defaults" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">2.1.2. </span>Configuração padrão<a class="headerlink" href="#general-defaults" title="Link permanente para este título">¶</a></h2>
 <ul class="simple">
 <li><p>PAGE_SIZE</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Used to pass your API Access Token
-Default: 100
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definition: Used define the size of the Pagination</p></li>
+<li><p>Padrão: 100</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 <ul class="simple">
 <li><p>SLUG_FIELD</p></li>
 </ul>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Definition: Key used to get a endpoint resource. Use the same identifier you receive in payload.
-Default: &#39;id&#39;
-Required: False
-</pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Definition: Key used to get a endpoint resource. Use the same identifier you receive in payload.</p></li>
+<li><p>Padrão: ‘id’</p></li>
+<li><p>Requerido: False</p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -304,10 +344,10 @@ Required: False
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="index.html" title="Overview" >anterior</a></li>
-        <li><a href="../forms/index.html" title="Dynamic Form and Field" >próximo</a></li>
+        <li><a href="index.html" title="1. Visão Geral" >anterior</a></li>
+        <li><a href="../forms/index.html" title="4. Dynamic Form and Field" >próximo</a></li>
         <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
-        <li><a href="index.html" >Overview</a></li>
+        <li><a href="index.html" ><span class="section-number">1. </span>Visão Geral</a></li>
         <li><a href="#">top</a></li> 
       
     </ul>
