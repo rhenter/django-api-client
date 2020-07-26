@@ -16,7 +16,7 @@ Alguns motivos para se usar o **Django API Client**
 * Você deseja usar uma API de terceiros para listar, criar e alterar usando o sistema de templates do django
 
 
-Para mais informações, veja nossa documentação em `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_.
+Para mais informações, veja nossa documentação em `Github Pages <https://rhenter.github.io/django-api-client/>`_
 
 Dependências
 ============
@@ -145,7 +145,7 @@ Exemplo com o endpoint **/order/orders/**:
 Documentação
 ============
 
-Verifique a ultima versão da documentação do ``django-api-client`` em `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_
+Verifique a ultima versão da documentação do ``django-api-client`` em `Github Pages <https://rhenter.github.io/django-api-client/>`_
 
 
 Quer contribuir?
@@ -162,8 +162,8 @@ Por favor envie seus Pull Requests, eles serão muito apreciados.
 6. Crie um Pull Request com a sua contribuição
 
 
-.. |Docs| image:: https://readthedocs.org/projects/django-api-client/badge/?version=latest
-   :target: http://django-api-client.readthedocs.org/en/latest/?badge=latest
+.. |Docs| image:: https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg
+   :target: https://rhenter.github.io/django-api-client/
 .. |PyPI Version| image:: https://img.shields.io/pypi/pyversions/django-api-client.svg?maxAge=60
    :target: https://pypi.python.org/pypi/django-api-client
 .. |PyPI License| image:: https://img.shields.io/pypi/l/django-api-client.svg?maxAge=120

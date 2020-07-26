@@ -147,7 +147,7 @@ Note:
 Documentation
 =============
 
-Check out the latest ``django-api-client`` documentation at `Read the Docs <http://django-api-client.readthedocs.io/en/latest/>`_
+Check out the latest ``django-api-client`` documentation at `Github Pages <https://rhenter.github.io/django-api-client/>`_
 
 
 Contributing
@@ -165,7 +165,7 @@ Please send pull requests, very much appreciated.
 
 
 .. |Docs| image:: https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg
-   :target: http://django-api-client.readthedocs.org/en/latest/?badge=latest
+   :target: https://rhenter.github.io/django-api-client/
 .. |PyPI Version| image:: https://img.shields.io/pypi/pyversions/django-api-client.svg?maxAge=60
    :target: https://pypi.python.org/pypi/django-api-client
 .. |PyPI License| image:: https://img.shields.io/pypi/l/django-api-client.svg?maxAge=120
