@@ -1,3 +1,10 @@
+0.3.0
+~~~~~
+
+- Update Doc
+- Remove Read the docs to use Github Pages
+- Add new structure with a index to to the a lang
+
 0.2.0
 ~~~~~
 
