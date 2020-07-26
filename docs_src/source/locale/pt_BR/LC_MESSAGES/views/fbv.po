@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:44-0300\n"
+"POT-Creation-Date: 2020-07-26 17:18-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,36 +20,38 @@ msgstr ""
 
 #: ../../source/views/fbv.rst:2
 msgid "Using Function Based Views (FBV)"
-msgstr ""
+msgstr "Usando Views baseadas em Funções (FBV)"
 
 #: ../../source/views/fbv.rst:4
 msgid ""
 "Using function-based views, the way is somewhat manual but it is quite "
 "simple to use the results in the same way."
 msgstr ""
+"Usando Views baseadas em Funções, a maneira de ser fazer é meio manual, "
+"mas é bastante simples usar os resultados da mesma maneira."
 
 #: ../../source/views/fbv.rst:7
 msgid "List"
-msgstr ""
+msgstr "Listar"
 
-#: ../../source/views/fbv.rst:23 ../../source/views/fbv.rst:42
-#: ../../source/views/fbv.rst:67 ../../source/views/fbv.rst:93
-msgid "PS: The usage example assumes that the endpoint ``/order/orders/``"
-msgstr ""
+#: ../../source/views/fbv.rst:24 ../../source/views/fbv.rst:44
+#: ../../source/views/fbv.rst:70 ../../source/views/fbv.rst:96
+#: ../../source/views/fbv.rst:118
+msgid "The usage example assumes that the endpoint ``/order/orders/``"
+msgstr "O Examplo assume que o endpoint é ``/order/orders/``"
 
-#: ../../source/views/fbv.rst:26
+#: ../../source/views/fbv.rst:27
 msgid "Detail"
-msgstr ""
+msgstr "Detalhe"
 
-#: ../../source/views/fbv.rst:46
+#: ../../source/views/fbv.rst:48
 msgid "Create"
-msgstr ""
+msgstr "Criar"
 
-#: ../../source/views/fbv.rst:71
+#: ../../source/views/fbv.rst:73
 msgid "Update"
-msgstr ""
+msgstr "Atualizar"
 
-#: ../../source/views/fbv.rst:97
+#: ../../source/views/fbv.rst:100
 msgid "Delete"
-msgstr ""
-
+msgstr "Deletar"

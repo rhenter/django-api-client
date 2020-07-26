@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>Requirements &mdash; documentação Django API Client 0.3.0</title>
+    <title>Dependências &mdash; documentação Django API Client 0.3.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -52,8 +52,8 @@
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
     <link rel="top" title="documentação Django API Client 0.3.0" href="../index.html" />
-    <link rel="next" title="Overview" href="../client/index.html" />
-    <link rel="prev" title="Bem vindo a documentação do Django API Client" href="../index.html" /> 
+    <link rel="next" title="1. Visão Geral" href="../client/index.html" />
+    <link rel="prev" title="Documentação do Django API Client" href="../index.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -73,17 +73,17 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">Requirements</a></li>
-<li><a class="reference internal" href="#how-to-install">How to install</a></li>
-<li><a class="reference internal" href="#how-to-config">How to Config</a></li>
+<li><a class="reference internal" href="#">Dependências</a></li>
+<li><a class="reference internal" href="#how-to-install">Como instalar</a></li>
+<li><a class="reference internal" href="#how-to-config">Como configurar</a></li>
 </ul>
 
                 </ul>
               </li>
 
             
-              <li><a href="../index.html" title="Bem vindo a documentação do Django API Client" accesskey="P">anterior </a></li>
-              <li><a href="../client/index.html" title="Overview" accesskey="N">próximo </a></li>
+              <li><a href="../index.html" title="Documentação do Django API Client" accesskey="P">anterior </a></li>
+              <li><a href="../client/index.html" title="1. Visão Geral" accesskey="N">próximo </a></li>
               <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
             
             <li class="visible-xs"><a href="../_sources/quickstart/index.rst.txt" rel="nofollow">Exibir Fonte</a></li>
@@ -120,17 +120,17 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Requirements</a></li>
-<li><a class="reference internal" href="#how-to-install">How to install</a></li>
-<li><a class="reference internal" href="#how-to-config">How to Config</a></li>
+<li><a class="reference internal" href="#">Dependências</a></li>
+<li><a class="reference internal" href="#how-to-install">Como instalar</a></li>
+<li><a class="reference internal" href="#how-to-config">Como configurar</a></li>
 </ul>
 
   <h4>Tópico anterior</h4>
   <p class="topless"><a href="../index.html"
-                        title="capítulo anterior">Bem vindo a documentação do Django API Client</a></p>
+                        title="capítulo anterior">Documentação do Django API Client</a></p>
   <h4>Próximo tópico</h4>
   <p class="topless"><a href="../client/index.html"
-                        title="próximo capítulo">Overview</a></p>
+                        title="próximo capítulo"><span class="section-number">1. </span>Visão Geral</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -165,19 +165,19 @@
                 <div class="body">
                   
   <div class="section" id="requirements">
-<h1>Requirements<a class="headerlink" href="#requirements" title="Link permanente para este título">¶</a></h1>
+<h1>Dependências<a class="headerlink" href="#requirements" title="Link permanente para este título">¶</a></h1>
 <ul class="simple">
 <li><p>Python 3.x</p></li>
-<li><p>Django 2.0 or later</p></li>
+<li><p>Django 2.0 ou posterior</p></li>
 </ul>
 </div>
 <div class="section" id="how-to-install">
-<h1>How to install<a class="headerlink" href="#how-to-install" title="Link permanente para este título">¶</a></h1>
-<p>You can get Django API Client by using pip:</p>
+<h1>Como instalar<a class="headerlink" href="#how-to-install" title="Link permanente para este título">¶</a></h1>
+<p>Você pode instalar o Django API Client usando pip:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ pip install django-api-client
 </pre></div>
 </div>
-<p>If you want to install it from source, grab the git repository from Gitlab and run setup.py:</p>
+<p>Se você quer instalar a partir do código fonte, pegue o repositório do GitHub em rode o setup.py</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone git@github.com:rhenter/django_api_client.git
 $ <span class="nb">cd</span> django_api_client
 $ python setup.py install
@@ -185,9 +185,8 @@ $ python setup.py install
 </div>
 </div>
 <div class="section" id="how-to-config">
-<h1>How to Config<a class="headerlink" href="#how-to-config" title="Link permanente para este título">¶</a></h1>
-<p>To enable <cite>django_api_client</cite> in your project you need to add it to <cite>INSTALLED_APPS</cite> in your projects
-<cite>settings.py</cite> file:</p>
+<h1>Como configurar<a class="headerlink" href="#how-to-config" title="Link permanente para este título">¶</a></h1>
+<p>Para habilitar o <cite>django_api_client</cite> você precisa adiciona-lo ao <cite>INSTALLED_APPS</cite> no seu arquivo <cite>settings.py</cite> do seu projeto:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="o">...</span>
     <span class="s1">&#39;django_api_client&#39;</span><span class="p">,</span>
@@ -216,8 +215,8 @@ $ python setup.py install
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="../index.html" title="Bem vindo a documentação do Django API Client" >anterior</a></li>
-        <li><a href="../client/index.html" title="Overview" >próximo</a></li>
+        <li><a href="../index.html" title="Documentação do Django API Client" >anterior</a></li>
+        <li><a href="../client/index.html" title="1. Visão Geral" >próximo</a></li>
         <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
         <li><a href="#">top</a></li> 
       

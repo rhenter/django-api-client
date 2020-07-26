@@ -36,7 +36,7 @@ You can get Django API Client by using pip:
     $ pip install django-api-client
 
 
-If you want to install it from source, grab the git repository from Gitlab and run setup.py:
+If you want to install it from source, grab the git repository from GitHub and run setup.py:
 
 .. code:: shell
 

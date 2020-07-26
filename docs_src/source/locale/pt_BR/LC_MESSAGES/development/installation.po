@@ -20,27 +20,27 @@ msgstr ""
 
 #: ../../source/development/installation.rst:2
 msgid "Development Installation"
-msgstr ""
+msgstr "Intalação em Desenvolvimento"
 
 #: ../../source/development/installation.rst:5
 msgid "Requirements"
-msgstr ""
+msgstr "Dependências"
 
 #: ../../source/development/installation.rst:7
 msgid "Python 3.x"
 msgstr ""
 
 #: ../../source/development/installation.rst:8
-msgid "Django 1.11 or later"
-msgstr ""
+msgid "Django 2.0 or later"
+msgstr "Django 2.0 ou posterior"
 
 #: ../../source/development/installation.rst:12
 msgid "Development install"
-msgstr ""
+msgstr "Intalação em Desenvolvimento"
 
 #: ../../source/development/installation.rst:14
 msgid "After forking or checking out:"
-msgstr ""
+msgstr "Depois de fazer o Fork ou Clonar:"
 
 #: ../../source/development/installation.rst:22
 msgid ""
@@ -57,11 +57,11 @@ msgstr ""
 
 #: ../../source/development/installation.rst:31
 msgid "Running tests"
-msgstr ""
+msgstr "Rodando testes"
 
 #: ../../source/development/installation.rst:37
 msgid "or:"
-msgstr ""
+msgstr "ou"
 
 #~ msgid "Generating documentation"
 #~ msgstr ""

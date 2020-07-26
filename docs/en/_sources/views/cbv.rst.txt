@@ -26,13 +26,13 @@ Following the same example as Model ListView, the results returned from the mode
 
 .. hint::
   - template_name: path with name of you template
-  - client_method: method of the client that to get the the resource list
+  - client_method: method of the client that get a list of records of a resource list
   - page_title: Generates a context variable to use in your template
   - page_base_url: Information used in pagination, and the search
   - paginate_by: Number of items to generate the pagination
 
 .. note::
-  The usage example assumes that the endpoint ``/order/orders/``
+  The usage example assumes that the endpoint is ``/order/orders/``
 
 ClientAPIDetailView
 ~~~~~~~~~~~~~~~~~~~
@@ -54,11 +54,11 @@ Following the same example as Model DetailView, the results returned from the mo
 
 .. hint::
   - template_name: path with name of you template
-  - client_method: method of the client that to get the resource information
+  - client_method: method of the client that to get a record in the resource
   - page_title: Generates a context variable to use in your template
 
 .. note::
-  The usage example assumes that the endpoint ``/order/orders/``
+  The usage example assumes that the endpoint is ``/order/orders/``
 
 ClientAPICreateView
 ~~~~~~~~~~~~~~~~~~~
@@ -82,11 +82,11 @@ Following the same example as Model CreateView, on submit will validate and save
 
 .. hint::
   - template_name: path with name of you template
-  - client_method: method of the client that to create
+  - client_method: method of the client that create a record in the resource
   - page_title: Generates a context variable to use in your template
 
 .. note::
-  The usage example assumes that the endpoint ``/order/orders/``
+  The usage example assumes that the endpoint is ``/order/orders/``
 
 ClientAPIUpdateView
 ~~~~~~~~~~~~~~~~~~~
@@ -147,7 +147,7 @@ ClientAPIUpdateView
     - partial: means if you are going to update only part of your asset or you are going to update everything
 
 .. note::
-  The usage example assumes that the endpoint ``/order/orders/``
+  The usage example assumes that the endpoint is ``/order/orders/``
 
 
 ClientAPIDeleteView
@@ -173,4 +173,4 @@ Following the same example as Model DetailView, the results returned from the mo
 
 
 .. note::
-  The usage example assumes that the endpoint ``/order/orders/``
+  The usage example assumes that the endpoint is ``/order/orders/``

@@ -16,7 +16,7 @@ repos:
     - id: detect-private-key
     - id: forbid-new-submodules
 
--   repo: https://gitlab.com/pycqa/flake8
+-   repo: https://GitHub.com/pycqa/flake8
     rev: 3.7.9
     hooks:
     - id: flake8

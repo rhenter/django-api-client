@@ -5,7 +5,7 @@ Requirements
 ------------
 
 - Python 3.x
-- Django 1.11 or later
+- Django 2.0 or later
 
 
 Development install

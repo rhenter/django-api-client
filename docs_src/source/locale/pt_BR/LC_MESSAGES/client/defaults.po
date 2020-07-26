@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 14:50-0300\n"
+"POT-Creation-Date: 2020-07-26 17:18-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,7 +154,7 @@ msgstr ""
 
 #: ../../source/client/defaults.rst:65
 #, fuzzy
-msgid "Default: Project Language Code"
+msgid "Default: Project Language Code set on settings.py"
 msgstr "Padão: Linguagem padrão do codigo setada no settings.py"
 
 #: ../../source/client/defaults.rst:68

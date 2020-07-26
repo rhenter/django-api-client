@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/quickstart/index.rst:2
 msgid "Requirements"
-msgstr ""
+msgstr "Dependências"
 
 #: ../../source/quickstart/index.rst:4
 msgid "Python 3.x"
@@ -28,29 +28,33 @@ msgstr ""
 
 #: ../../source/quickstart/index.rst:5
 msgid "Django 2.0 or later"
-msgstr ""
+msgstr "Django 2.0 ou posterior"
 
 #: ../../source/quickstart/index.rst:9
 msgid "How to install"
-msgstr ""
+msgstr "Como instalar"
 
 #: ../../source/quickstart/index.rst:11
 msgid "You can get Django API Client by using pip:"
-msgstr ""
+msgstr "Você pode instalar o Django API Client usando pip:"
 
 #: ../../source/quickstart/index.rst:18
 msgid ""
 "If you want to install it from source, grab the git repository from "
-"Gitlab and run setup.py:"
+"GitHub and run setup.py:"
 msgstr ""
+"Se você quer instalar a partir do código fonte, pegue o repositório do "
+"GitHub em rode o setup.py"
 
 #: ../../source/quickstart/index.rst:28
 msgid "How to Config"
-msgstr ""
+msgstr "Como configurar"
 
 #: ../../source/quickstart/index.rst:30
 msgid ""
 "To enable `django_api_client` in your project you need to add it to "
 "`INSTALLED_APPS` in your projects `settings.py` file:"
 msgstr ""
+"Para habilitar o `django_api_client` você precisa adiciona-lo ao "
+"`INSTALLED_APPS` no seu arquivo `settings.py` do seu projeto:"
 

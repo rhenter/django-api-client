@@ -45,7 +45,7 @@ msgstr ""
 #: ../../source/quickstart/installation.rst:21
 msgid ""
 "If you want to install it from source, grab the git repository from "
-"Gitlab and run setup.py:"
+"GitHub and run setup.py:"
 msgstr ""
 
 #: ../../source/quickstart/installation.rst:31

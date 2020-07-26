@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>5.1. Using Class Based Views (CBV) &mdash; documentação Django API Client 0.3.0</title>
+    <title>5.1. Usando Views Baseadas em Classes (CBV) &mdash; documentação Django API Client 0.3.0</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -53,7 +53,7 @@
     <link rel="search" title="Buscar" href="../search.html" />
     <link rel="top" title="documentação Django API Client 0.3.0" href="../index.html" />
     <link rel="up" title="5. Views" href="index.html" />
-    <link rel="next" title="5.2. Using Function Based Views (FBV)" href="fbv.html" />
+    <link rel="next" title="5.2. Usando Views baseadas em Funções (FBV)" href="fbv.html" />
     <link rel="prev" title="5. Views" href="index.html" /> 
   </head>
   <body role="document">
@@ -74,7 +74,7 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">5.1. Using Class Based Views (CBV)</a><ul>
+<li><a class="reference internal" href="#">5.1. Usando Views Baseadas em Classes (CBV)</a><ul>
 <li><a class="reference internal" href="#clientapilistview">5.1.1. ClientAPIListView</a></li>
 <li><a class="reference internal" href="#clientapidetailview">5.1.2. ClientAPIDetailView</a></li>
 <li><a class="reference internal" href="#clientapicreateview">5.1.3. ClientAPICreateView</a></li>
@@ -89,7 +89,7 @@
 
             
               <li><a href="index.html" title="5. Views" accesskey="P">anterior </a></li>
-              <li><a href="fbv.html" title="5.2. Using Function Based Views (FBV)" accesskey="N">próximo </a></li>
+              <li><a href="fbv.html" title="5.2. Usando Views baseadas em Funções (FBV)" accesskey="N">próximo </a></li>
               <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
               <li><a href="index.html" accesskey="U"><span class="section-number">5. </span>Views</a></li>
             
@@ -127,7 +127,7 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
   <ul>
-<li><a class="reference internal" href="#">5.1. Using Class Based Views (CBV)</a><ul>
+<li><a class="reference internal" href="#">5.1. Usando Views Baseadas em Classes (CBV)</a><ul>
 <li><a class="reference internal" href="#clientapilistview">5.1.1. ClientAPIListView</a></li>
 <li><a class="reference internal" href="#clientapidetailview">5.1.2. ClientAPIDetailView</a></li>
 <li><a class="reference internal" href="#clientapicreateview">5.1.3. ClientAPICreateView</a></li>
@@ -142,7 +142,7 @@
                         title="capítulo anterior"><span class="section-number">5. </span>Views</a></p>
   <h4>Próximo tópico</h4>
   <p class="topless"><a href="fbv.html"
-                        title="próximo capítulo"><span class="section-number">5.2. </span>Using Function Based Views (FBV)</a></p>
+                        title="próximo capítulo"><span class="section-number">5.2. </span>Usando Views baseadas em Funções (FBV)</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -177,7 +177,7 @@
                 <div class="body">
                   
   <div class="section" id="using-class-based-views-cbv">
-<h1><span class="section-number">5.1. </span>Using Class Based Views (CBV)<a class="headerlink" href="#using-class-based-views-cbv" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">5.1. </span>Usando Views Baseadas em Classes (CBV)<a class="headerlink" href="#using-class-based-views-cbv" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="clientapilistview">
 <h2><span class="section-number">5.1.1. </span>ClientAPIListView<a class="headerlink" href="#clientapilistview" title="Link permanente para este título">¶</a></h2>
 <p>Following the same example as Model ListView, the results returned from the model will go to the context variable `` object_list``, unless you want to customize it. Using ClientAPIListView we will use the attribute `` client_method`` instead of `` model`` to get our results</p>
@@ -198,16 +198,16 @@
 <div class="admonition hint">
 <p class="admonition-title">Dica</p>
 <ul class="simple">
-<li><p>template_name: path with name of you template</p></li>
-<li><p>client_method: method of the client that to get the the resource list</p></li>
+<li><p>template_name: caminho com nome do template</p></li>
+<li><p>client_method: método do cliente que list os registros de um resource</p></li>
 <li><p>page_title: Generates a context variable to use in your template</p></li>
 <li><p>page_base_url: Information used in pagination, and the search</p></li>
-<li><p>paginate_by: Number of items to generate the pagination</p></li>
+<li><p>paginate_by: Numero de itens para gerar a paginação</p></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+<p>The usage example assumes that the endpoint is <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
 </div>
 </div>
 <div class="section" id="clientapidetailview">
@@ -228,14 +228,14 @@
 <div class="admonition hint">
 <p class="admonition-title">Dica</p>
 <ul class="simple">
-<li><p>template_name: path with name of you template</p></li>
-<li><p>client_method: method of the client that to get the resource information</p></li>
+<li><p>template_name: caminho com nome do template</p></li>
+<li><p>client_method: método do cliente que pega um registro de um resource</p></li>
 <li><p>page_title: Generates a context variable to use in your template</p></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+<p>The usage example assumes that the endpoint is <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
 </div>
 </div>
 <div class="section" id="clientapicreateview">
@@ -258,14 +258,14 @@
 <div class="admonition hint">
 <p class="admonition-title">Dica</p>
 <ul class="simple">
-<li><p>template_name: path with name of you template</p></li>
-<li><p>client_method: method of the client that to create</p></li>
+<li><p>template_name: caminho com nome do template</p></li>
+<li><p>client_method: método do cliente que criar um registro em um resource</p></li>
 <li><p>page_title: Generates a context variable to use in your template</p></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+<p>The usage example assumes that the endpoint is <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
 </div>
 </div>
 <div class="section" id="clientapiupdateview">
@@ -319,16 +319,16 @@
 <div class="admonition hint">
 <p class="admonition-title">Dica</p>
 <ul class="simple">
-<li><p>template_name: path with name of you template</p></li>
-<li><p>client_method: method of the client that to update</p></li>
-<li><p>client_initial_method: method of the client that brings the result</p></li>
+<li><p>template_name: caminho com nome do template</p></li>
+<li><p>client_method: método do cliente que atualiza um registro de um resource</p></li>
+<li><p>client_method: método do cliente que pega um registro de um resource</p></li>
 <li><p>page_title: Generates a context variable to use in your template</p></li>
 <li><p>partial: means if you are going to update only part of your asset or you are going to update everything</p></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+<p>The usage example assumes that the endpoint is <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
 </div>
 </div>
 <div class="section" id="clientapideleteview">
@@ -348,12 +348,12 @@
 <div class="admonition hint">
 <p class="admonition-title">Dica</p>
 <ul class="simple">
-<li><p>client_method: method of the client that to remove the resource</p></li>
+<li><p>client_method: método do cliente que remove um registro de um resource</p></li>
 </ul>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+<p>The usage example assumes that the endpoint is <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
 </div>
 </div>
 </div>
@@ -378,7 +378,7 @@
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
         <li><a href="index.html" title="5. Views" >anterior</a></li>
-        <li><a href="fbv.html" title="5.2. Using Function Based Views (FBV)" >próximo</a></li>
+        <li><a href="fbv.html" title="5.2. Usando Views baseadas em Funções (FBV)" >próximo</a></li>
         <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
         <li><a href="index.html" ><span class="section-number">5. </span>Views</a></li>
         <li><a href="#">top</a></li> 
