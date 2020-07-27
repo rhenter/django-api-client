@@ -82,7 +82,7 @@ Update
 
   def update_order(request, pk):
     template = 'fbv/form.html'
-    response = api_client.order.get_order(id=pk)
+    response = api_client.order.orders.get(id=pk)
 
     form = TestForm(request.POST or None, initial=response.as_dict())
     if form.is_valid():
