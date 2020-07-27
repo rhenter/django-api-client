@@ -4,7 +4,7 @@ Django API Client
 
 |PyPI latest| |PyPI Version| |PyPI License|  |CicleCI Status| |Coverage| |Docs| |Open Source? Yes!|
 
-O Django API Client é um wrapper de resposta da API, que permite iterar com a API como se eles estivesse usando um modelo/objeto local em seu projeto. Seja por meio do cliente direto em uma FBV ou usando CBV personalizada (exibições baseadas em classe), este framework tenta facilitar ao máximo esta comunicação
+O Django API Client é um wrapper de resposta de API, que permite você iterar com os resultados da API como se eles estivesse usando um modelo/objeto local em seu projeto. Seja por meio do cliente direto usando uma FBV ou usando CBV personalizada (exibições baseadas em classe), este framework tenta facilitar ao máximo esta comunicação
 
 
 Alguns motivos para se usar o **Django API Client**
@@ -89,8 +89,8 @@ Exemplo
       ]
     }
 
-
-*Obs: Os detalhes de configuração serão explicados na documentação*
+.. note::
+  Os detalhes de configuração serão explicados na documentação*
 
 * Crie um arquivo clients.py em alguma pasta nucleo do seu projeto, caso não tenha, crie dentro da sua pasta do projeto para ficar mais simples de ser importado de qualquer lugar do projeto com o seguinte conteúdo:
 
@@ -101,7 +101,7 @@ Exemplo
   api_client = api_client_factory('production')
 
 
-Obs:
+.. note::
   - O nome desta variável será o nome nome do cliente que você usará em todo o seu projeto
   - Recomendo para produção usar uma env var setada no settings.py para você poder alterar de maneira simples o nome da API sem a necessidade de criar varios.
   - No nosso caso, temos a opção de "production" e "localhost", o factory gerará o cliente de acordo com o nome utilizado e os parametros descritos nele
@@ -125,7 +125,7 @@ Vamos imaginar que o cliente esta na pasta de projeto (pasta que contem o arquiv
       client_method = api_client.order.get_orders
 
 
-Obs:
+.. note::
   O cliente gerará para cada endpoint a toda uma estrutura amigavel para o usuário.
 
 

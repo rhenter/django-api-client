@@ -93,7 +93,8 @@ Example
     }
 
 
-*Note: The details of the configuration will be better explained in the documentation*
+.. note::
+  The details of the configuration will be better explained in the documentation
 
 * Create a clients.py file in the core folder of your project, if you haven't, created it within your project folder to be simple to be imported from anywhere in the project with the following content:
 
@@ -104,7 +105,7 @@ Example
   api_client = api_client_factory('production')
 
 
-Note:
+.. note::
    - The name of this variable will be the name of the client that you can use throughout your project
    - It is recommended that the production use a set of configurations without configurations.py to change the simple way or the name of the API without the need to create several.
    - In our case, we have the option of "production" and "localhost", the factory generates the customer according to the name used and the parameters identified in it
@@ -129,7 +130,7 @@ Let's imagine which client has a project folder (folder containing the settings.
       client_method = api_client.order.get_orders
 
 
-Note:
+.. note::
    The client will generate a user-friendly structure for each endpoint. Example with the endpoint */order/orders/*:
 
 .. code-block:: text
