@@ -129,7 +129,7 @@ Vamos imaginar que o cliente esta na pasta de projeto (pasta que contem o arquiv
   O cliente gerará para cada endpoint a toda uma estrutura amigavel para o usuário.
 
 
-No template você pode usar os includes (snippets) de formularios e paginação
+No seu template você pode usar os includes (snippets) de formularios e paginação. Ex:
 
 
 .. code-block:: jinja
@@ -179,7 +179,7 @@ No template você pode usar os includes (snippets) de formularios e paginação
 .. note::
   - Exemplo using estilos (styles) do Bootstrap
   - includes/form_search.html: Form com input de busca. Este include suporta placeholder também.
-  - includes/form_paginate_by.html: Form com select da escolha da paginação. Ex: (20, 40, 60, etc ...)
+  - includes/form_paginate_by.html: Form com select para escolher por quantos elementos a pagina será paginada. Ex: (20, 40, 60, etc ...)
   - includes/list_paginator.html: Bloco com os elementos de paginação com os botões dos número de paginas, anterior e próximo
 
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:31-0300\n"
+"POT-Creation-Date: 2020-07-27 12:50-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,72 +19,80 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 #: ../../../CHANGES.rst:2
-msgid "0.3.0"
+msgid "0.3.1"
 msgstr ""
 
 #: ../../../CHANGES.rst:4
-msgid "Update Doc"
+msgid "Finish the base documentation and Readme"
 msgstr ""
 
-#: ../../../CHANGES.rst:5
-msgid "Remove Read the docs to use Github Pages"
-msgstr ""
-
-#: ../../../CHANGES.rst:6
-msgid "Add new structure with a index to to the a lang"
+#: ../../../CHANGES.rst:7
+msgid "0.3.0"
 msgstr ""
 
 #: ../../../CHANGES.rst:9
-msgid "0.2.0"
+msgid "Update Doc"
+msgstr ""
+
+#: ../../../CHANGES.rst:10
+msgid "Remove Read the docs to use Github Pages"
 msgstr ""
 
 #: ../../../CHANGES.rst:11
-msgid "Fix CI process"
+msgid "Add new structure with a index to to the a lang"
 msgstr ""
 
-#: ../../../CHANGES.rst:12
-msgid "Add tests to increase the coverage"
-msgstr ""
-
-#: ../../../CHANGES.rst:13
-msgid "Fix read me file"
+#: ../../../CHANGES.rst:14
+msgid "0.2.0"
 msgstr ""
 
 #: ../../../CHANGES.rst:16
-msgid "0.1.3"
+msgid "Fix CI process"
+msgstr ""
+
+#: ../../../CHANGES.rst:17
+msgid "Add tests to increase the coverage"
 msgstr ""
 
 #: ../../../CHANGES.rst:18
+msgid "Fix read me file"
+msgstr ""
+
+#: ../../../CHANGES.rst:21
+msgid "0.1.3"
+msgstr ""
+
+#: ../../../CHANGES.rst:23
 msgid "Add ClientAPIAuthenticatedDeleteView and ClientAPIDeleteView"
 msgstr ""
 
-#: ../../../CHANGES.rst:19
+#: ../../../CHANGES.rst:24
 msgid ""
 "BugFix: Use the correct constant to defaults (DEFAULTS) and the api "
 "(API_DEFAULTS)"
 msgstr ""
 
-#: ../../../CHANGES.rst:22
+#: ../../../CHANGES.rst:27
 msgid "0.1.2"
 msgstr ""
 
-#: ../../../CHANGES.rst:24
+#: ../../../CHANGES.rst:29
 msgid "Add documentation and fix Python version"
 msgstr ""
 
-#: ../../../CHANGES.rst:28
+#: ../../../CHANGES.rst:33
 msgid "0.1.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:30
+#: ../../../CHANGES.rst:35
 msgid "Remove python 3.8 from setup because pypi dont support yet"
 msgstr ""
 
-#: ../../../CHANGES.rst:33
+#: ../../../CHANGES.rst:38
 msgid "0.1.0"
 msgstr ""
 
-#: ../../../CHANGES.rst:35
+#: ../../../CHANGES.rst:40
 msgid "Initial release"
 msgstr ""
 

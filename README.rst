@@ -184,7 +184,7 @@ In your template you can use the forms and pagination snippets. E.g:
 .. note::
   - Example using Bootstrap Styles
   - includes/form_search.html: Form with search input. This include support placeholder too.
-  - includes/form_paginate_by.html: Form with select paginate by (20, 40, 60, etc ...)
+  - includes/form_paginate_by.html: Select form to choose how many elements the page will be paged on (20, 40, 60, etc ...)
   - includes/list_paginator.html: Block with pagination elements with the number of pages buttons, previous and next
 
 

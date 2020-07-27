@@ -32,6 +32,7 @@ User Guide
     client/index.rst
     forms/index.rst
     views/index.rst
+    templates.rst
     example.rst
 
 

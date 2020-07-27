@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 17:33-0300\n"
+"POT-Creation-Date: 2020-07-27 12:50-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgstr "paginate_by: Numero de itens para gerar a paginação"
 #: ../../source/views/cbv.rst:89 ../../source/views/cbv.rst:150
 #: ../../source/views/cbv.rst:176
 #, fuzzy
-msgid "The usage example assumes that the endpoint ``/order/orders/``"
+msgid "The usage example assumes that the endpoint is ``/order/orders/``"
 msgstr "O exemplo de uso assume the o endpoint é ``/order/orders/``"
 
 #: ../../source/views/cbv.rst:38
