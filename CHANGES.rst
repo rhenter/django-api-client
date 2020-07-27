@@ -1,3 +1,8 @@
+0.3.2
+~~~~~
+
+- Update readme and documentation
+
 0.3.1
 ~~~~~
 
