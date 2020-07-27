@@ -20,7 +20,7 @@ Following the same example as Model ListView, the results returned from the mode
       page_title = 'Tests'
       page_base_url = reverse_lazy('order:list')
       paginate_by = 50
-      client_method = api_client.order.orders.list()
+      client_method = api_client.order.orders.list
 
 
 
