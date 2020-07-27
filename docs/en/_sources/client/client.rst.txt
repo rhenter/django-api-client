@@ -32,7 +32,7 @@ You need also to add you APIs configs using DJANGO_API_CLIENT constant. Ex:
       DJANGO_API_CLIENT = {
           'API': {
               'NAME': '<Slug Name to Access Your client>',
-              'URL_BASE': 'https://example.com/v1',
+              'BASE_URL': 'https://example.com/v1',
               'ENDPOINTS': [
                   '/order/orders',
                   '/user/users',

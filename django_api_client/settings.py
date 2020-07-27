@@ -5,7 +5,7 @@ For example your project's `settings.py` file might look like this:
 DJANGO_API_CLIENT = {
     'API': {
         'NAME': 'API NAME',
-        'URL_BASE': 'https://example.com/v1',
+        'BASE_URL': 'https://example.com/v1',
         'ENDPOINTS': [
             '/order/orders',
             '/user/users',
@@ -84,7 +84,7 @@ class APIClientSettings:
                 # Fall back to defaults
                 val = self.api_defaults[attr]
 
-            if attr == 'URL_BASE' and not val.startswith('http'):
+            if attr == 'BASE_URL' and not val.startswith('http'):
                 raise AttributeError(f"Invalid Base URL: '{val}'. Please add a URL with http or https as prefix.")
 
             configs[attr] = val

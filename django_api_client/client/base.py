@@ -22,7 +22,7 @@ class BaseAPI:
     """
     BaseAPI Abstract object.
     Attributes:
-        url_base: URL from API
+        base_url: URL from API
         timeout: Request timeout
         token:  API Access token
         transport: Transport class to able to use Requests

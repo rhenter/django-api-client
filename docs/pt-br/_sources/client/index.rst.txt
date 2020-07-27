@@ -34,7 +34,7 @@ You need also to add your APIs settings using ``DJANGO_API_CLIENT`` constant. E.
       DJANGO_API_CLIENT = {
           'API': {
               'NAME': '<Slug Name to Access Your client>',
-              'URL_BASE': 'https://example.com/v1',
+              'BASE_URL': 'https://example.com/v1',
               'ENDPOINTS': [
                   '<PATH OF THE ENDPOINT 1>',
                   '<PATH OF THE ENDPOINT 2>',

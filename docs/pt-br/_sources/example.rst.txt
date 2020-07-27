@@ -10,7 +10,7 @@ Example
         'API': [
           {
               'NAME': 'production',
-              'URL_BASE': 'https://example.com/v1',
+              'BASE_URL': 'https://example.com/v1',
               'ENDPOINTS': [
                   '/order/orders',
                   '/user/users',
@@ -20,7 +20,7 @@ Example
           },
           {
               'NAME': 'localhost',
-              'URL_BASE': 'http://localhost:8001/v1',
+              'BASE_URL': 'http://localhost:8001/v1',
               'ENDPOINTS': [
                   '/order/orders',
                   '/user/users',

@@ -9,7 +9,7 @@ from ..vcr import vcr
 
 
 @pytest.fixture
-def url_base():
+def base_url():
     return 'http://localhost:8001/v1/'
 
 
@@ -47,11 +47,11 @@ def test_sync_with_requests_error(api_client, endpoint, exception):
     assert str(error.value) == 'API server returned a internal server error'
 
 
-def test_sync_search(api_client, fake_session, endpoint, url_base):
+def test_sync_search(api_client, fake_session, endpoint, base_url):
     api_client.api.transport.session = fake_session
     api_client.api.search(endpoint)
     assert fake_session.get.called
-    assert fake_session.get.call_args[0][0] == url_base + endpoint
+    assert fake_session.get.call_args[0][0] == base_url + endpoint
     assert fake_session.get.call_args[1]['params'] == {}
 
 
@@ -59,15 +59,15 @@ def test_sync_search_with_params(
         api_client,
         fake_session,
         endpoint,
-        url_base):
+        base_url):
     api_client.api.transport.session = fake_session
     api_client.api.search(endpoint, params={'status': 'open'})
     assert fake_session.get.called
-    assert fake_session.get.call_args[0][0] == url_base + endpoint
+    assert fake_session.get.call_args[0][0] == base_url + endpoint
     assert fake_session.get.call_args[1]['params'] == {'status': 'open'}
 
 
-def test_sync_create(api_client, fake_session, endpoint, url_base):
+def test_sync_create(api_client, fake_session, endpoint, base_url):
     api_client.api.transport.session = fake_session
     payload = {
         "order": {
@@ -80,11 +80,11 @@ def test_sync_create(api_client, fake_session, endpoint, url_base):
     }
     api_client.api.create(endpoint, data=payload)
     assert fake_session.post.called
-    assert fake_session.post.call_args[0][0] == url_base + endpoint
+    assert fake_session.post.call_args[0][0] == base_url + endpoint
     assert fake_session.post.call_args[1]['data'] == json.dumps(payload)
 
 
-def test_sync_update_with_put(api_client, fake_session, endpoint, url_base):
+def test_sync_update_with_put(api_client, fake_session, endpoint, base_url):
     api_client.api.transport.session = fake_session
     payload = {
         "order": {
@@ -96,14 +96,14 @@ def test_sync_update_with_put(api_client, fake_session, endpoint, url_base):
     }
     api_client.api.update(endpoint + '6368', data=payload)
     assert fake_session.put.called
-    assert fake_session.put.call_args[0][0] == url_base + endpoint + '6368/'
+    assert fake_session.put.call_args[0][0] == base_url + endpoint + '6368/'
     assert fake_session.put.call_args[1]['data'] == json.dumps(payload)
 
 
-def test_sync_update_with_patch(api_client, fake_session, endpoint, url_base):
+def test_sync_update_with_patch(api_client, fake_session, endpoint, base_url):
     api_client.api.transport.session = fake_session
     payload = {'instrument': 'EUR_USD'}
     api_client.api.update(endpoint + '1234', data=payload, partial=True)
     assert fake_session.patch.called
-    assert fake_session.patch.call_args[0][0] == url_base + endpoint + '1234/'
+    assert fake_session.patch.call_args[0][0] == base_url + endpoint + '1234/'
     assert fake_session.patch.call_args[1]['data'] == json.dumps(payload)
