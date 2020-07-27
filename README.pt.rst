@@ -129,6 +129,61 @@ Vamos imaginar que o cliente esta na pasta de projeto (pasta que contem o arquiv
   O cliente gerará para cada endpoint a toda uma estrutura amigavel para o usuário.
 
 
+No template você pode usar os includes (snippets) de formularios e paginação
+
+
+.. code-block:: jinja
+
+    {% content %}
+
+    ...
+    <div class="card card-navy card-outline">
+      <div class="card-header">
+        <h3 class="card-title">
+          {% trans "Order List" %} : <small class="text-muted">{{ paginator.count }}</small>
+        </h3>
+        {% include "includes/form_paginate_by.html" with paginate_by=paginate_by range_pagination=range_pagination %}
+        {% include "includes/form_search.html" with search=search %}
+      </div>
+      <div class="card-body table-responsive p-0">
+        <table class="table table-bordered table-hover table-striped" id="list-content">
+          <thead>
+          <tr>
+            <th>{% trans 'Code' %}</th>
+            <th>{% trans 'Customer' %}</th>
+            <th>{% trans 'Product' %}</th>
+          </tr>
+          </thead>
+          <tbody class="text-gray">
+          {% for order in object_list %}
+            <tr>
+              <td><a href="{% url 'order:detail' pk=order.id %}" </a>
+              </td>
+              <td>{{ order.id }}</td>
+              <td>{{ order.customer.name|title }}</td>
+              <td>{{ order.product.name|title }}</td>
+            </tr>
+            {% endfor %}
+          {% endif %}
+          </tbody>
+        </table>
+      </div>
+      <div class="card-footer">
+        {% if object_list|length != 0 or not object_list %}
+          {% include "includes/list_paginator.html" with page_obj=page_obj paginator=paginator %}
+        {% endif %}
+      </div>
+    </div>
+
+
+.. note::
+  - Exemplo using estilos (styles) do Bootstrap
+  - includes/form_search.html: Form com input de busca. Este include suporta placeholder também.
+  - includes/form_paginate_by.html: Form com select da escolha da paginação. Ex: (20, 40, 60, etc ...)
+  - includes/list_paginator.html: Bloco com os elementos de paginação com os botões dos número de paginas, anterior e próximo
+
+
+
 Exemplo com o endpoint **/order/orders/**:
 
 .. code-block:: text
