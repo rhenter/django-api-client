@@ -1,3 +1,8 @@
+0.3.3
+~~~~~
+
+- Replace URL_BASE to BASE_URL in all places
+
 0.3.2
 ~~~~~
 
