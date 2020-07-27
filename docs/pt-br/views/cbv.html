@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>5.1. Usando Views Baseadas em Classes (CBV) &mdash; documentação Django API Client 0.3.1</title>
+    <title>6.1. Usando Views Baseadas em Classes (CBV) &mdash; documentação Django API Client 0.3.3</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,7 +33,7 @@
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
             URL_ROOT:    '../',
-            VERSION:     '0.3.1',
+            VERSION:     '0.3.3',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE:  true
@@ -51,10 +51,10 @@
 </script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="top" title="documentação Django API Client 0.3.1" href="../index.html" />
-    <link rel="up" title="5. Views" href="index.html" />
-    <link rel="next" title="5.2. Usando Views baseadas em Funções (FBV)" href="fbv.html" />
-    <link rel="prev" title="5. Views" href="index.html" /> 
+    <link rel="top" title="documentação Django API Client 0.3.3" href="../index.html" />
+    <link rel="up" title="6. Views" href="index.html" />
+    <link rel="next" title="6.2. Usando Views baseadas em Funções (FBV)" href="fbv.html" />
+    <link rel="prev" title="6. Views" href="index.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -66,7 +66,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.1</a>
+          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.3</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -74,12 +74,12 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">5.1. Usando Views Baseadas em Classes (CBV)</a><ul>
-<li><a class="reference internal" href="#clientapilistview">5.1.1. ClientAPIListView</a></li>
-<li><a class="reference internal" href="#clientapidetailview">5.1.2. ClientAPIDetailView</a></li>
-<li><a class="reference internal" href="#clientapicreateview">5.1.3. ClientAPICreateView</a></li>
-<li><a class="reference internal" href="#clientapiupdateview">5.1.4. ClientAPIUpdateView</a></li>
-<li><a class="reference internal" href="#clientapideleteview">5.1.5. ClientAPIDeleteView</a></li>
+<li><a class="reference internal" href="#">6.1. Usando Views Baseadas em Classes (CBV)</a><ul>
+<li><a class="reference internal" href="#clientapilistview">6.1.1. ClientAPIListView</a></li>
+<li><a class="reference internal" href="#clientapidetailview">6.1.2. ClientAPIDetailView</a></li>
+<li><a class="reference internal" href="#clientapicreateview">6.1.3. ClientAPICreateView</a></li>
+<li><a class="reference internal" href="#clientapiupdateview">6.1.4. ClientAPIUpdateView</a></li>
+<li><a class="reference internal" href="#clientapideleteview">6.1.5. ClientAPIDeleteView</a></li>
 </ul>
 </li>
 </ul>
@@ -88,10 +88,10 @@
               </li>
 
             
-              <li><a href="index.html" title="5. Views" accesskey="P">anterior </a></li>
-              <li><a href="fbv.html" title="5.2. Usando Views baseadas em Funções (FBV)" accesskey="N">próximo </a></li>
+              <li><a href="index.html" title="6. Views" accesskey="P">anterior </a></li>
+              <li><a href="fbv.html" title="6.2. Usando Views baseadas em Funções (FBV)" accesskey="N">próximo </a></li>
               <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
-              <li><a href="index.html" accesskey="U"><span class="section-number">5. </span>Views</a></li>
+              <li><a href="index.html" accesskey="U"><span class="section-number">6. </span>Views</a></li>
             
             <li class="visible-xs"><a href="../_sources/views/cbv.rst.txt" rel="nofollow">Exibir Fonte</a></li>
 
@@ -127,22 +127,22 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
   <ul>
-<li><a class="reference internal" href="#">5.1. Usando Views Baseadas em Classes (CBV)</a><ul>
-<li><a class="reference internal" href="#clientapilistview">5.1.1. ClientAPIListView</a></li>
-<li><a class="reference internal" href="#clientapidetailview">5.1.2. ClientAPIDetailView</a></li>
-<li><a class="reference internal" href="#clientapicreateview">5.1.3. ClientAPICreateView</a></li>
-<li><a class="reference internal" href="#clientapiupdateview">5.1.4. ClientAPIUpdateView</a></li>
-<li><a class="reference internal" href="#clientapideleteview">5.1.5. ClientAPIDeleteView</a></li>
+<li><a class="reference internal" href="#">6.1. Usando Views Baseadas em Classes (CBV)</a><ul>
+<li><a class="reference internal" href="#clientapilistview">6.1.1. ClientAPIListView</a></li>
+<li><a class="reference internal" href="#clientapidetailview">6.1.2. ClientAPIDetailView</a></li>
+<li><a class="reference internal" href="#clientapicreateview">6.1.3. ClientAPICreateView</a></li>
+<li><a class="reference internal" href="#clientapiupdateview">6.1.4. ClientAPIUpdateView</a></li>
+<li><a class="reference internal" href="#clientapideleteview">6.1.5. ClientAPIDeleteView</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Tópico anterior</h4>
   <p class="topless"><a href="index.html"
-                        title="capítulo anterior"><span class="section-number">5. </span>Views</a></p>
+                        title="capítulo anterior"><span class="section-number">6. </span>Views</a></p>
   <h4>Próximo tópico</h4>
   <p class="topless"><a href="fbv.html"
-                        title="próximo capítulo"><span class="section-number">5.2. </span>Usando Views baseadas em Funções (FBV)</a></p>
+                        title="próximo capítulo"><span class="section-number">6.2. </span>Usando Views baseadas em Funções (FBV)</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -177,9 +177,9 @@
                 <div class="body">
                   
   <div class="section" id="using-class-based-views-cbv">
-<h1><span class="section-number">5.1. </span>Usando Views Baseadas em Classes (CBV)<a class="headerlink" href="#using-class-based-views-cbv" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">6.1. </span>Usando Views Baseadas em Classes (CBV)<a class="headerlink" href="#using-class-based-views-cbv" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="clientapilistview">
-<h2><span class="section-number">5.1.1. </span>ClientAPIListView<a class="headerlink" href="#clientapilistview" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.1.1. </span>ClientAPIListView<a class="headerlink" href="#clientapilistview" title="Link permanente para este título">¶</a></h2>
 <p>Following the same example as Model ListView, the results returned from the model will go to the context variable `` object_list``, unless you want to customize it. Using ClientAPIListView we will use the attribute `` client_method`` instead of `` model`` to get our results</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIListView</span>
 
@@ -211,7 +211,7 @@
 </div>
 </div>
 <div class="section" id="clientapidetailview">
-<h2><span class="section-number">5.1.2. </span>ClientAPIDetailView<a class="headerlink" href="#clientapidetailview" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.1.2. </span>ClientAPIDetailView<a class="headerlink" href="#clientapidetailview" title="Link permanente para este título">¶</a></h2>
 <p>Following the same example as Model DetailView, the results returned from the model will go to the context variable <code class="docutils literal notranslate"><span class="pre">object</span></code>, unless you want to customize it. Using ClientAPIDetailView we will use the attribute <code class="docutils literal notranslate"><span class="pre">client_method</span></code> instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our result</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIDetailView</span>
 
@@ -239,7 +239,7 @@
 </div>
 </div>
 <div class="section" id="clientapicreateview">
-<h2><span class="section-number">5.1.3. </span>ClientAPICreateView<a class="headerlink" href="#clientapicreateview" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.1.3. </span>ClientAPICreateView<a class="headerlink" href="#clientapicreateview" title="Link permanente para este título">¶</a></h2>
 <p>Following the same example as Model CreateView, on submit will validate and save, using ClientAPIListView we will use the attribute `` client_method`` instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our result</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPICreateView</span>
 
@@ -269,7 +269,7 @@
 </div>
 </div>
 <div class="section" id="clientapiupdateview">
-<h2><span class="section-number">5.1.4. </span>ClientAPIUpdateView<a class="headerlink" href="#clientapiupdateview" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.1.4. </span>ClientAPIUpdateView<a class="headerlink" href="#clientapiupdateview" title="Link permanente para este título">¶</a></h2>
 <ul class="simple">
 <li><p>Simple</p></li>
 </ul>
@@ -332,7 +332,7 @@
 </div>
 </div>
 <div class="section" id="clientapideleteview">
-<h2><span class="section-number">5.1.5. </span>ClientAPIDeleteView<a class="headerlink" href="#clientapideleteview" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.1.5. </span>ClientAPIDeleteView<a class="headerlink" href="#clientapideleteview" title="Link permanente para este título">¶</a></h2>
 <p>Following the same example as Model DetailView, the results returned from the model will go to the context variable <code class="docutils literal notranslate"><span class="pre">object</span></code>, unless you want to customize it. Using ClientAPIDetailView we will use the attribute <code class="docutils literal notranslate"><span class="pre">client_method</span></code> instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our result</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIDeleteView</span>
 
@@ -373,14 +373,14 @@
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav navbar-nav ">
-        <li><a href="../index.html">documentação Django API Client 0.3.1</a></li>
+        <li><a href="../index.html">documentação Django API Client 0.3.3</a></li>
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="index.html" title="5. Views" >anterior</a></li>
-        <li><a href="fbv.html" title="5.2. Usando Views baseadas em Funções (FBV)" >próximo</a></li>
+        <li><a href="index.html" title="6. Views" >anterior</a></li>
+        <li><a href="fbv.html" title="6.2. Usando Views baseadas em Funções (FBV)" >próximo</a></li>
         <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
-        <li><a href="index.html" ><span class="section-number">5. </span>Views</a></li>
+        <li><a href="index.html" ><span class="section-number">6. </span>Views</a></li>
         <li><a href="#">top</a></li> 
       
     </ul>

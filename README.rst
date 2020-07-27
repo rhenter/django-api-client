@@ -71,20 +71,20 @@ Example
       'API': [
         {
             'NAME': 'production',
-            'BASE_URL': 'https://example.com/v1',
+            'BASE_URL': 'https://example.com',
             'ENDPOINTS': [
-                '/order/orders',
-                '/user/users',
+                '/v1/order/orders',
+                '/v1/user/users',
                 ...
             ],
             'AUTHENTICATION_ACCESS_TOKEN': 'TOKEN'
         },
         {
             'NAME': 'localhost',
-            'BASE_URL': 'http://localhost:8001/v1',
+            'BASE_URL': 'http://localhost:8001',
             'ENDPOINTS': [
-                '/order/orders',
-                '/user/users',
+                '/v1/order/orders',
+                '/v1/user/users',
                 ...
             ],
             'AUTHENTICATION_ACCESS_TOKEN': 'TOKEN'
@@ -127,7 +127,7 @@ Let's imagine which client has a project folder (folder containing the settings.
       page_title = 'Orders'                       # Generates a context variable to use in your template
       page_base_url = reverse_lazy('order:list')  # Information used in pagination, and the search
       paginate_by = 50                            # Number of items to generate the pagination
-      client_method = api_client.order.get_orders
+      client_method = api_client.order.orders.list
 
 
 .. note::

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 14:23-0300\n"
+"POT-Creation-Date: 2020-07-27 19:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,11 +48,43 @@ msgstr ""
 msgid "For more information on the available configurations, see at:"
 msgstr ""
 
-#: ../../source/client/index.rst:56
+#: ../../source/client/index.rst:57
+msgid "Client Methods"
+msgstr ""
+
+#: ../../source/client/index.rst:59
+msgid "For each endpoint the client Factory will create the follow structure:"
+msgstr ""
+
+#: ../../source/client/index.rst:61
+msgid "Example to ``/user/users/``"
+msgstr ""
+
+#: ../../source/client/index.rst:63
+msgid "Create:"
+msgstr ""
+
+#: ../../source/client/index.rst:70
+msgid "List:"
+msgstr ""
+
+#: ../../source/client/index.rst:77
+msgid "Get/Retrieve/Detail:"
+msgstr ""
+
+#: ../../source/client/index.rst:84
+msgid "Update:"
+msgstr ""
+
+#: ../../source/client/index.rst:91
+msgid "Delete:"
+msgstr ""
+
+#: ../../source/client/index.rst:100
 msgid "Client Usage"
 msgstr ""
 
-#: ../../source/client/index.rst:58
+#: ../../source/client/index.rst:102
 msgid ""
 "Import the api_client_factory module and create an instance using the "
 "name of the API you set in the ``DJANGO_API_CLIENT`` constant on "

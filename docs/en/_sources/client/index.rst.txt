@@ -52,6 +52,50 @@ You need also to add your APIs settings using ``DJANGO_API_CLIENT`` constant. E.
 
     defaults.rst
 
+
+Client Methods
+==============
+
+For each endpoint the client Factory will create the follow structure:
+
+Example to ``/user/users/``
+
+- Create:
+
+.. code-block:: text
+
+  usage: api_client.user.users.create(data=data)
+  return: Response of POST of data (dict) to /user/users/
+
+- List:
+
+.. code-block:: python
+
+  usage: api_client.user.users.list()
+  return: Response of GET to /user/users/
+
+- Get/Retrieve/Detail:
+
+.. code-block:: python
+
+  usage: api_client.user.users.get(id=123)
+  return: Response of GET to /user/users/123/
+
+- Update:
+
+.. code-block:: python
+
+  usage: api_client.user.users.update(id=123, data=data, partial=False)
+  return: the response of UPDATE or PATCH of data (dict) to /user/users/123/
+
+- Delete:
+
+.. code-block:: python
+
+  usage: api_client.user.users.delete(id=123)
+  return: Response of GET to /user/users/123/
+
+
 Client Usage
 ============
 
@@ -60,9 +104,9 @@ Client Usage
 .. code-block:: python
 
     >> from django_api_client.client import api_client_factory
-    >> client = api_client_factory('<Slug Name to Access Your client>')
+    >> api_client = api_client_factory('<Slug Name to Access Your client>')
     >>
-    >> result = client.user.get_users()
+    >> result = api_client.user.users.list()
     >>
     >> # Use the result as object
     >> print(result.as_obj())

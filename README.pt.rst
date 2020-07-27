@@ -68,20 +68,20 @@ Exemplo
       'API': [
         {
             'NAME': 'production',
-            'BASE_URL': 'https://example.com/v1',
+            'BASE_URL': 'https://example.com',
             'ENDPOINTS': [
-                '/order/orders',
-                '/user/users',
+                '/v1/order/orders',
+                '/v1/user/users',
                 ...
             ],
             'AUTHENTICATION_ACCESS_TOKEN': 'TOKEN'
         },
         {
             'NAME': 'localhost',
-            'BASE_URL': 'http://localhost:8001/v1',
+            'BASE_URL': 'http://localhost:8001',
             'ENDPOINTS': [
-                '/order/orders',
-                '/user/users',
+                '/v1/order/orders',
+                '/v1/user/users',
                 ...
             ],
             'AUTHENTICATION_ACCESS_TOKEN': 'TOKEN'
@@ -122,11 +122,11 @@ Vamos imaginar que o cliente esta na pasta de projeto (pasta que contem o arquiv
       page_title = 'Orders'                       # Gera uma variavel de contexto para usar no seu template
       page_base_url = reverse_lazy('order:list')  # Informação usada na paginação e na busca
       paginate_by = 50                            # Número de items para gerar a paginação
-      client_method = api_client.order.get_orders
+      client_method = api_client.order.orders.list
 
 
 .. note::
-  O cliente gerará para cada endpoint a toda uma estrutura amigavel para o usuário.
+  O cliente gerará para cada endpoint a toda uma estrutura amigável para o usuário.
 
 
 No seu template você pode usar os includes (snippets) de formularios e paginação. Ex:

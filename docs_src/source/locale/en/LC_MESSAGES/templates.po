@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-27 12:50-0300\n"
+"POT-Creation-Date: 2020-07-27 19:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,8 @@ msgstr ""
 
 #: ../../source/templates.rst:54
 msgid ""
-"includes/form_paginate_by.html: Form with select paginate by (20, 40, 60,"
-" etc ...)"
+"includes/form_paginate_by.html: Select form to choose how many elements "
+"the page will be paged on (20, 40, 60, etc ...)"
 msgstr ""
 
 #: ../../source/templates.rst:55
@@ -47,4 +47,9 @@ msgid ""
 "includes/list_paginator.html: Block with pagination elements with the "
 "number of pages buttons, previous and next"
 msgstr ""
+
+#~ msgid ""
+#~ "includes/form_paginate_by.html: Form with select "
+#~ "paginate by (20, 40, 60, etc ...)"
+#~ msgstr ""
 

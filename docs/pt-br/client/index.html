@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>1. Visão Geral &mdash; documentação Django API Client 0.3.1</title>
+    <title>1. Visão Geral &mdash; documentação Django API Client 0.3.3</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -29,11 +29,11 @@
 <link rel="stylesheet" href="../_static/css/basicstrap.css" type="text/css" />
 <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
 <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
+    
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
             URL_ROOT:    '../',
-            VERSION:     '0.3.1',
+            VERSION:     '0.3.3',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE:  true
@@ -51,9 +51,9 @@
 </script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="top" title="documentação Django API Client 0.3.1" href="../index.html" />
+    <link rel="top" title="documentação Django API Client 0.3.3" href="../index.html" />
     <link rel="next" title="2.1. Configurações Disponiveis" href="defaults.html" />
-    <link rel="prev" title="Dependências" href="../quickstart/index.html" />
+    <link rel="prev" title="Dependências" href="../quickstart/index.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -65,7 +65,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.1</a>
+          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.3</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -75,7 +75,8 @@
                 <ul>
 <li><a class="reference internal" href="#">1. Visão Geral</a></li>
 <li><a class="reference internal" href="#settings">2. Configurações</a></li>
-<li><a class="reference internal" href="#client-usage">3. Uso do Cliente</a></li>
+<li><a class="reference internal" href="#client-methods">3. Client Methods</a></li>
+<li><a class="reference internal" href="#client-usage">4. Uso do Cliente</a></li>
 </ul>
 
                 </ul>
@@ -115,14 +116,15 @@
 
       <!-- row -->
       <div class="row">
-      
+         
 <div class="col-md-3 hidden-xs" id="sidebar-wrapper">
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
   <ul>
 <li><a class="reference internal" href="#">1. Visão Geral</a></li>
 <li><a class="reference internal" href="#settings">2. Configurações</a></li>
-<li><a class="reference internal" href="#client-usage">3. Uso do Cliente</a></li>
+<li><a class="reference internal" href="#client-methods">3. Client Methods</a></li>
+<li><a class="reference internal" href="#client-usage">4. Uso do Cliente</a></li>
 </ul>
 
   <h4>Tópico anterior</h4>
@@ -155,7 +157,7 @@
     </p>
 </div>
   </div>
-</div>
+</div> 
         
 
         <div class="col-md-9" id="content-wrapper">
@@ -163,7 +165,7 @@
             <div class="documentwrapper">
               <div class="bodywrapper">
                 <div class="body">
-                
+                  
   <div class="section" id="overview">
 <h1><span class="section-number">1. </span>Visão Geral<a class="headerlink" href="#overview" title="Link permanente para este título">¶</a></h1>
 <p>O API Client Factory é um wrapper python3 para APIs REST. Ou seja, APIs que seguem o padrão de uso dos métodos abaixo:</p>
@@ -212,15 +214,55 @@ PATCH: Partial Update
 </ul>
 </div>
 </div>
+<div class="section" id="client-methods">
+<h1><span class="section-number">3. </span>Client Methods<a class="headerlink" href="#client-methods" title="Link permanente para este título">¶</a></h1>
+<p>For each endpoint the client Factory will create the follow structure:</p>
+<p>Exemplo para <code class="docutils literal notranslate"><span class="pre">/user/users/</span></code></p>
+<ul class="simple">
+<li><p>Criar:</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>usage: api_client.user.users.create(data=data)
+return: Response of POST of data (dict) to /user/users/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Listar:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">api_client</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+<span class="k">return</span><span class="p">:</span> <span class="n">Response</span> <span class="n">of</span> <span class="n">GET</span> <span class="n">to</span> <span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">users</span><span class="o">/</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Get/Recuperar/Detalhe:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">api_client</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+<span class="k">return</span><span class="p">:</span> <span class="n">Response</span> <span class="n">of</span> <span class="n">GET</span> <span class="n">to</span> <span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">users</span><span class="o">/</span><span class="mi">123</span><span class="o">/</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Atualizar:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">api_client</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">partial</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">return</span><span class="p">:</span> <span class="n">the</span> <span class="n">response</span> <span class="n">of</span> <span class="n">UPDATE</span> <span class="ow">or</span> <span class="n">PATCH</span> <span class="n">of</span> <span class="n">data</span> <span class="p">(</span><span class="nb">dict</span><span class="p">)</span> <span class="n">to</span> <span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">users</span><span class="o">/</span><span class="mi">123</span><span class="o">/</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Deletar:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">api_client</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="mi">123</span><span class="p">)</span>
+<span class="k">return</span><span class="p">:</span> <span class="n">Response</span> <span class="n">of</span> <span class="n">GET</span> <span class="n">to</span> <span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">users</span><span class="o">/</span><span class="mi">123</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="client-usage">
-<h1><span class="section-number">3. </span>Uso do Cliente<a class="headerlink" href="#client-usage" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">4. </span>Uso do Cliente<a class="headerlink" href="#client-usage" title="Link permanente para este título">¶</a></h1>
 <ul class="simple">
 <li><p>Import the api_client_factory module and create an instance using the name of the API you set in the <code class="docutils literal notranslate"><span class="pre">DJANGO_API_CLIENT</span></code> constant on settings.py file:</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span> <span class="kn">from</span> <span class="nn">django_api_client.client</span> <span class="kn">import</span> <span class="n">api_client_factory</span>
-<span class="o">&gt;&gt;</span> <span class="n">client</span> <span class="o">=</span> <span class="n">api_client_factory</span><span class="p">(</span><span class="s1">&#39;&lt;Slug Name to Access Your client&gt;&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;</span> <span class="n">api_client</span> <span class="o">=</span> <span class="n">api_client_factory</span><span class="p">(</span><span class="s1">&#39;&lt;Slug Name to Access Your client&gt;&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;</span>
-<span class="o">&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">get_users</span><span class="p">()</span>
+<span class="o">&gt;&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">users</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
 <span class="o">&gt;&gt;</span>
 <span class="o">&gt;&gt;</span> <span class="c1"># Use the result as object</span>
 <span class="o">&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">as_obj</span><span class="p">())</span>
@@ -275,14 +317,14 @@ PATCH: Partial Update
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav navbar-nav ">
-        <li><a href="../index.html">documentação Django API Client 0.3.1</a></li>
+        <li><a href="../index.html">documentação Django API Client 0.3.3</a></li>
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
         <li><a href="../quickstart/index.html" title="Dependências" >anterior</a></li>
         <li><a href="defaults.html" title="2.1. Configurações Disponiveis" >próximo</a></li>
         <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
-        <li><a href="#">top</a></li>
+        <li><a href="#">top</a></li> 
       
     </ul>
   </div>

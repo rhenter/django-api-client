@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-27 12:50-0300\n"
+"POT-Creation-Date: 2020-07-27 19:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,9 @@ msgstr ""
 
 #: ../../source/templates.rst:4
 msgid "In your template you can use the forms and pagination snippets. E.g:"
-msgstr "No seu template você pode usar os includes (snippets) de formularios e paginação. Ex:"
+msgstr ""
+"No seu template você pode usar os includes (snippets) de formularios e "
+"paginação. Ex:"
 
 #: ../../source/templates.rst:52
 msgid "Example using Bootstrap Styles"
@@ -40,10 +42,11 @@ msgstr ""
 
 #: ../../source/templates.rst:54
 msgid ""
-"includes/form_paginate_by.html: Form with select paginate by (20, 40, 60,"
-" etc ...)"
+"includes/form_paginate_by.html: Select form to choose how many elements "
+"the page will be paged on (20, 40, 60, etc ...)"
 msgstr ""
-"includes/form_paginate_by.html: Form com select da escolha da paginação. Ex: (20, 40, 60, etc ...)"
+"includes/form_paginate_by.html: Form com select para escolher com quantos elementos a pagina"
+" será paginada. Ex: (20, 40, 60, etc ...)"
 
 #: ../../source/templates.rst:55
 msgid ""

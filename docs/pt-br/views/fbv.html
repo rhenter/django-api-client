@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>5.2. Usando Views baseadas em Funções (FBV) &mdash; documentação Django API Client 0.3.1</title>
+    <title>6.2. Usando Views baseadas em Funções (FBV) &mdash; documentação Django API Client 0.3.3</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,7 +33,7 @@
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
             URL_ROOT:    '../',
-            VERSION:     '0.3.1',
+            VERSION:     '0.3.3',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE:  true
@@ -51,10 +51,10 @@
 </script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="top" title="documentação Django API Client 0.3.1" href="../index.html" />
-    <link rel="up" title="5. Views" href="index.html" />
-    <link rel="next" title="6. Templates" href="../templates.html" />
-    <link rel="prev" title="5.1. Usando Views Baseadas em Classes (CBV)" href="cbv.html" /> 
+    <link rel="top" title="documentação Django API Client 0.3.3" href="../index.html" />
+    <link rel="up" title="6. Views" href="index.html" />
+    <link rel="next" title="7. Templates" href="../templates.html" />
+    <link rel="prev" title="6.1. Usando Views Baseadas em Classes (CBV)" href="cbv.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -66,7 +66,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.1</a>
+          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.3</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -74,12 +74,12 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">5.2. Usando Views baseadas em Funções (FBV)</a><ul>
-<li><a class="reference internal" href="#list">5.2.1. Listar</a></li>
-<li><a class="reference internal" href="#detail">5.2.2. Detalhe</a></li>
-<li><a class="reference internal" href="#create">5.2.3. Criar</a></li>
-<li><a class="reference internal" href="#update">5.2.4. Atualizar</a></li>
-<li><a class="reference internal" href="#delete">5.2.5. Deletar</a></li>
+<li><a class="reference internal" href="#">6.2. Usando Views baseadas em Funções (FBV)</a><ul>
+<li><a class="reference internal" href="#list">6.2.1. Listar</a></li>
+<li><a class="reference internal" href="#detail">6.2.2. Detalhe</a></li>
+<li><a class="reference internal" href="#create">6.2.3. Criar</a></li>
+<li><a class="reference internal" href="#update">6.2.4. Atualizar</a></li>
+<li><a class="reference internal" href="#delete">6.2.5. Deletar</a></li>
 </ul>
 </li>
 </ul>
@@ -88,10 +88,10 @@
               </li>
 
             
-              <li><a href="cbv.html" title="5.1. Usando Views Baseadas em Classes (CBV)" accesskey="P">anterior </a></li>
-              <li><a href="../templates.html" title="6. Templates" accesskey="N">próximo </a></li>
+              <li><a href="cbv.html" title="6.1. Usando Views Baseadas em Classes (CBV)" accesskey="P">anterior </a></li>
+              <li><a href="../templates.html" title="7. Templates" accesskey="N">próximo </a></li>
               <li><a href="../genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
-              <li><a href="index.html" accesskey="U"><span class="section-number">5. </span>Views</a></li>
+              <li><a href="index.html" accesskey="U"><span class="section-number">6. </span>Views</a></li>
             
             <li class="visible-xs"><a href="../_sources/views/fbv.rst.txt" rel="nofollow">Exibir Fonte</a></li>
 
@@ -127,22 +127,22 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
   <ul>
-<li><a class="reference internal" href="#">5.2. Usando Views baseadas em Funções (FBV)</a><ul>
-<li><a class="reference internal" href="#list">5.2.1. Listar</a></li>
-<li><a class="reference internal" href="#detail">5.2.2. Detalhe</a></li>
-<li><a class="reference internal" href="#create">5.2.3. Criar</a></li>
-<li><a class="reference internal" href="#update">5.2.4. Atualizar</a></li>
-<li><a class="reference internal" href="#delete">5.2.5. Deletar</a></li>
+<li><a class="reference internal" href="#">6.2. Usando Views baseadas em Funções (FBV)</a><ul>
+<li><a class="reference internal" href="#list">6.2.1. Listar</a></li>
+<li><a class="reference internal" href="#detail">6.2.2. Detalhe</a></li>
+<li><a class="reference internal" href="#create">6.2.3. Criar</a></li>
+<li><a class="reference internal" href="#update">6.2.4. Atualizar</a></li>
+<li><a class="reference internal" href="#delete">6.2.5. Deletar</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Tópico anterior</h4>
   <p class="topless"><a href="cbv.html"
-                        title="capítulo anterior"><span class="section-number">5.1. </span>Usando Views Baseadas em Classes (CBV)</a></p>
+                        title="capítulo anterior"><span class="section-number">6.1. </span>Usando Views Baseadas em Classes (CBV)</a></p>
   <h4>Próximo tópico</h4>
   <p class="topless"><a href="../templates.html"
-                        title="próximo capítulo"><span class="section-number">6. </span>Templates</a></p>
+                        title="próximo capítulo"><span class="section-number">7. </span>Templates</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -177,10 +177,10 @@
                 <div class="body">
                   
   <div class="section" id="using-function-based-views-fbv">
-<h1><span class="section-number">5.2. </span>Usando Views baseadas em Funções (FBV)<a class="headerlink" href="#using-function-based-views-fbv" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">6.2. </span>Usando Views baseadas em Funções (FBV)<a class="headerlink" href="#using-function-based-views-fbv" title="Link permanente para este título">¶</a></h1>
 <p>Usando Views baseadas em Funções, a maneira de ser fazer é meio manual, mas é bastante simples usar os resultados da mesma maneira.</p>
 <div class="section" id="list">
-<h2><span class="section-number">5.2.1. </span>Listar<a class="headerlink" href="#list" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.2.1. </span>Listar<a class="headerlink" href="#list" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -198,7 +198,7 @@
 </div>
 </div>
 <div class="section" id="detail">
-<h2><span class="section-number">5.2.2. </span>Detalhe<a class="headerlink" href="#detail" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.2.2. </span>Detalhe<a class="headerlink" href="#detail" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -216,7 +216,7 @@
 </div>
 </div>
 <div class="section" id="create">
-<h2><span class="section-number">5.2.3. </span>Criar<a class="headerlink" href="#create" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.2.3. </span>Criar<a class="headerlink" href="#create" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -239,7 +239,7 @@
 </div>
 </div>
 <div class="section" id="update">
-<h2><span class="section-number">5.2.4. </span>Atualizar<a class="headerlink" href="#update" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.2.4. </span>Atualizar<a class="headerlink" href="#update" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -263,7 +263,7 @@
 </div>
 </div>
 <div class="section" id="delete">
-<h2><span class="section-number">5.2.5. </span>Deletar<a class="headerlink" href="#delete" title="Link permanente para este título">¶</a></h2>
+<h2><span class="section-number">6.2.5. </span>Deletar<a class="headerlink" href="#delete" title="Link permanente para este título">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
 
 <span class="o">...</span>
@@ -299,14 +299,14 @@
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav navbar-nav ">
-        <li><a href="../index.html">documentação Django API Client 0.3.1</a></li>
+        <li><a href="../index.html">documentação Django API Client 0.3.3</a></li>
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
-        <li><a href="cbv.html" title="5.1. Usando Views Baseadas em Classes (CBV)" >anterior</a></li>
-        <li><a href="../templates.html" title="6. Templates" >próximo</a></li>
+        <li><a href="cbv.html" title="6.1. Usando Views Baseadas em Classes (CBV)" >anterior</a></li>
+        <li><a href="../templates.html" title="7. Templates" >próximo</a></li>
         <li><a href="../genindex.html" title="Índice Geral" >índice</a></li>
-        <li><a href="index.html" ><span class="section-number">5. </span>Views</a></li>
+        <li><a href="index.html" ><span class="section-number">6. </span>Views</a></li>
         <li><a href="#">top</a></li> 
       
     </ul>
