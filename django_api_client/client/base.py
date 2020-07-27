@@ -1,4 +1,5 @@
 import json
+from urllib.parse import urljoin
 
 import requests
 from requests.exceptions import ConnectionError as RequestsConnectionError, ReadTimeout, Timeout
@@ -38,7 +39,6 @@ class BaseAPI:
             authentication_url_extra_params=None,
             authentication_url_key=None,
             locale='',
-            url_append_slash=True,
             timeout=3,
             transport_class=None,
             **kwargs):
@@ -52,7 +52,6 @@ class BaseAPI:
             authentication_url_extra_params (dict): Extra params to authenticate by GET
             authentication_url_key (str): key to authenticate by URL. Default is token
             locale (str): Set the locale language. Default is pt-br
-            url_append_slash (bool): Add a slash in the end of the request URL
             timeout (int): Set the request timeout. Default is 3
             transport_class (obj): Class Request Sync or using AsyncIO
         """
@@ -60,7 +59,6 @@ class BaseAPI:
         self.accept_language = locale
         self.access_token_type = access_token_type
         self.api_name = api_name
-        self.append_slash = url_append_slash
         self.authentication_method = authentication_method
         self.authentication_url_extra_params = authentication_url_extra_params
         self.authentication_url_key = authentication_url_key
@@ -98,9 +96,9 @@ class BaseAPI:
         Returns:
             response: Requests response object.
         """
-        full_url = f"{self.base_url}/{endpoint}"
-        if self.append_slash and not full_url.endswith('/'):
-            full_url = f'{full_url}/'
+
+        full_url = urljoin(self.base_url, endpoint)
+
         try:
             response = self.transport.make_request(
                 method_name, full_url, timeout=self.timeout, **kwargs
@@ -171,26 +169,21 @@ class BaseAPI:
 class BaseEndpoint:
     """Class holding endpoint functions.
     """
-    base_methods = ['_get_objects', '_create_object', '_get_object', '_update_object', '_delete_object']
-
     def __init__(self, api, endpoint=''):
         self._api = api
         self.endpoint = endpoint
         self.endpoint_name = self._get_endpoint_name()
 
-        for _method in self.base_methods:
-            method_name = _method.replace('object', self.endpoint_name)[1:]
-            method = getattr(self, _method)
-            setattr(self, method_name, method)
-
     def _get_endpoint_name(self):
         words = [key for key in self.endpoint.split('?')[0].split('/') if key]
-        response_name = words[0]
-        if response_name in [f'v{i}' for i in range(10)]:
-            response_name = words[1]
+        response_name = words[-1]
+        if '-' in response_name:
+            response_name = response_name.replace('-', '_')
+        elif response_name.endswith('s'):
+            response_name = response_name[:-1]
         return response_name
 
-    def _get_objects(self, **kwargs):
+    def list(self, **kwargs):
         """Get a list of all Objects of a Resource.
 
         Args:
@@ -208,7 +201,7 @@ class BaseEndpoint:
         endpoint = f'{self.endpoint}'
         return self._api.search(endpoint, **kwargs)
 
-    def _get_object(self, object_id):
+    def get(self, object_id):
         """Get the full details for a single resource
         Args:
             object_id (str): Object ID.
@@ -227,7 +220,7 @@ class BaseEndpoint:
             path = f'{self.endpoint}{object_id}/'
         return self._api.search(path)
 
-    def _create_object(self, data):
+    def create(self, data):
         """Update a single Object.
 
         Args:
@@ -245,7 +238,7 @@ class BaseEndpoint:
         endpoint = f'{self.endpoint}'
         return self._api.create(endpoint, data)
 
-    def _update_object(self, object_id, data, partial=False):
+    def update(self, object_id, data, partial=False):
         """Update a single Object.
 
         Args:
@@ -268,7 +261,7 @@ class BaseEndpoint:
             path = f'{self.endpoint}{object_id}/'
         return self._api.update(path, data, partial)
 
-    def _delete_object(self, object_id):
+    def delete(self, object_id):
         """Delete a single resource
         Args:
             object_id (str): Object ID.

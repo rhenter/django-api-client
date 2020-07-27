@@ -5,6 +5,25 @@ from .base import BaseAPI, BaseEndpoint
 from .exceptions import APINotFound
 
 
+class EndpointList:
+    endpoints = []
+
+    def __init__(self, endpoint_name):
+        self.name = endpoint_name
+
+    def set_endpoint(self, api, endpoint_url):
+        endpoint = BaseEndpoint(api=api, endpoint=endpoint_url)
+        setattr(self, self._get_endpoint_base_name(endpoint_url), endpoint)
+        self.endpoints.append(endpoint)
+
+    def _get_endpoint_base_name(self, endpoint):
+        words = [key for key in endpoint.split('?')[0].split('/') if key]
+        response_name = words[-1]
+        if '-' in response_name:
+            response_name = response_name.replace('-', '_')
+        return response_name
+
+
 class APIClient:
     """API Client Factory Class
     This class instantiates all endpoint classes
@@ -14,9 +33,31 @@ class APIClient:
         """API object to communicate with API.
         """
         self.api = BaseAPI(**kwargs)
-        for endpoint_url in kwargs['endpoints']:
-            endpoint = BaseEndpoint(api=self.api, endpoint=endpoint_url)
-            setattr(self, endpoint.endpoint_name, endpoint)
+        endpoints = self._get_endpoints(kwargs)
+        for endpoint_name in endpoints:
+            endpoint = None
+            endpoint_urls = endpoints[endpoint_name]
+            endpoint = EndpointList(endpoint_name)
+            for endpoint_url in endpoint_urls:
+                endpoint.set_endpoint(api=self.api, endpoint_url=endpoint_url)
+
+            setattr(self, endpoint_name, endpoint)
+
+    def _get_endpoints(self, kwargs):
+        endpoints = {}
+        for endpoint_path in kwargs['endpoints']:
+            endpoint_name = self._get_endpoint_base_name(endpoint_path)
+            if endpoint_name not in endpoints:
+                endpoints[endpoint_name] = []
+            endpoints[endpoint_name].append(endpoint_path)
+        return endpoints
+
+    def _get_endpoint_base_name(self, endpoint):
+        words = [key for key in endpoint.split('/') if key]
+        response_name = words[0]
+        if response_name in [f'v{i}' for i in range(10)]:
+            response_name = words[1]
+        return response_name
 
     def __repr__(self):
         return f'<APIClient {self.api.api_name.title()}>'

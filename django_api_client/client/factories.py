@@ -11,20 +11,28 @@ class ResponseFactory:
         self.response_name = self._get_response_name()
         self.raw = response
 
+    def _get_response_first_name(self, endpoint):
+        words = [key for key in endpoint.split('/') if key]
+        response_name = words[0]
+        if response_name in [f'v{i}' for i in range(10)]:
+            response_name = words[1]
+        return response_name
+
     def _get_response_name(self):
         path = self.endpoint
         if path.startswith('/'):
             path = path[1:]
         words = [key for key in path.split('?')[0].split('/') if key]
-        response_name = words[:1]
+        base_name = words[0]
+        if base_name in [f'v{i}' for i in range(10)]:
+            base_name = words[1]
 
-        last = [words[-1]]
-        if len(words) > 2:
-            last = [words[-2]]
-
-        if last != response_name:
-            response_name.extend(last)
-        return ''.join(word.capitalize() for word in response_name)
+        last = words[-1]
+        if base_name == last:
+            response_name = base_name
+        else:
+            response_name = ''.join(word.capitalize() for word in [base_name, last])
+        return response_name
 
     def as_dict(self):
         return self.raw.json()
