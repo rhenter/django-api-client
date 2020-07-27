@@ -10,16 +10,16 @@ from ..vcr import vcr
 
 @pytest.fixture
 def base_url():
-    return 'http://localhost:8001/v1/'
+    return 'http://localhost:8001'
 
 
 @pytest.fixture
 def endpoint():
-    return 'fake/endpoint/'
+    return '/v1/fake/endpoint/'
 
 
 @vcr.use_cassette()
-def test_sync_with_endpoint_not_fount(api_client, endpoint):
+def test_sync_with_endpoint_not_found(api_client, endpoint):
     with pytest.raises(NotFound) as error:
         api_client.api.search(endpoint)
 
@@ -96,14 +96,14 @@ def test_sync_update_with_put(api_client, fake_session, endpoint, base_url):
     }
     api_client.api.update(endpoint + '6368', data=payload)
     assert fake_session.put.called
-    assert fake_session.put.call_args[0][0] == base_url + endpoint + '6368/'
+    assert fake_session.put.call_args[0][0] == base_url + endpoint + '6368'
     assert fake_session.put.call_args[1]['data'] == json.dumps(payload)
 
 
 def test_sync_update_with_patch(api_client, fake_session, endpoint, base_url):
     api_client.api.transport.session = fake_session
     payload = {'instrument': 'EUR_USD'}
-    api_client.api.update(endpoint + '1234', data=payload, partial=True)
+    api_client.api.update(endpoint + '1234/', data=payload, partial=True)
     assert fake_session.patch.called
     assert fake_session.patch.call_args[0][0] == base_url + endpoint + '1234/'
     assert fake_session.patch.call_args[1]['data'] == json.dumps(payload)

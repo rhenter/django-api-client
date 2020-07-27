@@ -28,6 +28,9 @@ class ResponseFactory:
             base_name = words[1]
 
         last = words[-1]
+        if len(words) > 2:
+            last = words[-2]
+
         if base_name == last:
             response_name = base_name
         else:

@@ -1,3 +1,9 @@
+0.3.4
+~~~~~
+
+- BugFix: Client override when has more than on endpoint in the same base
+- Update doc with new client structure
+
 0.3.3
 ~~~~~
 
