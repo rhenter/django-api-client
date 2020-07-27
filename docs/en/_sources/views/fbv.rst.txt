@@ -14,14 +14,15 @@ List
   ...
 
   def get_orders(request):
-    response = api_client.order.get_orders()
+    response = api_client.order.orders.list()
     template = 'fbv/list.html'
-    context = {"object_list": response.as_obj()}
+    context = {"object_list": response.as_obj().results}
     return render(request, template, context)
 
 
 .. note::
   The usage example assumes that the endpoint ``/order/orders/``
+  Waiting the response {'count': , 'next': None, 'previous': None, 'results': []}
 
 Detail
 ~~~~~~
@@ -34,7 +35,7 @@ Detail
   ...
 
   def get_order(request, pk):
-    response = api_client.order.get_order(id=pk)
+    response = api_client.order.orders.get(id=pk)
     template = 'fbv/detail.html'
     context = {"object": response.as_obj()}
     return render(request, template, context)
@@ -59,10 +60,10 @@ Create
 
     form = TestForm(request.POST or None)
     if form.is_valid():
-        response = api_client.order.create_order(data=form.cleaned_data)
+        response = api_client.order.orders.create(data=form.cleaned_data)
         return redirect('fbv:index')
 
-    context = {"object": response.as_obj()}
+    context = {"form": form}
     return render(request, template, context)
 
 
@@ -81,14 +82,17 @@ Update
 
   def update_order(request, pk):
     template = 'fbv/form.html'
-    response = api_client.order.get_order(id=pk)
+    response = api_client.order.orders.get(id=pk)
 
     form = TestForm(request.POST or None, initial=response.as_dict())
     if form.is_valid():
-        response = api_client.order.update_order(id=pk, data=form.cleaned_data, partial=False)
+        response = api_client.order.orders.update(id=pk, data=form.cleaned_data, partial=False)
         return redirect('fbv:index')
 
-    context = {"object": response.as_obj()}
+    context = {
+      "object": response.as_obj(),
+      "form": form
+     }
     return render(request, template, context)
 
 
@@ -107,9 +111,9 @@ Delete
   ...
   def delete_order(request, pk):
       template = 'fbv/delete.html'
-      response = api_client.order.get_order(id=pk)
+      response = api_client.order.orders.get(id=pk)
       if request.method == 'POST':
-          api_client.order.delete_order(id=pk)
+          api_client.order.orders.delete(id=pk)
           return redirect('fbv:index')
       context = {"object": response.as_obj()}
       return render(request, template, context)

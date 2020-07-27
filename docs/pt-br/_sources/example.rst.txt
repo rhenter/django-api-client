@@ -66,7 +66,7 @@ Let's imagine which client has a project folder (folder containing the settings.
       page_title = 'Orders'                       # Generates a context variable to use in your template
       page_base_url = reverse_lazy('order:list')  # Information used in pagination, and the search
       paginate_by = 50                            # Number of items to generate the pagination
-      client_method = api_client.order.get_orders
+      client_method = api_client.order.orders.list
 
 
 .. note::
@@ -76,10 +76,10 @@ Let's imagine which client has a project folder (folder containing the settings.
 
     endpoint name: order
     methods:
-         get_orders # GET: List
-         get_order # GET: Detail of a resource using an identifier
-         create_order # POST: Create a resource record
-         update_order # PUT / PATCH: Fully or partially updates a resource using an identifier
+         list # GET: List
+         get # GET: Detail of a resource using an identifier
+         create # POST: Create a resource record
+         update # PUT / PATCH: Fully or partially updates a resource using an identifier
     What does that mean?
       That the customer will always generate the structure according to the names of their endpoints
 

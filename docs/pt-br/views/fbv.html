@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>6.2. Usando Views baseadas em Funções (FBV) &mdash; documentação Django API Client 0.3.3</title>
+    <title>6.2. Usando Views baseadas em Funções (FBV) &mdash; documentação Django API Client 0.3.4</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,7 +33,7 @@
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
             URL_ROOT:    '../',
-            VERSION:     '0.3.3',
+            VERSION:     '0.3.4',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE:  true
@@ -51,7 +51,7 @@
 </script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Buscar" href="../search.html" />
-    <link rel="top" title="documentação Django API Client 0.3.3" href="../index.html" />
+    <link rel="top" title="documentação Django API Client 0.3.4" href="../index.html" />
     <link rel="up" title="6. Views" href="index.html" />
     <link rel="next" title="7. Templates" href="../templates.html" />
     <link rel="prev" title="6.1. Usando Views Baseadas em Classes (CBV)" href="cbv.html" /> 
@@ -66,7 +66,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.3</a>
+          <a class="navbar-brand" href="../index.html">documentação Django API Client 0.3.4</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -186,15 +186,16 @@
 <span class="o">...</span>
 
 <span class="k">def</span> <span class="nf">get_orders</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-  <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get_orders</span><span class="p">()</span>
+  <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
   <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;fbv/list.html&#39;</span>
-  <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;object_list&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">as_obj</span><span class="p">()}</span>
+  <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;object_list&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">as_obj</span><span class="p">()</span><span class="o">.</span><span class="n">results</span><span class="p">}</span>
   <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>O Examplo assume que o endpoint é <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code></p>
+<p>The usage example assumes that the endpoint <code class="docutils literal notranslate"><span class="pre">/order/orders/</span></code>
+Waiting the response {‘count’: , ‘next’: None, ‘previous’: None, ‘results’: []}</p>
 </div>
 </div>
 <div class="section" id="detail">
@@ -204,7 +205,7 @@
 <span class="o">...</span>
 
 <span class="k">def</span> <span class="nf">get_order</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
-  <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get_order</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+  <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
   <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;fbv/detail.html&#39;</span>
   <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">as_obj</span><span class="p">()}</span>
   <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -226,10 +227,10 @@
 
   <span class="n">form</span> <span class="o">=</span> <span class="n">TestForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">)</span>
   <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
-      <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">create_order</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">)</span>
+      <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">)</span>
       <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;fbv:index&#39;</span><span class="p">)</span>
 
-  <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">as_obj</span><span class="p">()}</span>
+  <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;form&quot;</span><span class="p">:</span> <span class="n">form</span><span class="p">}</span>
   <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -246,14 +247,17 @@
 
 <span class="k">def</span> <span class="nf">update_order</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
   <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;fbv/form.html&#39;</span>
-  <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get_order</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+  <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
 
   <span class="n">form</span> <span class="o">=</span> <span class="n">TestForm</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span> <span class="ow">or</span> <span class="kc">None</span><span class="p">,</span> <span class="n">initial</span><span class="o">=</span><span class="n">response</span><span class="o">.</span><span class="n">as_dict</span><span class="p">())</span>
   <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
-      <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">update_order</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">,</span> <span class="n">partial</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+      <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">cleaned_data</span><span class="p">,</span> <span class="n">partial</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
       <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;fbv:index&#39;</span><span class="p">)</span>
 
-  <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">as_obj</span><span class="p">()}</span>
+  <span class="n">context</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">as_obj</span><span class="p">(),</span>
+    <span class="s2">&quot;form&quot;</span><span class="p">:</span> <span class="n">form</span>
+   <span class="p">}</span>
   <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -269,9 +273,9 @@
 <span class="o">...</span>
 <span class="k">def</span> <span class="nf">delete_order</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
     <span class="n">template</span> <span class="o">=</span> <span class="s1">&#39;fbv/delete.html&#39;</span>
-    <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get_order</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;POST&#39;</span><span class="p">:</span>
-        <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">delete_order</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+        <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="s1">&#39;fbv:index&#39;</span><span class="p">)</span>
     <span class="n">context</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;object&quot;</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">as_obj</span><span class="p">()}</span>
     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
@@ -299,7 +303,7 @@
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav navbar-nav ">
-        <li><a href="../index.html">documentação Django API Client 0.3.3</a></li>
+        <li><a href="../index.html">documentação Django API Client 0.3.4</a></li>
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       

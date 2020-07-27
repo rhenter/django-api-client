@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>8. Example &mdash; documentação Django API Client 0.3.3</title>
+    <title>8. Example &mdash; documentação Django API Client 0.3.4</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -33,7 +33,7 @@
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
             URL_ROOT:    './',
-            VERSION:     '0.3.3',
+            VERSION:     '0.3.4',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE:  true
@@ -51,7 +51,7 @@
 </script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Buscar" href="search.html" />
-    <link rel="top" title="documentação Django API Client 0.3.3" href="index.html" />
+    <link rel="top" title="documentação Django API Client 0.3.4" href="index.html" />
     <link rel="next" title="1. Intalação em Desenvolvimento" href="development/installation.html" />
     <link rel="prev" title="7. Templates" href="templates.html" /> 
   </head>
@@ -65,7 +65,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">documentação Django API Client 0.3.3</a>
+          <a class="navbar-brand" href="index.html">documentação Django API Client 0.3.4</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -211,7 +211,7 @@
     <span class="n">page_title</span> <span class="o">=</span> <span class="s1">&#39;Orders&#39;</span>                       <span class="c1"># Generates a context variable to use in your template</span>
     <span class="n">page_base_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;order:list&#39;</span><span class="p">)</span>  <span class="c1"># Information used in pagination, and the search</span>
     <span class="n">paginate_by</span> <span class="o">=</span> <span class="mi">50</span>                            <span class="c1"># Number of items to generate the pagination</span>
-    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">get_orders</span>
+    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">list</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -220,10 +220,10 @@
 </div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>endpoint name: order
 methods:
-     get_orders # GET: List
-     get_order # GET: Detail of a resource using an identifier
-     create_order # POST: Create a resource record
-     update_order # PUT / PATCH: Fully or partially updates a resource using an identifier
+     list # GET: List
+     get # GET: Detail of a resource using an identifier
+     create # POST: Create a resource record
+     update # PUT / PATCH: Fully or partially updates a resource using an identifier
 What does that mean?
   That the customer will always generate the structure according to the names of their endpoints
 </pre></div>
@@ -245,7 +245,7 @@ What does that mean?
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav navbar-nav ">
-        <li><a href="index.html">documentação Django API Client 0.3.3</a></li>
+        <li><a href="index.html">documentação Django API Client 0.3.4</a></li>
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
       
