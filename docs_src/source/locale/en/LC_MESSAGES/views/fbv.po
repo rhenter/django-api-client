@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 17:18-0300\n"
+"POT-Creation-Date: 2020-07-27 20:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,25 +32,30 @@ msgstr ""
 msgid "List"
 msgstr ""
 
-#: ../../source/views/fbv.rst:24 ../../source/views/fbv.rst:44
-#: ../../source/views/fbv.rst:70 ../../source/views/fbv.rst:96
-#: ../../source/views/fbv.rst:118
-msgid "The usage example assumes that the endpoint ``/order/orders/``"
+#: ../../source/views/fbv.rst:24
+msgid ""
+"The usage example assumes that the endpoint ``/order/orders/`` Waiting "
+"the response {'count': , 'next': None, 'previous': None, 'results': []}"
 msgstr ""
 
-#: ../../source/views/fbv.rst:27
+#: ../../source/views/fbv.rst:28
 msgid "Detail"
 msgstr ""
 
-#: ../../source/views/fbv.rst:48
+#: ../../source/views/fbv.rst:45 ../../source/views/fbv.rst:71
+#: ../../source/views/fbv.rst:100 ../../source/views/fbv.rst:122
+msgid "The usage example assumes that the endpoint ``/order/orders/``"
+msgstr ""
+
+#: ../../source/views/fbv.rst:49
 msgid "Create"
 msgstr ""
 
-#: ../../source/views/fbv.rst:73
+#: ../../source/views/fbv.rst:74
 msgid "Update"
 msgstr ""
 
-#: ../../source/views/fbv.rst:100
+#: ../../source/views/fbv.rst:104
 msgid "Delete"
 msgstr ""
 

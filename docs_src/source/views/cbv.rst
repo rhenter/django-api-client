@@ -20,7 +20,7 @@ Following the same example as Model ListView, the results returned from the mode
       page_title = 'Tests'
       page_base_url = reverse_lazy('order:list')
       paginate_by = 50
-      client_method = api_client.order.get_orders
+      client_method = api_client.order.orders.list()
 
 
 
@@ -50,7 +50,7 @@ Following the same example as Model DetailView, the results returned from the mo
   class TestDetailView(ClientAPIDetailView):
       template_name = "template_name.html"
       page_title = _('View Test')
-      client_method = api_client.order.get_order
+      client_method = api_client.order.orders.get
 
 .. hint::
   - template_name: path with name of you template
@@ -78,7 +78,7 @@ Following the same example as Model CreateView, on submit will validate and save
       template_name = "template_name.html"
       page_title = _('View Test')
       success_url = reverse_lazy('test:list')
-      client_method = api_client.order.create_order
+      client_method = api_client.order.orders.create
 
 .. hint::
   - template_name: path with name of you template
@@ -106,8 +106,8 @@ ClientAPIUpdateView
       template_name = "template_name.html"
       success_url = reverse_lazy('test:list')
       page_title = _('Edit Test')
-      client_method = api_client.order.update_order
-      client_initial_method = api_client.order.update_order
+      client_method = api_client.order.orders.update
+      client_initial_method = api_client.order.orders.get
       partial = False
 
 
@@ -126,8 +126,8 @@ ClientAPIUpdateView
       template_name = "template_name.html"
       success_url = reverse_lazy('test:list')
       page_title = _('Edit Test')
-      client_method = api_client.order.update_order
-      client_initial_method = api_client.order.update_order
+      client_method = api_client.order.orders.update
+      client_initial_method = api_client.order.orders.get
       partial = False
 
       def get_initial(self):
@@ -164,7 +164,7 @@ Following the same example as Model DetailView, the results returned from the mo
   ...
 
   class TestDetailView(ClientAPIDeleteView):
-      client_method = api_client.order.delete_order
+      client_method = api_client.order.orders.delete
       success_url = reverse_lazy('test:list')
 
 
