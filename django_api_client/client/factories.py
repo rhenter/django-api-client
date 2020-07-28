@@ -23,18 +23,20 @@ class ResponseFactory:
         if path.startswith('/'):
             path = path[1:]
         words = [key for key in path.split('?')[0].split('/') if key]
-        base_name = words[0]
-        if base_name in [f'v{i}' for i in range(10)]:
-            base_name = words[1]
+        base = 0
+        if words[base] in [f'v{i}' for i in range(10)]:
+            base = 1
 
-        last = words[-1]
+        last = -1
         if len(words) > 2:
-            last = words[-2]
+            last = base + 1
 
-        if base_name == last:
-            response_name = base_name
+        print(words[base], words[last])
+        if words[base] == words[last]:
+            response_name = words[base].title()
         else:
-            response_name = ''.join(word.capitalize() for word in [base_name, last])
+            response_name = f'{words[base].title()}{words[last].title()}'
+        response_name = response_name.replace('-', '').replace('_', '')
         return response_name
 
     def as_dict(self):
