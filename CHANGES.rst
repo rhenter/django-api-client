@@ -1,3 +1,8 @@
+0.3.8
+~~~~~
+
+- Change Factory name with APIClient signature
+
 0.3.7
 ~~~~~
 

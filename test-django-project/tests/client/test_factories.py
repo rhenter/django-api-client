@@ -33,4 +33,22 @@ def test_factory_str(endpoint, expected):
 
     factory = ResponseFactory(ResponseTest(), endpoint)
 
-    assert str(factory) == f'<{expected} object>'
+    assert str(factory) == expected
+
+
+@pytest.mark.parametrize('endpoint,expected', [
+    ('data/test', 'DataTest'),
+    ('base/target/DETAIL', 'BaseTarget'),
+    ('base/sub/123123', 'BaseSub'),
+    ('test/data', 'TestData'),
+])
+def test_factory_repr(endpoint, expected):
+    data = {'users': [{'id': '000-000-0000000-000', 'tags': []}]}
+
+    class ResponseTest:
+        def json(self):
+            return data
+
+    factory = ResponseFactory(ResponseTest(), endpoint)
+
+    assert repr(factory) == f'<APIClient {expected} object>'

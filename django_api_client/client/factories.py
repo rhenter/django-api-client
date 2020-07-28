@@ -45,4 +45,7 @@ class ResponseFactory:
         return model_builder(result, class_name=self.response_name)
 
     def __repr__(self):
-        return '<{} object>'.format(self.response_name)
+        return '<APIClient {} object>'.format(self.response_name)
+
+    def __str__(self):
+        return self.response_name
