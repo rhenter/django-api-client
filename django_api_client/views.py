@@ -6,8 +6,8 @@ from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import DeleteView, FormView
 
-from mixins import BaseViewMixin
 from . import status
+from .mixins import BaseViewMixin
 from .paginators import ClientAPIPagination
 from .settings import api_client_settings
 from .utils import clean_url
