@@ -1,3 +1,8 @@
+0.3.10
+------
+
+- BugFix: Remove debug from ResponseFactory
+
 0.3.11
 ------
 
