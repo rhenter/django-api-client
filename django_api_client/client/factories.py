@@ -31,7 +31,6 @@ class ResponseFactory:
         if len(words) > 2:
             last = base + 1
 
-        print(words[base], words[last])
         if words[base] == words[last]:
             response_name = words[base].title()
         else:
