@@ -1,3 +1,18 @@
+0.3.7
+~~~~~
+
+- Fix Slug field on ClientAPIAuthenticatedUpdateView to let generic
+
+0.3.6
+~~~~~
+
+- Add new fragment to the endpoint identifier on ClientAPIUpdateView
+
+0.3.5
+~~~~~
+
+- Get the endpoint identifier from the slug_field argument
+
 0.3.4
 ~~~~~
 

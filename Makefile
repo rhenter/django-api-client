@@ -33,3 +33,4 @@ release: build
 	git tag `python setup.py -q version`
 	git push origin `python setup.py -q version`
 	twine upload dist/*
+	$(MAKE) clean

@@ -47,17 +47,15 @@ class ClientAPIAuthenticatedUpdateView(ClientAPIFormView):
     def get_initial(self):
         if not self.client_initial_method:
             return None
-        response = self.client_initial_method(**self.kwargs)
+        response = self.client_initial_method(self.kwargs.get(self.slug_field))
         return response.as_dict()
 
     def form_valid(self, form):
-        slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
         params = {
-            slug_url_kwarg: self.kwargs.get(slug_url_kwarg),
             'data': form.cleaned_data,
             'partial': self.partial
         }
-        response = self.client_method(**params)
+        response = self.client_method(self.kwargs.get(self.slug_field), **params)
         return self.send_cleaned_data(response, form, update=True)
 
 
@@ -66,6 +64,7 @@ class ClientAPIAuthenticatedListView(ListView):
     paginate_by = api_client_settings.configs['PAGE_SIZE']
     paginator_class = ClientAPIPagination
     client_method = None
+    client_method_result_key = 'results'
     extra_kwargs = []
     page_base_url = ''
     page_title = ''
@@ -179,7 +178,7 @@ class ClientAPIAuthenticatedDetailView(DetailView):
     client_method = None
 
     def get(self, request, *args, **kwargs):
-        response = self.client_method(**self.kwargs)
+        response = self.client_method(self.kwargs.get(self.slug_field))
         self.object = response.as_obj()
         context = self.get_context_data()
         return self.render_to_response(context)
@@ -191,7 +190,7 @@ class ClientAPIAuthenticatedDeleteView(DeleteView):
     client_method = None
 
     def post(self, request, *args, **kwargs):
-        self.client_method(**self.kwargs)
+        self.client_method(self.kwargs.get(self.slug_field))
         success_url = self.get_success_url()
         return HttpResponseRedirect(success_url)
 

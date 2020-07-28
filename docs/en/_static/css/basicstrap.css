@@ -55,7 +55,7 @@ h2, h3, h4, h5, h6 {
   }
   form.sp-searchbox div.input-append {
     width: 90%;
-    
+
   }
   form.sp-searchbox input.search-query {
     width: 100%;
@@ -78,6 +78,6 @@ h2, h3, h4, h5, h6 {
 
 /* for desktop */
 @media (min-width: 768px) {
-  
-  
+
+
 }
