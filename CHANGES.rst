@@ -1,3 +1,8 @@
+0.3.11
+------
+
+- Change the APIClientEndpointList to get clear when django raises a wrong call
+
 0.3.10
 ------
 
