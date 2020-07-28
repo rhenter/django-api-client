@@ -5,7 +5,7 @@ from .base import BaseAPI, BaseEndpoint
 from .exceptions import APINotFound
 
 
-class EndpointList:
+class APIClientEndpointList:
     endpoints = []
 
     def __init__(self, endpoint_name):
@@ -37,7 +37,7 @@ class APIClient:
         for endpoint_name in endpoints:
             endpoint = None
             endpoint_urls = endpoints[endpoint_name]
-            endpoint = EndpointList(endpoint_name)
+            endpoint = APIClientEndpointList(endpoint_name)
             for endpoint_url in endpoint_urls:
                 endpoint.set_endpoint(api=self.api, endpoint_url=endpoint_url)
 
