@@ -1,3 +1,8 @@
+0.3.9
+~~~~~
+
+- Fix Factory repr name with special characters
+
 0.3.8
 ~~~~~
 
