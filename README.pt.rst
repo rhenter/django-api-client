@@ -194,8 +194,11 @@ Exemplo com o endpoint **/order/orders/**:
         get_order    # GET: Detalhe de um recurso usando um identificador
         create_order # POST: Cria um registro de um recurso
         update_order # PUT/PATCH: Atualiza total ou parciamente um recurso usando um identificador
+
+.. hint::
+
     O que isso quer dizer?
-      Que o cliente sempre gerará a estutura de acordo os nomes dos seus endpoints
+      Que o API Cliente sempre gerará a estutura de acordo os nomes dos seus endpoints
 
 Documentação
 ============

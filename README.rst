@@ -113,7 +113,7 @@ Example
 
 * Now we are going to list the data using the normal Django template system
 
-Let's imagine which client has a project folder (folder containing the settings.py file)
+Let's imagine which client is located in a folder called clients on project folder (folder containing the settings.py file)
 
 .. code-block:: python
 
@@ -182,9 +182,9 @@ In your template you can use the forms and pagination snippets. E.g:
 
 
 .. note::
-  - Example using Bootstrap Styles
-  - includes/form_search.html: Form with search input. This include support placeholder too.
-  - includes/form_paginate_by.html: Select form to choose how many elements the page will be paged on (20, 40, 60, etc ...)
+  - Example using Bootstrap Styles(CSS)
+  - includes/form_search.html: Form with search input. This ``include`` support placeholder too.
+  - includes/form_paginate_by.html: Select form to choose how many elements the page will be paginate. Ex: by (20, 40, 60, etc ...)
   - includes/list_paginator.html: Block with pagination elements with the number of pages buttons, previous and next
 
 
@@ -192,12 +192,16 @@ In your template you can use the forms and pagination snippets. E.g:
 
     endpoint name: order
     methods:
-         get_orders # GET: List
-         get_order # GET: Detail of a resource using an identifier
-         create_order # POST: Create a resource record
-         update_order # PUT / PATCH: Fully or partially updates a resource using an identifier
+         - list   # GET: List
+         - get    # GET: Detail of a resource using an identifier
+         - create # POST: Create a resource record
+         - update # PUT / PATCH: Fully or partially updates a resource using an identifier
+         - delete # DELETE: delete a record in a resource using an identifier
+
+.. hint::
+
     What does that mean?
-      That the customer will always generate the structure according to the names of their endpoints
+      That the API Client will always generate the structure according to the names of their endpoints
 
 Documentation
 =============

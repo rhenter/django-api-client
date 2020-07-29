@@ -33,7 +33,9 @@ User Guide
     forms/index.rst
     views/index.rst
     templates.rst
-    example.rst
+
+
+.. include::  example.rst
 
 
 Development

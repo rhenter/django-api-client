@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 14:16-0300\n"
+"POT-Creation-Date: 2020-07-29 08:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,23 +20,21 @@ msgstr ""
 
 #: ../../source/example.rst:2
 msgid "Example"
-msgstr ""
+msgstr "Exemplo"
 
 #: ../../source/example.rst:4
-#, fuzzy
 msgid "Add this settings in your project ``settings.py`` file to access your API"
 msgstr ""
 "Adicione esta configuração no seu projeto no arquivo ``settings.py`` para"
 " acessar a sua API "
 
 #: ../../source/example.rst:36
-#, fuzzy
 msgid ""
 "The details of the configuration will be better explained in the "
 "documentation"
 msgstr ""
-"*Nota: Os detalhes da configuração serão melhor explicados na "
-"documentação*"
+"Os detalhes da configuração serão melhor explicados na "
+"documentação"
 
 #: ../../source/example.rst:38
 msgid ""
@@ -75,16 +73,15 @@ msgstr ""
 "identificados nele"
 
 #: ../../source/example.rst:53
-#, fuzzy
 msgid "Now we are going to list the data using the Django template system default"
 msgstr "Agora vamos listar os dados usando o sistema padrão do Django "
 
 #: ../../source/example.rst:55
 msgid ""
-"Let's imagine which client has a project folder (folder containing the "
+"Let's imagine which client is located in a folder called clients on project folder (folder containing the "
 "settings.py file)"
 msgstr ""
-"Vamos imaginar qual cliente tem uma pasta de projeto (pasta que contém o "
+"Vamos imaginar que o cliente esta em uma pasta dentro da pasta do projeto (pasta que contém o "
 "arquivo settings.py)"
 
 #: ../../source/example.rst:73
@@ -94,6 +91,48 @@ msgid ""
 msgstr ""
 "O cliente irá gerar uma estrutura amigavel para cada endpoing. Exemplo "
 "com o endpoint */order/orders/*:"
+
+#: ../../source/example.rst:75
+msgid "In your template you can use the forms and pagination snippets. E.g:"
+msgstr "No seu template você pode usar os snippets de formulários e de paginação. Ex:"
+
+#: ../../source/example.rst:123
+msgid "Example using Bootstrap Styles(CSS)"
+msgstr "Exemplo usando estilos (CSS) do Bootstrap"
+
+#: ../../source/example.rst:124
+msgid ""
+"includes/form_search.html: Form with search input. This ``include`` support "
+"placeholder too."
+msgstr ""
+"includes/form_search.html: Formulário com input de busca. Este ``include`` suporta placeholder tambem."
+
+#: ../../source/example.rst:125
+msgid ""
+"includes/form_paginate_by.html: Select form to choose how many elements "
+"the page will be paginate. Ex: by (20, 40, 60, etc ...)"
+msgstr ""
+"includes/form_paginate_by.html: Formulario de Select para escolher com quantos elementos a pagina será paginada"
+"Ex: por (20, 40, 60, etc ...)"
+
+#: ../../source/example.rst:126
+msgid ""
+"includes/list_paginator.html: Block with pagination elements with the "
+"number of pages buttons, previous and next"
+msgstr ""
+"includes/list_paginator.html: Bloco com os elementos de paginação com os butões de número de paginas, anterior e proximo"
+
+
+#: ../../source/example.rst:141
+msgid "What does that mean?"
+msgstr "O que isso quer dizer?"
+
+#: ../../source/example.rst:142
+msgid ""
+"That the API Client will always generate the structure according to the "
+"names of their endpoints"
+msgstr ""
+"Que o API Cliente sempre gerará a estutura de acordo os nomes dos seus endpoints"
 
 #~ msgid "Also add the settings to access your API to settings.py:"
 #~ msgstr ""

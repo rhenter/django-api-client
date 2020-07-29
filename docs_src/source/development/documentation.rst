@@ -46,5 +46,6 @@ The project use GitHub pages, so all HTML files must be locate on /doc
 
 .. code-block:: bash
 
+    $ cd docs_src
     $ sphinx-build -b html source ../docs/en -D language='en'
     $ sphinx-build -b html source ../docs/pt-br -D language='pt_BR'

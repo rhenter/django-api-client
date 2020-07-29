@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 13:51-0300\n"
+"POT-Creation-Date: 2020-07-29 08:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,27 +63,119 @@ msgstr ""
 msgid "User Guide"
 msgstr ""
 
-#: ../../source/index.rst:39
+#: ../../source/example.rst:2
+msgid "Example"
+msgstr ""
+
+#: ../../source/example.rst:4
+msgid "Add this settings in your project ``settings.py`` file to access your API"
+msgstr ""
+
+#: ../../source/example.rst:36
+msgid ""
+"The details of the configuration will be better explained in the "
+"documentation"
+msgstr ""
+
+#: ../../source/example.rst:38
+msgid ""
+"Create a clients.py file in the core folder of your project, if you "
+"haven't, created it within your project folder to be simple to be "
+"imported from anywhere in the project with the following content:"
+msgstr ""
+
+#: ../../source/example.rst:48
+msgid ""
+"The name of this variable will be the name of the customer that you will "
+"import into every project"
+msgstr ""
+
+#: ../../source/example.rst:49
+msgid ""
+"It is recommended that the name comes from a constant in the settings.py "
+"file, and if possible it can even be an environment variable."
+msgstr ""
+
+#: ../../source/example.rst:50
+msgid ""
+"In our case, we have 2 options,\"production\" and \"localhost\", the "
+"factory generates a `api client` according to the name used and the "
+"parameters identified in it"
+msgstr ""
+
+#: ../../source/example.rst:53
+msgid "Now we are going to list the data using the Django template system default"
+msgstr ""
+
+#: ../../source/example.rst:55
+msgid ""
+"Let's imagine which client is located in a folder called clients on project folder (folder containing the "
+"settings.py file)"
+msgstr ""
+
+#: ../../source/example.rst:73
+msgid ""
+"The client will generate a user-friendly structure for each endpoint. "
+"Example with the endpoint */order/orders/*:"
+msgstr ""
+
+#: ../../source/example.rst:75
+msgid "In your template you can use the forms and pagination snippets. E.g:"
+msgstr ""
+
+#: ../../source/example.rst:123
+msgid "Example using Bootstrap Styles(CSS)"
+msgstr ""
+
+#: ../../source/example.rst:124
+msgid ""
+"includes/form_search.html: Form with search input. This ``include`` support "
+"placeholder too."
+msgstr ""
+
+#: ../../source/example.rst:125
+msgid ""
+"includes/form_paginate_by.html: Select form to choose how many elements "
+"the page will be paginate. Ex: by (20, 40, 60, etc ...)"
+msgstr ""
+
+#: ../../source/example.rst:126
+msgid ""
+"includes/list_paginator.html: Block with pagination elements with the "
+"number of pages buttons, previous and next"
+msgstr ""
+
+#: ../../source/example.rst:141
+msgid "What does that mean?"
+msgstr ""
+
+#: ../../source/example.rst:142
+msgid ""
+"That the API Client will always generate the structure according to the "
+"names of their endpoints"
+msgstr ""
+
+#: ../../source/index.rst:42
 msgid "Development"
 msgstr ""
 
-#: ../../source/index.rst:51
+#: ../../source/index.rst:54
 msgid "Downloads"
 msgstr ""
 
-#: ../../source/index.rst:53
+#: ../../source/index.rst:56
 msgid ""
 "`PDF <https://readthedocs.org/projects/django-api-"
 "client/downloads/pdf/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:55
+#: ../../source/index.rst:58
 msgid ""
 "`Epub <https://readthedocs.org/projects/django-api-"
 "client/downloads/epub/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:59
+#: ../../source/index.rst:62
 msgid "Changelog"
 msgstr ""
 

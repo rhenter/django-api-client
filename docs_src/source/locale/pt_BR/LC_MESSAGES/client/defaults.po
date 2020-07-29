@@ -153,9 +153,8 @@ msgstr ""
 "usado para passar o ``Accept-Language`` na solicitação"
 
 #: ../../source/client/defaults.rst:65
-#, fuzzy
 msgid "Default: Project Language Code set on settings.py"
-msgstr "Padão: Linguagem padrão do codigo setada no settings.py"
+msgstr "Padrão: Linguagem padrão do codigo setada no settings.py"
 
 #: ../../source/client/defaults.rst:68
 msgid "NAME"
@@ -163,7 +162,7 @@ msgstr ""
 
 #: ../../source/client/defaults.rst:71
 msgid "Definition: Slug Name used to instantiate the client api factory"
-msgstr "Definition: Apelido usado para instaciar o cliente da API"
+msgstr "Definição: Apelido usado para instaciar o cliente da API"
 
 #: ../../source/client/defaults.rst:75
 msgid "URL_APPEND_SLASH"
@@ -171,7 +170,7 @@ msgstr ""
 
 #: ../../source/client/defaults.rst:78
 msgid "Definition: Add a slash in end of the endpoint URL"
-msgstr ""
+msgstr "Definição: Adiciona uma / no fim da URL do endpoint"
 
 #: ../../source/client/defaults.rst:79
 msgid "Default: True"

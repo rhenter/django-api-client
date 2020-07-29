@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 14:16-0300\n"
+"POT-Creation-Date: 2020-07-29 08:48-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,7 +64,7 @@ msgstr ""
 
 #: ../../source/example.rst:55
 msgid ""
-"Let's imagine which client has a project folder (folder containing the "
+"Let's imagine which client is located in a folder called clients on project folder (folder containing the "
 "settings.py file)"
 msgstr ""
 
@@ -72,6 +72,42 @@ msgstr ""
 msgid ""
 "The client will generate a user-friendly structure for each endpoint. "
 "Example with the endpoint */order/orders/*:"
+msgstr ""
+
+#: ../../source/example.rst:75
+msgid "In your template you can use the forms and pagination snippets. E.g:"
+msgstr ""
+
+#: ../../source/example.rst:123
+msgid "Example using Bootstrap Styles(CSS)"
+msgstr ""
+
+#: ../../source/example.rst:124
+msgid ""
+"includes/form_search.html: Form with search input. This ``include`` support "
+"placeholder too."
+msgstr ""
+
+#: ../../source/example.rst:125
+msgid ""
+"includes/form_paginate_by.html: Select form to choose how many elements "
+"the page will be paginate. Ex: by (20, 40, 60, etc ...)"
+msgstr ""
+
+#: ../../source/example.rst:126
+msgid ""
+"includes/list_paginator.html: Block with pagination elements with the "
+"number of pages buttons, previous and next"
+msgstr ""
+
+#: ../../source/example.rst:141
+msgid "What does that mean?"
+msgstr ""
+
+#: ../../source/example.rst:142
+msgid ""
+"That the API Client will always generate the structure according to the "
+"names of their endpoints"
 msgstr ""
 
 #~ msgid "Also add the settings to access your API to settings.py:"

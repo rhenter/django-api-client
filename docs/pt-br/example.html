@@ -6,12 +6,12 @@
 <html lang="pt_BR">
   <head>
     <meta charset="utf-8" />
-
-    <title>8. Example &mdash; documentação Django API Client 0.3.4</title>
+    
+    <title>Exemplo &mdash; documentação Django API Client 0.3.12</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
-
+    
 
 <link rel="stylesheet" href="_static/css/basicstrap-base.css" type="text/css" />
 <link rel="stylesheet" id="current-theme" href="_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
@@ -29,11 +29,11 @@
 <link rel="stylesheet" href="_static/css/basicstrap.css" type="text/css" />
 <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-
+    
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
             URL_ROOT:    './',
-            VERSION:     '0.3.4',
+            VERSION:     '0.3.12',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE:  true
@@ -51,9 +51,7 @@
 </script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Buscar" href="search.html" />
-    <link rel="top" title="documentação Django API Client 0.3.4" href="index.html" />
-    <link rel="next" title="1. Intalação em Desenvolvimento" href="development/installation.html" />
-    <link rel="prev" title="7. Templates" href="templates.html" />
+    <link rel="top" title="documentação Django API Client 0.3.12" href="index.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -65,16 +63,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">documentação Django API Client 0.3.4</a>
+          <a class="navbar-brand" href="index.html">documentação Django API Client 0.3.12</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
 
-
-              <li><a href="templates.html" title="7. Templates" accesskey="P">anterior </a></li>
-              <li><a href="development/installation.html" title="1. Intalação em Desenvolvimento" accesskey="N">próximo </a></li>
+            
               <li><a href="genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
-
+            
             <li class="visible-xs"><a href="_sources/example.rst.txt" rel="nofollow">Exibir Fonte</a></li>
 
             <li class="visible-xs">
@@ -90,29 +86,23 @@
                 </form>
             </li>
 
-
+            
 
           </ul>
 
         </div>
       </div>
     </div>
-
+    
 
     <!-- container -->
     <div class="container-fluid">
 
       <!-- row -->
       <div class="row">
-
+         
 <div class="col-md-3 hidden-xs" id="sidebar-wrapper">
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
-  <h4>Tópico anterior</h4>
-  <p class="topless"><a href="templates.html"
-                        title="capítulo anterior"><span class="section-number">7. </span>Templates</a></p>
-  <h4>Próximo tópico</h4>
-  <p class="topless"><a href="development/installation.html"
-                        title="próximo capítulo"><span class="section-number">1. </span>Intalação em Desenvolvimento</a></p>
   <div role="note" aria-label="source link">
     <h3>Essa Página</h3>
     <ul class="this-page-menu">
@@ -137,19 +127,19 @@
     </p>
 </div>
   </div>
-</div>
-
+</div> 
+        
 
         <div class="col-md-9" id="content-wrapper">
           <div class="document" role="main">
             <div class="documentwrapper">
               <div class="bodywrapper">
                 <div class="body">
-
+                  
   <div class="section" id="example">
-<h1><span class="section-number">8. </span>Example<a class="headerlink" href="#example" title="Link permanente para este título">¶</a></h1>
+<h1>Exemplo<a class="headerlink" href="#example" title="Link permanente para este título">¶</a></h1>
 <ul class="simple">
-<li><p>Add this settings in your project <code class="docutils literal notranslate"><span class="pre">settings.py</span></code> file to access your API</p></li>
+<li><p>Adicione esta configuração no seu projeto no arquivo <code class="docutils literal notranslate"><span class="pre">settings.py</span></code> para acessar a sua API</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DJANGO_API_CLIENT</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;API&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -179,7 +169,7 @@
 </div>
 <div class="admonition hint">
 <p class="admonition-title">Dica</p>
-<p>The details of the configuration will be better explained in the documentation</p>
+<p>Os detalhes da configuração serão melhor explicados na documentação</p>
 </div>
 <ul class="simple">
 <li><p>Crie um arquivo clients.py em alguma pasta nucleo do seu projeto, caso não tenha, crie dentro da sua pasta do projeto para ficar mais simples de ser importado de qualquer lugar do projeto com o seguinte conteúdo:</p></li>
@@ -198,9 +188,9 @@
 </ul>
 </div>
 <ul class="simple">
-<li><p>Now we are going to list the data using the Django template system default</p></li>
+<li><p>Agora vamos listar os dados usando o sistema padrão do Django</p></li>
 </ul>
-<p>Vamos imaginar qual cliente tem uma pasta de projeto (pasta que contém o arquivo settings.py)</p>
+<p>Vamos imaginar que o cliente esta em uma pasta dentro da pasta do projeto (pasta que contém o arquivo settings.py)</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.mixins</span> <span class="kn">import</span> <span class="n">ClientAPIListMixin</span>
 
 <span class="kn">from</span> <span class="nn">pasta_do_projeto.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
@@ -218,15 +208,73 @@
 <p class="admonition-title">Nota</p>
 <p>O cliente irá gerar uma estrutura amigavel para cada endpoing. Exemplo com o endpoint <em>/order/orders/</em>:</p>
 </div>
+<p>No seu template você pode usar os snippets de formulários e de paginação. Ex:</p>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">content</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">...</span>
+<span class="x">&lt;div class=&quot;card card-navy card-outline&quot;&gt;</span>
+<span class="x">  &lt;div class=&quot;card-header&quot;&gt;</span>
+<span class="x">    &lt;h3 class=&quot;card-title&quot;&gt;</span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">trans</span> <span class="s2">&quot;Order List&quot;</span> <span class="cp">%}</span><span class="x"> : &lt;small class=&quot;text-muted&quot;&gt;</span><span class="cp">{{</span> <span class="nv">paginator.count</span> <span class="cp">}}</span><span class="x">&lt;/small&gt;</span>
+<span class="x">    &lt;/h3&gt;</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;includes/form_paginate_by.html&quot;</span> <span class="k">with</span> <span class="nv">paginate_by</span><span class="o">=</span><span class="nv">paginate_by</span> <span class="nv">range_pagination</span><span class="o">=</span><span class="nv">range_pagination</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;includes/form_search.html&quot;</span> <span class="k">with</span> <span class="nv">search</span><span class="o">=</span><span class="nv">search</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  &lt;/div&gt;</span>
+<span class="x">  &lt;div class=&quot;card-body table-responsive p-0&quot;&gt;</span>
+<span class="x">    &lt;table class=&quot;table table-bordered table-hover table-striped&quot; id=&quot;list-content&quot;&gt;</span>
+<span class="x">      &lt;thead&gt;</span>
+<span class="x">      &lt;tr&gt;</span>
+<span class="x">        &lt;th&gt;</span><span class="cp">{%</span> <span class="k">trans</span> <span class="s1">&#39;Code&#39;</span> <span class="cp">%}</span><span class="x">&lt;/th&gt;</span>
+<span class="x">        &lt;th&gt;</span><span class="cp">{%</span> <span class="k">trans</span> <span class="s1">&#39;Customer&#39;</span> <span class="cp">%}</span><span class="x">&lt;/th&gt;</span>
+<span class="x">        &lt;th&gt;</span><span class="cp">{%</span> <span class="k">trans</span> <span class="s1">&#39;Product&#39;</span> <span class="cp">%}</span><span class="x">&lt;/th&gt;</span>
+<span class="x">      &lt;/tr&gt;</span>
+<span class="x">      &lt;/thead&gt;</span>
+<span class="x">      &lt;tbody class=&quot;text-gray&quot;&gt;</span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">order</span> <span class="k">in</span> <span class="nv">object_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        &lt;tr&gt;</span>
+<span class="x">          &lt;td&gt;&lt;a href=&quot;</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">&#39;order:detail&#39;</span> <span class="nv">pk</span><span class="o">=</span><span class="nv">order.id</span> <span class="cp">%}</span><span class="x">&quot; &lt;/a&gt;</span>
+<span class="x">          &lt;/td&gt;</span>
+<span class="x">          &lt;td&gt;</span><span class="cp">{{</span> <span class="nv">order.id</span> <span class="cp">}}</span><span class="x">&lt;/td&gt;</span>
+<span class="x">          &lt;td&gt;</span><span class="cp">{{</span> <span class="nv">order.customer.name</span><span class="o">|</span><span class="nf">title</span> <span class="cp">}}</span><span class="x">&lt;/td&gt;</span>
+<span class="x">          &lt;td&gt;</span><span class="cp">{{</span> <span class="nv">order.product.name</span><span class="o">|</span><span class="nf">title</span> <span class="cp">}}</span><span class="x">&lt;/td&gt;</span>
+<span class="x">        &lt;/tr&gt;</span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">      &lt;/tbody&gt;</span>
+<span class="x">    &lt;/table&gt;</span>
+<span class="x">  &lt;/div&gt;</span>
+<span class="x">  &lt;div class=&quot;card-footer&quot;&gt;</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">object_list</span><span class="o">|</span><span class="nf">length</span> <span class="o">!=</span> <span class="m">0</span> <span class="k">or</span> <span class="k">not</span> <span class="nv">object_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;includes/list_paginator.html&quot;</span> <span class="k">with</span> <span class="nv">page_obj</span><span class="o">=</span><span class="nv">page_obj</span> <span class="nv">paginator</span><span class="o">=</span><span class="nv">paginator</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  &lt;/div&gt;</span>
+<span class="x">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Exemplo usando estilos (CSS) do Bootstrap</p></li>
+<li><p>includes/form_search.html: Formulário com input de busca. Este <code class="docutils literal notranslate"><span class="pre">include</span></code> suporta placeholder tambem.</p></li>
+<li><p>includes/form_paginate_by.html: Formulario de Select para escolher com quantos elementos a pagina será paginadaEx: por (20, 40, 60, etc …)</p></li>
+<li><p>includes/list_paginator.html: Bloco com os elementos de paginação com os butões de número de paginas, anterior e proximo</p></li>
+</ul>
+</div>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>endpoint name: order
 methods:
-     list # GET: List
-     get # GET: Detail of a resource using an identifier
-     create # POST: Create a resource record
-     update # PUT / PATCH: Fully or partially updates a resource using an identifier
-What does that mean?
-  That the customer will always generate the structure according to the names of their endpoints
+     - list   # GET: List
+     - get    # GET: Detail of a resource using an identifier
+     - create # POST: Create a resource record
+     - update # PUT / PATCH: Fully or partially updates a resource using an identifier
+     - delete # DELETE: delete a record in a resource using an identifier
 </pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Dica</p>
+<dl class="simple">
+<dt>O que isso quer dizer?</dt><dd><p>Que o API Cliente sempre gerará a estutura de acordo os nomes dos seus endpoints</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -236,8 +284,8 @@ What does that mean?
             </div>
           </div>
         </div>
-
-
+        
+        
       </div><!-- /row -->
 
       <!-- row -->
@@ -245,15 +293,13 @@ What does that mean?
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav navbar-nav ">
-        <li><a href="index.html">documentação Django API Client 0.3.4</a></li>
+        <li><a href="index.html">documentação Django API Client 0.3.12</a></li>
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
-
-        <li><a href="templates.html" title="7. Templates" >anterior</a></li>
-        <li><a href="development/installation.html" title="1. Intalação em Desenvolvimento" >próximo</a></li>
+      
         <li><a href="genindex.html" title="Índice Geral" >índice</a></li>
-        <li><a href="#">top</a></li>
-
+        <li><a href="#">top</a></li> 
+      
     </ul>
   </div>
 </div>

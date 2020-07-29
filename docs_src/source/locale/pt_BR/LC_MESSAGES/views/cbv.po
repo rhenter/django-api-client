@@ -61,7 +61,6 @@ msgstr "paginate_by: Numero de itens para gerar a paginação"
 #: ../../source/views/cbv.rst:35 ../../source/views/cbv.rst:61
 #: ../../source/views/cbv.rst:89 ../../source/views/cbv.rst:150
 #: ../../source/views/cbv.rst:176
-#, fuzzy
 msgid "The usage example assumes that the endpoint is ``/order/orders/``"
 msgstr "O exemplo de uso assume the o endpoint é ``/order/orders/``"
 

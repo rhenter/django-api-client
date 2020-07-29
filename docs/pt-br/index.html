@@ -6,12 +6,12 @@
 <html lang="pt_BR">
   <head>
     <meta charset="utf-8" />
-
-    <title>Documentação do Django API Client &mdash; documentação Django API Client 0.3.4</title>
+    
+    <title>Documentação do Django API Client &mdash; documentação Django API Client 0.3.12</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
-
+    
 
 <link rel="stylesheet" href="_static/css/basicstrap-base.css" type="text/css" />
 <link rel="stylesheet" id="current-theme" href="_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
@@ -29,11 +29,11 @@
 <link rel="stylesheet" href="_static/css/basicstrap.css" type="text/css" />
 <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-
+    
 <script type="text/javascript">
   var DOCUMENTATION_OPTIONS = {
             URL_ROOT:    './',
-            VERSION:     '0.3.4',
+            VERSION:     '0.3.12',
             COLLAPSE_INDEX: false,
             FILE_SUFFIX: '.html',
             HAS_SOURCE:  true
@@ -51,8 +51,8 @@
 </script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Buscar" href="search.html" />
-    <link rel="top" title="documentação Django API Client 0.3.4" href="#" />
-    <link rel="next" title="Dependências" href="quickstart/index.html" />
+    <link rel="top" title="documentação Django API Client 0.3.12" href="#" />
+    <link rel="next" title="Dependências" href="quickstart/index.html" /> 
   </head>
   <body role="document">
     <div id="navbar-top" class="navbar navbar-fixed-top navbar-default" role="navigation" aria-label="top navigation">
@@ -64,7 +64,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">documentação Django API Client 0.3.4</a>
+          <a class="navbar-brand" href="#">documentação Django API Client 0.3.12</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -75,6 +75,7 @@
 <li><a class="reference internal" href="#">Documentação do Django API Client</a></li>
 <li><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li><a class="reference internal" href="#user-guide">Guia do Usuário</a></li>
+<li><a class="reference internal" href="#example">Exemplo</a></li>
 <li><a class="reference internal" href="#development">Desenvolvimento</a></li>
 <li><a class="reference internal" href="#downloads">Downloads</a></li>
 <li><a class="reference internal" href="#changelog">Changelog</a></li>
@@ -83,10 +84,10 @@
                 </ul>
               </li>
 
-
+            
               <li><a href="quickstart/index.html" title="Dependências" accesskey="N">próximo </a></li>
               <li><a href="genindex.html" title="Índice Geral" accesskey="I">índice </a></li>
-
+            
             <li class="visible-xs"><a href="_sources/index.rst.txt" rel="nofollow">Exibir Fonte</a></li>
 
             <li class="visible-xs">
@@ -102,21 +103,21 @@
                 </form>
             </li>
 
-
+            
 
           </ul>
 
         </div>
       </div>
     </div>
-
+    
 
     <!-- container -->
     <div class="container-fluid">
 
       <!-- row -->
       <div class="row">
-
+         
 <div class="col-md-3 hidden-xs" id="sidebar-wrapper">
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="#">Tabela de Conteúdo</a></h3>
@@ -124,6 +125,7 @@
 <li><a class="reference internal" href="#">Documentação do Django API Client</a></li>
 <li><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li><a class="reference internal" href="#user-guide">Guia do Usuário</a></li>
+<li><a class="reference internal" href="#example">Exemplo</a></li>
 <li><a class="reference internal" href="#development">Desenvolvimento</a></li>
 <li><a class="reference internal" href="#downloads">Downloads</a></li>
 <li><a class="reference internal" href="#changelog">Changelog</a></li>
@@ -156,15 +158,15 @@
     </p>
 </div>
   </div>
-</div>
-
+</div> 
+        
 
         <div class="col-md-9" id="content-wrapper">
           <div class="document" role="main">
             <div class="documentwrapper">
               <div class="bodywrapper">
                 <div class="body">
-
+                  
   <div class="section" id="django-api-client-documentation">
 <h1>Documentação do Django API Client<a class="headerlink" href="#django-api-client-documentation" title="Link permanente para este título">¶</a></h1>
 <p>O Django API Client é um wrapper de resposta da API, que permite iterar com a API como se eles estivesse usando um modelo/objeto local em seu projeto. Seja por meio do cliente direto em uma FBV ou usando CBV personalizada (exibições baseadas em classe), este framework tenta facilitar ao máximo esta comunicação</p>
@@ -194,7 +196,7 @@
 <li class="toctree-l2"><a class="reference internal" href="client/defaults.html">2.1. Configurações Disponiveis</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="client/index.html#client-methods">3. Client Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client/index.html#client-methods">3. Métodos Cliente</a></li>
 <li class="toctree-l1"><a class="reference internal" href="client/index.html#client-usage">4. Uso do Cliente</a></li>
 <li class="toctree-l1"><a class="reference internal" href="forms/index.html">5. Dynamic Form and Field</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="forms/index.html#dynamicform">5.1. DynamicForm</a></li>
@@ -207,8 +209,148 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="templates.html">7. Templates</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">8. Example</a></li>
 </ul>
+</div>
+</div>
+<div class="section" id="example">
+<h1>Exemplo<a class="headerlink" href="#example" title="Link permanente para este título">¶</a></h1>
+<ul class="simple">
+<li><p>Adicione esta configuração no seu projeto no arquivo <code class="docutils literal notranslate"><span class="pre">settings.py</span></code> para acessar a sua API</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DJANGO_API_CLIENT</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;API&#39;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;production&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;BASE_URL&#39;</span><span class="p">:</span> <span class="s1">&#39;https://example.com/v1&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;ENDPOINTS&#39;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s1">&#39;/order/orders&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;/user/users&#39;</span><span class="p">,</span>
+              <span class="o">...</span>
+          <span class="p">],</span>
+          <span class="s1">&#39;AUTHENTICATION_ACCESS_TOKEN&#39;</span><span class="p">:</span> <span class="s1">&#39;TOKEN&#39;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="s1">&#39;NAME&#39;</span><span class="p">:</span> <span class="s1">&#39;localhost&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;BASE_URL&#39;</span><span class="p">:</span> <span class="s1">&#39;http://localhost:8001/v1&#39;</span><span class="p">,</span>
+          <span class="s1">&#39;ENDPOINTS&#39;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s1">&#39;/order/orders&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;/user/users&#39;</span><span class="p">,</span>
+              <span class="o">...</span>
+          <span class="p">],</span>
+          <span class="s1">&#39;AUTHENTICATION_ACCESS_TOKEN&#39;</span><span class="p">:</span> <span class="s1">&#39;TOKEN&#39;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Dica</p>
+<p>Os detalhes da configuração serão melhor explicados na documentação*</p>
+</div>
+<ul class="simple">
+<li><p>Crie um arquivo clients.py em alguma pasta nucleo do seu projeto, caso não tenha, crie dentro da sua pasta do projeto para ficar mais simples de ser importado de qualquer lugar do projeto com o seguinte conteúdo:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.client</span> <span class="kn">import</span> <span class="n">api_client_factory</span>
+
+<span class="n">api_client</span> <span class="o">=</span> <span class="n">api_client_factory</span><span class="p">(</span><span class="s1">&#39;production&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Dica</p>
+<ul class="simple">
+<li><p>O nome dessa variável será o nome do cliente que será importado para cada projeto</p></li>
+<li><p>It is recommended that the name comes from a constant in the settings.py file, and if possible it can even be an environment variable.</p></li>
+<li><p>É recomendável que o nome venha de uma constante no arquivo settings.py, e se possível ser até uma variável de ambiente</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>Agora vamos listar os dados usando o sistema padrão do Django</p></li>
+</ul>
+<p>Vamos imaginar que o cliente esta em uma pasta dentro da pasta do projeto (pasta que contém o arquivo settings.py)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.mixins</span> <span class="kn">import</span> <span class="n">ClientAPIListMixin</span>
+
+<span class="kn">from</span> <span class="nn">pasta_do_projeto.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
+
+
+<span class="k">class</span> <span class="nc">OrderListView</span><span class="p">(</span><span class="n">ClientAPIListMixin</span><span class="p">):</span>
+    <span class="n">template_name</span> <span class="o">=</span> <span class="s2">&quot;template_name.html&quot;</span>        <span class="c1"># Path where is your template</span>
+    <span class="n">page_title</span> <span class="o">=</span> <span class="s1">&#39;Orders&#39;</span>                       <span class="c1"># Generates a context variable to use in your template</span>
+    <span class="n">page_base_url</span> <span class="o">=</span> <span class="n">reverse_lazy</span><span class="p">(</span><span class="s1">&#39;order:list&#39;</span><span class="p">)</span>  <span class="c1"># Information used in pagination, and the search</span>
+    <span class="n">paginate_by</span> <span class="o">=</span> <span class="mi">50</span>                            <span class="c1"># Number of items to generate the pagination</span>
+    <span class="n">client_method</span> <span class="o">=</span> <span class="n">api_client</span><span class="o">.</span><span class="n">order</span><span class="o">.</span><span class="n">orders</span><span class="o">.</span><span class="n">list</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>O cliente irá gerar uma estrutura amigavel para cada endpoing. Exemplo com o endpoint <em>/order/orders/</em>:</p>
+</div>
+<p>No seu template você pode usar os snippets de formulários e de paginação. Ex:</p>
+<div class="highlight-jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">content</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="x">...</span>
+<span class="x">&lt;div class=&quot;card card-navy card-outline&quot;&gt;</span>
+<span class="x">  &lt;div class=&quot;card-header&quot;&gt;</span>
+<span class="x">    &lt;h3 class=&quot;card-title&quot;&gt;</span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">trans</span> <span class="s2">&quot;Order List&quot;</span> <span class="cp">%}</span><span class="x"> : &lt;small class=&quot;text-muted&quot;&gt;</span><span class="cp">{{</span> <span class="nv">paginator.count</span> <span class="cp">}}</span><span class="x">&lt;/small&gt;</span>
+<span class="x">    &lt;/h3&gt;</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;includes/form_paginate_by.html&quot;</span> <span class="k">with</span> <span class="nv">paginate_by</span><span class="o">=</span><span class="nv">paginate_by</span> <span class="nv">range_pagination</span><span class="o">=</span><span class="nv">range_pagination</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;includes/form_search.html&quot;</span> <span class="k">with</span> <span class="nv">search</span><span class="o">=</span><span class="nv">search</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  &lt;/div&gt;</span>
+<span class="x">  &lt;div class=&quot;card-body table-responsive p-0&quot;&gt;</span>
+<span class="x">    &lt;table class=&quot;table table-bordered table-hover table-striped&quot; id=&quot;list-content&quot;&gt;</span>
+<span class="x">      &lt;thead&gt;</span>
+<span class="x">      &lt;tr&gt;</span>
+<span class="x">        &lt;th&gt;</span><span class="cp">{%</span> <span class="k">trans</span> <span class="s1">&#39;Code&#39;</span> <span class="cp">%}</span><span class="x">&lt;/th&gt;</span>
+<span class="x">        &lt;th&gt;</span><span class="cp">{%</span> <span class="k">trans</span> <span class="s1">&#39;Customer&#39;</span> <span class="cp">%}</span><span class="x">&lt;/th&gt;</span>
+<span class="x">        &lt;th&gt;</span><span class="cp">{%</span> <span class="k">trans</span> <span class="s1">&#39;Product&#39;</span> <span class="cp">%}</span><span class="x">&lt;/th&gt;</span>
+<span class="x">      &lt;/tr&gt;</span>
+<span class="x">      &lt;/thead&gt;</span>
+<span class="x">      &lt;tbody class=&quot;text-gray&quot;&gt;</span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">order</span> <span class="k">in</span> <span class="nv">object_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">        &lt;tr&gt;</span>
+<span class="x">          &lt;td&gt;&lt;a href=&quot;</span><span class="cp">{%</span> <span class="k">url</span> <span class="s1">&#39;order:detail&#39;</span> <span class="nv">pk</span><span class="o">=</span><span class="nv">order.id</span> <span class="cp">%}</span><span class="x">&quot; &lt;/a&gt;</span>
+<span class="x">          &lt;/td&gt;</span>
+<span class="x">          &lt;td&gt;</span><span class="cp">{{</span> <span class="nv">order.id</span> <span class="cp">}}</span><span class="x">&lt;/td&gt;</span>
+<span class="x">          &lt;td&gt;</span><span class="cp">{{</span> <span class="nv">order.customer.name</span><span class="o">|</span><span class="nf">title</span> <span class="cp">}}</span><span class="x">&lt;/td&gt;</span>
+<span class="x">          &lt;td&gt;</span><span class="cp">{{</span> <span class="nv">order.product.name</span><span class="o">|</span><span class="nf">title</span> <span class="cp">}}</span><span class="x">&lt;/td&gt;</span>
+<span class="x">        &lt;/tr&gt;</span>
+<span class="x">        </span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">      &lt;/tbody&gt;</span>
+<span class="x">    &lt;/table&gt;</span>
+<span class="x">  &lt;/div&gt;</span>
+<span class="x">  &lt;div class=&quot;card-footer&quot;&gt;</span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">object_list</span><span class="o">|</span><span class="nf">length</span> <span class="o">!=</span> <span class="m">0</span> <span class="k">or</span> <span class="k">not</span> <span class="nv">object_list</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">      </span><span class="cp">{%</span> <span class="k">include</span> <span class="s2">&quot;includes/list_paginator.html&quot;</span> <span class="k">with</span> <span class="nv">page_obj</span><span class="o">=</span><span class="nv">page_obj</span> <span class="nv">paginator</span><span class="o">=</span><span class="nv">paginator</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">    </span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  &lt;/div&gt;</span>
+<span class="x">&lt;/div&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Exemplo usando estilos (CSS) do Bootstrap</p></li>
+<li><p>includes/form_search.html: Formulário com input de busca. Este <code class="docutils literal notranslate"><span class="pre">include</span></code> suporta placeholder tambem.</p></li>
+<li><p>includes/form_paginate_by.html: Formulario de Select para escolher com quantos elementos a pagina será paginadaEx: por (20, 40, 60, etc …)</p></li>
+<li><p>includes/list_paginator.html: Bloco com os elementos de paginação com os butões de número de paginas, anterior e proximo</p></li>
+</ul>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>endpoint name: order
+methods:
+     - list   # GET: List
+     - get    # GET: Detail of a resource using an identifier
+     - create # POST: Create a resource record
+     - update # PUT / PATCH: Fully or partially updates a resource using an identifier
+     - delete # DELETE: delete a record in a resource using an identifier
+</pre></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Dica</p>
+<dl class="simple">
+<dt>O que isso quer dizer?</dt><dd><p>Que o API Cliente sempre gerará a estutura de acordo os nomes dos seus endpoints</p>
+</dd>
+</dl>
 </div>
 </div>
 <div class="section" id="development">
@@ -242,16 +384,24 @@
 <h1>Changelog<a class="headerlink" href="#changelog" title="Link permanente para este título">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html">0.3.4</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id2">0.3.3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id3">0.3.2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id4">0.3.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id5">0.3.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id6">0.2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id7">0.1.3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id8">0.1.2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id9">0.1.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="changelog.html#id10">0.1.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">0.3.12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id2">0.3.11</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id3">0.3.10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id4">0.3.9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id5">0.3.8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id6">0.3.7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id7">0.3.6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id8">0.3.5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id9">0.3.4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id10">0.3.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id11">0.3.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id12">0.3.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id13">0.3.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id14">0.2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id15">0.1.3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id16">0.1.2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id17">0.1.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html#id18">0.1.0</a></li>
 </ul>
 </div>
 </div>
@@ -262,8 +412,8 @@
             </div>
           </div>
         </div>
-
-
+        
+        
       </div><!-- /row -->
 
       <!-- row -->
@@ -271,14 +421,14 @@
 <div id="navbar-related" class=" related navbar navbar-default" role="navigation" aria-label="related navigation">
   <div class="navbar-inner">
     <ul class="nav navbar-nav ">
-        <li><a href="#">documentação Django API Client 0.3.4</a></li>
+        <li><a href="#">documentação Django API Client 0.3.12</a></li>
     </ul>
 <ul class="nav navbar-nav pull-right hidden-xs hidden-sm">
-
+      
         <li><a href="quickstart/index.html" title="Dependências" >próximo</a></li>
         <li><a href="genindex.html" title="Índice Geral" >índice</a></li>
-        <li><a href="#">top</a></li>
-
+        <li><a href="#">top</a></li> 
+      
     </ul>
   </div>
 </div>
