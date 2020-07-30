@@ -179,7 +179,7 @@
 <h1><span class="section-number">6.1. </span>Using Class Based Views (CBV)<a class="headerlink" href="#using-class-based-views-cbv" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="clientapilistview">
 <h2><span class="section-number">6.1.1. </span>ClientAPIListView<a class="headerlink" href="#clientapilistview" title="Permalink to this headline">¶</a></h2>
-<p>Following the same example as Model ListView, the results returned from the model will go to the context variable `` object_list``, unless you want to customize it. Using ClientAPIListView we will use the attribute `` client_method`` instead of `` model`` to get our results</p>
+<p>Following the same example as Model ListView, the results returned from the model will go to the context variable <code class="docutils literal notranslate"><span class="pre">object_list</span></code>, unless you want to customize it. Using ClientAPIListView we will use the attribute <code class="docutils literal notranslate"><span class="pre">client_method</span></code> instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our results</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIListView</span>
 
 <span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>

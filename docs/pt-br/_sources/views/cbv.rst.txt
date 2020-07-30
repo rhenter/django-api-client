@@ -4,7 +4,7 @@ Using Class Based Views (CBV)
 ClientAPIListView
 ~~~~~~~~~~~~~~~~~
 
-Following the same example as Model ListView, the results returned from the model will go to the context variable `` object_list``, unless you want to customize it. Using ClientAPIListView we will use the attribute `` client_method`` instead of `` model`` to get our results
+Following the same example as Model ListView, the results returned from the model will go to the context variable ``object_list``, unless you want to customize it. Using ClientAPIListView we will use the attribute ``client_method`` instead of ``model`` to get our results
 
 
 .. code-block:: python

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-29 21:32-0300\n"
+"POT-Creation-Date: 2020-07-29 21:53-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -200,7 +200,7 @@ msgstr ""
 
 #: ../../source/client/defaults.rst:103
 msgid ""
-"Definition: Key used to get a endpoint resource. Use the same identifier "
+"Definition: Key used to get a endpoint record. Use the same identifier "
 "you receive in payload."
 msgstr ""
 
@@ -227,5 +227,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Definition: Used define the size of the Pagination"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Definition: Key used to get a "
+#~ "endpoint resource. Use the same "
+#~ "identifier you receive in payload."
 #~ msgstr ""
 
