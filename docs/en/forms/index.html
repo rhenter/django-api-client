@@ -171,7 +171,7 @@
 <h1><span class="section-number">5. </span>Dynamic Form and Field<a class="headerlink" href="#dynamic-form-and-field" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="dynamicform">
 <h2><span class="section-number">5.1. </span>DynamicForm<a class="headerlink" href="#dynamicform" title="Permalink to this headline">¶</a></h2>
-<p>In the same way that ModelForm does not need to manually add each attribute, DynamicForm only needs you to add the field name, allowing you to add the “Verbose Name” in the list</p>
+<p>In the same way that ModelForm does not need to manually add each attribute, using DynamicForm, you just need to add the field name with an additional one that allows you to add the “Label Name” to the list</p>
 <ul class="simple">
 <li><p>Simple Example</p></li>
 </ul>
@@ -191,7 +191,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Advanced Example with custom fields and verbose name</p></li>
+<li><p>Advanced Example with custom fields and <code class="docutils literal notranslate"><span class="pre">label</span></code> name</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.forms</span> <span class="kn">import</span> <span class="n">DynamicForm</span>
 
@@ -245,7 +245,7 @@
 </div>
 <div class="section" id="ajaxchoicefield">
 <h2><span class="section-number">5.2. </span>AjaxChoiceField<a class="headerlink" href="#ajaxchoicefield" title="Permalink to this headline">¶</a></h2>
-<p>Is the same of a ChoiceField but you are able to populate the field using <code class="docutils literal notranslate"><span class="pre">ajax</span></code> in the template and submit the result</p>
+<p>Is the same of a ChoiceField but you are able to populate the choices using <code class="docutils literal notranslate"><span class="pre">ajax</span></code> directly from the template and submit the result</p>
 <ul class="simple">
 <li><p>Example</p></li>
 </ul>

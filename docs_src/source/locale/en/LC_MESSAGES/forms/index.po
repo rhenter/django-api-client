@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:31-0300\n"
+"POT-Creation-Date: 2020-07-29 20:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,8 +29,8 @@ msgstr ""
 #: ../../source/forms/index.rst:7
 msgid ""
 "In the same way that ModelForm does not need to manually add each "
-"attribute, DynamicForm only needs you to add the field name, allowing you"
-" to add the \"Verbose Name\" in the list"
+"attribute, using DynamicForm, you just need to add the field name with an"
+" additional one that allows you to add the \"Label Name\" to the list"
 msgstr ""
 
 #: ../../source/forms/index.rst:10
@@ -38,7 +38,7 @@ msgid "Simple Example"
 msgstr ""
 
 #: ../../source/forms/index.rst:29
-msgid "Advanced Example with custom fields and verbose name"
+msgid "Advanced Example with custom fields and ``label`` name"
 msgstr ""
 
 #: ../../source/forms/index.rst:56
@@ -51,11 +51,30 @@ msgstr ""
 
 #: ../../source/forms/index.rst:90
 msgid ""
-"Is the same of a ChoiceField but you are able to populate the field using"
-" ``ajax`` in the template and submit the result"
+"Is the same of a ChoiceField but you are able to populate the choices "
+"using ``ajax`` directly from the template and submit the result"
 msgstr ""
 
 #: ../../source/forms/index.rst:92
 msgid "Example"
 msgstr ""
+
+#~ msgid ""
+#~ "In the same way that ModelForm "
+#~ "does not need to manually add each"
+#~ " attribute, DynamicForm only needs you "
+#~ "to add the field name, allowing "
+#~ "you to add the \"Verbose Name\" in"
+#~ " the list"
+#~ msgstr ""
+
+#~ msgid "Advanced Example with custom fields and verbose name"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Is the same of a ChoiceField but"
+#~ " you are able to populate the "
+#~ "field using ``ajax`` in the template "
+#~ "and submit the result"
+#~ msgstr ""
 

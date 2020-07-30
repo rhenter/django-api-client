@@ -62,7 +62,3 @@ msgstr "Rodando testes"
 #: ../../source/development/installation.rst:37
 msgid "or:"
 msgstr "ou"
-
-#~ msgid "Generating documentation"
-#~ msgstr ""
-

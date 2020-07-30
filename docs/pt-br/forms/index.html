@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     
-    <title>5. Dynamic Form and Field &mdash; documentação Django API Client 0.3.12</title>
+    <title>5. Formulário e Campo Dinâmico &mdash; documentação Django API Client 0.3.12</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -73,7 +73,7 @@
                 <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
-<li><a class="reference internal" href="#">5. Dynamic Form and Field</a><ul>
+<li><a class="reference internal" href="#">5. Formulário e Campo Dinâmico</a><ul>
 <li><a class="reference internal" href="#dynamicform">5.1. DynamicForm</a></li>
 <li><a class="reference internal" href="#ajaxchoicefield">5.2. AjaxChoiceField</a></li>
 </ul>
@@ -122,7 +122,7 @@
   <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
   <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
   <ul>
-<li><a class="reference internal" href="#">5. Dynamic Form and Field</a><ul>
+<li><a class="reference internal" href="#">5. Formulário e Campo Dinâmico</a><ul>
 <li><a class="reference internal" href="#dynamicform">5.1. DynamicForm</a></li>
 <li><a class="reference internal" href="#ajaxchoicefield">5.2. AjaxChoiceField</a></li>
 </ul>
@@ -169,12 +169,12 @@
                 <div class="body">
                   
   <div class="section" id="dynamic-form-and-field">
-<h1><span class="section-number">5. </span>Dynamic Form and Field<a class="headerlink" href="#dynamic-form-and-field" title="Link permanente para este título">¶</a></h1>
+<h1><span class="section-number">5. </span>Formulário e Campo Dinâmico<a class="headerlink" href="#dynamic-form-and-field" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="dynamicform">
 <h2><span class="section-number">5.1. </span>DynamicForm<a class="headerlink" href="#dynamicform" title="Link permanente para este título">¶</a></h2>
-<p>In the same way that ModelForm does not need to manually add each attribute, DynamicForm only needs you to add the field name, allowing you to add the “Verbose Name” in the list</p>
+<p>Da mesma forma que o ModelForm não precisa adicionar manualmente cada atributo, usando o DynamicForm, você só precisa adicionar o nome do campo com um adicional que permite adicionar o “Nome Detalhado” à lista</p>
 <ul class="simple">
-<li><p>Simple Example</p></li>
+<li><p>Exemplo Simples</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.forms</span> <span class="kn">import</span> <span class="n">DynamicForm</span>
 
@@ -192,7 +192,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Advanced Example with custom fields and verbose name</p></li>
+<li><p>Advanced Example with custom fields and <code class="docutils literal notranslate"><span class="pre">label</span></code> name</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.forms</span> <span class="kn">import</span> <span class="n">DynamicForm</span>
 
@@ -217,7 +217,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Advanced Example with validation</p></li>
+<li><p>Exemplo Avançado com validação</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.forms</span> <span class="kn">import</span> <span class="n">DynamicForm</span>
 
@@ -246,9 +246,9 @@
 </div>
 <div class="section" id="ajaxchoicefield">
 <h2><span class="section-number">5.2. </span>AjaxChoiceField<a class="headerlink" href="#ajaxchoicefield" title="Link permanente para este título">¶</a></h2>
-<p>Is the same of a ChoiceField but you are able to populate the field using <code class="docutils literal notranslate"><span class="pre">ajax</span></code> in the template and submit the result</p>
+<p>É o mesmo que o ChoiceField mas você pode pode popupar o choices usando <code class="docutils literal notranslate"><span class="pre">ajax</span></code> direto do template e submeter o resultado</p>
 <ul class="simple">
-<li><p>Example</p></li>
+<li><p>Exemplo</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.fields</span> <span class="kn">import</span> <span class="n">AjaxChoiceField</span>
 

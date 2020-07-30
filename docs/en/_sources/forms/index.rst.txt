@@ -4,7 +4,7 @@ Dynamic Form and Field
 DynamicForm
 -----------
 
-In the same way that ModelForm does not need to manually add each attribute, DynamicForm only needs you to add the field name, allowing you to add the "Verbose Name" in the list
+In the same way that ModelForm does not need to manually add each attribute, using DynamicForm, you just need to add the field name with an additional one that allows you to add the "Label Name" to the list
 
 
 - Simple Example
@@ -26,7 +26,7 @@ In the same way that ModelForm does not need to manually add each attribute, Dyn
           }
 
 
-- Advanced Example with custom fields and verbose name
+- Advanced Example with custom fields and ``label`` name
 
 
 .. code-block:: python
@@ -87,7 +87,7 @@ In the same way that ModelForm does not need to manually add each attribute, Dyn
 AjaxChoiceField
 ---------------
 
-Is the same of a ChoiceField but you are able to populate the field using ``ajax`` in the template and submit the result
+Is the same of a ChoiceField but you are able to populate the choices using ``ajax`` directly from the template and submit the result
 
 - Example
 

@@ -24,36 +24,27 @@ msgstr ""
 
 #: ../../source/development/release.rst:4
 msgid "To release a new version, a few steps are required:"
-msgstr ""
+msgstr "Para gerar uma nova versão, alguns passos são necessários:"
 
 #: ../../source/development/release.rst:6
 msgid "Add entry to ``CHANGES.rst`` following the same standard"
-msgstr ""
+msgstr "Adicione uma entrada ao ``CHANGES.rst`` seguindo o mesmo padrão dos anteriores"
 
 #: ../../source/development/release.rst:8
 msgid "Example:"
-msgstr ""
+msgstr "Exemplo:"
 
 #: ../../source/development/release.rst:18
 msgid "Review changes in test requirements ``requirements.txt``"
-msgstr ""
+msgstr "Reveja as alterações feita nas dependências ``requirements.txt``"
 
 #: ../../source/development/release.rst:20
 msgid "Commit and push changes"
-msgstr ""
+msgstr "Commit e faça o push das alterações"
 
 #: ../../source/development/release.rst:22
 msgid ""
 "Run the Release command that will run the tests, build the code and "
 "upload to Pypi."
 msgstr ""
-
-#~ msgid "Add entry to ``CHANGES.rst`` and documentation"
-#~ msgstr ""
-
-#~ msgid "Test build with ``make build``"
-#~ msgstr ""
-
-#~ msgid "Release with ``make release``"
-#~ msgstr ""
-
+"Rode o comando para gerar a release que irá rodar os tests, compilar e fazer o upload para o Pypi"

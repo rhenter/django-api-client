@@ -1,13 +1,13 @@
 Documentation
 =============
 
-Update or Add Documentation
----------------------------
+Update or Add New
+-----------------
 
-To add new or update the documentation, you must to add or change the files in RST format located on ``docs_src/source``
+To add new or update documentation, you must add or change existing files in RST format, located at ``docs_src/source``
 
-Note:
-  If you add anything new, make sure you add the reference in the ``docs_src/source/index.rst``
+.. note::
+  If you added a new file, make sure you add the reference in the directory ``docs_src/source/index.rst``
 
 
 Update the translation
@@ -16,7 +16,7 @@ Update the translation
 Today we have 2 translations, being ``en`` (english) and ``pt_BR`` Portuguese, if you want to add one more,
 just add the prefix of the language that will be generated or updated in located in ``docs_src/source/locale/``
 
-* Generate new blocks to update
+* Generate the .po files to update
 
 .. code-block:: bash
 
@@ -25,7 +25,7 @@ just add the prefix of the language that will be generated or updated in located
     $ sphinx-intl update -p build/gettext -l pt_BR -l en
 
 
-* Update the .po files in ``docs_src/source/locale/ LANGUAGE /LC_MESSAGES/``
+* Update the .po files in ``docs_src/source/locale/< LANGUAGE prefix >/LC_MESSAGES/``
 
 Example:
 
@@ -36,13 +36,13 @@ Example:
     msgstr "Guia do Usuário"
 
 
-Note:
+.. note::
   The .mo file will be generated when you generate the HTML files
 
-Generating documentation
-------------------------
+Generating the documentation
+----------------------------
 
-The project use GitHub pages, so all HTML files must be locate on /doc
+The project uses GitHub Pages to host the documentation files, so all HTML files must be located in /doc
 
 .. code-block:: bash
 

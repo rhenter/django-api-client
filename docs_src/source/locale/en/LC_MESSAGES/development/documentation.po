@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:31-0300\n"
+"POT-Creation-Date: 2020-07-29 21:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,24 +23,19 @@ msgid "Documentation"
 msgstr ""
 
 #: ../../source/development/documentation.rst:5
-msgid "Update or Add Documentation"
+msgid "Update or Add New"
 msgstr ""
 
 #: ../../source/development/documentation.rst:7
 msgid ""
-"To add new or update the documentation, you must to add or change the "
-"files in RST format located on ``docs_src/source``"
-msgstr ""
-
-#: ../../source/development/documentation.rst:11
-#: ../../source/development/documentation.rst:40
-msgid "Note:"
+"To add new or update documentation, you must add or change existing files"
+" in RST format, located at ``docs_src/source``"
 msgstr ""
 
 #: ../../source/development/documentation.rst:10
 msgid ""
-"If you add anything new, make sure you add the reference in the "
-"``docs_src/source/index.rst``"
+"If you added a new file, make sure you add the reference in the directory"
+" ``docs_src/source/index.rst``"
 msgstr ""
 
 #: ../../source/development/documentation.rst:14
@@ -56,11 +51,13 @@ msgid ""
 msgstr ""
 
 #: ../../source/development/documentation.rst:19
-msgid "Generate new blocks to update"
+msgid "Generate the .po files to update"
 msgstr ""
 
 #: ../../source/development/documentation.rst:28
-msgid "Update the .po files in ``docs_src/source/locale/ LANGUAGE /LC_MESSAGES/``"
+msgid ""
+"Update the .po files in ``docs_src/source/locale/< LANGUAGE prefix "
+">/LC_MESSAGES/``"
 msgstr ""
 
 #: ../../source/development/documentation.rst:30
@@ -72,10 +69,52 @@ msgid "The .mo file will be generated when you generate the HTML files"
 msgstr ""
 
 #: ../../source/development/documentation.rst:43
-msgid "Generating documentation"
+msgid "Generating the documentation"
 msgstr ""
 
 #: ../../source/development/documentation.rst:45
-msgid "The project use GitHub pages, so all HTML files must be locate on /doc"
+msgid ""
+"The project uses GitHub Pages to host the documentation files, so all "
+"HTML files must be located in /doc"
 msgstr ""
+
+#~ msgid "Update or Add Documentation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To add new or update the "
+#~ "documentation, you must to add or "
+#~ "change the files in RST format "
+#~ "located on ``docs_src/source``"
+#~ msgstr ""
+
+#~ msgid "Note:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you add anything new, make sure"
+#~ " you add the reference in the "
+#~ "``docs_src/source/index.rst``"
+#~ msgstr ""
+
+#~ msgid "Generate new blocks to update"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Update the .po files in "
+#~ "``docs_src/source/locale/ LANGUAGE /LC_MESSAGES/``"
+#~ msgstr ""
+
+#~ msgid "Generating documentation"
+#~ msgstr ""
+
+#~ msgid "The project use GitHub pages, so all HTML files must be locate on /doc"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The project uses GitHub Pages to "
+#~ "host the documentation files, so all "
+#~ "HTML files must be located in /"
+#~ " doc"
+#~ msgstr ""
 

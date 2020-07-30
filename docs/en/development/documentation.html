@@ -73,9 +73,9 @@
                 <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
                 <ul>
 <li><a class="reference internal" href="#">2. Documentation</a><ul>
-<li><a class="reference internal" href="#update-or-add-documentation">2.1. Update or Add Documentation</a></li>
+<li><a class="reference internal" href="#update-or-add-new">2.1. Update or Add New</a></li>
 <li><a class="reference internal" href="#update-the-translation">2.2. Update the translation</a></li>
-<li><a class="reference internal" href="#generating-documentation">2.3. Generating documentation</a></li>
+<li><a class="reference internal" href="#generating-the-documentation">2.3. Generating the documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -123,9 +123,9 @@
   <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">2. Documentation</a><ul>
-<li><a class="reference internal" href="#update-or-add-documentation">2.1. Update or Add Documentation</a></li>
+<li><a class="reference internal" href="#update-or-add-new">2.1. Update or Add New</a></li>
 <li><a class="reference internal" href="#update-the-translation">2.2. Update the translation</a></li>
-<li><a class="reference internal" href="#generating-documentation">2.3. Generating documentation</a></li>
+<li><a class="reference internal" href="#generating-the-documentation">2.3. Generating the documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -171,20 +171,20 @@
                   
   <div class="section" id="documentation">
 <h1><span class="section-number">2. </span>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="update-or-add-documentation">
-<h2><span class="section-number">2.1. </span>Update or Add Documentation<a class="headerlink" href="#update-or-add-documentation" title="Permalink to this headline">¶</a></h2>
-<p>To add new or update the documentation, you must to add or change the files in RST format located on <code class="docutils literal notranslate"><span class="pre">docs_src/source</span></code></p>
-<dl class="simple">
-<dt>Note:</dt><dd><p>If you add anything new, make sure you add the reference in the <code class="docutils literal notranslate"><span class="pre">docs_src/source/index.rst</span></code></p>
-</dd>
-</dl>
+<div class="section" id="update-or-add-new">
+<h2><span class="section-number">2.1. </span>Update or Add New<a class="headerlink" href="#update-or-add-new" title="Permalink to this headline">¶</a></h2>
+<p>To add new or update documentation, you must add or change existing files in RST format, located at <code class="docutils literal notranslate"><span class="pre">docs_src/source</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you added a new file, make sure you add the reference in the directory <code class="docutils literal notranslate"><span class="pre">docs_src/source/index.rst</span></code></p>
+</div>
 </div>
 <div class="section" id="update-the-translation">
 <h2><span class="section-number">2.2. </span>Update the translation<a class="headerlink" href="#update-the-translation" title="Permalink to this headline">¶</a></h2>
 <p>Today we have 2 translations, being <code class="docutils literal notranslate"><span class="pre">en</span></code> (english) and <code class="docutils literal notranslate"><span class="pre">pt_BR</span></code> Portuguese, if you want to add one more,
 just add the prefix of the language that will be generated or updated in located in <code class="docutils literal notranslate"><span class="pre">docs_src/source/locale/</span></code></p>
 <ul class="simple">
-<li><p>Generate new blocks to update</p></li>
+<li><p>Generate the .po files to update</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> docs_src
 $ make gettext
@@ -192,7 +192,7 @@ $ sphinx-intl update -p build/gettext -l pt_BR -l en
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Update the .po files in <code class="docutils literal notranslate"><span class="pre">docs_src/source/locale/</span> <span class="pre">LANGUAGE</span> <span class="pre">/LC_MESSAGES/</span></code></p></li>
+<li><p>Update the .po files in <code class="docutils literal notranslate"><span class="pre">docs_src/source/locale/&lt;</span> <span class="pre">LANGUAGE</span> <span class="pre">prefix</span> <span class="pre">&gt;/LC_MESSAGES/</span></code></p></li>
 </ul>
 <p>Example:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>#: ../../source/index.rst:28
@@ -200,14 +200,14 @@ msgid &quot;User Guide&quot;
 msgstr &quot;Guia do Usuário&quot;
 </pre></div>
 </div>
-<dl class="simple">
-<dt>Note:</dt><dd><p>The .mo file will be generated when you generate the HTML files</p>
-</dd>
-</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The .mo file will be generated when you generate the HTML files</p>
 </div>
-<div class="section" id="generating-documentation">
-<h2><span class="section-number">2.3. </span>Generating documentation<a class="headerlink" href="#generating-documentation" title="Permalink to this headline">¶</a></h2>
-<p>The project use GitHub pages, so all HTML files must be locate on /doc</p>
+</div>
+<div class="section" id="generating-the-documentation">
+<h2><span class="section-number">2.3. </span>Generating the documentation<a class="headerlink" href="#generating-the-documentation" title="Permalink to this headline">¶</a></h2>
+<p>The project uses GitHub Pages to host the documentation files, so all HTML files must be located in /doc</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> docs_src
 $ sphinx-build -b html <span class="nb">source</span> ../docs/en -D <span class="nv">language</span><span class="o">=</span><span class="s1">&#39;en&#39;</span>
 $ sphinx-build -b html <span class="nb">source</span> ../docs/pt-br -D <span class="nv">language</span><span class="o">=</span><span class="s1">&#39;pt_BR&#39;</span>

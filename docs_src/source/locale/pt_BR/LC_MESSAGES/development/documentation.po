@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-26 11:31-0300\n"
+"POT-Creation-Date: 2020-07-29 21:10-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,32 +20,32 @@ msgstr ""
 
 #: ../../source/development/documentation.rst:2
 msgid "Documentation"
-msgstr ""
+msgstr "Documentação"
 
 #: ../../source/development/documentation.rst:5
-msgid "Update or Add Documentation"
-msgstr ""
+msgid "Update or Add New"
+msgstr "Atualizar ou Adicionar Nova"
 
 #: ../../source/development/documentation.rst:7
 msgid ""
-"To add new or update the documentation, you must to add or change the "
-"files in RST format located on ``docs_src/source``"
+"To add new or update documentation, you must add or change existing files"
+" in RST format, located at ``docs_src/source``"
 msgstr ""
-
-#: ../../source/development/documentation.rst:11
-#: ../../source/development/documentation.rst:40
-msgid "Note:"
-msgstr ""
+"Para adicionar nova ou atualizar a documentação, você deve adicionar ou "
+"alterar os arquivos existentes no formato RST, localizados em "
+"``docs_src/source``"
 
 #: ../../source/development/documentation.rst:10
 msgid ""
-"If you add anything new, make sure you add the reference in the "
-"``docs_src/source/index.rst``"
+"If you added a new file, make sure you add the reference in the directory"
+" ``docs_src/source/index.rst``"
 msgstr ""
+"Se você adicionou um novo arquivo, esteja certo de que você adicionou a "
+"referência no diretório ``docs_src/source/index.rst``"
 
 #: ../../source/development/documentation.rst:14
 msgid "Update the translation"
-msgstr ""
+msgstr "Atualizar a tradução"
 
 #: ../../source/development/documentation.rst:16
 msgid ""
@@ -54,28 +54,54 @@ msgid ""
 "language that will be generated or updated in located in "
 "``docs_src/source/locale/``"
 msgstr ""
+"Hoje temos 2 traduções, sendo `` en`` (inglês) e `` pt_BR`` (português), "
+"se você quiser adicionar mais uma, basta adicionar o prefixo do idioma "
+"que será gerado ou atualizado, localizado em ``docs_src/source/locale/``"
 
 #: ../../source/development/documentation.rst:19
-msgid "Generate new blocks to update"
-msgstr ""
+msgid "Generate the .po files to update"
+msgstr "Gere os arquivos .po para atualizar"
 
 #: ../../source/development/documentation.rst:28
-msgid "Update the .po files in ``docs_src/source/locale/ LANGUAGE /LC_MESSAGES/``"
+msgid ""
+"Update the .po files in ``docs_src/source/locale/< LANGUAGE prefix "
+">/LC_MESSAGES/``"
 msgstr ""
+"Atualizar os aquivos .po em ``docs_src/source/locale/< Prefixo da LANGUAGE >"
+"/LC_MESSAGES/``"
 
 #: ../../source/development/documentation.rst:30
 msgid "Example:"
-msgstr ""
+msgstr "Exemplo:"
 
 #: ../../source/development/documentation.rst:40
 msgid "The .mo file will be generated when you generate the HTML files"
-msgstr ""
+msgstr "O arquivo .mo irá ser gerado quando você gerar os aquivos HTML"
 
 #: ../../source/development/documentation.rst:43
-msgid "Generating documentation"
-msgstr ""
+msgid "Generating the documentation"
+msgstr "Gerando a documentação"
 
 #: ../../source/development/documentation.rst:45
-msgid "The project use GitHub pages, so all HTML files must be locate on /doc"
+msgid ""
+"The project uses GitHub Pages to host the documentation files, so all "
+"HTML files must be located in /doc"
 msgstr ""
+"O projeto usa o GitHub Pages para hospedar os arquivos de documentação, "
+"então, todos os arquivos HTML devem estar localizados em /doc"
+
+#~ msgid "Update or Add Documentation"
+#~ msgstr "Atualizar ou Adicionar Nova"
+
+#~ msgid "Note:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you add anything new, make sure"
+#~ " you add the reference in the "
+#~ "``docs_src/source/index.rst``"
+#~ msgstr ""
+
+#~ msgid "Generate new blocks to update"
+#~ msgstr ""
 
