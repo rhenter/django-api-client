@@ -93,13 +93,13 @@ General defaults
 * PAGE_SIZE
 
 .. note::
-  - Definition: Used define the size of the Pagination
+  - Definition: Used to define the size of the Pagination
   - Default: 100
   - Required: False
 
 * SLUG_FIELD
 
 .. note::
-  - Definition: Key used to get a endpoint resource. Use the same identifier you receive in payload.
+  - Definition: Key used to get a endpoint record. Use the same identifier you receive in payload.
   - Default: 'id'
   - Required: False

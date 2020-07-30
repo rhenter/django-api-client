@@ -28,7 +28,7 @@ Following the same example as Model ListView, the results returned from the mode
   - template_name: path with name of you template
   - client_method: method of the client that get a list of records of a resource list
   - page_title: Generates a context variable to use in your template
-  - page_base_url: Information used in pagination, and the search
+  - page_base_url: Information used in pagination and the search
   - paginate_by: Number of items to generate the pagination
 
 .. note::

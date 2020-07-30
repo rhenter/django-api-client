@@ -180,7 +180,7 @@
 <h1><span class="section-number">6.1. </span>Usando Views Baseadas em Classes (CBV)<a class="headerlink" href="#using-class-based-views-cbv" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="clientapilistview">
 <h2><span class="section-number">6.1.1. </span>ClientAPIListView<a class="headerlink" href="#clientapilistview" title="Link permanente para este título">¶</a></h2>
-<p>Following the same example as Model ListView, the results returned from the model will go to the context variable `` object_list``, unless you want to customize it. Using ClientAPIListView we will use the attribute `` client_method`` instead of `` model`` to get our results</p>
+<p>Seguindo o mesmo exemplo do Model ListView, os resultados retornados do modelo irão para a variável de contexto <code class="docutils literal notranslate"><span class="pre">object_list</span></code>, a menos que você queira personalizá-lo. Usando ClientAPIListView, usaremos o atributo <code class="docutils literal notranslate"><span class="pre">client_method``em</span> <span class="pre">vez</span> <span class="pre">do</span> <span class="pre">atributo</span> <span class="pre">``model</span></code> padrão para obter nossos resultados</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIListView</span>
 
 <span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
@@ -200,9 +200,9 @@
 <ul class="simple">
 <li><p>template_name: caminho com nome do template</p></li>
 <li><p>client_method: método do cliente que list os registros de um resource</p></li>
-<li><p>page_title: Generates a context variable to use in your template</p></li>
-<li><p>page_base_url: Information used in pagination, and the search</p></li>
-<li><p>paginate_by: Numero de itens para gerar a paginação</p></li>
+<li><p>page_title: Gera uma variável de contexto para usar no seu template</p></li>
+<li><p>page_base_url: Information used in pagination and the search</p></li>
+<li><p>paginate_by: Némero de itens para gerar a paginação</p></li>
 </ul>
 </div>
 <div class="admonition note">
@@ -212,7 +212,7 @@
 </div>
 <div class="section" id="clientapidetailview">
 <h2><span class="section-number">6.1.2. </span>ClientAPIDetailView<a class="headerlink" href="#clientapidetailview" title="Link permanente para este título">¶</a></h2>
-<p>Following the same example as Model DetailView, the results returned from the model will go to the context variable <code class="docutils literal notranslate"><span class="pre">object</span></code>, unless you want to customize it. Using ClientAPIDetailView we will use the attribute <code class="docutils literal notranslate"><span class="pre">client_method</span></code> instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our result</p>
+<p>Seguindo o mesmo exemplo do Model DetailView, os resultados retornados do modelo irão para a variável de contexto <code class="docutils literal notranslate"><span class="pre">object</span></code>, a menos que você queira personalizá-lo. Usando ClientAPIDetailView, usaremos o atributo `` client_method`` em vez de <code class="docutils literal notranslate"><span class="pre">model</span></code> para obter nosso resultado</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIDetailView</span>
 
 <span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
@@ -230,7 +230,7 @@
 <ul class="simple">
 <li><p>template_name: caminho com nome do template</p></li>
 <li><p>client_method: método do cliente que pega um registro de um resource</p></li>
-<li><p>page_title: Generates a context variable to use in your template</p></li>
+<li><p>page_title: Gera uma variável de contexto para usar no seu template</p></li>
 </ul>
 </div>
 <div class="admonition note">
@@ -240,7 +240,7 @@
 </div>
 <div class="section" id="clientapicreateview">
 <h2><span class="section-number">6.1.3. </span>ClientAPICreateView<a class="headerlink" href="#clientapicreateview" title="Link permanente para este título">¶</a></h2>
-<p>Following the same example as Model CreateView, on submit will validate and save, using ClientAPIListView we will use the attribute `` client_method`` instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our result</p>
+<p>Seguindo o mesmo exemplo que o Model CreateView, ao enviar validar e salvar, usando ClientAPIListView, usaremos o atributo <code class="docutils literal notranslate"><span class="pre">client_method</span></code> em vez de <code class="docutils literal notranslate"><span class="pre">model</span></code> para obter nosso resultado</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPICreateView</span>
 
 <span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
@@ -260,7 +260,7 @@
 <ul class="simple">
 <li><p>template_name: caminho com nome do template</p></li>
 <li><p>client_method: método do cliente que criar um registro em um resource</p></li>
-<li><p>page_title: Generates a context variable to use in your template</p></li>
+<li><p>page_title: Gera uma variável de contexto para usar no seu template</p></li>
 </ul>
 </div>
 <div class="admonition note">
@@ -271,7 +271,7 @@
 <div class="section" id="clientapiupdateview">
 <h2><span class="section-number">6.1.4. </span>ClientAPIUpdateView<a class="headerlink" href="#clientapiupdateview" title="Link permanente para este título">¶</a></h2>
 <ul class="simple">
-<li><p>Simple</p></li>
+<li><p>Simples</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIUpdateView</span>
 
@@ -290,7 +290,7 @@
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Advanced with a custom initial</p></li>
+<li><p>Avançado com dados iniciais customizados</p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIUpdateView</span>
 
@@ -322,8 +322,8 @@
 <li><p>template_name: caminho com nome do template</p></li>
 <li><p>client_method: método do cliente que atualiza um registro de um resource</p></li>
 <li><p>client_method: método do cliente que pega um registro de um resource</p></li>
-<li><p>page_title: Generates a context variable to use in your template</p></li>
-<li><p>partial: means if you are going to update only part of your asset or you are going to update everything</p></li>
+<li><p>page_title: Gera uma variável de contexto para usar no seu template</p></li>
+<li><p>partial: significa se você deseja atualizar apenas parte de seu registro ou se deseja atualizar tudo</p></li>
 </ul>
 </div>
 <div class="admonition note">
@@ -333,7 +333,7 @@
 </div>
 <div class="section" id="clientapideleteview">
 <h2><span class="section-number">6.1.5. </span>ClientAPIDeleteView<a class="headerlink" href="#clientapideleteview" title="Link permanente para este título">¶</a></h2>
-<p>Following the same example as Model DetailView, the results returned from the model will go to the context variable <code class="docutils literal notranslate"><span class="pre">object</span></code>, unless you want to customize it. Using ClientAPIDetailView we will use the attribute <code class="docutils literal notranslate"><span class="pre">client_method</span></code> instead of <code class="docutils literal notranslate"><span class="pre">model</span></code> to get our result</p>
+<p>Seguindo o mesmo exemplo do Model DetailView, os resultados retornados do modelo irão para a variável de contexto <code class="docutils literal notranslate"><span class="pre">object</span></code>, a menos que você queira personalizá-lo. Usando ClientAPIDetailView, usaremos o atributo `` client_method`` em vez de <code class="docutils literal notranslate"><span class="pre">model</span></code> para obter nosso resultado</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django_api_client.views</span> <span class="kn">import</span> <span class="n">ClientAPIDeleteView</span>
 
 <span class="kn">from</span> <span class="nn">folder_project.clients</span> <span class="kn">import</span> <span class="n">api_client</span>
