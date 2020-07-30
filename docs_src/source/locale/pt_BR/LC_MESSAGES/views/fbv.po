@@ -47,7 +47,7 @@ msgstr "Detalhe"
 #: ../../source/views/fbv.rst:45 ../../source/views/fbv.rst:71
 #: ../../source/views/fbv.rst:100 ../../source/views/fbv.rst:122
 msgid "The usage example assumes that the endpoint ``/order/orders/``"
-msgstr "O Examplo assume que o endpoint é ``/order/orders/``"
+msgstr "O Exemplo assume que o endpoint é ``/order/orders/``"
 
 #: ../../source/views/fbv.rst:49
 msgid "Create"

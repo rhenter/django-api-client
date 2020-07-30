@@ -33,7 +33,10 @@ msgid ""
 "want to customize it. Using ClientAPIListView we will use the attribute "
 "`` client_method`` instead of `` model`` to get our results"
 msgstr ""
-
+"Seguindo o mesmo exemplo do Model ListView, os resultados retornados do "
+"modelo irão para a variável de contexto ``object_list``, a menos que você "
+"queira personalizá-lo. Usando ClientAPIListView, usaremos o atributo ``client_method``"
+ "em vez do atributo ``model`` padrão para obter nossos resultados"
 #: ../../source/views/cbv.rst:28 ../../source/views/cbv.rst:56
 #: ../../source/views/cbv.rst:84 ../../source/views/cbv.rst:143
 msgid "template_name: path with name of you template"
@@ -48,15 +51,15 @@ msgstr "client_method: método do cliente que list os registros de um resource"
 #: ../../source/views/cbv.rst:30 ../../source/views/cbv.rst:58
 #: ../../source/views/cbv.rst:86 ../../source/views/cbv.rst:146
 msgid "page_title: Generates a context variable to use in your template"
-msgstr ""
+msgstr "page_title: Gera uma variável de contexto para usar no seu template"
 
 #: ../../source/views/cbv.rst:31
 msgid "page_base_url: Information used in pagination, and the search"
-msgstr ""
+msgstr "page_base_url: Informação usada na paginação e na busca"
 
 #: ../../source/views/cbv.rst:32
 msgid "paginate_by: Number of items to generate the pagination"
-msgstr "paginate_by: Numero de itens para gerar a paginação"
+msgstr "paginate_by: Némero de itens para gerar a paginação"
 
 #: ../../source/views/cbv.rst:35 ../../source/views/cbv.rst:61
 #: ../../source/views/cbv.rst:89 ../../source/views/cbv.rst:150
@@ -75,6 +78,10 @@ msgid ""
 " customize it. Using ClientAPIDetailView we will use the attribute "
 "``client_method`` instead of ``model`` to get our result"
 msgstr ""
+"Seguindo o mesmo exemplo do Model DetailView, os resultados retornados do modelo "
+"irão para a variável de contexto ``object``, a menos que você queira personalizá-lo. "
+"Usando ClientAPIDetailView, usaremos o atributo `` client_method`` em vez de ``model`` "
+"para obter nosso resultado"
 
 #: ../../source/views/cbv.rst:57
 msgid "client_method: method of the client that to get a record in the resource"
@@ -90,6 +97,9 @@ msgid ""
 "and save, using ClientAPIListView we will use the attribute `` "
 "client_method`` instead of ``model`` to get our result"
 msgstr ""
+"Seguindo o mesmo exemplo que o Model CreateView, ao enviar validar e salvar, "
+"usando ClientAPIListView, usaremos o atributo ``client_method`` em vez de ``model``"
+" para obter nosso resultado"
 
 #: ../../source/views/cbv.rst:85
 msgid "client_method: method of the client that create a record in the resource"
@@ -101,11 +111,11 @@ msgstr ""
 
 #: ../../source/views/cbv.rst:94
 msgid "Simple"
-msgstr ""
+msgstr "Simples"
 
 #: ../../source/views/cbv.rst:114
 msgid "Advanced with a custom initial"
-msgstr ""
+msgstr "Avançado com dados iniciais customizados"
 
 #: ../../source/views/cbv.rst:144
 msgid "client_method: method of the client that to update"
@@ -120,6 +130,7 @@ msgid ""
 "partial: means if you are going to update only part of your asset or you "
 "are going to update everything"
 msgstr ""
+"partial: significa se você deseja atualizar apenas parte de seu registro ou se deseja atualizar tudo"
 
 #: ../../source/views/cbv.rst:154
 msgid "ClientAPIDeleteView"
