@@ -182,7 +182,7 @@ msgstr ""
 
 #: ../../source/client/defaults.rst:85
 msgid "Definition: Period to wait for the request response"
-msgstr ""
+msgstr "Definição: Período de espera pela resposta da requisição"
 
 #: ../../source/client/defaults.rst:86
 msgid "Default: 3"
@@ -197,8 +197,8 @@ msgid "PAGE_SIZE"
 msgstr ""
 
 #: ../../source/client/defaults.rst:96
-msgid "Definition: Used define the size of the Pagination"
-msgstr ""
+msgid "Definition: Used to define the size of the Pagination"
+msgstr "Definição: Usado para definir o tamanho da Paginação"
 
 #: ../../source/client/defaults.rst:97
 msgid "Default: 100"
@@ -213,6 +213,8 @@ msgid ""
 "Definition: Key used to get a endpoint resource. Use the same identifier "
 "you receive in payload."
 msgstr ""
+"Definição: Change usada para pegar um registro de um endpoint. Use o mesmo identificador"
+"que você recebe no payload"
 
 #: ../../source/client/defaults.rst:104
 msgid "Default: 'id'"

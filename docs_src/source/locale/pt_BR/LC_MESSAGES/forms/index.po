@@ -65,12 +65,3 @@ msgstr ""
 msgid "Example"
 msgstr "Exemplo"
 
-#~ msgid ""
-#~ "In the same way that ModelForm "
-#~ "does not need to manually add each"
-#~ " attribute, DynamicForm only needs you "
-#~ "to add the field name, allowing "
-#~ "you to add the \"Verbose Name\" in"
-#~ " the list"
-#~ msgstr ""
-
