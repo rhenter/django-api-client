@@ -74,10 +74,10 @@ setup(
     cmdclass={'version': VersionCommand},
     description='Library with REST APIs Client code for Django',
     install_requires=install_requires,
-    keywords='utils tools django views list api client',
+    keywords='django rest views utils tools list api client restframework',
     long_description=long_description,
     name='django-api-client',
-    packages=find_packages(exclude=['docs_src', 'tests*']),
+    packages=find_packages(exclude=['docs_src', 'doc', 'tests*']),
     url='https://github.com/rhenter/django-api-client',
     version=version,
 )

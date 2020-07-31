@@ -1,3 +1,9 @@
+0.4.0
+-----
+
+- Finish the documentation
+- Add new tags to setup.py
+
 0.3.12
 ------
 
