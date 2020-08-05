@@ -1,3 +1,8 @@
+0.5.0
+-----
+
+- Add a json converter to serialize the dict when running json.dumps
+
 0.4.0
 -----
 

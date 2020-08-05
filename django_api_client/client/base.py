@@ -4,7 +4,7 @@ from urllib.parse import urljoin
 import requests
 from requests.exceptions import ConnectionError as RequestsConnectionError, ReadTimeout, Timeout
 
-from utils import json_converter
+from django_api_client.utils import json_converter
 from .exceptions import ServerError
 from .factories import ResponseFactory
 from .validators import validate_status_code
@@ -170,6 +170,7 @@ class BaseAPI:
 class BaseEndpoint:
     """Class holding endpoint functions.
     """
+
     def __init__(self, api, endpoint=''):
         self._api = api
         self.endpoint = endpoint
