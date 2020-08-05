@@ -4,6 +4,7 @@ from urllib.parse import urljoin
 import requests
 from requests.exceptions import ConnectionError as RequestsConnectionError, ReadTimeout, Timeout
 
+from utils import json_converter
 from .exceptions import ServerError
 from .factories import ResponseFactory
 from .validators import validate_status_code
@@ -121,7 +122,7 @@ class BaseAPI:
         Returns:
             dict: Data retrieved for specified endpoint.
         """
-        response = self.make_request('POST', endpoint, data=json.dumps(data))
+        response = self.make_request('POST', endpoint, data=json.dumps(data, default=json_converter))
         return ResponseFactory(response, endpoint)
 
     def update(self, endpoint, data, partial=False):
@@ -136,7 +137,7 @@ class BaseAPI:
             dict: Data retrieved for specified endpoint.
         """
         method = 'PATCH' if partial else 'PUT'
-        response = self.make_request(method, endpoint, data=json.dumps(data))
+        response = self.make_request(method, endpoint, data=json.dumps(data, default=json_converter))
         return ResponseFactory(response, endpoint)
 
     def search(self, endpoint, **kwargs):

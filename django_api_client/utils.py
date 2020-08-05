@@ -1,8 +1,10 @@
 import codecs
+import datetime
 import os
 import re
 from json import dumps
 from urllib.parse import (parse_qsl, ParseResult, unquote, urlencode, urlparse)
+from uuid import UUID
 
 
 def clean_url(url):
@@ -48,3 +50,9 @@ def get_version_from_changes(path):
 
 def labelize(text):
     return ' '.join([t.capitalize() for t in text.replace('_', ' ').split(' ')])
+
+
+def json_converter(output):
+    if isinstance(output, datetime.datetime) or isinstance(output, datetime.date) or isinstance(output, UUID):
+        return output.__str__()
+    return output
