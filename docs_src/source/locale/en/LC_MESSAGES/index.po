@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-29 08:48-0300\n"
+"POT-Creation-Date: 2020-08-07 07:33-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,42 +24,42 @@ msgstr ""
 
 #: ../../source/index.rst:4
 msgid ""
-"The Django API Client is an API response wrapper, which allows you to "
-"iterate through the API as if they were using a local model / object in "
-"your project. Whether through the direct customer in an FBV or using "
-"personalized CBV (class-based displays), this framework tries to make "
-"this communication as easy as possible"
+"The Django API Client is an API response wrapper, which translates "
+"Django's native calls when using a view to a particular REST API. Whether"
+" using the API client directly in a FBV (Function-based View) or using "
+"CBV (Class-based View), this library makes this communication as "
+"transparent and easy as possible"
 msgstr ""
 
-#: ../../source/index.rst:7
+#: ../../source/index.rst:6
 msgid "Some reasons to use the **Django API Client**"
 msgstr ""
 
-#: ../../source/index.rst:9
+#: ../../source/index.rst:8
 msgid ""
 "If you work with microservices with APIs in multiple locations and want "
 "to continue using Django as a WebApp with the same capabilities to render"
 " data as if you were using native models"
 msgstr ""
 
-#: ../../source/index.rst:11
+#: ../../source/index.rst:10
 msgid ""
 "You want to separate your Django project to let one of them only with the"
 " API with DRF and the other as a WebApp with Templates (HTML), CSS, JS "
 "instead of using some JS frontend (ReactJS, AngularJS, etc.)"
 msgstr ""
 
-#: ../../source/index.rst:13
+#: ../../source/index.rst:12
 msgid ""
 "You want to use a third party API to list, create and change using the "
 "django template system"
 msgstr ""
 
-#: ../../source/index.rst:17
+#: ../../source/index.rst:16
 msgid "Quickstart"
 msgstr ""
 
-#: ../../source/index.rst:26
+#: ../../source/index.rst:25
 msgid "User Guide"
 msgstr ""
 
@@ -109,8 +109,8 @@ msgstr ""
 
 #: ../../source/example.rst:55
 msgid ""
-"Let's imagine which client is located in a folder called clients on project folder (folder containing the "
-"settings.py file)"
+"Let's imagine which client is located in a folder called clients on "
+"project folder (folder containing the settings.py file)"
 msgstr ""
 
 #: ../../source/example.rst:73
@@ -129,8 +129,8 @@ msgstr ""
 
 #: ../../source/example.rst:124
 msgid ""
-"includes/form_search.html: Form with search input. This ``include`` support "
-"placeholder too."
+"includes/form_search.html: Form with search input. This ``include`` "
+"support placeholder too."
 msgstr ""
 
 #: ../../source/example.rst:125
@@ -155,27 +155,27 @@ msgid ""
 "names of their endpoints"
 msgstr ""
 
-#: ../../source/index.rst:42
+#: ../../source/index.rst:41
 msgid "Development"
 msgstr ""
 
-#: ../../source/index.rst:54
+#: ../../source/index.rst:53
 msgid "Downloads"
 msgstr ""
 
-#: ../../source/index.rst:56
+#: ../../source/index.rst:55
 msgid ""
 "`PDF <https://readthedocs.org/projects/django-api-"
 "client/downloads/pdf/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:58
+#: ../../source/index.rst:57
 msgid ""
 "`Epub <https://readthedocs.org/projects/django-api-"
 "client/downloads/epub/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:62
+#: ../../source/index.rst:61
 msgid "Changelog"
 msgstr ""
 
@@ -201,5 +201,18 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Django API Client Documentação"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Django API Client is an API"
+#~ " response wrapper, which allows you "
+#~ "to iterate through the API as if"
+#~ " they were using a local model "
+#~ "/ object in your project. Whether "
+#~ "through the direct customer in an "
+#~ "FBV or using personalized CBV (class-"
+#~ "based displays), this framework tries to"
+#~ " make this communication as easy as"
+#~ " possible"
 #~ msgstr ""
 

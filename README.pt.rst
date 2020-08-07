@@ -4,7 +4,7 @@ Django API Client
 
 |PyPI latest| |PyPI Version| |PyPI License|  |CicleCI Status| |Coverage| |Docs| |Open Source? Yes!|
 
-O Django API Client é um wrapper de resposta de API, que permite você iterar com os resultados da API como se eles estivesse usando um modelo/objeto local em seu projeto. Seja por meio do cliente direto usando uma FBV ou usando CBV personalizada (exibições baseadas em classe), este framework tenta facilitar ao máximo esta comunicação
+O Django API Client é um wrapper de resposta da API, que traduz as chamadas nativas do Django ao usar uma view para a uma determinada API REST. Seja usando do cliente da API diretamente em um FBV (Function-based View) ou usando CBV (Class-based View), essa biblioteca tornar essa comunicação o mais transparente e fácil o possível
 
 
 Alguns motivos para se usar o **Django API Client**

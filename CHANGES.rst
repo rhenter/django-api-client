@@ -1,3 +1,8 @@
+0.5.1
+-----
+
+- Fix documentation grammar to get clear
+
 0.5.0
 -----
 

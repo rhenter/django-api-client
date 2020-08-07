@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-29 08:48-0300\n"
+"POT-Creation-Date: 2020-08-07 07:33-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,23 +24,23 @@ msgstr "Documentação do Django API Client"
 
 #: ../../source/index.rst:4
 msgid ""
-"The Django API Client is an API response wrapper, which allows you to "
-"iterate through the API as if they were using a local model / object in "
-"your project. Whether through the direct customer in an FBV or using "
-"personalized CBV (class-based displays), this framework tries to make "
-"this communication as easy as possible"
+"The Django API Client is an API response wrapper, which translates "
+"Django's native calls when using a view to a particular REST API. Whether"
+" using the API client directly in a FBV (Function-based View) or using "
+"CBV (Class-based View), this library makes this communication as "
+"transparent and easy as possible"
 msgstr ""
-"O Django API Client é um wrapper de resposta da API, que permite iterar "
-"com a API como se eles estivesse usando um modelo/objeto local em seu "
-"projeto. Seja por meio do cliente direto em uma FBV ou usando CBV "
-"personalizada (exibições baseadas em classe), este framework tenta "
-"facilitar ao máximo esta comunicação"
+"O Django API Client é um wrapper de resposta da API, que traduz as chamadas "
+"nativas do Django ao usar uma view para a uma determinada API REST."
+"Seja usando do cliente da API diretamente em um FBV (Function-based View) ou "
+"usando CBV (Class-based View), essa biblioteca tornar essa comunicação o mais "
+"transparente e fácil o possível"
 
-#: ../../source/index.rst:7
+#: ../../source/index.rst:6
 msgid "Some reasons to use the **Django API Client**"
 msgstr "Alguns motivos para se usar o **Django API Client**"
 
-#: ../../source/index.rst:9
+#: ../../source/index.rst:8
 msgid ""
 "If you work with microservices with APIs in multiple locations and want "
 "to continue using Django as a WebApp with the same capabilities to render"
@@ -50,7 +50,7 @@ msgstr ""
 "continuar usando o Django como um WebApp com os mesmos recursos para "
 "renderizar os dados como se estivesse usando os modelos nativos"
 
-#: ../../source/index.rst:11
+#: ../../source/index.rst:10
 msgid ""
 "You want to separate your Django project to let one of them only with the"
 " API with DRF and the other as a WebApp with Templates (HTML), CSS, JS "
@@ -60,7 +60,7 @@ msgstr ""
 " API com DRF e outro como um WebApp com Templates(HTML), CSS, JS ao invés"
 " de usar algum frontend JS (ReactJS, AngularJS, etc)"
 
-#: ../../source/index.rst:13
+#: ../../source/index.rst:12
 msgid ""
 "You want to use a third party API to list, create and change using the "
 "django template system"
@@ -68,11 +68,11 @@ msgstr ""
 "Você deseja usar uma API de terceiros para listar, criar e alterar usando"
 " o sistema de templates do django"
 
-#: ../../source/index.rst:17
+#: ../../source/index.rst:16
 msgid "Quickstart"
 msgstr ""
 
-#: ../../source/index.rst:26
+#: ../../source/index.rst:25
 msgid "User Guide"
 msgstr "Guia do Usuário"
 
@@ -90,9 +90,7 @@ msgstr ""
 msgid ""
 "The details of the configuration will be better explained in the "
 "documentation"
-msgstr ""
-"Os detalhes da configuração serão melhor explicados na "
-"documentação*"
+msgstr "Os detalhes da configuração serão melhor explicados na documentação*"
 
 #: ../../source/example.rst:38
 msgid ""
@@ -133,11 +131,11 @@ msgstr "Agora vamos listar os dados usando o sistema padrão do Django "
 
 #: ../../source/example.rst:55
 msgid ""
-"Let's imagine which client is located in a folder called clients on project folder (folder containing the "
-"settings.py file)"
+"Let's imagine which client is located in a folder called clients on "
+"project folder (folder containing the settings.py file)"
 msgstr ""
-"Vamos imaginar que o cliente esta em uma pasta dentro da pasta do projeto (pasta que contém o "
-"arquivo settings.py)"
+"Vamos imaginar que o cliente esta em uma pasta dentro da pasta do projeto"
+" (pasta que contém o arquivo settings.py)"
 
 #: ../../source/example.rst:73
 msgid ""
@@ -146,10 +144,12 @@ msgid ""
 msgstr ""
 "O cliente irá gerar uma estrutura amigavel para cada endpoing. Exemplo "
 "com o endpoint */order/orders/*:"
+
 #: ../../source/example.rst:75
 msgid "In your template you can use the forms and pagination snippets. E.g:"
-msgstr "No seu template você pode usar os snippets de formulários e de paginação. Ex:"
-
+msgstr ""
+"No seu template você pode usar os snippets de formulários e de paginação."
+" Ex:"
 
 #: ../../source/example.rst:123
 msgid "Example using Bootstrap Styles(CSS)"
@@ -157,26 +157,27 @@ msgstr "Exemplo usando estilos (CSS) do Bootstrap"
 
 #: ../../source/example.rst:124
 msgid ""
-"includes/form_search.html: Form with search input. This ``include`` support "
-"placeholder too."
+"includes/form_search.html: Form with search input. This ``include`` "
+"support placeholder too."
 msgstr ""
-"includes/form_search.html: Formulário com input de busca. Este ``include`` suporta placeholder tambem."
+"includes/form_search.html: Formulário com input de busca. Este "
+"``include`` suporta placeholder tambem."
 
 #: ../../source/example.rst:125
 msgid ""
 "includes/form_paginate_by.html: Select form to choose how many elements "
 "the page will be paginate. Ex: by (20, 40, 60, etc ...)"
 msgstr ""
-"includes/form_paginate_by.html: Formulario de Select para escolher com quantos elementos a pagina será paginada"
-"Ex: por (20, 40, 60, etc ...)"
-
+"includes/form_paginate_by.html: Formulario de Select para escolher com "
+"quantos elementos a pagina será paginadaEx: por (20, 40, 60, etc ...)"
 
 #: ../../source/example.rst:126
 msgid ""
 "includes/list_paginator.html: Block with pagination elements with the "
 "number of pages buttons, previous and next"
 msgstr ""
-"includes/list_paginator.html: Bloco com os elementos de paginação com os butões de número de paginas, anterior e proximo"
+"includes/list_paginator.html: Bloco com os elementos de paginação com os "
+"butões de número de paginas, anterior e proximo"
 
 #: ../../source/example.rst:141
 msgid "What does that mean?"
@@ -187,29 +188,52 @@ msgid ""
 "That the API Client will always generate the structure according to the "
 "names of their endpoints"
 msgstr ""
-"Que o API Cliente sempre gerará a estutura de acordo os nomes dos seus endpoints"
+"Que o API Cliente sempre gerará a estutura de acordo os nomes dos seus "
+"endpoints"
 
-#: ../../source/index.rst:42
+#: ../../source/index.rst:41
 msgid "Development"
 msgstr "Desenvolvimento"
 
-#: ../../source/index.rst:54
+#: ../../source/index.rst:53
 msgid "Downloads"
 msgstr ""
 
-#: ../../source/index.rst:56
+#: ../../source/index.rst:55
 msgid ""
 "`PDF <https://readthedocs.org/projects/django-api-"
 "client/downloads/pdf/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:58
+#: ../../source/index.rst:57
 msgid ""
 "`Epub <https://readthedocs.org/projects/django-api-"
 "client/downloads/epub/latest/>`_"
 msgstr ""
 
-#: ../../source/index.rst:62
+#: ../../source/index.rst:61
 msgid "Changelog"
 msgstr ""
+
+#~ msgid ""
+#~ "The Django API Client is an API"
+#~ " response wrapper, which allows you "
+#~ "to iterate through the API as if"
+#~ " they were using a local model "
+#~ "/ object in your project. Whether "
+#~ "through the direct customer in an "
+#~ "FBV or using personalized CBV (class-"
+#~ "based displays), this framework tries to"
+#~ " make this communication as easy as"
+#~ " possible"
+#~ msgstr ""
+#~ "O Django API Client é um wrapper"
+#~ " de resposta da API, que permite "
+#~ "iterar com a API como se eles "
+#~ "estivesse usando um modelo/objeto local "
+#~ "em seu projeto. Seja por meio do"
+#~ " cliente direto em uma FBV ou "
+#~ "usando CBV personalizada (exibições baseadas"
+#~ " em classe), este framework tenta "
+#~ "facilitar ao máximo esta comunicação"
 
