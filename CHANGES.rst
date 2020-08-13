@@ -1,3 +1,8 @@
+0.6.0
+-----
+
+- Add response when requests wore Ajax
+
 0.5.1
 -----
 
