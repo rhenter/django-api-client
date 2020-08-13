@@ -1,7 +1,7 @@
 import json
 
 from django.core.paginator import InvalidPage
-from django.http import Http404, HttpResponse, HttpResponseRedirect
+from django.http import Http404, HttpResponse, HttpResponseRedirect, JsonResponse
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import DeleteView, FormView
@@ -29,7 +29,12 @@ class ClientAPIFormView(FormView):
                     form.add_error(None, errors[error_key])
                     continue
                 form.add_error(error_key, errors[error_key])
+
+            if self.request.is_ajax():
+                return JsonResponse({'errors': form.errors})
             return self.form_invalid(form)
+        if self.request.is_ajax():
+            return JsonResponse({'status': True})
         return super().form_valid(form)
 
 
