@@ -116,6 +116,7 @@ class ClientAPIAuthenticatedListView(ListView):
         return extra_params
 
     def get_context_data(self, **kwargs):
+        filter_params = kwargs.pop('filter_params', False)
         paginate_by = self.get_paginate_by()
         if paginate_by:
             paginator, page, queryset, is_paginated = self._paginate_queryset(self.client_method,
@@ -139,6 +140,7 @@ class ClientAPIAuthenticatedListView(ListView):
         context.update({
             'search': self.request.GET.get('search', ''),
             'search_url': search_url,
+            'filter_params': filter_params,
             'page_base_url': self.get_page_base_url(),
             'range_pagination': [x for x in range(20, 220, 20)],
             'paginate_by': paginate_by,
@@ -153,6 +155,8 @@ class ClientAPIAuthenticatedListView(ListView):
 
     def get(self, request, *args, **kwargs):
         params = self.get_extra_params(request)
+        if params:
+            params['filter_params'] = True
 
         context = self.get_context_data(**params)
         self.object_list = context['object_list']
