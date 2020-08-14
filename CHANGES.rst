@@ -1,3 +1,8 @@
+0.7.0
+-----
+
+- Add filter_params to the context when the request has filter
+
 0.6.0
 -----
 
