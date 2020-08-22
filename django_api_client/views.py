@@ -164,20 +164,6 @@ class ClientAPIAuthenticatedListView(ListView):
         if params:
             context.update(params)
 
-        if request.is_ajax():
-            paginator = context['paginator']
-            more = False
-            if paginator.num_pages > 1:
-                more = True
-
-            results = [{'id': instance.code, 'text': instance.brand.upper()} for instance in self.object_list]
-            data = {
-                "results": results,
-                "pagination": {
-                    "more": more
-                }
-            }
-            return HttpResponse(json.dumps(data))
         return self.render_to_response(context)
 
 

@@ -1,3 +1,8 @@
+0.9.0
+-----
+
+- Remove is_ajax condition to use with infinity scroll
+
 0.8.0
 -----
 
