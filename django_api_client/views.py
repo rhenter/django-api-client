@@ -70,7 +70,7 @@ class ClientAPIAuthenticatedListView(ListView):
     paginator_class = ClientAPIPagination
     client_method = None
     client_method_result_key = 'results'
-    extra_kwargs = []
+    api_filters = []
     page_base_url = ''
     page_title = ''
 
@@ -105,15 +105,15 @@ class ClientAPIAuthenticatedListView(ListView):
                 'message': str(e)
             })
 
-    def get_extra_params(self, request):
-        default_kwargs_list = ['search']
-        default_kwargs_list.extend(self.extra_kwargs)
-        extra_params = {}
-        for param in default_kwargs_list:
+    def get_api_params(self, request):
+        default_api_filters = ['search']
+        default_api_filters.extend(self.api_filters)
+        api_filters = {}
+        for param in default_api_filters:
             param_value = request.GET.get(param, '')
             if param_value:
-                extra_params[param] = param_value
-        return extra_params
+                api_filters[param] = param_value
+        return api_filters
 
     def get_context_data(self, **kwargs):
         filter_params = kwargs.pop('filter_params', False)
@@ -154,7 +154,7 @@ class ClientAPIAuthenticatedListView(ListView):
         return context
 
     def get(self, request, *args, **kwargs):
-        params = self.get_extra_params(request)
+        params = self.get_api_params(request)
         if params:
             params['filter_params'] = True
 
