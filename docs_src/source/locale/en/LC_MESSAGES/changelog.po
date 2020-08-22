@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-05 13:26-0300\n"
+"POT-Creation-Date: 2020-08-22 11:32-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,194 +19,230 @@ msgstr ""
 "Generated-By: Babel 2.8.0\n"
 
 #: ../../../CHANGES.rst:2
-msgid "0.5.0"
+msgid "0.8.0"
 msgstr ""
 
 #: ../../../CHANGES.rst:4
-msgid "Add a json converter to serialize the dict when running json.dumps"
+msgid "Change extra_kwargs class attribute to api_filters"
 msgstr ""
 
-#: ../../../CHANGES.rst:7
-msgid "0.4.0"
+#: ../../../CHANGES.rst:5
+msgid "Change get_extra_params to get_api_params"
 msgstr ""
 
-#: ../../../CHANGES.rst:9
-msgid "Finish the documentation"
+#: ../../../CHANGES.rst:8
+msgid "0.7.0"
 msgstr ""
 
 #: ../../../CHANGES.rst:10
-msgid "Add new tags to setup.py"
+msgid "Add filter_params to the context when the request has filter"
 msgstr ""
 
 #: ../../../CHANGES.rst:13
-msgid "0.3.12"
+msgid "0.6.0"
 msgstr ""
 
 #: ../../../CHANGES.rst:15
-msgid "BugFix: Remove debug from ResponseFactory"
+msgid "Add response when requests wore Ajax"
 msgstr ""
 
 #: ../../../CHANGES.rst:18
-msgid "0.3.11"
+msgid "0.5.1"
 msgstr ""
 
 #: ../../../CHANGES.rst:20
+msgid "Fix documentation grammar to get clear"
+msgstr ""
+
+#: ../../../CHANGES.rst:23
+msgid "0.5.0"
+msgstr ""
+
+#: ../../../CHANGES.rst:25
+msgid "Add a json converter to serialize the dict when running json.dumps"
+msgstr ""
+
+#: ../../../CHANGES.rst:28
+msgid "0.4.0"
+msgstr ""
+
+#: ../../../CHANGES.rst:30
+msgid "Finish the documentation"
+msgstr ""
+
+#: ../../../CHANGES.rst:31
+msgid "Add new tags to setup.py"
+msgstr ""
+
+#: ../../../CHANGES.rst:34
+msgid "0.3.12"
+msgstr ""
+
+#: ../../../CHANGES.rst:36
+msgid "BugFix: Remove debug from ResponseFactory"
+msgstr ""
+
+#: ../../../CHANGES.rst:39
+msgid "0.3.11"
+msgstr ""
+
+#: ../../../CHANGES.rst:41
 msgid ""
 "Change the APIClientEndpointList to get clear when django raises a wrong "
 "call"
 msgstr ""
 
-#: ../../../CHANGES.rst:23
+#: ../../../CHANGES.rst:44
 msgid "0.3.10"
 msgstr ""
 
-#: ../../../CHANGES.rst:25
+#: ../../../CHANGES.rst:46
 msgid "BugFix: Import without the relative import"
 msgstr ""
 
-#: ../../../CHANGES.rst:28
+#: ../../../CHANGES.rst:49
 msgid "0.3.9"
 msgstr ""
 
-#: ../../../CHANGES.rst:30
+#: ../../../CHANGES.rst:51
 msgid "BugFix: Factory repr name with special characters"
 msgstr ""
 
-#: ../../../CHANGES.rst:33
+#: ../../../CHANGES.rst:54
 msgid "0.3.8"
 msgstr ""
 
-#: ../../../CHANGES.rst:35
+#: ../../../CHANGES.rst:56
 msgid "Change Factory name with APIClient signature"
 msgstr ""
 
-#: ../../../CHANGES.rst:38
+#: ../../../CHANGES.rst:59
 msgid "0.3.7"
 msgstr ""
 
-#: ../../../CHANGES.rst:40
+#: ../../../CHANGES.rst:61
 msgid "BugFix: Slug field on ClientAPIAuthenticatedUpdateView to let generic"
 msgstr ""
 
-#: ../../../CHANGES.rst:43
+#: ../../../CHANGES.rst:64
 msgid "0.3.6"
 msgstr ""
 
-#: ../../../CHANGES.rst:45
+#: ../../../CHANGES.rst:66
 msgid "Add new fragment to the endpoint identifier on ClientAPIUpdateView"
 msgstr ""
 
-#: ../../../CHANGES.rst:48
+#: ../../../CHANGES.rst:69
 msgid "0.3.5"
 msgstr ""
 
-#: ../../../CHANGES.rst:50
+#: ../../../CHANGES.rst:71
 msgid "Get the endpoint identifier from the slug_field argument"
 msgstr ""
 
-#: ../../../CHANGES.rst:53
+#: ../../../CHANGES.rst:74
 msgid "0.3.4"
 msgstr ""
 
-#: ../../../CHANGES.rst:55
+#: ../../../CHANGES.rst:76
 msgid "BugFix: Client override when has more than on endpoint in the same base"
 msgstr ""
 
-#: ../../../CHANGES.rst:56
+#: ../../../CHANGES.rst:77
 msgid "Update doc with new client structure"
 msgstr ""
 
-#: ../../../CHANGES.rst:59
+#: ../../../CHANGES.rst:80
 msgid "0.3.3"
 msgstr ""
 
-#: ../../../CHANGES.rst:61
+#: ../../../CHANGES.rst:82
 msgid "Replace URL_BASE to BASE_URL in all places"
 msgstr ""
 
-#: ../../../CHANGES.rst:64
+#: ../../../CHANGES.rst:85
 msgid "0.3.2"
 msgstr ""
 
-#: ../../../CHANGES.rst:66
+#: ../../../CHANGES.rst:87
 msgid "Update readme and documentation"
 msgstr ""
 
-#: ../../../CHANGES.rst:69
+#: ../../../CHANGES.rst:90
 msgid "0.3.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:71
+#: ../../../CHANGES.rst:92
 msgid "Finish the base documentation and Readme"
 msgstr ""
 
-#: ../../../CHANGES.rst:74
+#: ../../../CHANGES.rst:95
 msgid "0.3.0"
 msgstr ""
 
-#: ../../../CHANGES.rst:76
+#: ../../../CHANGES.rst:97
 msgid "Update Doc"
 msgstr ""
 
-#: ../../../CHANGES.rst:77
+#: ../../../CHANGES.rst:98
 msgid "Remove Read the docs to use Github Pages"
 msgstr ""
 
-#: ../../../CHANGES.rst:78
+#: ../../../CHANGES.rst:99
 msgid "Add new structure with a index to to the a lang"
 msgstr ""
 
-#: ../../../CHANGES.rst:81
+#: ../../../CHANGES.rst:102
 msgid "0.2.0"
 msgstr ""
 
-#: ../../../CHANGES.rst:83
+#: ../../../CHANGES.rst:104
 msgid "Fix CI process"
 msgstr ""
 
-#: ../../../CHANGES.rst:84
+#: ../../../CHANGES.rst:105
 msgid "Add tests to increase the coverage"
 msgstr ""
 
-#: ../../../CHANGES.rst:85
+#: ../../../CHANGES.rst:106
 msgid "Fix read me file"
 msgstr ""
 
-#: ../../../CHANGES.rst:88
+#: ../../../CHANGES.rst:109
 msgid "0.1.3"
 msgstr ""
 
-#: ../../../CHANGES.rst:90
+#: ../../../CHANGES.rst:111
 msgid "Add ClientAPIAuthenticatedDeleteView and ClientAPIDeleteView"
 msgstr ""
 
-#: ../../../CHANGES.rst:91
+#: ../../../CHANGES.rst:112
 msgid ""
 "BugFix: Use the correct constant to defaults (DEFAULTS) and the api "
 "(API_DEFAULTS)"
 msgstr ""
 
-#: ../../../CHANGES.rst:94
+#: ../../../CHANGES.rst:115
 msgid "0.1.2"
 msgstr ""
 
-#: ../../../CHANGES.rst:96
+#: ../../../CHANGES.rst:117
 msgid "Add documentation and fix Python version"
 msgstr ""
 
-#: ../../../CHANGES.rst:100
+#: ../../../CHANGES.rst:121
 msgid "0.1.1"
 msgstr ""
 
-#: ../../../CHANGES.rst:102
+#: ../../../CHANGES.rst:123
 msgid "Remove python 3.8 from setup because pypi dont support yet"
 msgstr ""
 
-#: ../../../CHANGES.rst:105
+#: ../../../CHANGES.rst:126
 msgid "0.1.0"
 msgstr ""
 
-#: ../../../CHANGES.rst:107
+#: ../../../CHANGES.rst:128
 msgid "Initial release"
 msgstr ""
 

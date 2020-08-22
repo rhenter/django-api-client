@@ -1,8 +1,8 @@
 Using Class Based Views (CBV)
------------------------------
+=============================
 
 ClientAPIListView
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Following the same example as Model ListView, the results returned from the model will go to the context variable ``object_list``, unless you want to customize it. Using ClientAPIListView we will use the attribute ``client_method`` instead of ``model`` to get our results
 
@@ -34,8 +34,67 @@ Following the same example as Model ListView, the results returned from the mode
 .. note::
   The usage example assumes that the endpoint is ``/order/orders/``
 
+
+API Filters
+~~~~~~~~~~~
+
+- Enable filter:
+
+  To enable a filter for the API you just need to add the filter you want in `api_filters`
+
+
+.. code-block:: python
+
+  from django_api_client.views import ClientAPIListView
+
+  from folder_project.clients import api_client
+
+  ...
+
+  class TestUsingFilterListView(ClientAPIListView):
+      template_name = "template_name.html"
+      page_title = 'Tests'
+      page_base_url = reverse_lazy('order:list')
+      paginate_by = 50
+      client_method = api_client.order.orders.list
+      api_filters = ['user']
+
+
+.. note::
+  The usage example use the `user`, so if you pass the user on the querystring, this value will be passed to the API
+
+- Add a custom filter or queryset:
+
+  To customize a search or call to the API you need to use `get_api_params` adding the parameters you want. Example:
+
+.. code-block:: python
+
+  from django_api_client.views import ClientAPIListView
+
+  from folder_project.clients import api_client
+
+  ...
+
+  class TestUsingCustomFilterListView(ClientAPIListView):
+      template_name = "template_name.html"
+      page_title = 'Tests'
+      page_base_url = reverse_lazy('order:list')
+      paginate_by = 50
+      client_method = api_client.order.orders.list
+      api_filters = ['user']
+
+      def get_extra_params(self, request):
+        extra_params = super().get_extra_params(request)
+        extra_params['status'] = 'finished'
+        return extra_params
+
+
+.. note::
+  The usage example take all params you already have and add the custom `status` to send to the API
+
+
 ClientAPIDetailView
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Following the same example as Model DetailView, the results returned from the model will go to the context variable ``object``, unless you want to customize it. Using ClientAPIDetailView we will use the attribute ``client_method`` instead of ``model`` to get our result
 
@@ -61,7 +120,7 @@ Following the same example as Model DetailView, the results returned from the mo
   The usage example assumes that the endpoint is ``/order/orders/``
 
 ClientAPICreateView
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Following the same example as Model CreateView, on submit will validate and save, using ClientAPIListView we will use the attribute `` client_method`` instead of ``model`` to get our result
 
@@ -89,7 +148,7 @@ Following the same example as Model CreateView, on submit will validate and save
   The usage example assumes that the endpoint is ``/order/orders/``
 
 ClientAPIUpdateView
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 - Simple
 
@@ -151,7 +210,7 @@ ClientAPIUpdateView
 
 
 ClientAPIDeleteView
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Following the same example as Model DetailView, the results returned from the model will go to the context variable ``object``, unless you want to customize it. Using ClientAPIDetailView we will use the attribute ``client_method`` instead of ``model`` to get our result
 

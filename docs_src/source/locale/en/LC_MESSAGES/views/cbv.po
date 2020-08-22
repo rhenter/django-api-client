@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Django API Client 0.3.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-29 21:53-0300\n"
+"POT-Creation-Date: 2020-08-22 11:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,8 +34,8 @@ msgid ""
 "``client_method`` instead of ``model`` to get our results"
 msgstr ""
 
-#: ../../source/views/cbv.rst:28 ../../source/views/cbv.rst:56
-#: ../../source/views/cbv.rst:84 ../../source/views/cbv.rst:143
+#: ../../source/views/cbv.rst:28 ../../source/views/cbv.rst:115
+#: ../../source/views/cbv.rst:143 ../../source/views/cbv.rst:202
 msgid "template_name: path with name of you template"
 msgstr ""
 
@@ -45,8 +45,8 @@ msgid ""
 "resource list"
 msgstr ""
 
-#: ../../source/views/cbv.rst:30 ../../source/views/cbv.rst:58
-#: ../../source/views/cbv.rst:86 ../../source/views/cbv.rst:146
+#: ../../source/views/cbv.rst:30 ../../source/views/cbv.rst:117
+#: ../../source/views/cbv.rst:145 ../../source/views/cbv.rst:205
 msgid "page_title: Generates a context variable to use in your template"
 msgstr ""
 
@@ -58,17 +58,53 @@ msgstr ""
 msgid "paginate_by: Number of items to generate the pagination"
 msgstr ""
 
-#: ../../source/views/cbv.rst:35 ../../source/views/cbv.rst:61
-#: ../../source/views/cbv.rst:89 ../../source/views/cbv.rst:150
-#: ../../source/views/cbv.rst:176
+#: ../../source/views/cbv.rst:35 ../../source/views/cbv.rst:120
+#: ../../source/views/cbv.rst:148 ../../source/views/cbv.rst:209
+#: ../../source/views/cbv.rst:235
 msgid "The usage example assumes that the endpoint is ``/order/orders/``"
 msgstr ""
 
-#: ../../source/views/cbv.rst:38
+#: ../../source/views/cbv.rst:39
+msgid "API Filters"
+msgstr ""
+
+#: ../../source/views/cbv.rst:41
+msgid "Enable filter:"
+msgstr ""
+
+#: ../../source/views/cbv.rst:43
+msgid ""
+"To enable a filter for the API you just need to add the filter you want "
+"in `api_filters`"
+msgstr ""
+
+#: ../../source/views/cbv.rst:64
+msgid ""
+"The usage example use the `user`, so if you pass the user on the "
+"querystring, this value will be passed to the API"
+msgstr ""
+
+#: ../../source/views/cbv.rst:66
+msgid "Add a custom filter or queryset:"
+msgstr ""
+
+#: ../../source/views/cbv.rst:68
+msgid ""
+"To customize a search or call to the API you need to use `get_api_params`"
+" adding the parameters you want. Example:"
+msgstr ""
+
+#: ../../source/views/cbv.rst:93
+msgid ""
+"The usage example take all params you already have and add the custom "
+"`status` to send to the API"
+msgstr ""
+
+#: ../../source/views/cbv.rst:97
 msgid "ClientAPIDetailView"
 msgstr ""
 
-#: ../../source/views/cbv.rst:40 ../../source/views/cbv.rst:156
+#: ../../source/views/cbv.rst:99 ../../source/views/cbv.rst:215
 msgid ""
 "Following the same example as Model DetailView, the results returned from"
 " the model will go to the context variable ``object``, unless you want to"
@@ -76,56 +112,56 @@ msgid ""
 "``client_method`` instead of ``model`` to get our result"
 msgstr ""
 
-#: ../../source/views/cbv.rst:57
+#: ../../source/views/cbv.rst:116
 msgid "client_method: method of the client that to get a record in the resource"
 msgstr ""
 
-#: ../../source/views/cbv.rst:64
+#: ../../source/views/cbv.rst:123
 msgid "ClientAPICreateView"
 msgstr ""
 
-#: ../../source/views/cbv.rst:66
+#: ../../source/views/cbv.rst:125
 msgid ""
 "Following the same example as Model CreateView, on submit will validate "
 "and save, using ClientAPIListView we will use the attribute `` "
 "client_method`` instead of ``model`` to get our result"
 msgstr ""
 
-#: ../../source/views/cbv.rst:85
+#: ../../source/views/cbv.rst:144
 msgid "client_method: method of the client that create a record in the resource"
 msgstr ""
 
-#: ../../source/views/cbv.rst:92
+#: ../../source/views/cbv.rst:151
 msgid "ClientAPIUpdateView"
 msgstr ""
 
-#: ../../source/views/cbv.rst:94
+#: ../../source/views/cbv.rst:153
 msgid "Simple"
 msgstr ""
 
-#: ../../source/views/cbv.rst:114
+#: ../../source/views/cbv.rst:173
 msgid "Advanced with a custom initial"
 msgstr ""
 
-#: ../../source/views/cbv.rst:144
+#: ../../source/views/cbv.rst:203
 msgid "client_method: method of the client that to update"
 msgstr ""
 
-#: ../../source/views/cbv.rst:145
+#: ../../source/views/cbv.rst:204
 msgid "client_initial_method: method of the client that brings the result"
 msgstr ""
 
-#: ../../source/views/cbv.rst:147
+#: ../../source/views/cbv.rst:206
 msgid ""
 "partial: means if you are going to update only part of your asset or you "
 "are going to update everything"
 msgstr ""
 
-#: ../../source/views/cbv.rst:154
+#: ../../source/views/cbv.rst:213
 msgid "ClientAPIDeleteView"
 msgstr ""
 
-#: ../../source/views/cbv.rst:172
+#: ../../source/views/cbv.rst:231
 msgid "client_method: method of the client that to remove the resource"
 msgstr ""
 
@@ -164,5 +200,11 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "page_base_url: Information used in pagination, and the search"
+#~ msgstr ""
+
+#~ msgid "To Enable you only need to add the `api_filters` you wish"
+#~ msgstr ""
+
+#~ msgid "To Add a custom filter you need to use the `get_api_params`. Example:"
 #~ msgstr ""
 

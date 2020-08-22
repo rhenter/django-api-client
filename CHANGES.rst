@@ -3,6 +3,7 @@
 
 - Change extra_kwargs class attribute to api_filters
 - Change get_extra_params to get_api_params
+- Update documentation with the new params
 
 0.7.0
 -----
