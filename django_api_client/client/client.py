@@ -57,6 +57,10 @@ class APIClient:
         response_name = words[0]
         if response_name in [f'v{i}' for i in range(10)]:
             response_name = words[1]
+
+        if '-' in response_name:
+            response_name = response_name.replace('-', '_')
+
         return response_name
 
     def __repr__(self):

@@ -1,3 +1,8 @@
+0.9.1
+-----
+
+- BugFix: Client endpoint name: Replace - to _
+
 0.9.0
 -----
 
