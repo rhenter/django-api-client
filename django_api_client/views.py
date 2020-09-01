@@ -1,7 +1,5 @@
-import json
-
 from django.core.paginator import InvalidPage
-from django.http import Http404, HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import Http404, HttpResponseRedirect, JsonResponse
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import DeleteView, FormView
@@ -13,10 +11,20 @@ from .settings import api_client_settings
 from .utils import clean_url
 
 
+class ClientMethodMixin:
+    client_method = None
+    client_initial_method = None
+
+    def get_client_method(self):
+        return self.client_method
+
+    def get_client_initial_method(self):
+        return self.client_initial_method
+
+
 class ClientAPIFormView(FormView):
     slug_field = api_client_settings.configs['SLUG_FIELD']
     slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
-    client_method = None
 
     def send_cleaned_data(self, response, form, update=False):
         response_status = status.HTTP_201_CREATED
@@ -38,21 +46,23 @@ class ClientAPIFormView(FormView):
         return super().form_valid(form)
 
 
-class ClientAPIAuthenticatedCreateView(ClientAPIFormView):
+class ClientAPIAuthenticatedCreateView(ClientMethodMixin, ClientAPIFormView):
 
     def form_valid(self, form):
-        response = self.client_method(data=form.cleaned_data)
+        client_method = self.get_client_method()
+        response = client_method(data=form.cleaned_data)
         return self.send_cleaned_data(response, form)
 
 
-class ClientAPIAuthenticatedUpdateView(ClientAPIFormView):
+class ClientAPIAuthenticatedUpdateView(ClientMethodMixin, ClientAPIFormView):
     client_initial_method = None
     partial = False
 
     def get_initial(self):
         if not self.client_initial_method:
             return None
-        response = self.client_initial_method(self.kwargs.get(self.slug_field))
+        client_initial_method = self.get_client_initial_method()
+        response = client_initial_method(self.kwargs.get(self.slug_field))
         return response.as_dict()
 
     def form_valid(self, form):
@@ -60,15 +70,15 @@ class ClientAPIAuthenticatedUpdateView(ClientAPIFormView):
             'data': form.cleaned_data,
             'partial': self.partial
         }
-        response = self.client_method(self.kwargs.get(self.slug_field), **params)
+        client_method = self.get_client_method()
+        response = client_method(self.kwargs.get(self.slug_field), **params)
         return self.send_cleaned_data(response, form, update=True)
 
 
-class ClientAPIAuthenticatedListView(ListView):
+class ClientAPIAuthenticatedListView(ClientMethodMixin, ListView):
     http_method_names = ['get']
     paginate_by = api_client_settings.configs['PAGE_SIZE']
     paginator_class = ClientAPIPagination
-    client_method = None
     client_method_result_key = 'results'
     api_filters = []
     page_base_url = ''
@@ -119,7 +129,7 @@ class ClientAPIAuthenticatedListView(ListView):
         filter_params = kwargs.pop('filter_params', False)
         paginate_by = self.get_paginate_by()
         if paginate_by:
-            paginator, page, queryset, is_paginated = self._paginate_queryset(self.client_method,
+            paginator, page, queryset, is_paginated = self._paginate_queryset(self.get_client_method(),
                                                                               paginate_by,
                                                                               extra_params=kwargs)
             context = {
@@ -167,25 +177,25 @@ class ClientAPIAuthenticatedListView(ListView):
         return self.render_to_response(context)
 
 
-class ClientAPIAuthenticatedDetailView(DetailView):
+class ClientAPIAuthenticatedDetailView(ClientMethodMixin, DetailView):
     slug_field = api_client_settings.configs['SLUG_FIELD']
     slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
-    client_method = None
 
     def get(self, request, *args, **kwargs):
-        response = self.client_method(self.kwargs.get(self.slug_field))
+        client_method = self.get_client_method()
+        response = client_method(self.kwargs.get(self.slug_field))
         self.object = response.as_obj()
         context = self.get_context_data()
         return self.render_to_response(context)
 
 
-class ClientAPIAuthenticatedDeleteView(DeleteView):
+class ClientAPIAuthenticatedDeleteView(ClientMethodMixin, DeleteView):
     slug_field = api_client_settings.configs['SLUG_FIELD']
     slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
-    client_method = None
 
     def post(self, request, *args, **kwargs):
-        self.client_method(self.kwargs.get(self.slug_field))
+        client_method = self.get_client_method()
+        client_method(self.kwargs.get(self.slug_field))
         success_url = self.get_success_url()
         return HttpResponseRedirect(success_url)
 

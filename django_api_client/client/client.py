@@ -67,7 +67,7 @@ class APIClient:
         return f'<APIClient {self.api.api_name.title()}>'
 
 
-def api_client_factory(api_name=''):
+def api_client_factory(api_name='', **kwargs):
     if not api_name:
         raise AttributeError(_('API name is required.'))
     api_configs = next((api for api in api_client_settings.apis if api['NAME'] == api_name), None)
@@ -75,18 +75,18 @@ def api_client_factory(api_name=''):
         raise APINotFound(_('API name Not Found.'))
 
     api_args = {
-        'api_name': api_configs.get('NAME'),
-        'base_url': api_configs.get('BASE_URL'),
-        'access_token': api_configs.get('AUTHENTICATION_ACCESS_TOKEN'),
-        'access_token_type': api_configs.get(
+        'api_name': api_name,
+        'base_url': kwargs.get('base_url', '') or api_configs.get('BASE_URL'),
+        'access_token': kwargs.get('access_token', '') or api_configs.get('AUTHENTICATION_ACCESS_TOKEN'),
+        'access_token_type': kwargs.get('access_token_type', '') or api_configs.get(
             'AUTHENTICATION_ACCESS_TOKEN_TYPE'),
-        'authentication_method': api_configs.get('AUTHENTICATION_METHOD'),
-        'authentication_url_extra_params': api_configs.get(
+        'authentication_method': kwargs.get('authentication_method', '') or api_configs.get('AUTHENTICATION_METHOD'),
+        'authentication_url_extra_params': kwargs.get('authentication_url_extra_params', '') or api_configs.get(
             'AUTHENTICATION_URL_EXTRA_PARAMS'),
-        'authentication_url_key': api_configs.get('AUTHENTICATION_URL_KEY'),
-        'endpoints': api_configs.get('ENDPOINTS'),
-        'locale': api_configs.get('LOCALE'),
-        'url_append_slash': api_configs.get('URL_APPEND_SLASH'),
-        'timeout': api_configs.get('TIMEOUT'),
+        'authentication_url_key': kwargs.get('authentication_url_key', '') or api_configs.get('AUTHENTICATION_URL_KEY'),
+        'endpoints': kwargs.get('endpoints', '') or api_configs.get('ENDPOINTS'),
+        'locale': kwargs.get('locale', '') or api_configs.get('LOCALE'),
+        'url_append_slash': kwargs.get('url_append_slash', '') or api_configs.get('URL_APPEND_SLASH'),
+        'timeout': kwargs.get('timeout', '') or api_configs.get('TIMEOUT'),
     }
     return APIClient(**api_args)

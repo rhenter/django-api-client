@@ -1,3 +1,8 @@
+0.10.0
+------
+
+- Add get_client_method and client_initial_method
+
 0.9.1
 -----
 
