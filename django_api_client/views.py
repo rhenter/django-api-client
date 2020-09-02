@@ -55,13 +55,12 @@ class ClientAPIAuthenticatedCreateView(ClientMethodMixin, ClientAPIFormView):
 
 
 class ClientAPIAuthenticatedUpdateView(ClientMethodMixin, ClientAPIFormView):
-    client_initial_method = None
     partial = False
 
     def get_initial(self):
-        if not self.client_initial_method:
-            return None
         client_initial_method = self.get_client_initial_method()
+        if not client_initial_method:
+            return None
         response = client_initial_method(self.kwargs.get(self.slug_field))
         return response.as_dict()
 

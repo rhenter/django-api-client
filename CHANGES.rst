@@ -1,3 +1,8 @@
+0.10.1
+------
+
+- BugFix: ClientAPIAuthenticatedUpdateView when call client_initial_method
+
 0.10.0
 ------
 
