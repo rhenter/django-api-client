@@ -1,3 +1,8 @@
+0.11.0
+------
+
+- Add is_ajax on form_invalid on All Create and Update Views
+
 0.10.1
 ------
 

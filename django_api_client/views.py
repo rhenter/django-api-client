@@ -45,6 +45,12 @@ class ClientAPIFormView(FormView):
             return JsonResponse({'status': True})
         return super().form_valid(form)
 
+    def form_invalid(self, form):
+        if self.request.is_ajax():
+            if form.errors:
+                return JsonResponse({'status': False, 'errors': form.errors})
+        return super().form_valid(form)
+
 
 class ClientAPIAuthenticatedCreateView(ClientMethodMixin, ClientAPIFormView):
 
