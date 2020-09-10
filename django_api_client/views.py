@@ -63,12 +63,24 @@ class ClientAPIAuthenticatedCreateView(ClientMethodMixin, ClientAPIFormView):
 class ClientAPIAuthenticatedUpdateView(ClientMethodMixin, ClientAPIFormView):
     partial = False
 
-    def get_initial(self):
+    def get_api_object_response(self):
         client_initial_method = self.get_client_initial_method()
         if not client_initial_method:
             return None
-        response = client_initial_method(self.kwargs.get(self.slug_field))
-        return response.as_dict()
+        return client_initial_method(self.kwargs.get(self.slug_field))
+
+    def get_initial(self):
+        api_object = self.get_api_object_response()
+        if not api_object:
+            return None
+        return api_object.as_dict()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        api_object = self.get_api_object_response()
+        if api_object:
+            context['object'] = api_object.as_obj()
+        return context
 
     def form_valid(self, form):
         params = {

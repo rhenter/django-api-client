@@ -1,3 +1,8 @@
+0.12.0
+------
+
+- Add object on the view context on ClientAPIAuthenticatedUpdateView
+
 0.11.0
 ------
 
