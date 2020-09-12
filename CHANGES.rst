@@ -1,3 +1,8 @@
+0.13.0
+------
+
+- BugFix: Form invalid override
+
 0.12.0
 ------
 
