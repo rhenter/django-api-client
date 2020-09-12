@@ -27,7 +27,7 @@ class ClientAPIFormView(FormView):
     slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
 
     def send_cleaned_data(self, response, form):
-        if response.raw.status_code not in [status.HTTP_201_CREATED or status.HTTP_200_OK]:
+        if response.raw.status_code not in [status.HTTP_201_CREATED, status.HTTP_200_OK]:
             errors = response.raw.json()
             for error_key in errors:
                 if error_key == 'non_field_errors':
