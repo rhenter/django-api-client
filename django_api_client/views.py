@@ -26,11 +26,8 @@ class ClientAPIFormView(FormView):
     slug_field = api_client_settings.configs['SLUG_FIELD']
     slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
 
-    def send_cleaned_data(self, response, form, update=False):
-        response_status = status.HTTP_201_CREATED
-        if update:
-            response_status = status.HTTP_200_OK
-        if response.raw.status_code != response_status:
+    def send_cleaned_data(self, response, form):
+        if response.raw.status_code not in [status.HTTP_201_CREATED or status.HTTP_200_OK]:
             errors = response.raw.json()
             for error_key in errors:
                 if error_key == 'non_field_errors':
@@ -89,7 +86,7 @@ class ClientAPIAuthenticatedUpdateView(ClientMethodMixin, ClientAPIFormView):
         }
         client_method = self.get_client_method()
         response = client_method(self.kwargs.get(self.slug_field), **params)
-        return self.send_cleaned_data(response, form, update=True)
+        return self.send_cleaned_data(response, form)
 
 
 class ClientAPIAuthenticatedListView(ClientMethodMixin, ListView):

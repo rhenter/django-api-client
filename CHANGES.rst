@@ -1,3 +1,8 @@
+0.15.0
+------
+
+- Allow status 200 as OK on POST Request
+
 0.14.0
 ------
 
