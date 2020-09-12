@@ -42,3 +42,7 @@ class NotFound(APIError):
 class ServerError(APIError):
     """ServerError"""
     pass
+
+
+class APIEndpointMissingArgument(Exception):
+    pass

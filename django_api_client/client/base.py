@@ -2,10 +2,11 @@ import json
 from urllib.parse import urljoin
 
 import requests
+from django.utils.translation import gettext_lazy as _
 from requests.exceptions import ConnectionError as RequestsConnectionError, ReadTimeout, Timeout
 
 from django_api_client.utils import json_converter
-from .exceptions import ServerError
+from .exceptions import APIEndpointMissingArgument, ServerError
 from .factories import ResponseFactory
 from .validators import validate_status_code
 
@@ -113,7 +114,7 @@ class BaseAPI:
 
         return response
 
-    def create(self, endpoint, data):
+    def create(self, endpoint, data={}):
         """Do a POST without need to pass all arguments to make a request
         Args:
             endpoint (str): URL for the API endpoint.
@@ -125,7 +126,7 @@ class BaseAPI:
         response = self.make_request('POST', endpoint, data=json.dumps(data, default=json_converter))
         return ResponseFactory(response, endpoint)
 
-    def update(self, endpoint, data, partial=False):
+    def update(self, endpoint, data={}, partial=False):
         """Do a update (PUT/PATCH) without need to pass all arguments to make a request
         Args:
             endpoint (str): URL for the API endpoint.
@@ -185,7 +186,25 @@ class BaseEndpoint:
             response_name = response_name[:-1]
         return response_name
 
-    def list(self, **kwargs):
+    def get_endpoint(self, object_id=None, detail=False, *args, **kwargs):
+        if detail:
+            if not object_id:
+                raise APIEndpointMissingArgument(_('Identifier is required.'))
+            path = f'{self.endpoint}/{object_id}/'
+            if self.endpoint.endswith('/'):
+                path = f'{self.endpoint}{object_id}/'
+        else:
+            path = self.endpoint
+
+        if all([c in path for c in ['{', '}']]):
+            try:
+                path = path.format(**kwargs)
+            except KeyError:
+                raise APIEndpointMissingArgument(
+                    _('This endpoint contains a Arg in the path and this Arg is required.'))
+        return path
+
+    def list(self, *args, **kwargs):
         """Get a list of all Objects of a Resource.
 
         Args:
@@ -200,10 +219,10 @@ class BaseEndpoint:
             APIError: An error occurred while requesting the API endpoint.
         """
 
-        endpoint = f'{self.endpoint}'
+        endpoint = self.get_endpoint(*args, **kwargs)
         return self._api.search(endpoint, **kwargs)
 
-    def get(self, object_id):
+    def get(self, object_id, *args, **kwargs):
         """Get the full details for a single resource
         Args:
             object_id (str): Object ID.
@@ -217,12 +236,10 @@ class BaseEndpoint:
             APIError: An error occurred while requesting the API.
 
         """
-        path = f'{self.endpoint}/{object_id}/'
-        if self.endpoint.endswith('/'):
-            path = f'{self.endpoint}{object_id}/'
-        return self._api.search(path)
+        endpoint = self.get_endpoint(object_id, detail=True, *args, **kwargs)
+        return self._api.search(endpoint)
 
-    def create(self, data):
+    def create(self, data={}, *args, **kwargs):
         """Update a single Object.
 
         Args:
@@ -237,10 +254,10 @@ class BaseEndpoint:
             APIError: An error occurred while requesting the API.
 
         """
-        endpoint = f'{self.endpoint}'
+        endpoint = self.get_endpoint(*args, **kwargs)
         return self._api.create(endpoint, data)
 
-    def update(self, object_id, data, partial=False):
+    def update(self, object_id, data={}, partial=False, *args, **kwargs):
         """Update a single Object.
 
         Args:
@@ -258,12 +275,10 @@ class BaseEndpoint:
             APIError: An error occurred while requesting the API.
 
         """
-        path = f'{self.endpoint}/{object_id}/'
-        if self.endpoint.endswith('/'):
-            path = f'{self.endpoint}{object_id}/'
-        return self._api.update(path, data, partial)
+        endpoint = self.get_endpoint(object_id, detail=True, *args, **kwargs)
+        return self._api.update(endpoint, data, partial)
 
-    def delete(self, object_id):
+    def delete(self, object_id, *args, **kwargs):
         """Delete a single resource
         Args:
             object_id (str): Object ID.
@@ -275,7 +290,11 @@ class BaseEndpoint:
             RequestException: An error thrown by Requests library.
             APIError: An error occurred while requesting the API.
         """
-        path = f'{self.endpoint}/{object_id}/'
-        if self.endpoint.endswith('/'):
-            path = f'{self.endpoint}{object_id}/'
-        return self._api.delete(path)
+        endpoint = self.get_endpoint(object_id, detail=True, *args, **kwargs)
+        return self._api.delete(endpoint)
+
+    def __repr__(self):
+        return f'<BaseEndpoint {self.endpoint_name}: {self.endpoint}>'
+
+    def __str__(self):
+        return f'{self.endpoint_name} -> {self.endpoint}'

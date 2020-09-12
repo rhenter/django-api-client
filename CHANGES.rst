@@ -1,3 +1,8 @@
+0.14.0
+------
+
+- Build endpoint URL even when the identifier is included in the endpoint
+
 0.13.0
 ------
 
