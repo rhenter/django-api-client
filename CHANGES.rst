@@ -1,3 +1,8 @@
+0.16.0
+------
+
+- Add response as response.json when the request is ajax
+
 0.15.1
 ------
 

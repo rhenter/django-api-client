@@ -39,7 +39,7 @@ class ClientAPIFormView(FormView):
                 return JsonResponse({'errors': form.errors})
             return self.form_invalid(form)
         if self.request.is_ajax():
-            return JsonResponse({'status': True})
+            return JsonResponse(response.as_dict())
         return super().form_valid(form)
 
     def form_invalid(self, form):
