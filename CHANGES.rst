@@ -1,3 +1,8 @@
+0.15.1
+------
+
+- BugFix: Remove "or" operator from success status list
+
 0.15.0
 ------
 
