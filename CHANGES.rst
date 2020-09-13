@@ -1,3 +1,8 @@
+0.18.0
+------
+
+- BugFix: Remove duplication request for pagination
+
 0.17.0
 ------
 
