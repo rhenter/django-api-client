@@ -9,8 +9,15 @@ from django.utils.translation import gettext_lazy as _
 
 class ClientAPIPagination:
     def __init__(self, client_method, per_page, **kwargs):
-        self.extra_params = kwargs.get('extra_params', {})
+        params =  kwargs.get('extra_params', {})
+        params.update({
+            'limit': per_page,
+            'offset': 0
+        })
+
+        self.extra_params = params
         self.client_method = client_method
+
         self.object_list = client_method(params=self.extra_params).as_obj()
         self.per_page = int(per_page)
 
@@ -78,10 +85,12 @@ class ClientAPIPagination:
             'limit': limit,
             'offset': offset
         }
-        if self.extra_params:
+        if self.extra_params and self.extra_params['offset'] != 0:
             params.update(self.extra_params)
-        object_list = self.client_method(params=params)
-        return self._get_page(object_list.as_obj().results, number, self)
+            object_list = self.client_method(params=params).as_obj()
+        else:
+            object_list = self.object_list
+        return self._get_page(object_list.results, number, self)
 
     def _get_page(self, *args, **kwargs):
         """
