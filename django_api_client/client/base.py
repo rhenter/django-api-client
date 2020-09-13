@@ -82,7 +82,6 @@ class BaseAPI:
         """
         return {
             'Authorization': f'{self.access_token_type} {self.access_token}',
-            'Content-Type': 'application/json',
             "Accept-Language": self.accept_language
         }
 
@@ -101,9 +100,17 @@ class BaseAPI:
 
         full_url = urljoin(self.base_url, endpoint)
 
+        content_type = kwargs.pop('content_type', 'application/json')
+        if content_type != 'form-data':
+            self.transport.session.headers['Content-Type'] = content_type
+
+        json = None
+        if content_type == 'application/json':
+            json = 'json'
+
         try:
             response = self.transport.make_request(
-                method_name, full_url, timeout=self.timeout, **kwargs
+                method_name, full_url, timeout=self.timeout, json=json, **kwargs
             )
         except (Timeout, ReadTimeout, RequestsConnectionError) as exc:
             raise ServerError() from exc
@@ -114,7 +121,7 @@ class BaseAPI:
 
         return response
 
-    def create(self, endpoint, data={}):
+    def create(self, endpoint, data={}, files=None, content_type='application/json'):
         """Do a POST without need to pass all arguments to make a request
         Args:
             endpoint (str): URL for the API endpoint.
@@ -123,10 +130,12 @@ class BaseAPI:
         Returns:
             dict: Data retrieved for specified endpoint.
         """
-        response = self.make_request('POST', endpoint, data=json.dumps(data, default=json_converter))
+        if content_type == 'application/json' or not files:
+            data = json.dumps(data, default=json_converter)
+        response = self.make_request('POST', endpoint, data=data, files=files, content_type=content_type)
         return ResponseFactory(response, endpoint)
 
-    def update(self, endpoint, data={}, partial=False):
+    def update(self, endpoint, data={}, partial=False, content_type='application/json'):
         """Do a update (PUT/PATCH) without need to pass all arguments to make a request
         Args:
             endpoint (str): URL for the API endpoint.
@@ -138,7 +147,9 @@ class BaseAPI:
             dict: Data retrieved for specified endpoint.
         """
         method = 'PATCH' if partial else 'PUT'
-        response = self.make_request(method, endpoint, data=json.dumps(data, default=json_converter))
+        if content_type == 'application/json':
+            data = json.dumps(data, default=json_converter)
+        response = self.make_request(method, endpoint, data=data, content_type=content_type)
         return ResponseFactory(response, endpoint)
 
     def search(self, endpoint, **kwargs):
@@ -239,7 +250,7 @@ class BaseEndpoint:
         endpoint = self.get_endpoint(object_id, detail=True, *args, **kwargs)
         return self._api.search(endpoint)
 
-    def create(self, data={}, *args, **kwargs):
+    def create(self, data={}, files=None, content_type='application/json', *args, **kwargs):
         """Update a single Object.
 
         Args:
@@ -255,9 +266,9 @@ class BaseEndpoint:
 
         """
         endpoint = self.get_endpoint(*args, **kwargs)
-        return self._api.create(endpoint, data)
+        return self._api.create(endpoint, data, files=files, content_type=content_type)
 
-    def update(self, object_id, data={}, partial=False, *args, **kwargs):
+    def update(self, object_id, data={}, partial=False, content_type='application/json', *args, **kwargs):
         """Update a single Object.
 
         Args:
@@ -276,7 +287,7 @@ class BaseEndpoint:
 
         """
         endpoint = self.get_endpoint(object_id, detail=True, *args, **kwargs)
-        return self._api.update(endpoint, data, partial)
+        return self._api.update(endpoint, data, partial, content_type=content_type)
 
     def delete(self, object_id, *args, **kwargs):
         """Delete a single resource

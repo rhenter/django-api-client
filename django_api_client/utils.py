@@ -5,7 +5,7 @@ import re
 from json import dumps
 from urllib.parse import (parse_qsl, ParseResult, unquote, urlencode, urlparse)
 from uuid import UUID
-
+from django.core.files.uploadedfile import TemporaryUploadedFile
 
 def clean_url(url):
     url = unquote(url)
@@ -55,4 +55,6 @@ def labelize(text):
 def json_converter(output):
     if isinstance(output, datetime.datetime) or isinstance(output, datetime.date) or isinstance(output, UUID):
         return output.__str__()
+    if isinstance(output, TemporaryUploadedFile):
+        raise Exception(f'Unable to convert. Type: {type(output)}')
     return output

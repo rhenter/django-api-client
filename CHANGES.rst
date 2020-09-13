@@ -1,3 +1,8 @@
+0.17.0
+------
+
+- Allow to send the form as form_data
+
 0.16.0
 ------
 
