@@ -1,4 +1,4 @@
-0.18.0
+0.19.0
 ------
 
 - Raise a Assertion error when a file is not declared on dynamic_fields
