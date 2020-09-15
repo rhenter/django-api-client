@@ -6,7 +6,7 @@ from django.utils.translation import gettext_lazy as _
 from requests.exceptions import ConnectionError as RequestsConnectionError, ReadTimeout, Timeout
 
 from django_api_client.utils import json_converter
-from .exceptions import APIEndpointMissingArgument, ServerError
+from .exceptions import APIEndpointMissingArgument, APIUnreachableOrOffline
 from .factories import ResponseFactory
 from .validators import validate_status_code
 
@@ -113,7 +113,7 @@ class BaseAPI:
                 method_name, full_url, timeout=self.timeout, json=json, **kwargs
             )
         except (Timeout, ReadTimeout, RequestsConnectionError) as exc:
-            raise ServerError() from exc
+            raise APIUnreachableOrOffline(exception_desc=str(exc)) from exc
 
         is_valid, exception_class = validate_status_code(response.status_code)
         if not is_valid:

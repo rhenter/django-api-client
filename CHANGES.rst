@@ -1,3 +1,8 @@
+0.20.0
+------
+
+- Add custom exception when the API is Offline
+
 0.19.0
 ------
 
