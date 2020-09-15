@@ -4,7 +4,7 @@ from unittest.mock import Mock
 import pytest
 from requests.exceptions import ConnectionError as RequestsConnectionError, ReadTimeout, Timeout
 
-from django_api_client.client.exceptions import NotFound, ServerError
+from django_api_client.client.exceptions import APIUnreachableOrOffline, NotFound, ServerError
 from ..vcr import vcr
 
 
@@ -41,10 +41,10 @@ def test_sync_with_server_error(api_client, endpoint):
 def test_sync_with_requests_error(api_client, endpoint, exception):
     api_client.api.transport.make_request = Mock(side_effect=exception('foo'))
 
-    with pytest.raises(ServerError) as error:
+    with pytest.raises(APIUnreachableOrOffline) as error:
         api_client.api.search(endpoint)
 
-    assert str(error.value) == 'API server returned a internal server error'
+    assert str(error.value) == 'API server is offline or unreachable. Error foo'
 
 
 def test_sync_search(api_client, fake_session, endpoint, base_url):

@@ -35,7 +35,9 @@ class APIUnreachableOrOffline(Exception):
     def __init__(self, exception_desc):
         self.exception_desc = exception_desc
 
-        message = f"API server is offline or unreachable. Error {self.exception_desc}"
+        message = f"API server is offline or unreachable."
+        if self.exception_desc:
+            message = f"{message} Error {self.exception_desc}"
         super().__init__(message)
 
 
