@@ -1,6 +1,11 @@
 0.18.0
 ------
 
+- Raise a Assertion error when a file is not declared on dynamic_fields
+
+0.18.0
+------
+
 - BugFix: Remove duplication request for pagination
 
 0.17.0

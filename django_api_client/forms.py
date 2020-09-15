@@ -34,6 +34,16 @@ class DeclarativeFieldsMetaclass(MediaDefiningClass):
             else:
                 dynamic_fields = dict(current_fields).keys()
 
+            for field_name, field in current_fields:
+                assert field_name in dynamic_fields, (
+                    "The field '{field_name}' was declared on DynamicForm "
+                    "{form_class}, but has not been included in the "
+                    "'dynamic_fields' option.".format(
+                        field_name=field_name,
+                        form_class=name
+                    )
+                )
+
             current_fields = sorted(current_fields, key=lambda pair: list(dynamic_fields).index(pair[0]))
 
         attrs['declared_fields'] = dict(current_fields)
