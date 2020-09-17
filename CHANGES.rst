@@ -1,3 +1,8 @@
+0.20.1
+------
+
+- BugFix: Get correct offset pagination
+
 0.20.0
 ------
 
