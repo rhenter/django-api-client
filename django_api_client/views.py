@@ -171,7 +171,7 @@ class ClientAPIAuthenticatedListView(ClientMethodMixin, ListView):
             'page_title': self.page_title
         })
 
-        pagination_params = ['search', 'paginate_by', 'ordering']
+        pagination_params = ['search', 'paginate_by', 'ordering'] + self.api_filters
         context['append_param'] = '&' if any(
             [True for x in pagination_params if x in search_url]) else '?'
 

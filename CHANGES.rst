@@ -1,3 +1,8 @@
+0.20.3
+------
+
+- BugFix: Add filter_params to set append_param to the URL
+
 0.20.2
 ------
 
