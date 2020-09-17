@@ -85,7 +85,7 @@ class ClientAPIPagination:
             'limit': limit,
             'offset': offset
         }
-        if self.extra_params and self.extra_params['offset'] != 0:
+        if offset != 0:
             self.extra_params.update(params)
             object_list = self.client_method(params=self.extra_params).as_obj()
         else:

@@ -1,3 +1,8 @@
+0.20.2
+------
+
+- BugFix: Remove ambiguous conditions to get new offset
+
 0.20.1
 ------
 
