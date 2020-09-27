@@ -126,6 +126,8 @@ class BaseAPI:
         Args:
             endpoint (str): URL for the API endpoint.
             data (dict, list of tuples): Data to send in the body of the request.
+            files (dict, list of tuples): Files to send in the body of the request.
+            content_type (str): Request Content Type. E.g: 'application/json', 'form-data'
 
         Returns:
             dict: Data retrieved for specified endpoint.
@@ -135,11 +137,13 @@ class BaseAPI:
         response = self.make_request('POST', endpoint, data=data, files=files, content_type=content_type)
         return ResponseFactory(response, endpoint)
 
-    def update(self, endpoint, data={}, partial=False, content_type='application/json'):
+    def update(self, endpoint, data={}, files=None, partial=False, content_type='application/json'):
         """Do a update (PUT/PATCH) without need to pass all arguments to make a request
         Args:
             endpoint (str): URL for the API endpoint.
             data (dict, list of tuples): Data to send in the body of the request.
+            files (dict, list of tuples): Files to send in the body of the request.
+            content_type (str): Request Content Type. E.g: 'application/json', 'form-data'
             partial (bool): To specify whether the update will change everything
                             or just a few attributes. Default is False
 
@@ -149,7 +153,7 @@ class BaseAPI:
         method = 'PATCH' if partial else 'PUT'
         if content_type == 'application/json':
             data = json.dumps(data, default=json_converter)
-        response = self.make_request(method, endpoint, data=data, content_type=content_type)
+        response = self.make_request(method, endpoint, data=data, files=files, content_type=content_type)
         return ResponseFactory(response, endpoint)
 
     def search(self, endpoint, **kwargs):

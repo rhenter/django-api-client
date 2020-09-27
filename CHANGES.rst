@@ -1,3 +1,9 @@
+0.20.4
+------
+
+- BugFix: Add files to the Client Update
+- Update docstrings
+
 0.20.3
 ------
 
