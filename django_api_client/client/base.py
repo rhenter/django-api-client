@@ -259,6 +259,8 @@ class BaseEndpoint:
 
         Args:
             data (dict, list of tuples): Data to send in the body of the request.
+            files (dict, list of tuples): Files to send in the body of the request.
+            content_type (str): Request Content Type. E.g: 'application/json', 'form-data'
 
         Returns:
             dict: Data retrieved for specified endpoint.
@@ -270,14 +272,16 @@ class BaseEndpoint:
 
         """
         endpoint = self.get_endpoint(*args, **kwargs)
-        return self._api.create(endpoint, data, files=files, content_type=content_type)
+        return self._api.create(endpoint, data=data, files=files, content_type=content_type)
 
-    def update(self, object_id, data={}, partial=False, content_type='application/json', *args, **kwargs):
+    def update(self, object_id, data={}, files=None, partial=False, content_type='application/json', *args, **kwargs):
         """Update a single Object.
 
         Args:
             object_id (str): Object ID.
             data (dict, list of tuples): Data to send in the body of the request.
+            files (dict, list of tuples): Files to send in the body of the request.
+            content_type (str): Request Content Type. E.g: 'application/json', 'form-data'
             partial (bool): To specify whether the update will change everything
                             or just a few attributes. Default is False
 
@@ -291,7 +295,7 @@ class BaseEndpoint:
 
         """
         endpoint = self.get_endpoint(object_id, detail=True, *args, **kwargs)
-        return self._api.update(endpoint, data, partial, content_type=content_type)
+        return self._api.update(endpoint, data=data, files=files, partial=partial, content_type=content_type)
 
     def delete(self, object_id, *args, **kwargs):
         """Delete a single resource

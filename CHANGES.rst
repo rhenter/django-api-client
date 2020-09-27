@@ -1,3 +1,8 @@
+0.20.5
+------
+
+- BugFix: Add missing attribute on BaseEndpoint
+
 0.20.4
 ------
 
