@@ -1,3 +1,8 @@
+0.20.7
+------
+
+- BugFix: Missing return the result method
+
 0.20.6
 ------
 

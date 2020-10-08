@@ -70,7 +70,7 @@ class BaseAPI:
         self.kwargs = kwargs
 
     def _render_response(self, response, endpoint):
-        ResponseFactory(response, endpoint)
+        return ResponseFactory(response, endpoint)
 
     def _set_transport_class(self, transport_class):
         headers = self.get_default_headers()
