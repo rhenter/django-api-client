@@ -1,3 +1,8 @@
+0.20.6
+------
+
+- BugFix: Add conditional to the client update method when passing files.
+
 0.20.5
 ------
 

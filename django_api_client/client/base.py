@@ -67,6 +67,10 @@ class BaseAPI:
         self.base_url = base_url
         self.timeout = timeout
         self._set_transport_class(transport_class=transport_class or RequestsTransport)
+        self.kwargs = kwargs
+
+    def _render_response(self, response, endpoint):
+        ResponseFactory(response, endpoint)
 
     def _set_transport_class(self, transport_class):
         headers = self.get_default_headers()
@@ -135,7 +139,7 @@ class BaseAPI:
         if content_type == 'application/json' or not files:
             data = json.dumps(data, default=json_converter)
         response = self.make_request('POST', endpoint, data=data, files=files, content_type=content_type)
-        return ResponseFactory(response, endpoint)
+        return self._render_response(response, endpoint)
 
     def update(self, endpoint, data={}, files=None, partial=False, content_type='application/json'):
         """Do a update (PUT/PATCH) without need to pass all arguments to make a request
@@ -153,8 +157,13 @@ class BaseAPI:
         method = 'PATCH' if partial else 'PUT'
         if content_type == 'application/json':
             data = json.dumps(data, default=json_converter)
-        response = self.make_request(method, endpoint, data=data, files=files, content_type=content_type)
-        return ResponseFactory(response, endpoint)
+
+        if files:
+            response = self.make_request(method, endpoint, data=data, files=files, content_type=content_type)
+            return self._render_response(response, endpoint)
+
+        response = self.make_request(method, endpoint, data=data, content_type=content_type)
+        return self._render_response(response, endpoint)
 
     def search(self, endpoint, **kwargs):
         """Do a GET to make a search without need
@@ -169,7 +178,7 @@ class BaseAPI:
         """
         params = kwargs.pop('params', {})
         response = self.make_request('GET', endpoint, params=params)
-        return ResponseFactory(response, endpoint)
+        return self._render_response(response, endpoint)
 
     def delete(self, endpoint):
         """Do a DELETE request to remove a resource
@@ -180,7 +189,7 @@ class BaseAPI:
             dict: Empty
         """
         response = self.make_request('DELETE', endpoint)
-        return ResponseFactory(response, endpoint)
+        return self._render_response(response, endpoint)
 
 
 class BaseEndpoint:
