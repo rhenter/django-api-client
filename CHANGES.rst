@@ -1,3 +1,8 @@
+0.20.8
+------
+
+- BugFix: Set as dict if the error response wore a Str
+
 0.20.7
 ------
 
