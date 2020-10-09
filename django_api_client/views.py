@@ -29,6 +29,8 @@ class ClientAPIFormView(FormView):
     def send_cleaned_data(self, response, form):
         if response.raw.status_code not in [status.HTTP_201_CREATED, status.HTTP_200_OK]:
             errors = response.raw.json()
+            if isinstance(errors, str):
+                errors = {'non_field_errors': errors}
             for error_key in errors:
                 if error_key == 'non_field_errors':
                     form.add_error(None, errors[error_key])
