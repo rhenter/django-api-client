@@ -1,3 +1,8 @@
+0.20.9
+------
+
+- BugFix:If the error is not a JSON, add as non field error
+
 0.20.8
 ------
 
