@@ -1,7 +1,12 @@
+0.20.10
+------
+
+- BugFix: Check if the param is in the request instead to the URL
+
 0.20.9
 ------
 
-- BugFix:If the error is not a JSON, add as non field error
+- BugFix: If the error is not a JSON, add as non field error
 
 0.20.8
 ------
