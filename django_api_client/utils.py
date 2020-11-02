@@ -5,7 +5,10 @@ import re
 from json import dumps
 from urllib.parse import (parse_qsl, ParseResult, unquote, urlencode, urlparse)
 from uuid import UUID
+
 from django.core.files.uploadedfile import TemporaryUploadedFile
+from simple_model import to_dict as to_dict_sm
+
 
 def clean_url(url):
     url = unquote(url)
@@ -58,3 +61,11 @@ def json_converter(output):
     if isinstance(output, TemporaryUploadedFile):
         raise Exception(f'Unable to convert. Type: {type(output)}')
     return output
+
+
+def to_dict(object_list):
+    results = []
+    for item in object_list:
+        item.validate()
+        results.append(to_dict_sm(item))
+    return results

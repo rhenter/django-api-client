@@ -1,5 +1,7 @@
+import json
+
 from django.core.paginator import InvalidPage
-from django.http import Http404, HttpResponseRedirect, JsonResponse
+from django.http import Http404, HttpResponse, HttpResponseRedirect, JsonResponse
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import DeleteView, FormView
@@ -8,7 +10,7 @@ from . import status
 from .mixins import BaseViewMixin
 from .paginators import ClientAPIPagination
 from .settings import api_client_settings
-from .utils import clean_url
+from .utils import clean_url, to_dict
 
 
 class ClientMethodMixin:
@@ -185,6 +187,10 @@ class ClientAPIAuthenticatedListView(ClientMethodMixin, ListView):
             params['filter_params'] = True
 
         context = self.get_context_data(**params)
+        if request.is_ajax():
+            results = to_dict(context['object_list'])
+            return HttpResponse(json.dumps(results))
+
         self.object_list = context['object_list']
 
         if params:

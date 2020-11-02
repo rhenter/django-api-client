@@ -1,3 +1,8 @@
+0.21.0
+------
+
+- Response as JSON if the list request is ajax
+
 0.20.10
 ------
 
