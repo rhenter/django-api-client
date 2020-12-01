@@ -1,3 +1,8 @@
+0.22.0
+------
+
+- Allow to set the Ajax response language as JSON or HTML
+
 0.21.0
 ------
 

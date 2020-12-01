@@ -101,6 +101,7 @@ class ClientAPIAuthenticatedListView(ClientMethodMixin, ListView):
     api_filters = []
     page_base_url = ''
     page_title = ''
+    ajax_response_type = 'html'
 
     def get_paginate_by(self):
         """
@@ -187,7 +188,7 @@ class ClientAPIAuthenticatedListView(ClientMethodMixin, ListView):
             params['filter_params'] = True
 
         context = self.get_context_data(**params)
-        if request.is_ajax():
+        if request.is_ajax() and self.ajax_response_type == 'json':
             results = to_dict(context['object_list'])
             return HttpResponse(json.dumps(results))
 
