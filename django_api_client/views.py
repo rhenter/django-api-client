@@ -39,15 +39,15 @@ class ClientAPIFormView(FormView):
                     continue
                 form.add_error(error_key, errors[error_key])
 
-            if self.request.is_ajax():
+            if self.request.headers.get('x-requested-with') == 'XMLHttpRequest':
                 return JsonResponse({'errors': form.errors})
             return self.form_invalid(form)
-        if self.request.is_ajax():
+        if self.request.headers.get('x-requested-with') == 'XMLHttpRequest':
             return JsonResponse(response.as_dict())
         return super().form_valid(form)
 
     def form_invalid(self, form):
-        if self.request.is_ajax():
+        if self.request.headers.get('x-requested-with') == 'XMLHttpRequest':
             if form.errors:
                 return JsonResponse({'status': False, 'errors': form.errors})
         return super().form_invalid(form)
@@ -188,7 +188,7 @@ class ClientAPIAuthenticatedListView(ClientMethodMixin, ListView):
             params['filter_params'] = True
 
         context = self.get_context_data(**params)
-        if request.is_ajax() and self.ajax_response_type == 'json':
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest' and self.ajax_response_type == 'json':
             results = to_dict(context['object_list'])
             return HttpResponse(json.dumps(results))
 

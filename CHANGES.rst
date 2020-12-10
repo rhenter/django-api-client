@@ -1,3 +1,9 @@
+0.23.0
+------
+
+- Remove deprecation warnings.
+  - Change request.is_ajax to request.headers.get('x-requested-with') == 'XMLHttpRequest'
+
 0.22.0
 ------
 
