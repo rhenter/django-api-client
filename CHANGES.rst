@@ -1,3 +1,8 @@
+0.24.0
+------
+
+- Use Django Responses on client Exceptions
+
 0.23.0
 ------
 

@@ -1,3 +1,6 @@
+from django.http import Http404, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseServerError
+
+
 class APIError(Exception):
     """API Error Exception Class"""
 
@@ -41,18 +44,18 @@ class APIUnreachableOrOffline(Exception):
         super().__init__(message)
 
 
-class AuthError(APIError):
+class AuthError(APIError, HttpResponseForbidden):
     pass
 
 
-class NotFound(APIError):
+class NotFound(APIError, Http404):
     pass
 
 
-class ServerError(APIError):
+class ServerError(APIError, HttpResponseServerError):
     """ServerError"""
     pass
 
 
-class APIEndpointMissingArgument(Exception):
+class APIEndpointMissingArgument(HttpResponseBadRequest):
     pass
