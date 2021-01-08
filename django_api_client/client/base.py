@@ -1,4 +1,5 @@
 import json
+from typing import Any
 from urllib.parse import urljoin
 
 import requests
@@ -12,11 +13,11 @@ from .validators import validate_status_code
 
 
 class RequestsTransport:
-    def __init__(self, headers):
+    def __init__(self, headers: Any) -> None:
         self.session = requests.Session()
         self.session.headers.update(headers)
 
-    def make_request(self, method_name, endpoint, **kwargs):
+    def make_request(self, method_name: str, endpoint: str, **kwargs: Any) -> Any:
         method = getattr(self.session, method_name.lower())
         return method(endpoint, **kwargs)
 
@@ -33,29 +34,30 @@ class BaseAPI:
 
     def __init__(
             self,
-            api_name,
-            base_url,
-            access_token,
-            access_token_type='Bearer',
-            authentication_method='header',
-            authentication_url_extra_params=None,
-            authentication_url_key=None,
-            locale='',
-            timeout=3,
-            transport_class=None,
-            **kwargs):
+            api_name: str,
+            base_url: str,
+            access_token: str,
+            access_token_type: str = 'Bearer',
+            authentication_method: str = 'header',
+            authentication_url_extra_params: dict = None,
+            authentication_url_key: str = None,
+            locale: str = '',
+            timeout: int = 3,
+            transport_class: Any = None,
+            **kwargs: Any
+    ) -> None:
         """
         Args:
-            api_name (str): API name
-            base_url (str): Provides the environment for  API.
-            access_token (str): Specifies the access token.
-            access_token_type (str): Type of the token, could be Bearer, Token, etc. Default is Bearer
-            authentication_method (str): Method used to authenticate. Default is 'header'
-            authentication_url_extra_params (dict): Extra params to authenticate by GET
-            authentication_url_key (str): key to authenticate by URL. Default is token
-            locale (str): Set the locale language. Default is pt-br
-            timeout (int): Set the request timeout. Default is 3
-            transport_class (obj): Class Request Sync or using AsyncIO
+            api_name: API name
+            base_url: Provides the environment for  API.
+            access_token: Specifies the access token.
+            access_token_type: Type of the token, could be Bearer, Token, etc. Default is Bearer
+            authentication_method: Method used to authenticate. Default is 'header'
+            authentication_url_extra_params: Extra params to authenticate by GET
+            authentication_url_key: key to authenticate by URL. Default is token
+            locale: Set the locale language. Default is pt-br
+            timeout: Set the request timeout. Default is 3
+            transport_class: Class Request Sync or using AsyncIO
         """
         self.access_token = access_token
         self.accept_language = locale
@@ -69,17 +71,17 @@ class BaseAPI:
         self._set_transport_class(transport_class=transport_class or RequestsTransport)
         self.kwargs = kwargs
 
-    def _render_response(self, response, endpoint):
+    def _render_response(self, response: Any, endpoint: Any) -> ResponseFactory:
         return ResponseFactory(response, endpoint)
 
-    def _set_transport_class(self, transport_class):
+    def _set_transport_class(self, transport_class: Any) -> None:
         headers = self.get_default_headers()
         self.transport = transport_class(headers=headers)
 
-    def get_default_headers(self):
+    def get_default_headers(self) -> dict:
         """Get the required headers to access the API
         Optional:
-            access_token_type (str): Specifies the access_token_type to be used on the request. E.g: Token or Bearer
+            access_token_type: Specifies the access_token_type to be used on the request. E.g: Token or Bearer
             accept_language: Specifies the Accept-Language to be receive the response i18n.
         Returns:
              dict: Authorization and Content Type
@@ -89,11 +91,11 @@ class BaseAPI:
             "Accept-Language": self.accept_language
         }
 
-    def make_request(self, method_name, endpoint, **kwargs):
+    def make_request(self, method_name: str, endpoint: str, **kwargs: Any) -> Any:
         """Requests data from the API.
         Args:
-            endpoint (str): URL for the API endpoint.
-            method_name (str): Specifies the method to be used on the request.
+            endpoint: URL for the API endpoint.
+            method_name: Specifies the method to be used on the request.
         Optional:
             params (dict, optional): Specifies parameters to be sent with the
             request.
@@ -125,13 +127,19 @@ class BaseAPI:
 
         return response
 
-    def create(self, endpoint, data={}, files=None, content_type='application/json'):
+    def create(
+            self,
+            endpoint: str,
+            data: dict = None,
+            files: dict = None,
+            content_type: str = 'application/json'
+    ) -> ResponseFactory:
         """Do a POST without need to pass all arguments to make a request
         Args:
-            endpoint (str): URL for the API endpoint.
-            data (dict, list of tuples): Data to send in the body of the request.
-            files (dict, list of tuples): Files to send in the body of the request.
-            content_type (str): Request Content Type. E.g: 'application/json', 'form-data'
+            endpoint: URL for the API endpoint.
+            data: Data to send in the body of the request.
+            files: Files to send in the body of the request.
+            content_type: Request Content Type. E.g: 'application/json', 'form-data'
 
         Returns:
             dict: Data retrieved for specified endpoint.
@@ -141,15 +149,22 @@ class BaseAPI:
         response = self.make_request('POST', endpoint, data=data, files=files, content_type=content_type)
         return self._render_response(response, endpoint)
 
-    def update(self, endpoint, data={}, files=None, partial=False, content_type='application/json'):
+    def update(
+            self,
+            endpoint: str,
+            data: dict = None,
+            files: dict = None,
+            partial: bool = False,
+            content_type: str = 'application/json'
+    ) -> ResponseFactory:
         """Do a update (PUT/PATCH) without need to pass all arguments to make a request
         Args:
-            endpoint (str): URL for the API endpoint.
-            data (dict, list of tuples): Data to send in the body of the request.
-            files (dict, list of tuples): Files to send in the body of the request.
-            content_type (str): Request Content Type. E.g: 'application/json', 'form-data'
-            partial (bool): To specify whether the update will change everything
-                            or just a few attributes. Default is False
+            endpoint: URL for the API endpoint.
+            data: Data to send in the body of the request.
+            files: Files to send in the body of the request.
+            content_type: Request Content Type. E.g: 'application/json', 'form-data'
+            partial: To specify whether the update will change everything
+                     or just a few attributes. Default is False
 
         Returns:
             dict: Data retrieved for specified endpoint.
@@ -165,11 +180,11 @@ class BaseAPI:
         response = self.make_request(method, endpoint, data=data, content_type=content_type)
         return self._render_response(response, endpoint)
 
-    def search(self, endpoint, **kwargs):
+    def search(self, endpoint: str, **kwargs: Any) -> ResponseFactory:
         """Do a GET to make a search without need
            to pass all arguments to make a request.
         Args:
-            endpoint (str): URL for the API endpoint.
+            endpoint: URL for the API endpoint.
         Kwargs(Optional):
             params (dict): Specifies parameters to be sent with the request.
 
@@ -180,10 +195,10 @@ class BaseAPI:
         response = self.make_request('GET', endpoint, params=params)
         return self._render_response(response, endpoint)
 
-    def delete(self, endpoint):
+    def delete(self, endpoint: str) -> ResponseFactory:
         """Do a DELETE request to remove a resource
         Args:
-            endpoint (str): URL for the API endpoint with the ID of the resource.
+            endpoint: URL for the API endpoint with the ID of the resource.
 
         Returns:
             dict: Empty
@@ -196,12 +211,18 @@ class BaseEndpoint:
     """Class holding endpoint functions.
     """
 
-    def __init__(self, api, endpoint=''):
+    def __init__(self, api: Any, endpoint: str = '') -> None:
         self._api = api
         self.endpoint = endpoint
         self.endpoint_name = self._get_endpoint_name()
 
-    def _get_endpoint_name(self):
+    def __repr__(self) -> str:
+        return f'<BaseEndpoint {self.endpoint_name}: {self.endpoint}>'
+
+    def __str__(self) -> str:
+        return f'{self.endpoint_name} -> {self.endpoint}'
+
+    def _get_endpoint_name(self) -> str:
         words = [key for key in self.endpoint.split('?')[0].split('/') if key]
         response_name = words[-1]
         if '-' in response_name:
@@ -210,7 +231,7 @@ class BaseEndpoint:
             response_name = response_name[:-1]
         return response_name
 
-    def get_endpoint(self, object_id=None, detail=False, *args, **kwargs):
+    def get_endpoint(self, object_id: Any = None, detail: bool = False, *args: Any, **kwargs: Any) -> str:
         if detail:
             if not object_id:
                 raise APIEndpointMissingArgument(_('Identifier is required.'))
@@ -228,7 +249,7 @@ class BaseEndpoint:
                     _('This endpoint contains a Arg in the path and this Arg is required.'))
         return path
 
-    def list(self, *args, **kwargs):
+    def list(self, *args: Any, **kwargs: Any) -> ResponseFactory:
         """Get a list of all Objects of a Resource.
 
         Args:
@@ -246,10 +267,10 @@ class BaseEndpoint:
         endpoint = self.get_endpoint(*args, **kwargs)
         return self._api.search(endpoint, **kwargs)
 
-    def get(self, object_id, *args, **kwargs):
+    def get(self, object_id: str, *args: Any, **kwargs: Any) -> ResponseFactory:
         """Get the full details for a single resource
         Args:
-            object_id (str): Object ID.
+            object_id: Object ID.
 
         Returns:
             dict: Full resource details.
@@ -263,13 +284,21 @@ class BaseEndpoint:
         endpoint = self.get_endpoint(object_id, detail=True, *args, **kwargs)
         return self._api.search(endpoint)
 
-    def create(self, data={}, files=None, content_type='application/json', *args, **kwargs):
+    def create(
+            self,
+            data: dict = None,
+            files: dict = None,
+            content_type: str = 'application/json',
+            *args: Any,
+            **kwargs: Any
+    ) -> ResponseFactory:
+
         """Update a single Object.
 
         Args:
-            data (dict, list of tuples): Data to send in the body of the request.
-            files (dict, list of tuples): Files to send in the body of the request.
-            content_type (str): Request Content Type. E.g: 'application/json', 'form-data'
+            data: Data to send in the body of the request.
+            files: Files to send in the body of the request.
+            content_type: Request Content Type. E.g: 'application/json', 'form-data'
 
         Returns:
             dict: Data retrieved for specified endpoint.
@@ -283,15 +312,24 @@ class BaseEndpoint:
         endpoint = self.get_endpoint(*args, **kwargs)
         return self._api.create(endpoint, data=data, files=files, content_type=content_type)
 
-    def update(self, object_id, data={}, files=None, partial=False, content_type='application/json', *args, **kwargs):
+    def update(
+            self,
+            object_id: Any,
+            data: dict = None,
+            files: dict = None,
+            partial: bool = False,
+            content_type: str = 'application/json',
+            *args: Any,
+            **kwargs: Any
+    ) -> ResponseFactory:
         """Update a single Object.
 
         Args:
-            object_id (str): Object ID.
-            data (dict, list of tuples): Data to send in the body of the request.
-            files (dict, list of tuples): Files to send in the body of the request.
-            content_type (str): Request Content Type. E.g: 'application/json', 'form-data'
-            partial (bool): To specify whether the update will change everything
+            object_id: Object ID.
+            data: Data to send in the body of the request.
+            files: Files to send in the body of the request.
+            content_type: Request Content Type. E.g: 'application/json', 'form-data'
+            partial: To specify whether the update will change everything
                             or just a few attributes. Default is False
 
         Returns:
@@ -306,10 +344,10 @@ class BaseEndpoint:
         endpoint = self.get_endpoint(object_id, detail=True, *args, **kwargs)
         return self._api.update(endpoint, data=data, files=files, partial=partial, content_type=content_type)
 
-    def delete(self, object_id, *args, **kwargs):
+    def delete(self, object_id: Any, *args: Any, **kwargs: Any) -> ResponseFactory:
         """Delete a single resource
         Args:
-            object_id (str): Object ID.
+            object_id: Object ID.
 
         Returns:
             dict: Empty
@@ -320,9 +358,3 @@ class BaseEndpoint:
         """
         endpoint = self.get_endpoint(object_id, detail=True, *args, **kwargs)
         return self._api.delete(endpoint)
-
-    def __repr__(self):
-        return f'<BaseEndpoint {self.endpoint_name}: {self.endpoint}>'
-
-    def __str__(self):
-        return f'{self.endpoint_name} -> {self.endpoint}'

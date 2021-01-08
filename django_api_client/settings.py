@@ -20,6 +20,8 @@ This module provides the `api_client_setting` object, that is used to access
 Django API Client settings, checking for user settings first, then falling
 back to the defaults.
 """
+from typing import Any, Dict, List, Optional
+
 from django.conf import settings
 from django.test.signals import setting_changed
 
@@ -56,7 +58,10 @@ class APIClientSettings:
     and return the class, rather than the string literal.
     """
 
-    def __init__(self, user_settings=None, defaults=None, api_defaults=None):
+    def __init__(self,
+                 user_settings: dict = None,
+                 defaults: dict = None,
+                 api_defaults: dict = None) -> None:
         if user_settings:
             self._user_settings = user_settings
         self.api_defaults = api_defaults or API_DEFAULTS
@@ -65,7 +70,7 @@ class APIClientSettings:
         self.apis = self._set_apis()
         self.configs = self._get_defaults_configs()
 
-    def _get_api_configs(self, api_settings):
+    def _get_api_configs(self, api_settings: dict) -> Dict:
         configs = {}
 
         for req_attr in REQUIRED_KEYS:
@@ -92,7 +97,7 @@ class APIClientSettings:
             self._cached_attrs.add(attr)
         return configs
 
-    def _get_defaults_configs(self):
+    def _get_defaults_configs(self) -> Dict:
         configs = {}
 
         for user_attr in self.user_settings:
@@ -112,10 +117,10 @@ class APIClientSettings:
             self._cached_attrs.add(attr)
         return configs
 
-    def _set_apis(self):
+    def _set_apis(self) -> List[dict]:
         api_settings = self.user_settings.get('API', '')
         if not api_settings:
-            return
+            return []
 
         apis = []
         if isinstance(api_settings, dict):
@@ -126,26 +131,26 @@ class APIClientSettings:
         return apis
 
     @property
-    def api_names(self):
+    def api_names(self) -> list:
         return [api['NAME'] for api in self.apis]
 
     @property
-    def user_settings(self):
+    def user_settings(self) -> Dict:
         if not hasattr(self, '_user_settings'):
             self._user_settings = getattr(settings, DEFAULT_SETTINGS_KEY, {})
         return self._user_settings
 
-    def reload(self):
+    def reload(self) -> None:
         for attr in self._cached_attrs:
             delattr(self, attr)
         self._cached_attrs.clear()
         if hasattr(self, '_user_settings'):
             delattr(self, '_user_settings')
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return '<APIClientSettings>'
 
-    def __str__(self):
+    def __str__(self) -> str:
         names = ' '.join([name.title() for name in self.api_names])
         return f'APIClientSettings: {names}'
 
@@ -153,7 +158,7 @@ class APIClientSettings:
 api_client_settings = APIClientSettings(None, DEFAULTS)
 
 
-def reload_api_settings(*args, **kwargs):
+def reload_api_settings(*args: Any, **kwargs: Any) -> None:
     setting = kwargs['setting']
     if setting == DEFAULT_SETTINGS_KEY:
         api_client_settings.reload()

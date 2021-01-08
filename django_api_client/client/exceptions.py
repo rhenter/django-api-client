@@ -1,10 +1,14 @@
-from django.http import Http404, HttpResponseBadRequest, HttpResponseForbidden, HttpResponseServerError
+from django.http import Http404, HttpResponseForbidden, HttpResponseServerError
 
 
 class APIError(Exception):
     """API Error Exception Class"""
 
-    def __init__(self, status_code='', resp_content=''):
+    def __init__(
+            self,
+            status_code: str = '',
+            resp_content: dict = None
+    ) -> None:
         """APIError Exception raised when server returns error.
         Args:
             status_code (str): Status code retrieved from the server.
@@ -57,5 +61,5 @@ class ServerError(APIError, HttpResponseServerError):
     pass
 
 
-class APIEndpointMissingArgument(HttpResponseBadRequest):
+class APIEndpointMissingArgument(Exception):
     pass

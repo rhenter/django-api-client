@@ -1,3 +1,8 @@
+0.25.0
+------
+
+- Refactor: Add Typing Annotation
+
 0.24.0
 ------
 

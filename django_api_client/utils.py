@@ -10,7 +10,7 @@ from django.core.files.uploadedfile import TemporaryUploadedFile
 from simple_model import to_dict as to_dict_sm
 
 
-def clean_url(url):
+def clean_url(url: str) -> str:
     url = unquote(url)
     # Extracting url info
     parsed_url = urlparse(url)
@@ -38,7 +38,7 @@ def clean_url(url):
     return new_url
 
 
-def get_version_from_changes(path):
+def get_version_from_changes(path: str) -> str:
     current_version = ''
     changes = os.path.join(path, "CHANGES.rst")
     pattern = r'^(?P<version>[0-9]+.[0-9]+(.[0-9]+)?)'
@@ -51,7 +51,7 @@ def get_version_from_changes(path):
     return current_version or '0.1.0'
 
 
-def labelize(text):
+def labelize(text: str) -> str:
     return ' '.join([t.capitalize() for t in text.replace('_', ' ').split(' ')])
 
 
