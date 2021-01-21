@@ -13,10 +13,6 @@ def test_is_redirect():
     assert status.is_redirect(304)
 
 
-def test_is_client_error():
-    assert status.is_client_error(403)
-
-
 def test_is_server_error():
     assert status.is_server_error(500)
 
