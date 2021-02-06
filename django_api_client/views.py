@@ -7,7 +7,7 @@ from django.views.generic import DetailView, ListView
 from django.views.generic.edit import DeleteView, FormView
 
 from . import status
-from .exceptions import RemovedInDjangoAPIClient20Warning
+from .exceptions import RemovedInDjangoAPIClient10Warning
 from .mixins import BaseViewMixin
 from .paginators import ClientAPIPagination
 from .settings import api_client_settings
@@ -62,7 +62,7 @@ class ClientAPIBaseCreateView(ClientMethodMixin, ClientAPIFormView):
         return self.send_cleaned_data(response, form)
 
 
-class ClientAPIAuthenticatedCreateView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseCreateView):
+class ClientAPIAuthenticatedCreateView(RemovedInDjangoAPIClient10Warning, ClientAPIBaseCreateView):
     alternative = 'ClientAPIBaseCreateView'
 
 
@@ -98,7 +98,7 @@ class ClientAPIBaseUpdateView(ClientMethodMixin, ClientAPIFormView):
         return self.send_cleaned_data(response, form)
 
 
-class ClientAPIAuthenticatedUpdateView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseUpdateView):
+class ClientAPIAuthenticatedUpdateView(RemovedInDjangoAPIClient10Warning, ClientAPIBaseUpdateView):
     alternative = 'ClientAPIBaseUpdateView'
 
 
@@ -209,7 +209,7 @@ class ClientAPIBaseListView(ClientMethodMixin, ListView):
         return self.render_to_response(context)
 
 
-class ClientAPIAuthenticatedListView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseListView):
+class ClientAPIAuthenticatedListView(RemovedInDjangoAPIClient10Warning, ClientAPIBaseListView):
     alternative = 'ClientAPIBaseListView'
 
 
@@ -225,7 +225,7 @@ class ClientAPIBaseDetailView(ClientMethodMixin, DetailView):
         return self.render_to_response(context)
 
 
-class ClientAPIAuthenticatedDetailView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseDetailView):
+class ClientAPIAuthenticatedDetailView(RemovedInDjangoAPIClient10Warning, ClientAPIBaseDetailView):
     alternative = 'ClientAPIBaseDetailView'
 
 
@@ -254,7 +254,7 @@ class ClientAPIBaseDeleteView(ClientMethodMixin, DeleteView):
         return HttpResponseRedirect(success_url)
 
 
-class ClientAPIAuthenticatedDeleteView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseDeleteView):
+class ClientAPIAuthenticatedDeleteView(RemovedInDjangoAPIClient10Warning, ClientAPIBaseDeleteView):
     alternative = 'ClientAPIBaseDeleteView'
 
 

@@ -1,2 +1,2 @@
-class RemovedInDjangoAPIClient20Warning(PendingDeprecationWarning):
+class RemovedInDjangoAPIClient10Warning(PendingDeprecationWarning):
     pass
