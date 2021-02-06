@@ -1,3 +1,11 @@
+0.27.0
+------
+
+- Refactor:
+  - Rename Authenticated by Base on View classes
+  - Add Deprecation Warnings for the old Classes
+- Add new Detail View by Position
+
 0.26.0
 ------
 
