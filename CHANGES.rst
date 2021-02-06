@@ -1,3 +1,8 @@
+0.26.0
+------
+
+- Client: Add a better message on 500 errors
+
 0.25.0
 ------
 
