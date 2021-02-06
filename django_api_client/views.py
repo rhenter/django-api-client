@@ -7,6 +7,7 @@ from django.views.generic import DetailView, ListView
 from django.views.generic.edit import DeleteView, FormView
 
 from . import status
+from .exceptions import RemovedInDjangoAPIClient20Warning
 from .mixins import BaseViewMixin
 from .paginators import ClientAPIPagination
 from .settings import api_client_settings
@@ -53,7 +54,7 @@ class ClientAPIFormView(FormView):
         return super().form_invalid(form)
 
 
-class ClientAPIAuthenticatedCreateView(ClientMethodMixin, ClientAPIFormView):
+class ClientAPIBaseCreateView(ClientMethodMixin, ClientAPIFormView):
 
     def form_valid(self, form):
         client_method = self.get_client_method()
@@ -61,7 +62,11 @@ class ClientAPIAuthenticatedCreateView(ClientMethodMixin, ClientAPIFormView):
         return self.send_cleaned_data(response, form)
 
 
-class ClientAPIAuthenticatedUpdateView(ClientMethodMixin, ClientAPIFormView):
+class ClientAPIAuthenticatedCreateView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseCreateView):
+    alternative = 'ClientAPIBaseCreateView'
+
+
+class ClientAPIBaseUpdateView(ClientMethodMixin, ClientAPIFormView):
     partial = False
 
     def get_api_object_response(self):
@@ -93,7 +98,11 @@ class ClientAPIAuthenticatedUpdateView(ClientMethodMixin, ClientAPIFormView):
         return self.send_cleaned_data(response, form)
 
 
-class ClientAPIAuthenticatedListView(ClientMethodMixin, ListView):
+class ClientAPIAuthenticatedUpdateView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseUpdateView):
+    alternative = 'ClientAPIBaseUpdateView'
+
+
+class ClientAPIBaseListView(ClientMethodMixin, ListView):
     http_method_names = ['get']
     paginate_by = api_client_settings.configs['PAGE_SIZE']
     paginator_class = ClientAPIPagination
@@ -200,7 +209,11 @@ class ClientAPIAuthenticatedListView(ClientMethodMixin, ListView):
         return self.render_to_response(context)
 
 
-class ClientAPIAuthenticatedDetailView(ClientMethodMixin, DetailView):
+class ClientAPIAuthenticatedListView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseListView):
+    alternative = 'ClientAPIBaseListView'
+
+
+class ClientAPIBaseDetailView(ClientMethodMixin, DetailView):
     slug_field = api_client_settings.configs['SLUG_FIELD']
     slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
 
@@ -212,7 +225,25 @@ class ClientAPIAuthenticatedDetailView(ClientMethodMixin, DetailView):
         return self.render_to_response(context)
 
 
-class ClientAPIAuthenticatedDeleteView(ClientMethodMixin, DeleteView):
+class ClientAPIAuthenticatedDetailView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseDetailView):
+    alternative = 'ClientAPIBaseDetailView'
+
+
+class ClientAPIByPositionBaseDetailView(ClientMethodMixin, DetailView):
+    position = 0
+
+    def get(self, request, *args, **kwargs):
+        client_method = self.get_client_method()
+        response = client_method().as_obj()
+        instance = None
+        if response.results:
+            instance = response.results[self.position]
+        self.object = instance
+        context = self.get_context_data()
+        return self.render_to_response(context)
+
+
+class ClientAPIBaseDeleteView(ClientMethodMixin, DeleteView):
     slug_field = api_client_settings.configs['SLUG_FIELD']
     slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
 
@@ -223,21 +254,29 @@ class ClientAPIAuthenticatedDeleteView(ClientMethodMixin, DeleteView):
         return HttpResponseRedirect(success_url)
 
 
-class ClientAPICreateView(BaseViewMixin, ClientAPIAuthenticatedCreateView):
+class ClientAPIAuthenticatedDeleteView(RemovedInDjangoAPIClient20Warning, ClientAPIBaseDeleteView):
+    alternative = 'ClientAPIBaseDeleteView'
+
+
+class ClientAPICreateView(BaseViewMixin, ClientAPIBaseCreateView):
     pass
 
 
-class ClientAPIDetailView(BaseViewMixin, ClientAPIAuthenticatedDetailView):
+class ClientAPIDetailView(BaseViewMixin, ClientAPIBaseDetailView):
     pass
 
 
-class ClientAPIUpdateView(BaseViewMixin, ClientAPIAuthenticatedUpdateView):
+class ClientAPIByPositionDetailView(BaseViewMixin, ClientAPIByPositionBaseDetailView):
     pass
 
 
-class ClientAPIListView(BaseViewMixin, ClientAPIAuthenticatedListView):
+class ClientAPIUpdateView(BaseViewMixin, ClientAPIBaseUpdateView):
     pass
 
 
-class ClientAPIDeleteView(BaseViewMixin, ClientAPIAuthenticatedDeleteView):
+class ClientAPIListView(BaseViewMixin, ClientAPIBaseListView):
+    pass
+
+
+class ClientAPIDeleteView(BaseViewMixin, ClientAPIBaseDeleteView):
     pass
