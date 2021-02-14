@@ -1,3 +1,8 @@
+0.28.0
+------
+
+- Add Get Method to DeleteApiView and ignore success_url when is ajax
+
 0.27.0
 ------
 

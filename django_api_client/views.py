@@ -247,9 +247,18 @@ class ClientAPIBaseDeleteView(ClientMethodMixin, DeleteView):
     slug_field = api_client_settings.configs['SLUG_FIELD']
     slug_url_kwarg = api_client_settings.configs['SLUG_FIELD']
 
+    def get(self, request, *args, **kwargs):
+        client_method = self.get_client_initial_method()
+        response = client_method(self.kwargs.get(self.slug_field))
+        self.object = response.as_obj()
+        context = self.get_context_data()
+        return self.render_to_response(context)
+
     def post(self, request, *args, **kwargs):
         client_method = self.get_client_method()
         client_method(self.kwargs.get(self.slug_field))
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return JsonResponse({'deleted': True})
         success_url = self.get_success_url()
         return HttpResponseRedirect(success_url)
 
