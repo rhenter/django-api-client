@@ -185,7 +185,7 @@ class ClientAPIBaseListView(ClientMethodMixin, ListView):
             'page_title': self.page_title
         })
 
-        pagination_params = ['search', 'paginate_by', 'ordering'] + self.api_filters
+        pagination_params = ['search', 'paginate_by', 'ordering'] + list(self.get_api_params(self.request).keys())
         context['append_param'] = '&' if any(
             [True for x in pagination_params if x in self.request.GET.keys()]) else '?'
 
