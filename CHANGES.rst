@@ -1,3 +1,8 @@
+0.30.0
+------
+
+- BugFix: Check params before set the append param to & or ?
+
 0.29.0
 ------
 
