@@ -175,9 +175,11 @@ class ClientAPIBaseListView(ClientMethodMixin, ListView):
             }
 
         search_url = clean_url(self.request.get_full_path())
+        api_params = self.get_api_params(self.request)
         context.update({
             'search': self.request.GET.get('search', ''),
             'search_url': search_url,
+            'api_params': api_params,
             'filter_params': filter_params,
             'page_base_url': self.get_page_base_url(),
             'range_pagination': [x for x in range(20, 220, 20)],
@@ -185,7 +187,7 @@ class ClientAPIBaseListView(ClientMethodMixin, ListView):
             'page_title': self.page_title
         })
 
-        pagination_params = ['search', 'paginate_by', 'ordering'] + list(self.get_api_params(self.request).keys())
+        pagination_params = ['search', 'paginate_by', 'ordering'] + list(api_params.keys())
         context['append_param'] = '&' if any(
             [True for x in pagination_params if x in self.request.GET.keys()]) else '?'
 

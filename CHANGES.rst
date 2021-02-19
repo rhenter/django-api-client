@@ -1,3 +1,8 @@
+0.31.0
+------
+
+- Add api_params to the context
+
 0.30.0
 ------
 
