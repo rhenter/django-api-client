@@ -2,6 +2,7 @@ import codecs
 import datetime
 import os
 import re
+from decimal import Decimal
 from json import dumps
 from urllib.parse import (parse_qsl, ParseResult, unquote, urlencode, urlparse)
 from uuid import UUID
@@ -58,7 +59,9 @@ def labelize(text: str) -> str:
 def json_converter(output):
     if isinstance(output, datetime.datetime) or isinstance(output, datetime.date) or isinstance(output, UUID):
         return output.__str__()
-    if isinstance(output, TemporaryUploadedFile):
+    elif isinstance(output, Decimal):
+        return output.__str__()
+    elif isinstance(output, TemporaryUploadedFile):
         raise Exception(f'Unable to convert. Type: {type(output)}')
     return output
 

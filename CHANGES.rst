@@ -1,3 +1,8 @@
+0.29.0
+------
+
+- BugFix: Serialize the data is Decimal
+
 0.28.0
 ------
 
