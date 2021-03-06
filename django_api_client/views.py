@@ -113,7 +113,7 @@ class ClientAPIBaseListView(ClientMethodMixin, ListView):
     ajax_response_type = 'html'
     ignore_filters = []
 
-    def get_paginate_by(self, queryset):
+    def get_paginate_by(self):
         """
         Get the number of items to paginate by, or ``None`` for no pagination.
         """

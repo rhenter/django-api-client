@@ -1,3 +1,8 @@
+0.32.1
+------
+
+- BugFix: Add a custom signature
+
 0.32.0
 ------
 
