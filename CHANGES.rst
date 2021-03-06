@@ -1,3 +1,8 @@
+0.32.0
+------
+
+- Add has_filter context var
+
 0.31.0
 ------
 

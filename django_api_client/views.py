@@ -111,8 +111,9 @@ class ClientAPIBaseListView(ClientMethodMixin, ListView):
     page_base_url = ''
     page_title = ''
     ajax_response_type = 'html'
+    ignore_filters = []
 
-    def get_paginate_by(self):
+    def get_paginate_by(self, queryset):
         """
         Get the number of items to paginate by, or ``None`` for no pagination.
         """
@@ -153,6 +154,12 @@ class ClientAPIBaseListView(ClientMethodMixin, ListView):
                 api_filters[param] = param_value
         return api_filters
 
+    def has_filter(self):
+        params = self.get_api_params(self.request)
+        if not params:
+            return False
+        return any([param not in self.ignore_filters for param in params])
+
     def get_context_data(self, **kwargs):
         filter_params = kwargs.pop('filter_params', False)
         paginate_by = self.get_paginate_by()
@@ -181,6 +188,7 @@ class ClientAPIBaseListView(ClientMethodMixin, ListView):
             'search_url': search_url,
             'api_params': api_params,
             'filter_params': filter_params,
+            'has_filter': self.has_filter(),
             'page_base_url': self.get_page_base_url(),
             'range_pagination': [x for x in range(20, 220, 20)],
             'paginate_by': paginate_by,
