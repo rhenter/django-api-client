@@ -125,7 +125,7 @@ class APIClientSettings:
         apis = []
         if isinstance(api_settings, dict):
             apis.append(self._get_api_configs(api_settings))
-        elif isinstance(self.user_settings, list):
+        elif isinstance(api_settings, list):
             for api in api_settings:
                 apis.append(self._get_api_configs(api))
         return apis
